@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Horarios · Colegio Querer 2026-27</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-view="inicio" aria-label="Colegio Querer">
+        <img class="brand__logo" src="Assets/logo-querer.png" alt="Colegio Querer" />
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Secciones">
+        <button class="nav__item is-active" data-view="inicio"><span class="nav__ico" data-ico="house"></span><span class="nav__label">Inicio</span></button>
+        <button class="nav__item" data-view="clases"><span class="nav__ico" data-ico="clases"></span><span class="nav__label">Clases</span><span class="nav__count" data-count="clases"></span></button>
+        <button class="nav__item" data-view="tutoras"><span class="nav__ico" data-ico="tutoras"></span><span class="nav__label">Tutoras</span><span class="nav__count" data-count="tutoras"></span></button>
+        <button class="nav__item" data-view="especialistas"><span class="nav__ico" data-ico="especialistas"></span><span class="nav__label">Especialistas</span><span class="nav__count" data-count="especialistas"></span></button>
+        <button class="nav__item" data-view="terapeutas"><span class="nav__ico" data-ico="terapeutas"></span><span class="nav__label">Terapeutas</span><span class="nav__count" data-count="terapeutas"></span></button>
+        <button class="nav__item" data-view="momentos"><span class="nav__ico" data-ico="momentos"></span><span class="nav__label">Turnos</span></button>
+      </nav>
+
+      <div class="sidebar__foot">
+        <p class="sidebar__course">Curso 2026-27</p>
+        <img class="sidebar__logo" src="Assets/logo-fundacion.png" alt="Fundación Querer" />
+      </div>
+    </aside>
+
+    <!-- ===================== MAIN ===================== -->
+    <main class="main" id="main">
+      <!-- barra superior solo visible en móvil -->
+      <div class="mobilebar">
+        <img class="mobilebar__logo" src="Assets/logo-querer.png" alt="Colegio Querer" />
+        <nav class="mobilebar__nav" id="mobileNav" aria-label="Secciones">
+          <button class="mnav is-active" data-view="inicio">Inicio</button>
+          <button class="mnav" data-view="clases">Clases</button>
+          <button class="mnav" data-view="tutoras">Tutoras</button>
+          <button class="mnav" data-view="especialistas">Especialistas</button>
+          <button class="mnav" data-view="terapeutas">Terapeutas</button>
+          <button class="mnav" data-view="momentos">Turnos</button>
+        </nav>
+      </div>
+
+      <!-- ============ INICIO ============ -->
+      <section class="view is-active" id="view-inicio">
+        <div class="landing">
+          <div class="landing__lead">
+            <h1 class="landing__title">Horarios del centro</h1>
+            <p class="landing__sub">El horario semanal del alumnado y de cada aula, tutor o tutora, especialista y terapeuta, listo para consultar de un vistazo.</p>
+            <div class="finder">
+              <label class="search">
+                <span class="search__ico" data-ico="search"></span>
+                <input id="finderInput" type="text" autocomplete="off" spellcheck="false" placeholder="Busca un aula, alumno, tutora, especialista o terapeuta…" aria-label="Buscar" />
+              </label>
+              <div class="finder__results" id="finderResults" role="listbox" hidden></div>
+            </div>
+            <button class="btn" data-view="clases"><span>Ver clases</span><span class="btn__ico" data-ico="arrow"></span></button>
+          </div>
+
+          <div class="landing__aside">
+            <p class="wk__t">La semana <span id="weekMapAula">aula Estrella</span></p>
+            <button class="wk" id="weekMap" data-view="clases" aria-label="Abrir Clases"></button>
+            <p class="wk__cap">Vista rápida de un aula. Pulsa para abrir Clases.</p>
+          </div>
+        </div>
+
+        <div class="quick">
+          <p class="quick__t">Accesos rápidos · Aulas</p>
+          <div class="chips" id="finderAulas"></div>
+        </div>
+      </section>
+
+      <!-- ============ CLASES ============ -->
+      <section class="view" id="view-clases">
+        <header class="viewhead">
+          <div class="viewhead__title"><h2>Clases</h2><p>Horario semanal del aula (grupo) y horario individual de cada alumno o alumna de esa clase.</p></div>
+          <div class="picker-stack">
+            <div class="picker picker--sub" data-for="clases" aria-label="Aulas"></div>
+            <div class="picker" data-for="clases-alumnos" aria-label="Aula o alumno"></div>
+          </div>
+        </header>
+        <div class="grid-host" data-grid="clases"></div>
+      </section>
+
+      <!-- ============ TUTORAS ============ -->
+      <section class="view" id="view-tutoras">
+        <header class="viewhead">
+          <div class="viewhead__title"><h2>Tutoras</h2><p>El horario individual de cada tutora, franja a franja.</p></div>
+          <div class="picker" data-for="tutoras" aria-label="Tutoras"></div>
+        </header>
+        <div class="grid-host" data-grid="tutoras"></div>
+      </section>
+
+      <!-- ============ ESPECIALISTAS ============ -->
+      <section class="view" id="view-especialistas">
+        <header class="viewhead">
+          <div class="viewhead__title"><h2>Especialistas</h2><p>Educación Física, Inglés y demás perfiles especialistas del centro.</p></div>
+          <div class="picker" data-for="especialistas" aria-label="Especialistas"></div>
+        </header>
+        <div class="grid-host" data-grid="especialistas"></div>
+      </section>
+
+      <!-- ============ TERAPEUTAS ============ -->
+      <section class="view" id="view-terapeutas">
+        <header class="viewhead">
+          <div class="viewhead__title"><h2>Terapeutas</h2><p>Psicólogas, logopedas y terapeutas ocupacionales, con el detalle de sus sesiones.</p></div>
+          <div class="picker-stack">
+            <div class="picker picker--sub" data-for="terapeutas" aria-label="Subgrupos"></div>
+            <div class="picker" data-for="terapeutas-personas" aria-label="Persona"></div>
+          </div>
+        </header>
+        <div class="grid-host" data-grid="terapeutas"></div>
+      </section>
+
+      <!-- ============ TURNOS (coordinaciones, patios y comedores) ============ -->
+      <section class="view" id="view-momentos">
+        <header class="viewhead">
+          <div class="viewhead__title"><h2>Coordinaciones, patios y comedores</h2><p>Quién atiende cada momento del día (asambleas y coordinaciones, recreo, comedores, patios y comidas), día a día.</p></div>
+        </header>
+        <div class="momentos" data-momentos></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="tip" class="tip" role="tooltip" aria-hidden="true"></div>
+
+  <script>
+    /* Carga datos + app evitando la caché del navegador (siempre la versión más reciente).
+       El parámetro ?v= cambia en cada carga, así un horarios.js nuevo se lee al instante. */
+    (function () {
+      var d = document, base = d.body, v = Date.now();
+      var data = d.createElement('script');
+      data.src = 'js/horarios.js?v=' + v;
+      data.onload = function () {
+        var app = d.createElement('script');
+        app.src = 'js/app.js?v=' + v;
+        base.appendChild(app);
+      };
+      base.appendChild(data);
+    })();
+  </script>
+</body>
+</html>
