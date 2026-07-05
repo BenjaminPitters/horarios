@@ -522,6 +522,9 @@
     tip.style.left = Math.max(8, x) + 'px'; tip.style.top = Math.max(8, y) + 'px';
   }
   function hideTip() { tip.classList.remove('is-on'); tip.setAttribute('aria-hidden', 'true'); }
+  // En táctil no se dispara 'mouseleave': cerrar el tooltip al hacer scroll o al tocar fuera de un código.
+  window.addEventListener('scroll', hideTip, { passive: true, capture: true });
+  document.addEventListener('touchstart', e => { if (!e.target.closest('[data-tip]')) hideTip(); }, { passive: true });
 
   /* ============================================================
      VISTAS
