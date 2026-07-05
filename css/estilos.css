@@ -267,6 +267,7 @@ tr.brk th.tgut .h{color:var(--ink-3)}
 
 /* ===================== TURNOS (coordinaciones, patios y comedores) ===================== */
 .momentos{display:flex;flex-direction:column;gap:1.4rem}
+.mom-dayswitch{display:none}   /* selector de día: solo en móvil */
 .mom-group{display:flex;flex-direction:column;gap:1.4rem}
 .mom-grouptop{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:-.55rem}
 .mom-grouptop__t{font-family:'Geist',sans-serif;font-size:.98rem;font-weight:600;letter-spacing:-.01em;color:var(--ink-2)}
@@ -373,10 +374,24 @@ tr.brk th.tgut .h{color:var(--ink-3)}
   tr.brk{grid-template-columns:1fr}
   tr.brk td{display:none!important}
   tr.brk th.tgut{border-right:0}
+
+  /* Turnos día a día en móvil, igual que las demás tablas */
+  .mom-dayswitch{display:block;margin-bottom:1rem;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);overflow:hidden}
+  .mom-dayswitch .day-switch{border-bottom:0}
+  .mom-table,.mom-table tbody,.mom-table tr,.mom-table td,.mom-table th{display:block;min-width:0;width:auto}
+  .mom-table{min-width:0}
+  .mom-table thead{display:none}
+  .mom-table tr{display:grid;grid-template-columns:118px 1fr;border-bottom:1px solid var(--line)}
+  .mom-table tr:last-child{border-bottom:0}
+  .mom-lbl{border-right:1px solid var(--line);border-bottom:0}
+  .mom-c{border-right:0;border-bottom:0}
+  .mom-c[data-day]{display:none}
+  .mom-c.on{display:block}
 }
 
 @media (max-width:420px){
   table.grid tr{grid-template-columns:74px 1fr}
+  .mom-table tr{grid-template-columns:100px 1fr}
 }
 
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}

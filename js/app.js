@@ -447,7 +447,8 @@
     }).join('');
     const codes = Object.keys(DIR).sort((a, b) => a.replace(/\d+/, '').localeCompare(b.replace(/\d+/, '')) || codeNum(a) - codeNum(b));
     const legend = `<div class="mom-legend"><span class="mom-legend__t">Códigos</span>${codes.map(c => `<span class="cod"><b>${esc(c)}</b> ${esc(DIR[c].nombre)}</span>`).join('')}<span class="mom-legend__hint">verde = coordinación del tutor</span></div>`;
-    host.innerHTML = groups + legend;
+    // En móvil las tablas van día a día (como el resto): una sola day-switch las controla todas.
+    host.innerHTML = '<div class="mom-dayswitch noprint">' + daySwitch() + '</div>' + groups + legend;
     // Cada botón marca el <body> con el grupo a imprimir; el CSS de impresión oculta el resto.
     els('.mom-print', host).forEach(btn => btn.addEventListener('click', () => {
       document.body.classList.add('printgroup', 'printgroup--' + btn.dataset.print);
@@ -459,6 +460,17 @@
       n.addEventListener('mousemove', moveTip);
       n.addEventListener('mouseleave', hideTip);
     });
+    // Día a día en móvil: pinta solo la columna del día activo en TODAS las tablas.
+    function paintMom() {
+      els('.mom-c[data-day]', host).forEach(td => td.classList.toggle('on', td.dataset.day === DIAS[state.day]));
+      const dEl = el('.day-switch__day', host); if (dEl) dEl.textContent = DIAS[state.day];
+      els('.day-switch__dot', host).forEach((d, i) => d.classList.toggle('on', i === state.day));
+    }
+    els('.day-switch__btn', host).forEach(b => b.addEventListener('click', () => {
+      state.day = (state.day + parseInt(b.dataset.nav, 10) + DIAS.length) % DIAS.length; syncDays();
+    }));
+    els('.day-switch__dot', host).forEach(d => d.addEventListener('click', () => { state.day = parseInt(d.dataset.di, 10); syncDays(); }));
+    host._paintMom = paintMom; paintMom();
   }
 
   function mount(sel, html) {
@@ -482,7 +494,10 @@
     els('.day-switch__dot', host).forEach(d => d.addEventListener('click', () => { state.day = parseInt(d.dataset.di, 10); syncDays(); }));
     host._paint = paint; paint();
   }
-  function syncDays() { els('.grid-host').forEach(h => h._paint && h._paint()); }
+  function syncDays() {
+    els('.grid-host').forEach(h => h._paint && h._paint());
+    const m = el('[data-momentos]'); if (m && m._paintMom) m._paintMom();   // Turnos también, día a día
+  }
 
   /* tooltip */
   const tip = el('#tip');
