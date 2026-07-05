@@ -367,7 +367,13 @@
   function renderMomentos() {
     const host = el('[data-momentos]'); if (!host) return;
     const CODE_RE = /^([A-Za-zÑ]{1,3}\d+)\s*(.*)$/;   // "T1 María C." / "TO1" / "Ps3"
-    const chip = c => `<span class="mom-chip"${c.nombre ? ` title="${esc(c.nombre)}"` : ''}>${esc(c.code)}</span>`;
+    // chip con tooltip: al pasar el ratón muestra el nombre (y rol) de quien es el código.
+    const chip = c => {
+      const nom = c.nombre || (DIR[c.code] ? DIR[c.code].nombre : '');
+      const rol = DIR[c.code] ? DIR[c.code].rol : '';
+      const tip = nom ? ` data-tip='${esc(JSON.stringify({ hd: nom, rows: rol ? [['', rol]] : [] }))}'` : '';
+      return `<span class="mom-chip"${tip}>${esc(c.code)}</span>`;
+    };
     // Cada string puede tener varias líneas: una línea "(...)" es NOTA del grupo anterior;
     // el resto son grupos (Coordinan doble = 2 grupos "Aula: códigos" en 2 líneas).
     function parseLines(str) {
@@ -409,12 +415,17 @@
       .replace(/^Coordinan\b.*$/i, 'Coordinación')
       .replace(/\s*\([^)]*\)/g, '')
       .trim();
-    const blockHtml = b => {
-      const parts = (b.titulo || '').split(' — ');
-      const titulo = clean(parts.shift()), sub = clean(parts.join(' — '));
+    // Título: sin subtítulo (fuera lo de " — ..."), la hora sale como meta (sin paréntesis),
+    // y las comidas se numeran "Turno N de comida".
+    const blockHtml = (b, comidaNo) => {
+      const raw = clean((b.titulo || '').split(' — ')[0]).trim();
+      const mh = raw.match(/(\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2})/);   // clean ya pasó – a -
+      const hora = mh ? mh[1].replace(/\s+/g, '') : '';
+      let name = raw.replace(/\s*\([^)]*\)/g, '').replace(/\s*·\s*turno.*/i, '').trim();
+      if (comidaNo) name = 'Turno ' + comidaNo + ' de comida';
       const rows = (b.filas || []).map(f =>
         `<tr><th class="mom-lbl" scope="row">${esc(label(f.label))}</th>${DIAS.map(d => `<td class="mom-c" data-day="${d}">${cell(f.dias && f.dias[d])}</td>`).join('')}</tr>`).join('');
-      return `<div class="mom-block"><div class="mom-head"><h3>${esc(titulo)}</h3>${sub ? `<p>${esc(sub)}</p>` : ''}</div>` +
+      return `<div class="mom-block"><div class="mom-head"><h3>${esc(name)}</h3>${hora ? `<span class="mom-head__hora">${esc(hora)}</span>` : ''}</div>` +
         `<div class="grid-scroll"><table class="mom-table"><thead><tr><th></th>${DIAS.map(d => `<th>${esc(d)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div></div>`;
     };
     // Tres grupos que se pueden imprimir por separado (cada uno con su botón):
@@ -432,7 +443,7 @@
         <div class="mom-grouptop noprint">
           <span class="mom-grouptop__t">${esc(g.label)}</span>
           <button class="gb-print mom-print" type="button" data-print="${esc(g.id)}" aria-label="Imprimir ${esc(g.label)}"><span class="gb-print__ico">${ICON.printer}</span>Imprimir</button>
-        </div>${bs.map(blockHtml).join('')}</div>`;
+        </div>${bs.map((b, i) => blockHtml(b, g.id === 'comida' ? i + 1 : 0)).join('')}</div>`;
     }).join('');
     const codes = Object.keys(DIR).sort((a, b) => a.replace(/\d+/, '').localeCompare(b.replace(/\d+/, '')) || codeNum(a) - codeNum(b));
     const legend = `<div class="mom-legend"><span class="mom-legend__t">Códigos</span>${codes.map(c => `<span class="cod"><b>${esc(c)}</b> ${esc(DIR[c].nombre)}</span>`).join('')}<span class="mom-legend__hint">verde = coordinación del tutor</span></div>`;
@@ -442,6 +453,12 @@
       document.body.classList.add('printgroup', 'printgroup--' + btn.dataset.print);
       window.print();
     }));
+    // Tooltip con el nombre al pasar el ratón por cada código (igual que en Clases).
+    els('[data-tip]', host).forEach(n => {
+      n.addEventListener('mouseenter', () => showTip(n));
+      n.addEventListener('mousemove', moveTip);
+      n.addEventListener('mouseleave', hideTip);
+    });
   }
 
   function mount(sel, html) {
