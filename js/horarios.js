@@ -1,4 +1,4 @@
-// Datos de horarios del Colegio Querer - v11 (con momentos para la pestaña Turnos).
+// Datos de horarios del Colegio Querer - v11 (alumnado con nombre de pila).
 window.HORARIOS = {
  "meta": {
   "centro": "Colegio Querer",
@@ -10817,7 +10817,7 @@ window.HORARIOS = {
  },
  "alumnado": {
   "Estrella": {
-   "Naomi Sánchez Moneo": {
+   "Naomi": {
     "filas": [
      {
       "franja": "F0",
@@ -11099,7 +11099,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Inés Serra Lasala": {
+   "Inés": {
     "filas": [
      {
       "franja": "F0",
@@ -11381,7 +11381,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Lucía Benjumea Martín": {
+   "Lucía": {
     "filas": [
      {
       "franja": "F0",
@@ -11663,7 +11663,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Bernardo Barreto-Saraiva": {
+   "Bernardo": {
     "filas": [
      {
       "franja": "F0",
@@ -11947,7 +11947,7 @@ window.HORARIOS = {
    }
   },
   "Sol": {
-   "Gonzalo Cuevas Navarrete": {
+   "Gonzalo": {
     "filas": [
      {
       "franja": "F0",
@@ -12229,7 +12229,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Álvaro Regojo": {
+   "Álvaro": {
     "filas": [
      {
       "franja": "F0",
@@ -12511,7 +12511,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Santiago Deffi": {
+   "Santiago": {
     "filas": [
      {
       "franja": "F0",
@@ -12793,7 +12793,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Eva Pereda": {
+   "Eva": {
     "filas": [
      {
       "franja": "F0",
@@ -13077,7 +13077,7 @@ window.HORARIOS = {
    }
   },
   "Norte": {
-   "Catalina Figueroa": {
+   "Catalina": {
     "filas": [
      {
       "franja": "F0",
@@ -13359,7 +13359,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Leonor Courtade": {
+   "Leonor": {
     "filas": [
      {
       "franja": "F0",
@@ -13641,7 +13641,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Alejandra Rodríguez": {
+   "Alejandra": {
     "filas": [
      {
       "franja": "F0",
@@ -13923,7 +13923,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Miguel Rudeke": {
+   "Miguel": {
     "filas": [
      {
       "franja": "F0",
@@ -14207,7 +14207,7 @@ window.HORARIOS = {
    }
   },
   "Luna": {
-   "Darío Salamanca de Mingo": {
+   "Darío": {
     "filas": [
      {
       "franja": "F0",
@@ -14489,7 +14489,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Luis López-Quiñones Rivera": {
+   "Luis": {
     "filas": [
      {
       "franja": "F0",
@@ -14771,7 +14771,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Manuela García": {
+   "Manuela": {
     "filas": [
      {
       "franja": "F0",
@@ -15053,7 +15053,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Lucas Martín Martínez": {
+   "Lucas": {
     "filas": [
      {
       "franja": "F0",
@@ -15337,7 +15337,7 @@ window.HORARIOS = {
    }
   },
   "Este": {
-   "Manuel González": {
+   "Manuel": {
     "filas": [
      {
       "franja": "F0",
@@ -15618,7 +15618,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Martina Nuñez Rubiano": {
+   "Martina": {
     "filas": [
      {
       "franja": "F0",
@@ -15899,7 +15899,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Yago Regueras": {
+   "Yago": {
     "filas": [
      {
       "franja": "F0",
@@ -16180,7 +16180,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Catalina Belló": {
+   "Catalina": {
     "filas": [
      {
       "franja": "F0",
@@ -16461,7 +16461,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Marco Delgado Abad": {
+   "Marco": {
     "filas": [
      {
       "franja": "F0",
@@ -16744,7 +16744,7 @@ window.HORARIOS = {
    }
   },
   "Oeste": {
-   "Daniel Ramírez": {
+   "Daniel": {
     "filas": [
      {
       "franja": "F0",
@@ -17025,7 +17025,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Elvira Cermeño": {
+   "Elvira": {
     "filas": [
      {
       "franja": "F0",
@@ -17306,7 +17306,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Daniela Vacas": {
+   "Daniela": {
     "filas": [
      {
       "franja": "F0",
@@ -17587,7 +17587,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Micke Ocaña": {
+   "Micke": {
     "filas": [
      {
       "franja": "F0",
@@ -17868,7 +17868,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Emma Soto": {
+   "Emma": {
     "filas": [
      {
       "franja": "F0",
@@ -18149,7 +18149,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Noah Skelt": {
+   "Noah": {
     "filas": [
      {
       "franja": "F0",
@@ -18432,7 +18432,7 @@ window.HORARIOS = {
    }
   },
   "Sur": {
-   "Carmen Mazarrasa": {
+   "Carmen": {
     "filas": [
      {
       "franja": "F0",
@@ -18713,7 +18713,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Bosco Alonso": {
+   "Bosco": {
     "filas": [
      {
       "franja": "F0",
@@ -18994,7 +18994,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Ángela Carmona": {
+   "Ángela": {
     "filas": [
      {
       "franja": "F0",
@@ -19275,7 +19275,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Esther Juncan Wang": {
+   "Esther": {
     "filas": [
      {
       "franja": "F0",
@@ -19556,7 +19556,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Andrés E. Paz": {
+   "Andrés": {
     "filas": [
      {
       "franja": "F0",
@@ -19837,7 +19837,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Silvana Ospina Ramírez": {
+   "Silvana": {
     "filas": [
      {
       "franja": "F0",
@@ -20118,7 +20118,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Jacobo Llopis": {
+   "Jacobo": {
     "filas": [
      {
       "franja": "F0",
