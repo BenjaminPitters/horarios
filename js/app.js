@@ -322,7 +322,14 @@
         const hasSal = salidas.length > 0;
         // Quitar la "L · " (marca de Lectivo) del inicio de la línea principal.
         const mainLine = (rawLines.filter(l => !l.startsWith('↗'))[0] || '').replace(/^L\s*·\s*/, '');
-        const col = c.aula ? aulaColor(c.aula) : estadoColor(c.tipo);
+        // Color por aula. Si no viene el campo `aula` (p.ej. EF conjunta "Oeste/Sur"),
+        // lo deduzco del propio texto para que la celda no quede en blanco.
+        let col = c.aula ? aulaColor(c.aula) : null;
+        if (!col && c.tipo === 'lectivo') {
+          const am = /^([^:]+):/.exec(mainLine);
+          if (am) { const a0 = am[1].split('/')[0].trim(); if (AULA_COLORS[a0]) col = aulaColor(a0); }
+        }
+        if (!col) col = estadoColor(c.tipo);
         const muted = c.tipo === 'no_lectivo';
         const style = col ? ` style="background:${tint(col,.28)};border-left-color:${col}"` : '';
         const room = c.aula ? `<span class="cx__room">${esc(c.aula)}</span>` : '';
