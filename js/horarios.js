@@ -1,4 +1,4 @@
-// Datos de horarios del Colegio Querer - v11 (alumnado con nombre de pila).
+// Datos de horarios del Colegio Querer - v11 (EF conjunta Oeste/Sur).
 window.HORARIOS = {
  "meta": {
   "centro": "Colegio Querer",
@@ -7036,19 +7036,16 @@ window.HORARIOS = {
      "hora": "15:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Oeste: Educación Física (conj.)",
-       "tipo": "lectivo",
-       "aula": "Oeste"
+       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Oeste: Educación Física (conj.)",
-       "tipo": "lectivo",
-       "aula": "Oeste"
+       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Oeste: Educación Física (conj.)",
-       "tipo": "lectivo",
-       "aula": "Oeste"
+       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "tipo": "lectivo"
       },
       "Jueves": {
        "txt": "L · Sur: Educación Física (1h)\n↗ Bosco→L2",
@@ -7067,19 +7064,16 @@ window.HORARIOS = {
      "hora": "15:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Oeste: Educación Física (conj.)",
-       "tipo": "lectivo",
-       "aula": "Oeste"
+       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Oeste: Educación Física (conj.)",
-       "tipo": "lectivo",
-       "aula": "Oeste"
+       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Oeste: Educación Física (conj.)",
-       "tipo": "lectivo",
-       "aula": "Oeste"
+       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "tipo": "lectivo"
       },
       "Jueves": {
        "txt": "L · Sur: Educación Física (1h)\n↗ Jacobo→L2",
