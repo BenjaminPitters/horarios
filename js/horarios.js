@@ -29,8 +29,8 @@ window.HORARIOS = {
    "Inglés": "#F8C471",
    "Juego": "#AED6F1",
    "Educación Física": "#A9CCE3",
-   "Educación Física (1h)": "#A9CCE3",
-   "Educación Física (conj.)": "#A9CCE3",
+   "Educación Física": "#A9CCE3",
+   "Educación Física": "#A9CCE3",
    "Psicomotricidad": "#AEB6E8",
    "Snack": "#BFD7EA",
    "Autonomía": "#B3D4E0",
@@ -3599,19 +3599,19 @@ window.HORARIOS = {
      "hora": "15:00",
      "dias": {
       "Lunes": {
-       "asig": "Educación Física (conj.)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ]
       },
       "Martes": {
-       "asig": "Educación Física (conj.)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ]
       },
       "Miércoles": {
-       "asig": "Educación Física (conj.)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ]
@@ -3623,7 +3623,7 @@ window.HORARIOS = {
        ]
       },
       "Viernes": {
-       "asig": "Educación Física (1h)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ]
@@ -3635,19 +3635,19 @@ window.HORARIOS = {
      "hora": "15:30",
      "dias": {
       "Lunes": {
-       "asig": "Educación Física (conj.)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ]
       },
       "Martes": {
-       "asig": "Educación Física (conj.)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ]
       },
       "Miércoles": {
-       "asig": "Educación Física (conj.)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ]
@@ -3659,7 +3659,7 @@ window.HORARIOS = {
        ]
       },
       "Viernes": {
-       "asig": "Educación Física (1h)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ]
@@ -4213,19 +4213,19 @@ window.HORARIOS = {
      "hora": "15:00",
      "dias": {
       "Lunes": {
-       "asig": "Educación Física (conj.)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ]
       },
       "Martes": {
-       "asig": "Educación Física (conj.)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ]
       },
       "Miércoles": {
-       "asig": "Educación Física (conj.)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ],
@@ -4238,7 +4238,7 @@ window.HORARIOS = {
        ]
       },
       "Jueves": {
-       "asig": "Educación Física (1h)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ],
@@ -4264,25 +4264,25 @@ window.HORARIOS = {
      "hora": "15:30",
      "dias": {
       "Lunes": {
-       "asig": "Educación Física (conj.)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ]
       },
       "Martes": {
-       "asig": "Educación Física (conj.)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ]
       },
       "Miércoles": {
-       "asig": "Educación Física (conj.)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ]
       },
       "Jueves": {
-       "asig": "Educación Física (1h)",
+       "asig": "Educación Física",
        "adultos": [
         "EF1"
        ],
@@ -7036,24 +7036,24 @@ window.HORARIOS = {
      "hora": "15:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "txt": "L · Oeste/Sur: Educación Física",
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "txt": "L · Oeste/Sur: Educación Física",
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "txt": "L · Oeste/Sur: Educación Física",
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Sur: Educación Física (1h)\n↗ Bosco→L2",
+       "txt": "L · Sur: Educación Física\n↗ Bosco→L2",
        "tipo": "lectivo",
        "aula": "Sur"
       },
       "Viernes": {
-       "txt": "L · Oeste: Educación Física (1h)",
+       "txt": "L · Oeste: Educación Física",
        "tipo": "lectivo",
        "aula": "Oeste"
       }
@@ -7064,24 +7064,24 @@ window.HORARIOS = {
      "hora": "15:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "txt": "L · Oeste/Sur: Educación Física",
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "txt": "L · Oeste/Sur: Educación Física",
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "txt": "L · Oeste/Sur: Educación Física",
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Sur: Educación Física (1h)\n↗ Jacobo→L2",
+       "txt": "L · Sur: Educación Física\n↗ Jacobo→L2",
        "tipo": "lectivo",
        "aula": "Sur"
       },
       "Viernes": {
-       "txt": "L · Oeste: Educación Física (1h)",
+       "txt": "L · Oeste: Educación Física",
        "tipo": "lectivo",
        "aula": "Oeste"
       }
@@ -16980,19 +16980,19 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
         "asig": "Actividades de la Vida Diaria"
        },
        "Viernes": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        }
       }
      },
@@ -17001,19 +17001,19 @@ window.HORARIOS = {
       "hora": "15:30",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
         "asig": "Actividades de la Vida Diaria"
        },
        "Viernes": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        }
       }
      }
@@ -17261,19 +17261,19 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
         "asig": "Actividades de la Vida Diaria"
        },
        "Viernes": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        }
       }
      },
@@ -17282,19 +17282,19 @@ window.HORARIOS = {
       "hora": "15:30",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
         "asig": "Actividades de la Vida Diaria"
        },
        "Viernes": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        }
       }
      }
@@ -17542,19 +17542,19 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
         "asig": "Actividades de la Vida Diaria"
        },
        "Viernes": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        }
       }
      },
@@ -17563,19 +17563,19 @@ window.HORARIOS = {
       "hora": "15:30",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
         "asig": "Actividades de la Vida Diaria"
        },
        "Viernes": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        }
       }
      }
@@ -17823,19 +17823,19 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
         "asig": "Actividades de la Vida Diaria"
        },
        "Viernes": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        }
       }
      },
@@ -17844,19 +17844,19 @@ window.HORARIOS = {
       "hora": "15:30",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
         "asig": "Actividades de la Vida Diaria"
        },
        "Viernes": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        }
       }
      }
@@ -18104,19 +18104,19 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
         "asig": "Actividades de la Vida Diaria"
        },
        "Viernes": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        }
       }
      },
@@ -18125,19 +18125,19 @@ window.HORARIOS = {
       "hora": "15:30",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
         "asig": "Actividades de la Vida Diaria"
        },
        "Viernes": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        }
       }
      }
@@ -18385,19 +18385,19 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
         "asig": "Actividades de la Vida Diaria"
        },
        "Viernes": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        }
       }
      },
@@ -18406,19 +18406,19 @@ window.HORARIOS = {
       "hora": "15:30",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
         "asig": "Actividades de la Vida Diaria"
        },
        "Viernes": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        }
       }
      }
@@ -18667,17 +18667,17 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
         "salida": "TO2",
         "dest_nombre": "Aitana"
        },
        "Jueves": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        },
        "Viernes": {
         "asig": "Actividades de la Vida Diaria"
@@ -18689,16 +18689,16 @@ window.HORARIOS = {
       "hora": "15:30",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        },
        "Viernes": {
         "asig": "Actividades de la Vida Diaria"
@@ -18948,13 +18948,13 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
         "salida": "L2",
@@ -18970,16 +18970,16 @@ window.HORARIOS = {
       "hora": "15:30",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        },
        "Viernes": {
         "asig": "Actividades de la Vida Diaria"
@@ -19230,16 +19230,16 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        },
        "Viernes": {
         "asig": "Actividades de la Vida Diaria"
@@ -19251,16 +19251,16 @@ window.HORARIOS = {
       "hora": "15:30",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        },
        "Viernes": {
         "asig": "Actividades de la Vida Diaria"
@@ -19511,16 +19511,16 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        },
        "Viernes": {
         "asig": "Actividades de la Vida Diaria"
@@ -19532,16 +19532,16 @@ window.HORARIOS = {
       "hora": "15:30",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        },
        "Viernes": {
         "asig": "Actividades de la Vida Diaria"
@@ -19792,16 +19792,16 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        },
        "Viernes": {
         "asig": "Actividades de la Vida Diaria"
@@ -19813,16 +19813,16 @@ window.HORARIOS = {
       "hora": "15:30",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        },
        "Viernes": {
         "asig": "Actividades de la Vida Diaria"
@@ -20073,16 +20073,16 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        },
        "Viernes": {
         "asig": "Actividades de la Vida Diaria"
@@ -20094,16 +20094,16 @@ window.HORARIOS = {
       "hora": "15:30",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        },
        "Viernes": {
         "asig": "Actividades de la Vida Diaria"
@@ -20353,16 +20353,16 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
-        "asig": "Educación Física (1h)"
+        "asig": "Educación Física"
        },
        "Viernes": {
         "asig": "Actividades de la Vida Diaria"
@@ -20374,13 +20374,13 @@ window.HORARIOS = {
       "hora": "15:30",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Martes": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Miércoles": {
-        "asig": "Educación Física (conj.)"
+        "asig": "Educación Física"
        },
        "Jueves": {
         "salida": "L2",
