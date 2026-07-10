@@ -9,7 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/estilos.css" />
+  <!-- CSS con anti-caché (igual que el JS): el navegador siempre lee la hoja de estilos más
+       reciente y no mezcla un HTML nuevo con un CSS viejo cacheado. -->
+  <script>document.write('<link rel="stylesheet" href="css/estilos.css?v=' + Date.now() + '">');</script>
+  <noscript><link rel="stylesheet" href="css/estilos.css" /></noscript>
 </head>
 <body>
   <div class="app">
