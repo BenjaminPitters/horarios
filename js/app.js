@@ -335,8 +335,13 @@
         const room = c.aula ? `<span class="cx__room">${esc(c.aula)}</span>` : '';
         const oneLine = c.tipo === 'comedor' ? ' cx--1line' : '';
         const tipAttr = hasSal ? ` data-tip='${esc(JSON.stringify({ salidas }))}'` : '';
+        // Salidas escritas en la propia celda: "↗ Alumno → cód" (una línea por niño).
+        const salHTML = hasSal
+          ? `<div class="cx__sal">${salidas.map(s =>
+              `<span class="cx__salrow"><span class="cx__salarr" aria-hidden="true">↗</span><span class="cx__salwho">${esc(s.alumno)}</span><span class="cx__saldest">→ ${esc(s.a)}</span></span>`).join('')}</div>`
+          : '';
         return `<td class="cell${hasSal ? ' cell--sal' : ''}" data-day="${day}"${style}${tipAttr}>
-          <div class="cx${oneLine}">${hasSal ? '<span class="cx__flag" aria-hidden="true">↗</span>' : ''}<span class="${muted ? 'cx__nl' : 'cx__txt'}">${esc(mainLine || '·')}</span>${room}</div></td>`;
+          <div class="cx${oneLine}"><span class="${muted ? 'cx__nl' : 'cx__txt'}">${esc(mainLine || '·')}</span>${room}${salHTML}</div></td>`;
       }).join('');
       return `<tr>${gut(f.franja, f.hora)}${cells}</tr>`;
     }).join('');

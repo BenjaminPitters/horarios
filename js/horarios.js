@@ -4441,7 +4441,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Matemáticas · T5 (Este)\n↗ Lucía→O2",
+       "txt": "L · Matemáticas · T5 (Este)\n↗ Marco→Ps3\n↗ Lucía→O2",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -4449,7 +4449,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Matemáticas · T5 (Este)\n↗ Naomi→O2",
+       "txt": "L · Matemáticas · T5 (Este)\n↗ Catalina B.→L3\n↗ Daniel→Ps3\n↗ Naomi→O2",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -5495,11 +5495,11 @@ window.HORARIOS = {
      "hora": "12:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Matemáticas · T7 (Sur)",
+       "txt": "L · Matemáticas · T7 (Sur)\n↗ Silvana→L3",
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Matemáticas · T7 (Sur)\n↗ Darío→O1",
+       "txt": "L · Matemáticas · T7 (Sur)\n↗ Darío→O1\n↗ Esther→L1",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -6183,23 +6183,23 @@ window.HORARIOS = {
      "hora": "12:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Juego (Est+Sol)\n↗ Daniela→L2\n↗ Noah→L1",
+       "txt": "L · Juego (Est+Sol)\n↗ Daniela→L2\n↗ Noah→L1\n↗ Gonzalo→O1",
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Juego (Est+Sol)\n↗ Elvira→O2\n↗ Andrés→L2",
+       "txt": "L · Juego (Est+Sol)\n↗ Naomi→TO1\n↗ Elvira→O2\n↗ Andrés→L2",
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Juego (Est+Sol)",
+       "txt": "L · Juego (Est+Sol)\n↗ Eva→L2",
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Juego (Est+Sol)",
+       "txt": "L · Juego (Est+Sol)\n↗ Lucía→TO1",
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Juego (Est+Sol)",
+       "txt": "L · Juego (Est+Sol)\n↗ Bernardo→TO1\n↗ Santiago→L3",
        "tipo": "lectivo"
       }
      }
@@ -6981,7 +6981,7 @@ window.HORARIOS = {
        "aula": "Este"
       },
       "Miércoles": {
-       "txt": "L · Estrella: Juego · T1",
+       "txt": "L · Estrella: Juego · T1\n↗ Gonzalo→L2",
        "tipo": "lectivo",
        "aula": "Estrella"
       },
@@ -7007,7 +7007,7 @@ window.HORARIOS = {
        "aula": "Oeste/Sur"
       },
       "Martes": {
-       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "txt": "L · Oeste/Sur: Educación Física (conj.)\n↗ Ángela→L2\n↗ Silvana→O2",
        "tipo": "lectivo",
        "aula": "Oeste/Sur"
       },
@@ -7033,17 +7033,17 @@ window.HORARIOS = {
      "hora": "15:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "txt": "L · Oeste/Sur: Educación Física (conj.)\n↗ Bosco→L2",
        "tipo": "lectivo",
        "aula": "Oeste/Sur"
       },
       "Martes": {
-       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "txt": "L · Oeste/Sur: Educación Física (conj.)\n↗ Esther→O2\n↗ Emma→L2",
        "tipo": "lectivo",
        "aula": "Oeste/Sur"
       },
       "Miércoles": {
-       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "txt": "L · Oeste/Sur: Educación Física (conj.)\n↗ Daniela→L2",
        "tipo": "lectivo",
        "aula": "Oeste/Sur"
       },
@@ -10697,7 +10697,7 @@ window.HORARIOS = {
         "tipo": "no_lectivo"
        },
        "Martes": {
-        "txt": "L · Estrella+Sol: Juego · apoyo",
+        "txt": "L · Estrella+Sol: Juego · apoyo\n↗ Lucía→L1",
         "tipo": "lectivo",
         "aula": "Estrella+Sol"
        },
