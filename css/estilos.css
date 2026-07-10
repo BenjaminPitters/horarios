@@ -210,6 +210,9 @@ img{max-width:100%}
 .gb-print__ico{width:16px;height:16px;display:block}
 .gb-print__ico svg{width:100%;height:100%}
 
+/* cabecera de impresión: oculta en pantalla, visible solo al imprimir (ver @media print) */
+.printhead{display:none}
+
 .day-switch{display:none}
 
 .grid-scroll{overflow-x:auto}
@@ -401,7 +404,7 @@ tr.brk th.tgut .h{color:var(--ink-3)}
    Un horario por página, en horizontal, con el mismo aspecto que la web.
    Se ANULA por completo el modo móvil (tabla apilada) y se compacta. */
 @media print{
-  @page{ size:landscape; margin:9mm; }
+  @page{ size:A4 portrait; margin:8mm; }
   *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
   html,body{ background:#fff !important; }
 
@@ -415,12 +418,17 @@ tr.brk th.tgut .h{color:var(--ink-3)}
   .viewhead{ margin:0 0 3mm !important; display:block !important; }
   .viewhead__title h2{ font-size:13pt !important; margin:0 !important; }
 
-  .grid-host{ box-shadow:none !important; border:1px solid #d8d2ce !important; border-radius:4px !important; break-inside:avoid; }
-  .grid-host::before{
-    content:"Colegio Querer · Horarios 2026-27";
-    display:block;padding:1.6mm 3mm;font-family:var(--mono);font-size:7.5pt;
-    letter-spacing:.03em;color:#8b827d;border-bottom:1px solid #eee;
+  /* cabecera de impresión: título a la izquierda, logo del colegio arriba a la derecha */
+  .printhead{
+    display:flex !important; align-items:center; justify-content:space-between;
+    gap:6mm; margin:0 0 4mm; padding:0 0 2.4mm; border-bottom:1.2px solid #d8d2ce;
   }
+  .printhead__meta{ display:flex; flex-direction:column; gap:.4mm; }
+  .printhead__title{ font-size:12pt; font-weight:700; letter-spacing:-.01em; color:#2a2320; }
+  .printhead__sub{ font-family:var(--mono); font-size:7.5pt; letter-spacing:.03em; color:#8b827d; }
+  .printhead__logo{ height:13mm; width:auto; margin-left:auto; display:block; object-fit:contain; }
+
+  .grid-host{ box-shadow:none !important; border:1px solid #d8d2ce !important; border-radius:4px !important; break-inside:avoid; }
   .gridbanner{ padding:2mm 3mm !important; }
   .gridbanner__name{ font-size:11pt !important; }
   .gridbanner__role{ font-size:8pt !important; }
