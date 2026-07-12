@@ -71,7 +71,8 @@ img{max-width:100%}
 .nav__item.is-active .nav__count{color:var(--accent-strong)}
 
 .sidebar__foot{margin-top:auto;padding:.4rem;border-top:1px solid var(--line);padding-top:1rem}
-.sidebar__course{margin:0 0 .6rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.02em;color:var(--ink-2);font-weight:500}
+.sidebar__course{margin:0 0 .3rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.02em;color:var(--ink-2);font-weight:500}
+.sidebar__stamp{margin:0 0 .6rem;font-family:var(--mono);font-size:.66rem;letter-spacing:.01em;color:var(--ink-3)}
 .sidebar__logo{display:block;width:150px;max-width:100%;height:auto}
 
 /* ===================== MAIN ===================== */

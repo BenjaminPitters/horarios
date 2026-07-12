@@ -49,7 +49,8 @@ window.HORARIOS = {
    "Comedor Sol": "#FFCC99",
    "Comedor Norte": "#A8D8D0",
    "Comedor EBO/Luna": "#B3C7F0"
-  }
+  },
+  "generado": "2026-07-12"
  },
  "clases": {
   "Estrella": {

@@ -604,5 +604,20 @@
     momentos: renderMomentos
   };
 
+  // Sello de actualización de datos (meta.generado / meta.version): ayuda a ver de un vistazo
+  // si lo desplegado está al día. Si el dato no lo trae, no se muestra nada.
+  (function dataStamp() {
+    const g = H.meta && (H.meta.generado || H.meta.version);
+    if (!g) return;
+    const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(g));
+    const txt = m
+      ? m[3] + ' ' + ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'][+m[2] - 1] + ' ' + m[1]
+      : String(g);
+    els('[data-stamp]').forEach(n => {
+      n.textContent = (n.classList.contains('printhead__stamp') ? ' · actualizado ' : 'Actualizado: ') + txt;
+      n.hidden = false;
+    });
+  })();
+
   renderInicio(); rendered.inicio = true;
 })();
