@@ -283,16 +283,23 @@
         const c = f.dias[day] || {};
         if (c.asig) {
           const col = asigColor(c.asig);
+          const apoyo = (c.adultos || []).length >= 2;   // 2+ adultos = franja con apoyo
           const codes = (c.adultos || []).map(a => `<span class="code">${esc(a)}</span>`).join('');
           // Solo las celdas con salidas son interactivas: se marcan y muestran tooltip.
           const salidas = (c.salidas || []).filter(s => s && s.alumno);
           const hasSal = salidas.length > 0;
+          // Salida externa (fuera del centro): se escribe en la celda -> saber cuántos niños hay.
+          const externa = (c.externa || []).filter(e => e && e.alumno);
+          const extHTML = externa.length
+            ? `<div class="cx__ext">${externa.map(e =>
+                `<span class="cx__extrow"><span class="cx__exticon" aria-hidden="true">⇱</span><span>${esc(clean(e.alumno))} fuera${e.desde ? ` <span class="cx__extfrom">${esc(clean(e.desde))}</span>` : ''}</span></span>`).join('')}</div>`
+            : '';
           const tipAttr = hasSal
             ? ` data-tip='${esc(JSON.stringify({ salidas: salidas.map(s => ({ alumno: clean(s.alumno), a: clean(s.a), a_nombre: s.a_nombre ? clean(s.a_nombre) : null })) }))}'`
             : '';
           // El tinte y la barra de color van en la <td> para que rellene toda la fila.
-          return `<td class="cell${hasSal ? ' cell--sal' : ''}" data-day="${day}" style="background:${tint(col,.30)};border-left-color:${col}"${tipAttr}>
-            <div class="cx">${hasSal ? '<span class="cx__flag" aria-hidden="true">↗</span>' : ''}<span class="cx__asig">${esc(clean(c.asig))}</span>${codes ? `<span class="cx__codes">${codes}</span>` : ''}</div></td>`;
+          return `<td class="cell${hasSal ? ' cell--sal' : ''}${apoyo ? ' cell--apoyo' : ''}" data-day="${day}" style="background:${tint(col,.30)};border-left-color:${col}"${tipAttr}>
+            <div class="cx">${hasSal ? '<span class="cx__flag" aria-hidden="true">↗</span>' : ''}${apoyo ? '<span class="cx__apoyo" title="Franja con apoyo (2 adultos)" aria-label="Apoyo">+</span>' : ''}<span class="cx__asig">${esc(clean(c.asig))}</span>${codes ? `<span class="cx__codes">${codes}</span>` : ''}${extHTML}</div></td>`;
         }
         return `<td class="cell" data-day="${day}"><div class="cx"><span class="cx__nl">·</span></div></td>`;
       }).join('');
@@ -320,8 +327,10 @@
           return { alumno: m[1].trim(), a: a, a_nombre: DIR[a] ? DIR[a].nombre : null };
         }).filter(Boolean);
         const hasSal = salidas.length > 0;
+        // Anotaciones de salida externa (fuera del centro): líneas que empiezan por "⇱".
+        const extLines = rawLines.filter(l => l.startsWith('⇱')).map(l => l.replace(/^⇱\s*/, '').trim());
         // Quitar la "L · " (marca de Lectivo) del inicio de la línea principal.
-        const mainLine = (rawLines.filter(l => !l.startsWith('↗'))[0] || '').replace(/^L\s*·\s*/, '');
+        const mainLine = (rawLines.filter(l => !l.startsWith('↗') && !l.startsWith('⇱'))[0] || '').replace(/^L\s*·\s*/, '');
         // Color por aula. Si no viene el campo `aula` (p.ej. EF conjunta "Oeste/Sur"),
         // lo deduzco del propio texto para que la celda no quede en blanco.
         let col = c.aula ? aulaColor(c.aula) : null;
@@ -340,8 +349,12 @@
           ? `<div class="cx__sal">${salidas.map(s =>
               `<span class="cx__salrow"><span class="cx__salarr" aria-hidden="true">↗</span><span class="cx__salwho">${esc(s.alumno)}</span><span class="cx__saldest">→ ${esc(s.a)}</span></span>`).join('')}</div>`
           : '';
+        const extHTML = extLines.length
+          ? `<div class="cx__ext">${extLines.map(t =>
+              `<span class="cx__extrow"><span class="cx__exticon" aria-hidden="true">⇱</span><span>${esc(t)}</span></span>`).join('')}</div>`
+          : '';
         return `<td class="cell${hasSal ? ' cell--sal' : ''}" data-day="${day}"${style}${tipAttr}>
-          <div class="cx${oneLine}"><span class="${muted ? 'cx__nl' : 'cx__txt'}">${esc(mainLine || '·')}</span>${room}${salHTML}</div></td>`;
+          <div class="cx${oneLine}"><span class="${muted ? 'cx__nl' : 'cx__txt'}">${esc(mainLine || '·')}</span>${room}${salHTML}${extHTML}</div></td>`;
       }).join('');
       return `<tr>${gut(f.franja, f.hora)}${cells}</tr>`;
     }).join('');
@@ -365,8 +378,9 @@
           const dest = c.dest_nombre ? ' · ' + clean(c.dest_nombre) : '';
           return `<td class="cell" data-day="${day}" style="background:${SALIDA_BG};border-left-color:${SALIDA_LINE}"><div class="cx"><span class="cx__txt cx__go">↗ ${esc(clean(c.salida))}${esc(dest)}</span></div></td>`;
         }
-        if (c.label) {                                 // mediodía -> etiqueta neutra
-          return `<td class="cell" data-day="${day}" style="background:${MID_BG}"><div class="cx"><span class="cx__txt cx__mid">${esc(clean(c.label))}</span></div></td>`;
+        if (c.label) {                                 // mediodía / salida externa -> etiqueta
+          const isExt = /externa/i.test(c.label);
+          return `<td class="cell" data-day="${day}" style="background:${MID_BG}"><div class="cx"><span class="cx__txt ${isExt ? 'cx__extlbl' : 'cx__mid'}">${isExt ? '⇱ ' : ''}${esc(clean(c.label))}</span></div></td>`;
         }
         return empty(day);
       }).join('');
