@@ -339,6 +339,12 @@ tr.brk th.tgut .h{color:var(--ink-3)}
 .mom-chip{font-family:var(--mono);font-size:.72rem;font-weight:600;color:var(--ink-2);background:var(--bg-2);border:1px solid var(--line-2);border-radius:5px;padding:.04rem .34rem;line-height:1.5;cursor:default}
 .mom-cell.is-coord .mom-chip{background:#fff;border-color:#cfe0c4}
 .mom-note{font-size:.66rem;color:#5f7a52;font-style:italic;margin-top:1px}
+/* "Entrada y Asamblea" como matriz: una fila por aula (clase en la 1ª columna), filas bajas */
+.mom-table--matrix .mom-lbl{font-weight:600;font-size:.78rem;color:var(--ink);white-space:nowrap;padding:.2rem .6rem;background:var(--bg-2)}
+.mom-table--matrix .mom-cell{min-height:0;padding:.16rem .5rem;flex-direction:row;flex-wrap:wrap;align-items:center;gap:.25rem}
+.mom-table--matrix .mom-note{margin:0}
+.mom-ther{display:inline-flex;align-items:center;gap:.25rem;margin-right:.55rem}
+.mom-ther .mom-pref{font-weight:600;font-size:.68rem;color:var(--ink-2)}
 .mom-e__nl{color:var(--ink-3);font-size:.74rem}
 /* leyenda de códigos */
 .mom-legend{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem .7rem;padding:.9rem 1.1rem;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)}

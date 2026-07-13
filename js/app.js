@@ -485,7 +485,7 @@
           const first = (am[2].split('+')[0].trim().match(CODE_RE) || [])[1];
           const prefA = am[1] === 'Conjunta' ? 'Conjunta' : (TUTOR_AULA[first] || 'Asamblea');
           const chipsA = am[2].split('+').map(s => { s = s.trim(); const m = s.match(CODE_RE); return m ? { code: m[1], nombre: (m[2] || '').trim() || (DIR[m[1]] ? DIR[m[1]].nombre : '') } : { code: s, nombre: '' }; }).filter(c => c.code);
-          entries.push({ chips: chipsA, pref: prefA, nota: '', coord: false, asm: am[1] === 'Asamblea' });
+          entries.push({ chips: chipsA, pref: prefA, nota: '', coord: false, asm: am[1] === 'Asamblea', conj: am[1] === 'Conjunta' });
           return;
         }
         let pref = '';
@@ -519,20 +519,46 @@
       .trim();
     // Título: sin subtítulo (fuera lo de " — ..."), la hora sale como meta (sin paréntesis),
     // y las comidas se numeran "Turno N de comida".
+    // "Entrada y Asamblea": matriz aula×día. Primera columna = la clase; cada celda, quién la
+    // toca ese día (una fila por aula, poca altura). Las asambleas cubiertas van en verde.
+    function entradaMatrix(b) {
+      const ORDER = ['Estrella', 'Sol', 'Norte', 'Luna', 'Este'];
+      const perDay = {};
+      DIAS.forEach(d => { const arr = (b.filas && b.filas[0] && b.filas[0].dias && b.filas[0].dias[d]) || []; perDay[d] = parseLines(arr.join('\n')); });
+      const chipsHtml = es => es.length ? es.map(e => `<span class="mom-chips">${e.chips.map(chip).join('')}</span>${e.nota ? `<span class="mom-note">${esc(e.nota)}</span>` : ''}`).join('') : '<span class="mom-e__nl">·</span>';
+      const rowHtml = (label, pick) => `<tr><th class="mom-lbl" scope="row">${esc(label)}</th>${DIAS.map(d => { const es = pick(d); return `<td class="mom-c${es.some(e => e.coord) ? ' is-coord' : ''}" data-day="${d}"><div class="mom-cell">${chipsHtml(es)}</div></td>`; }).join('')}</tr>`;
+      // filas de aula (solo el asamblea: quién la toca)
+      const aulaByPref = {}; const aulas = [];
+      DIAS.forEach(d => perDay[d].filter(e => e.asm).forEach(e => { if (!(e.pref in aulaByPref)) { aulaByPref[e.pref] = {}; aulas.push(e.pref); } (aulaByPref[e.pref][d] = aulaByPref[e.pref][d] || []).push(e); }));
+      aulas.sort((a, x) => { const ia = ORDER.indexOf(a), ix = ORDER.indexOf(x); return (ia < 0 ? 99 : ia) - (ix < 0 ? 99 : ix) || a.localeCompare(x); });
+      let rows = aulas.map(p => rowHtml(p, d => aulaByPref[p][d] || [])).join('');
+      // fila Conjunta (EBO)
+      rows += rowHtml('Conjunta', d => perDay[d].filter(e => e.conj));
+      // fila Terapeutas: dónde está cada grupo EBO ese día ("aula: códigos")
+      const isTher = e => !e.asm && !e.conj && e.pref;
+      if (DIAS.some(d => perDay[d].some(isTher))) {
+        rows += `<tr><th class="mom-lbl" scope="row">Terapeutas</th>${DIAS.map(d => {
+          const es = perDay[d].filter(isTher);
+          return `<td class="mom-c" data-day="${d}"><div class="mom-cell">${es.length ? es.map(e => `<span class="mom-ther"><span class="mom-pref">${esc(e.pref)}:</span><span class="mom-chips">${e.chips.map(chip).join('')}</span></span>`).join('') : '<span class="mom-e__nl">·</span>'}</div></td>`;
+        }).join('')}</tr>`;
+      }
+      return rows;
+    }
     const blockHtml = (b, comidaNo) => {
       const raw = clean((b.titulo || '').split(' — ')[0]).trim();
       const mh = raw.match(/(\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2})/);   // clean ya pasó – a -
       const hora = mh ? mh[1].replace(/\s+/g, '') : '';
       let name = raw.replace(/\s*\([^)]*\)/g, '').replace(/\s*·\s*turno.*/i, '').trim();
       if (comidaNo) name = 'Turno ' + comidaNo + ' de comida';
-      const rows = (b.filas || []).map(f =>
+      const isEntrada = /Entrada|Asamblea/i.test(name);
+      const rows = isEntrada ? entradaMatrix(b) : (b.filas || []).map(f =>
         `<tr><th class="mom-lbl" scope="row">${esc(label(f.label))}</th>${DIAS.map(d => `<td class="mom-c" data-day="${d}">${cell(f.dias && f.dias[d])}</td>`).join('')}</tr>`).join('');
       return `<div class="mom-block"><div class="mom-head"><h3>${esc(name)}</h3>${hora ? `<span class="mom-head__hora">${esc(hora)}</span>` : ''}</div>` +
-        `<div class="grid-scroll"><table class="mom-table"><thead><tr><th></th>${DIAS.map(d => `<th>${esc(d)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div></div>`;
+        `<div class="grid-scroll"><table class="mom-table${isEntrada ? ' mom-table--matrix' : ''}"><thead><tr><th></th>${DIAS.map(d => `<th>${esc(d)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div></div>`;
     };
     // Tres grupos que se pueden imprimir por separado (cada uno con su botón):
     // coordinaciones/asambleas, patios+comedores y turnos de comida.
-    const groupOf = t => /^Comida/i.test(t) ? 'comida' : /patio|comedor/i.test(t) ? 'patios' : 'coord';
+    const groupOf = t => /\bComida\b/i.test(t) ? 'comida' : /patio|comedor/i.test(t) ? 'patios' : 'coord';
     const GROUPS = [
       { id: 'coord',  label: 'Coordinaciones y asambleas' },
       { id: 'patios', label: 'Patios y comedores' },
