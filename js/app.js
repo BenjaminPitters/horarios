@@ -102,6 +102,14 @@
     }
     return m.replace(/\s{2,}/g, " ").trim();
   }
+  // Aula de cada tutor (T1→Estrella…) y compañeros de una franja (los OTROS adultos del aula):
+  // sirve para sustituir "(apoyo)" por con quién está realmente ese adulto.
+  const TUTOR_AULA = {}; for (const _a of Object.keys(H.clases || {})) TUTOR_AULA[H.clases[_a].tutor] = _a;
+  function coAdultos(aula, day, franja, self) {
+    const cl = H.clases[aula]; if (!cl) return [];
+    const f = cl.filas.find(x => x.franja === franja); const c = f && f.dias[day];
+    return (c && c.adultos || []).filter(a => a !== self);
+  }
   function estadoColor(tipo) {
     if (!tipo || tipo === 'lectivo') return null;
     return (META.colores_estado && META.colores_estado[tipo]) ||
@@ -377,7 +385,14 @@
         // Anotaciones de salida externa (fuera del centro): líneas que empiezan por "⇱".
         const extLines = rawLines.filter(l => l.startsWith('⇱')).map(l => l.replace(/^⇱\s*/, '').trim());
         // Quitar la "L · " (marca de Lectivo) del inicio de la línea principal.
-        const mainLine = (rawLines.filter(l => !l.startsWith('↗') && !l.startsWith('⇱'))[0] || '').replace(/^L\s*·\s*/, '');
+        let mainLine = (rawLines.filter(l => !l.startsWith('↗') && !l.startsWith('⇱'))[0] || '').replace(/^L\s*·\s*/, '');
+        // "(apoyo)" -> con quién está: el otro adulto del aula en esa franja (según la rejilla).
+        if (/\(apoyo\)/i.test(mainLine)) {
+          const pref = (mainLine.match(/^([^:·]+):/) || [])[1];
+          const aula = (pref && H.clases[pref.trim()]) ? pref.trim() : TUTOR_AULA[mono];
+          const co = aula ? coAdultos(aula, day, f.franja, mono) : [];
+          mainLine = co.length ? mainLine.replace(/\s*\(apoyo\)/i, ' · ' + co.join('+')) : mainLine.replace(/\s*\(apoyo\)/i, ' · apoyo');
+        }
         const displayMain = formatMain(mainLine);   // sin paréntesis, con aula como prefijo
         // Color por ÁREA (igual que en Clases y en las fichas de los niños): si la línea
         // principal es un área, se pinta con su color; si no (p. ej. sesión individual de
