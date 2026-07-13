@@ -60,6 +60,7 @@
   /* ---- helpers ---- */
   const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, m => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[m]));
   const clean = s => String(s == null ? '' : s).replace(/[–—]/g, '-'); // sin en/em-dash
+  let orient = 'portrait';   // orientación de impresión elegida (vertical/horizontal)
   const el = (s, c) => (c || document).querySelector(s);
   const els = (s, c) => Array.prototype.slice.call((c || document).querySelectorAll(s));
   const codeNum = x => parseInt(String(x || '').replace(/\D/g, ''), 10) || 0;   // "T3" -> 3
@@ -249,13 +250,28 @@
   /* ============================================================
      REJILLA
      ============================================================ */
-  function banner(mono, name, role, meta) {
+  // "Imprimir todo" según el destino de la rejilla (no aparece dentro del contenedor #printall).
+  function paFromSel(sel) {
+    if (!sel || sel.indexOf('#printall') === 0) return null;
+    if (sel.indexOf('clases') >= 0) return { kind: 'clases', label: 'Imprimir todo el aula' };
+    if (sel.indexOf('especialistas') >= 0) return { kind: 'especialistas', label: 'Imprimir todos' };
+    if (sel.indexOf('terapeutas') >= 0) return { kind: 'terapeutas', label: 'Imprimir todos' };
+    return null;
+  }
+  function banner(mono, name, role, meta, printAll) {
+    const orientToggle = `<div class="orient noprint" role="group" aria-label="Orientación de impresión">
+        <button class="orient__opt${orient === 'portrait' ? ' is-active' : ''}" data-orient="portrait" type="button">Vertical</button>
+        <button class="orient__opt${orient === 'landscape' ? ' is-active' : ''}" data-orient="landscape" type="button">Horizontal</button>
+      </div>`;
+    const printAllBtn = printAll
+      ? `<button class="gb-print printall-btn noprint" type="button" data-printall="${esc(printAll.kind)}"><span class="gb-print__ico">${ICON.printer}</span>${esc(printAll.label)}</button>`
+      : '';
     return `<div class="gridbanner">
       <span class="gridbanner__mono">${esc(mono)}</span>
       <div><div class="gridbanner__name">${esc(name)}</div>${role ? `<div class="gridbanner__role">${esc(role)}</div>` : ''}</div>
       <div class="gridbanner__right">
         ${meta ? `<span class="gridbanner__meta">${esc(meta)}</span>` : ''}
-        <button class="gb-print noprint" type="button" aria-label="Imprimir este horario"><span class="gb-print__ico">${ICON.printer}</span>Imprimir</button>
+        <div class="gridbanner__print">${orientToggle}${printAllBtn}<button class="gb-print gb-print--one noprint" type="button" aria-label="Imprimir este horario"><span class="gb-print__ico">${ICON.printer}</span>Imprimir</button></div>
       </div>
     </div>`;
   }
@@ -327,7 +343,7 @@
       // Filas de clase con altura uniforme (caben asignatura de 2 líneas + chips).
       return `<tr>${gut(f.franja, f.hora, CLASE_ROW)}${cells}</tr>`;
     }).join('');
-    mount(sel || '[data-grid="clases"]', shell(banner('Aula', aula, 'Tutor/a ' + (cl.tutor_nombre || cl.tutor || ''), cl.tutor || ''), rows));
+    mount(sel || '[data-grid="clases"]', shell(banner('Aula', aula, 'Tutor/a ' + (cl.tutor_nombre || cl.tutor || ''), cl.tutor || '', paFromSel(sel || '[data-grid="clases"]')), rows));
   }
 
   // ---- PERSONA ----
@@ -379,7 +395,7 @@
       }).join('');
       return `<tr>${gut(f.franja, f.hora)}${cells}</tr>`;
     }).join('');
-    mount(sel, shell(banner(mono, persona.nombre, persona.rol || '', ''), rows));
+    mount(sel, shell(banner(mono, persona.nombre, persona.rol || '', '', paFromSel(sel)), rows));
   }
 
   // ---- ALUMNO (un niño) ----
@@ -407,7 +423,7 @@
       }).join('');
       return `<tr>${gut(f.franja, f.hora)}${cells}</tr>`;
     }).join('');
-    mount(sel, shell(banner(clase, nombre, 'Alumno/a · aula ' + clase, ''), rows));
+    mount(sel, shell(banner(clase, nombre, 'Alumno/a · aula ' + clase, '', paFromSel(sel)), rows));
   }
 
   // ---- TURNOS (coordinaciones, patios y comedores) — desde H.momentos ----
@@ -522,8 +538,9 @@
 
   function mount(sel, html) {
     const host = el(sel); host.innerHTML = html;
-    const pb = el('.gb-print', host);
-    if (pb) pb.addEventListener('click', () => window.print());
+    els('.gb-print--one', host).forEach(b => b.addEventListener('click', () => window.print()));           // imprimir este horario
+    els('[data-printall]', host).forEach(b => b.addEventListener('click', () => handlePrintAll(b.dataset.printall)));  // imprimir todo
+    els('[data-orient]', host).forEach(b => b.addEventListener('click', () => setOrient(b.dataset.orient)));           // orientación
     els('[data-tip]', host).forEach(n => {
       n.addEventListener('mouseenter', () => showTip(n));
       n.addEventListener('mousemove', moveTip);
@@ -624,21 +641,24 @@
   function printAllPersonas(lista) {
     printItems(lista.map(p => (sel => renderPersona(sel, p.code, p.data))));
   }
-  function wirePrintAll() {
-    els('[data-printall]').forEach(btn => {
-      const ico = el('.gb-print__ico', btn); if (ico && !ico.innerHTML.trim()) ico.innerHTML = ICON.printer;
-      btn.addEventListener('click', () => {
-      const kind = btn.dataset.printall;
-      if (kind === 'clases') {
-        const act = el('.picker[data-for="clases"] .pk.is-active');
-        printAllAula(act && act.dataset.key);
-      } else if (kind === 'especialistas') {
-        printAllPersonas(Object.keys(H.especialistas).sort(byCode(k => k)).map(k => ({ code: k, data: H.especialistas[k] })));
-      } else if (kind === 'terapeutas') {
-        printAllPersonas(terGroups().flatMap(g => Object.keys(H.terapeutas[g] || {}).sort(byCode(k => k)).map(k => ({ code: k, data: H.terapeutas[g][k] }))));
-      }
-      });
-    });
+  function handlePrintAll(kind) {
+    if (kind === 'clases') {
+      const act = el('.picker[data-for="clases"] .pk.is-active');
+      printAllAula(act && act.dataset.key);
+    } else if (kind === 'especialistas') {
+      printAllPersonas(Object.keys(H.especialistas).sort(byCode(k => k)).map(k => ({ code: k, data: H.especialistas[k] })));
+    } else if (kind === 'terapeutas') {
+      printAllPersonas(terGroups().flatMap(g => Object.keys(H.terapeutas[g] || {}).sort(byCode(k => k)).map(k => ({ code: k, data: H.terapeutas[g][k] }))));
+    }
+  }
+  // Orientación de impresión: un <style id="pageOrient"> controla @page. margin-top holgado para
+  // que el logo fijo (arriba a la derecha en todas las páginas) no pise el contenido.
+  function setOrient(o) {
+    orient = o === 'landscape' ? 'landscape' : 'portrait';
+    let st = el('#pageOrient');
+    if (!st) { st = document.createElement('style'); st.id = 'pageOrient'; document.head.appendChild(st); }
+    st.textContent = `@page{ size:A4 ${orient}; margin:16mm 8mm 9mm; }`;
+    els('[data-orient]').forEach(b => b.classList.toggle('is-active', b.dataset.orient === orient));
   }
 
   /* tooltip */
@@ -737,6 +757,6 @@
     });
   })();
 
-  wirePrintAll();
+  setOrient(orient);   // crea el <style> de @page (vertical por defecto)
   renderInicio(); rendered.inicio = true;
 })();

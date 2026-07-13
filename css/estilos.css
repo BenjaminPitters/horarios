@@ -211,6 +211,12 @@ img{max-width:100%}
 .gridbanner__role{font-size:.82rem;color:var(--ink-3);margin-top:1px}
 .gridbanner__meta{font-family:var(--mono);font-size:.74rem;color:var(--ink-3)}
 .gridbanner__right{margin-left:auto;display:flex;align-items:center;gap:.85rem;flex:none}
+/* Controles de impresión apilados: orientación · "Imprimir todo" · "Imprimir" */
+.gridbanner__print{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem}
+.orient{display:inline-flex;border:1px solid var(--line-2);border-radius:var(--r-pill);overflow:hidden;background:var(--paper)}
+.orient__opt{border:0;background:transparent;color:var(--ink-3);font:inherit;font-size:.72rem;font-weight:500;padding:.26rem .62rem;cursor:pointer;transition:background .14s,color .14s}
+.orient__opt.is-active{background:var(--ink);color:#fff}
+.orient__opt:not(.is-active):hover{color:var(--ink)}
 .gb-print{
   display:inline-flex;align-items:center;gap:.4rem;white-space:nowrap;
   border:1px solid var(--line-2);background:var(--paper);color:var(--ink-2);
@@ -384,8 +390,9 @@ tr.brk th.tgut .h{color:var(--ink-3)}
 
   .landing{grid-template-columns:1fr;gap:1.6rem;align-items:start}
   .viewhead{align-items:stretch}
-  .viewhead__right{width:100%;align-items:stretch}
-  .printall-btn{align-self:flex-start}
+  .gridbanner{flex-wrap:wrap}
+  .gridbanner__right{margin-left:0;width:100%}
+  .gridbanner__print{align-items:flex-start}
   .picker,.picker-stack{justify-content:flex-start;align-items:stretch}
   .picker{flex-wrap:nowrap;overflow-x:auto;padding-bottom:.25rem}
   .picker,.picker-stack{min-width:0;max-width:100%;width:100%}
@@ -446,7 +453,9 @@ tr.brk th.tgut .h{color:var(--ink-3)}
    Un horario por página, en horizontal, con el mismo aspecto que la web.
    Se ANULA por completo el modo móvil (tabla apilada) y se compacta. */
 @media print{
-  @page{ size:A4 portrait; margin:8mm; }
+  /* @page real lo fija JS (#pageOrient) según vertical/horizontal; esto es el respaldo.
+     margen superior holgado para que el logo fijo no pise el contenido. */
+  @page{ size:A4 portrait; margin:16mm 8mm 9mm; }
   *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
   html,body{ background:#fff !important; }
 
@@ -468,7 +477,9 @@ tr.brk th.tgut .h{color:var(--ink-3)}
   .printhead__meta{ display:flex; flex-direction:column; gap:.4mm; }
   .printhead__title{ font-size:12pt; font-weight:700; letter-spacing:-.01em; color:#2a2320; }
   .printhead__sub{ font-family:var(--mono); font-size:7.5pt; letter-spacing:.03em; color:#8b827d; }
-  .printhead__logo{ height:13mm; width:auto; margin-left:auto; display:block; object-fit:contain; }
+  /* El logo se fija: aparece arriba a la derecha en TODAS las páginas (position:fixed se
+     repite en cada hoja al imprimir en Chrome). El margen superior de @page le deja sitio. */
+  .printhead__logo{ position:fixed; top:5mm; right:8mm; height:11mm; width:auto; display:block; object-fit:contain; z-index:100; }
 
   .grid-host{ box-shadow:none !important; border:1px solid #d8d2ce !important; border-radius:4px !important; break-inside:avoid; }
   .gridbanner{ padding:2mm 3mm !important; }
