@@ -312,7 +312,7 @@
   const CLASE_ROW = 66;
   // La hora del dato es solo el inicio, así que la duración se sabe por la franja:
   // 45 min → Comida, Patio tarde y Coordinación; el resto son 30 min.
-  const DUR45 = new Set(['Comida', 'Patio tarde', 'Coord']);
+  const DUR45 = new Set(['Comida', 'Patio tarde', 'Coord', 'Coord.']);   // franjas de 45 min
   const durMin = fr => DUR45.has(fr) ? 45 : 30;
   const rowH = (fr, base) => Math.round((base || BASE_ROW) * durMin(fr) / 30);
   const gut = (fr, hora, base) => `<th class="tgut" scope="row" style="height:${rowH(fr, base)}px"><span class="f">${esc(clean(fr))}</span>${hora ? `<span class="h">${esc(clean(hora))}</span>` : ''}</th>`;
@@ -720,7 +720,7 @@
     orient = o === 'landscape' ? 'landscape' : 'portrait';
     let st = el('#pageOrient');
     if (!st) { st = document.createElement('style'); st.id = 'pageOrient'; document.head.appendChild(st); }
-    st.textContent = `@page{ size:A4 ${orient}; margin:16mm 8mm 9mm; }`;
+    st.textContent = `@page{ size:A4 ${orient}; margin:20mm 8mm 9mm; }`;
     els('[data-orient]').forEach(b => b.classList.toggle('is-active', b.dataset.orient === orient));
   }
 

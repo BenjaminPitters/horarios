@@ -461,7 +461,7 @@ tr.brk th.tgut .h{color:var(--ink-3)}
 @media print{
   /* @page real lo fija JS (#pageOrient) según vertical/horizontal; esto es el respaldo.
      margen superior holgado para que el logo fijo no pise el contenido. */
-  @page{ size:A4 portrait; margin:16mm 8mm 9mm; }
+  @page{ size:A4 portrait; margin:20mm 8mm 9mm; }
   *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
   html,body{ background:#fff !important; }
 
@@ -485,7 +485,7 @@ tr.brk th.tgut .h{color:var(--ink-3)}
   .printhead__sub{ font-family:var(--mono); font-size:7.5pt; letter-spacing:.03em; color:#8b827d; }
   /* El logo se fija: aparece arriba a la derecha en TODAS las páginas (position:fixed se
      repite en cada hoja al imprimir en Chrome). El margen superior de @page le deja sitio. */
-  .printhead__logo{ position:fixed; top:5mm; right:8mm; height:11mm; width:auto; display:block; object-fit:contain; z-index:100; }
+  .printhead__logo{ position:fixed; top:4mm; right:8mm; height:12mm; width:auto; display:block; object-fit:contain; z-index:100; background:#fff; }
 
   .grid-host{ box-shadow:none !important; border:1px solid #d8d2ce !important; border-radius:4px !important; break-inside:avoid; }
   .gridbanner{ padding:2mm 3mm !important; }
