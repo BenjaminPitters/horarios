@@ -534,14 +534,6 @@
       let rows = aulas.map(p => rowHtml(p, d => aulaByPref[p][d] || [])).join('');
       // fila Conjunta (EBO)
       rows += rowHtml('Conjunta', d => perDay[d].filter(e => e.conj));
-      // fila Terapeutas: dónde está cada grupo EBO ese día ("aula: códigos")
-      const isTher = e => !e.asm && !e.conj && e.pref;
-      if (DIAS.some(d => perDay[d].some(isTher))) {
-        rows += `<tr><th class="mom-lbl" scope="row">Terapeutas</th>${DIAS.map(d => {
-          const es = perDay[d].filter(isTher);
-          return `<td class="mom-c" data-day="${d}"><div class="mom-cell">${es.length ? es.map(e => `<span class="mom-ther"><span class="mom-pref">${esc(e.pref)}:</span><span class="mom-chips">${e.chips.map(chip).join('')}</span></span>`).join('') : '<span class="mom-e__nl">·</span>'}</div></td>`;
-        }).join('')}</tr>`;
-      }
       return rows;
     }
     // Comedores como matriz: 1ª columna = el comedor (aula). El dato viene plano, así que se
@@ -600,7 +592,7 @@
         </div>${bs.map((b, i) => blockHtml(b, g.id === 'comida' ? i + 1 : 0)).join('')}</div>`;
     }).join('');
     const codes = Object.keys(DIR).sort((a, b) => a.replace(/\d+/, '').localeCompare(b.replace(/\d+/, '')) || codeNum(a) - codeNum(b));
-    const legend = `<div class="mom-legend"><span class="mom-legend__t">Códigos</span>${codes.map(c => `<span class="cod"><b>${esc(c)}</b> ${esc(DIR[c].nombre)}</span>`).join('')}<span class="mom-legend__hint">verde = coordinación del tutor</span></div>`;
+    const legend = `<div class="mom-legend"><span class="mom-legend__t">Códigos</span>${codes.map(c => `<span class="cod"><b>${esc(c)}</b> ${esc(DIR[c].nombre)}</span>`).join('')}<span class="mom-legend__hint">verde = coordinación de la tutora</span></div>`;
     // En móvil las tablas van día a día (como el resto): una sola day-switch las controla todas.
     host.innerHTML = '<div class="mom-dayswitch noprint">' + daySwitch() + '</div>' + groups + legend;
     // Cada botón marca el <body> con el grupo a imprimir; el CSS de impresión oculta el resto.
