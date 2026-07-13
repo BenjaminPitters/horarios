@@ -404,7 +404,7 @@ tr.brk th.tgut .h{color:var(--ink-3)}
   .landing{grid-template-columns:1fr;gap:1.6rem;align-items:start}
   .viewhead{flex-direction:column;align-items:stretch}
   .viewhead__lead{width:100%}
-  .printbar{align-items:flex-start}
+  .printbar{flex-direction:row;flex-wrap:wrap;align-items:center;gap:.6rem}   /* móvil: orientación e "Imprimir todo" en la misma fila */
   .picker,.picker-stack{justify-content:flex-start;align-items:stretch}
   .picker{flex-wrap:nowrap;overflow-x:auto;padding-bottom:.25rem}
   .picker,.picker-stack{min-width:0;max-width:100%;width:100%}
