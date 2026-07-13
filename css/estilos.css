@@ -276,10 +276,14 @@ td.cell:last-child{border-right:0}
 /* comedor: siempre en una línea, igual todos los días */
 .cx--1line{justify-content:center}
 .cx--1line .cx__txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-/* Fila de transición corta (< 30 min, p. ej. la transición de patio de I2): compacta (~40px),
-   no ocupa la altura del patio de tarde completo. */
-tr.short .cx{min-height:34px;padding-top:.24rem;padding-bottom:.24rem}
+/* Fila de transición corta (< 30 min, p. ej. la transición de patio de I2): compacta (~40px).
+   La altura la marca el gutter (la etiqueta "Patio tarde" se parte en 2 líneas), así que hay
+   que compactar TAMBIÉN el gutter, no solo las celdas. */
+tr.short .cx{min-height:0;padding-top:.22rem;padding-bottom:.22rem}
 tr.short .cx__txt{font-size:.78rem;white-space:nowrap}
+tr.short th.tgut{padding-top:.22rem;padding-bottom:.22rem;line-height:1.03}
+tr.short th.tgut .f{font-size:.72rem}
+tr.short th.tgut .h{font-size:.62rem;margin-top:0}
 .cx__codes{display:flex;flex-wrap:nowrap;gap:3px;margin-top:1px;overflow:hidden}
 .code{
   font-family:var(--mono);font-size:.68rem;font-weight:500;color:var(--ink-2);
