@@ -276,6 +276,10 @@ td.cell:last-child{border-right:0}
 /* comedor: siempre en una línea, igual todos los días */
 .cx--1line{justify-content:center}
 .cx--1line .cx__txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* Fila de transición corta (< 30 min, p. ej. la transición de patio de I2): compacta (~40px),
+   no ocupa la altura del patio de tarde completo. */
+tr.short .cx{min-height:34px;padding-top:.24rem;padding-bottom:.24rem}
+tr.short .cx__txt{font-size:.78rem;white-space:nowrap}
 .cx__codes{display:flex;flex-wrap:nowrap;gap:3px;margin-top:1px;overflow:hidden}
 .code{
   font-family:var(--mono);font-size:.68rem;font-weight:500;color:var(--ink-2);

@@ -313,9 +313,16 @@
   // La hora del dato es solo el inicio, así que la duración se sabe por la franja:
   // 45 min → Comida, Patio tarde y Coordinación; el resto son 30 min.
   const DUR45 = new Set(['Comida', 'Patio tarde', 'Coord', 'Coord.']);   // franjas de 45 min
-  const durMin = fr => DUR45.has(fr) ? 45 : 30;
-  const rowH = (fr, base) => Math.round((base || BASE_ROW) * durMin(fr) / 30);
-  const gut = (fr, hora, base) => `<th class="tgut" scope="row" style="height:${rowH(fr, base)}px"><span class="f">${esc(clean(fr))}</span>${hora ? `<span class="h">${esc(clean(hora))}</span>` : ''}</th>`;
+  // Si la hora es un RANGO ("13:45–14:00") la duración sale de ahí — así la transición de patio
+  // de I2 (15 min) no ocupa la altura del patio de tarde completo (45 min). Si es solo el inicio,
+  // se usa la duración por defecto de la franja.
+  const durMin = (fr, hora) => {
+    const m = hora && String(hora).match(/(\d{1,2}):(\d{2})\s*[–-]\s*(\d{1,2}):(\d{2})/);
+    if (m) return (+m[3] * 60 + +m[4]) - (+m[1] * 60 + +m[2]);
+    return DUR45.has(fr) ? 45 : 30;
+  };
+  const rowH = (fr, base, hora) => Math.round((base || BASE_ROW) * durMin(fr, hora) / 30);
+  const gut = (fr, hora, base) => `<th class="tgut" scope="row" style="height:${rowH(fr, base, hora)}px"><span class="f">${esc(clean(fr))}</span>${hora ? `<span class="h">${esc(clean(hora))}</span>` : ''}</th>`;
   const brkRow = (fr, hora, base) => `<tr class="brk">${gut(fr, hora, base)}<td colspan="${DIAS.length}"><div class="brk__rule"><span>${esc(clean(fr))} ${esc(clean(hora || ''))}</span></div></td></tr>`;
 
   // Fila sintética de coordinación general (no viene en el dato): martes 16:00-16:45.
@@ -369,6 +376,7 @@
     // + coordinación general (martes), salvo para quien no va (Ps3, L3, I2).
     const filas = NO_COORD.has(mono) ? persona.filas : persona.filas.concat([COORD_ROW]);
     const rows = filas.map(f => {
+      const short = durMin(f.franja, f.hora) < 30;   // franja < 30 min (transición de patio de I2): fila compacta
       const cells = DIAS.map(day => {
         const c = f.dias[day] || {};
         // El txt puede ser multilínea: actividad principal + líneas "↗ alumno→dest".
@@ -393,6 +401,7 @@
           const co = aula ? coAdultos(aula, day, f.franja, mono) : [];
           mainLine = co.length ? mainLine.replace(/\s*\(apoyo\)/i, ' · ' + co.join('+')) : mainLine.replace(/\s*\(apoyo\)/i, ' · apoyo');
         }
+        if (short) mainLine = mainLine.replace(/^Transici[oó]n de patio$/i, 'Transición');   // 1 línea en la fila compacta
         const displayMain = formatMain(mainLine);   // sin paréntesis, con aula como prefijo
         // Color por ÁREA (igual que en Clases y en las fichas de los niños): si la línea
         // principal es un área, se pinta con su color; si no (p. ej. sesión individual de
@@ -420,7 +429,7 @@
         return `<td class="cell${hasSal ? ' cell--sal' : ''}" data-day="${day}" data-mk="${esc(mk)}"${style}${tipAttr}>
           <div class="cx${oneLine}"><span class="${muted ? 'cx__nl' : 'cx__txt'}">${esc(displayMain || '·')}</span>${room}${salHTML}${extHTML}</div></td>`;
       }).join('');
-      return `<tr>${gut(f.franja, f.hora)}${cells}</tr>`;
+      return `<tr${short ? ' class="short"' : ''}>${gut(f.franja, f.hora)}${cells}</tr>`;
     }).join('');
     mount(sel, shell(banner(mono, persona.nombre, persona.rol || '', '', paFromSel(sel)), rows));
   }
