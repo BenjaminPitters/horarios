@@ -328,7 +328,8 @@ tr.brk th.tgut .h{color:var(--ink-3)}
 .mom-head__hora{margin-left:auto;font-family:var(--mono);font-size:.74rem;color:var(--ink-3);white-space:nowrap}
 .mom-table{border-collapse:separate;border-spacing:0;width:100%;min-width:680px;font-size:.82rem;table-layout:fixed}
 .mom-table thead th{position:sticky;top:0;z-index:1;background:var(--bg-2);color:var(--ink-2);font-size:.76rem;text-transform:uppercase;letter-spacing:.02em;font-weight:600;text-align:left;padding:.6rem .55rem;border-bottom:1px solid var(--line-2)}
-.mom-table thead th:first-child{width:112px;padding-left:1.05rem}
+/* la 1ª columna estrecha SOLO cuando es la etiqueta (aula/comedor); en patios/comidas todas iguales */
+.mom-table:not(.mom-table--nolbl) thead th:first-child{width:112px;padding-left:1.05rem}
 .mom-lbl{text-align:left;font-weight:600;color:var(--ink);font-size:.8rem;padding:.4rem .6rem .4rem 1.05rem;border-bottom:1px solid var(--line);border-right:1px solid var(--line);vertical-align:middle;background:var(--paper);line-height:1.2}
 .mom-c{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:0;vertical-align:top}
 .mom-c:last-child{border-right:0}

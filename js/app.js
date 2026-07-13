@@ -544,6 +544,26 @@
       }
       return rows;
     }
+    // Comedores como matriz: 1ª columna = el comedor (aula). El dato viene plano, así que se
+    // agrupa por tutor: cada T1–T7 abre un comedor (su aula) y los códigos siguientes son su apoyo.
+    function comedorMatrix(b) {
+      const ORDER = ['Estrella', 'Sol', 'Norte', 'Luna', 'Este', 'Oeste', 'Sur'];
+      const byAula = {}; const aulas = [];
+      DIAS.forEach(d => {
+        const arr = (b.filas && b.filas[0] && b.filas[0].dias && b.filas[0].dias[d]) || [];
+        let cur = null;
+        arr.forEach(x => {
+          const m = clean(x).trim().match(CODE_RE); const c = m ? m[1] : clean(x).trim().split(/\s+/)[0];
+          if (/^T[1-7]$/.test(c)) { const aula = TUTOR_AULA[c] || c; if (!(aula in byAula)) { byAula[aula] = {}; aulas.push(aula); } cur = (byAula[aula][d] = byAula[aula][d] || []); }
+          if (cur && c) cur.push({ code: c, nombre: (m ? (m[2] || '') : '').trim() || (DIR[c] ? DIR[c].nombre : '') });
+        });
+      });
+      aulas.sort((a, x) => { const ia = ORDER.indexOf(a), ix = ORDER.indexOf(x); return (ia < 0 ? 99 : ia) - (ix < 0 ? 99 : ix) || a.localeCompare(x); });
+      return aulas.map(a => `<tr><th class="mom-lbl" scope="row">${esc(a)}</th>${DIAS.map(d => {
+        const cs = byAula[a][d] || [];
+        return `<td class="mom-c" data-day="${d}"><div class="mom-cell">${cs.length ? `<span class="mom-chips">${cs.map(chip).join('')}</span>` : '<span class="mom-e__nl">·</span>'}</div></td>`;
+      }).join('')}</tr>`).join('');
+    }
     const blockHtml = (b, comidaNo) => {
       const raw = clean((b.titulo || '').split(' — ')[0]).trim();
       const mh = raw.match(/(\d{1,2}:\d{2}\s*-\s*\d{1,2}:\d{2})/);   // clean ya pasó – a -
@@ -551,12 +571,14 @@
       let name = raw.replace(/\s*\([^)]*\)/g, '').replace(/\s*·\s*turno.*/i, '').trim();
       if (comidaNo) name = 'Turno ' + comidaNo + ' de comida';
       const isEntrada = /Entrada|Asamblea/i.test(name);
-      // ¿alguna fila lleva etiqueta de aula/comedor? Si no (patios, comidas…), fuera la 1ª columna vacía.
-      const hasLbl = isEntrada || (b.filas || []).some(f => label(f.label).trim());
+      const isComedor = /Comedor/i.test(name);
+      const isMatrix = isEntrada || isComedor;
+      // ¿alguna fila lleva etiqueta? Si no (patios, comidas…), fuera la 1ª columna vacía.
+      const hasLbl = isMatrix || (b.filas || []).some(f => label(f.label).trim());
       const lblTh = hasLbl ? '<th></th>' : '';
-      const rows = isEntrada ? entradaMatrix(b) : (b.filas || []).map(f =>
+      const rows = isEntrada ? entradaMatrix(b) : isComedor ? comedorMatrix(b) : (b.filas || []).map(f =>
         `<tr>${hasLbl ? `<th class="mom-lbl" scope="row">${esc(label(f.label))}</th>` : ''}${DIAS.map(d => `<td class="mom-c" data-day="${d}">${cell(f.dias && f.dias[d])}</td>`).join('')}</tr>`).join('');
-      const cls = 'mom-table' + (isEntrada ? ' mom-table--matrix' : '') + (hasLbl ? '' : ' mom-table--nolbl');
+      const cls = 'mom-table' + (isMatrix ? ' mom-table--matrix' : '') + (hasLbl ? '' : ' mom-table--nolbl');
       return `<div class="mom-block"><div class="mom-head"><h3>${esc(name)}</h3>${hora ? `<span class="mom-head__hora">${esc(hora)}</span>` : ''}</div>` +
         `<div class="grid-scroll"><table class="${cls}"><thead><tr>${lblTh}${DIAS.map(d => `<th>${esc(d)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div></div>`;
     };
