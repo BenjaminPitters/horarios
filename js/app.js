@@ -551,7 +551,7 @@
         });
       });
       aulas.sort((a, x) => { const ia = ORDER.indexOf(a), ix = ORDER.indexOf(x); return (ia < 0 ? 99 : ia) - (ix < 0 ? 99 : ix) || a.localeCompare(x); });
-      return aulas.map(a => `<tr><th class="mom-lbl" scope="row">${esc(a)}</th>${DIAS.map(d => {
+      return aulas.map(a => `<tr><th class="mom-lbl" scope="row">${esc(a === 'Luna' ? 'EBO/Luna' : a)}</th>${DIAS.map(d => {
         const cs = byAula[a][d] || [];
         return `<td class="mom-c" data-day="${d}"><div class="mom-cell">${cs.length ? `<span class="mom-chips">${cs.map(chip).join('')}</span>` : '<span class="mom-e__nl">·</span>'}</div></td>`;
       }).join('')}</tr>`).join('');
