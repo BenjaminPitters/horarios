@@ -64,8 +64,26 @@
   const els = (s, c) => Array.prototype.slice.call((c || document).querySelectorAll(s));
   const codeNum = x => parseInt(String(x || '').replace(/\D/g, ''), 10) || 0;   // "T3" -> 3
   const byCode = fn => (a, b) => codeNum(fn(a)) - codeNum(fn(b));
-  const asigColor = a => (META.colores_asignatura && META.colores_asignatura[a]) || '#D8D2CE';
+  const asigColor = a => (META.colores_asignatura && META.colores_asignatura[cleanAsig(a)]) || '#D8D2CE';
   const aulaColor = a => AULA_COLORS[a] || '#C9C2BD';
+  // Limpia el nombre de área para mostrar/colorear: quita (conj.), (1h), (2h)… (EF de Oeste/Sur).
+  function cleanAsig(a) { return String(a == null ? '' : a).replace(/\s*\((?:conj\.?|\d+\s*h)\)\s*$/i, '').trim(); }
+  // Tipo de sesión individual a partir del código del profesional (en vez de su nombre).
+  const SESION = c => /^TO/.test(c) ? 'Terapia Ocupacional'
+                    : /^L/.test(c) ? 'Logopedia'
+                    : /^(O|Ps)/.test(c) ? 'Estimulación Cognitiva' : String(c || '');
+  // Deduce el ÁREA de una línea de agenda (texto libre) para colorearla como en Clases.
+  const _ASIG_KEYS = Object.keys((META.colores_asignatura) || {}).sort((a, b) => b.length - a.length);
+  function areaDe(mainLine) {
+    let m = cleanAsig(String(mainLine || ''));
+    m = m.replace(/^[^:]{1,22}:\s*/, '');                       // prefijo de aula "Norte: ", "Oeste/Sur: "
+    m = m.replace(/\s*·\s*.*$/, '');                            // cola "· CÓD", "· apoyo"
+    m = cleanAsig(m.replace(/\s*\([^)]*\)\s*$/, '')).trim();    // "(apoyo)", "(Luna)"…
+    if (/^Est\.?\s*leng/i.test(m)) return 'Estimulación del Lenguaje';   // abreviatura
+    if (META.colores_asignatura && META.colores_asignatura[m]) return m;
+    for (const k of _ASIG_KEYS) if (m === k || m.startsWith(k + ' ')) return k;
+    return null;
+  }
   function estadoColor(tipo) {
     if (!tipo || tipo === 'lectivo') return null;
     return (META.colores_estado && META.colores_estado[tipo]) ||
@@ -258,13 +276,12 @@
   // BASE_ROW: filas de personas (1 línea). CLASE_ROW: filas de clase (asignatura + chips).
   const BASE_ROW = 54;
   const CLASE_ROW = 66;
-  const rowMin = hora => {
-    const m = String(hora || '').replace(/[–—]/g, '-').match(/(\d{1,2}):(\d{2})\s*-\s*(\d{1,2}):(\d{2})/);
-    const dur = m ? ((+m[3] * 60 + +m[4]) - (+m[1] * 60 + +m[2])) : 30;
-    return Math.max(30, dur);
-  };
-  const rowH = (hora, base) => Math.round((base || BASE_ROW) * rowMin(hora) / 30);
-  const gut = (fr, hora, base) => `<th class="tgut" scope="row" style="height:${rowH(hora, base)}px"><span class="f">${esc(clean(fr))}</span>${hora ? `<span class="h">${esc(clean(hora))}</span>` : ''}</th>`;
+  // La hora del dato es solo el inicio, así que la duración se sabe por la franja:
+  // 45 min → Comida, Patio tarde y Coordinación; el resto son 30 min.
+  const DUR45 = new Set(['Comida', 'Patio tarde', 'Coord']);
+  const durMin = fr => DUR45.has(fr) ? 45 : 30;
+  const rowH = (fr, base) => Math.round((base || BASE_ROW) * durMin(fr) / 30);
+  const gut = (fr, hora, base) => `<th class="tgut" scope="row" style="height:${rowH(fr, base)}px"><span class="f">${esc(clean(fr))}</span>${hora ? `<span class="h">${esc(clean(hora))}</span>` : ''}</th>`;
   const brkRow = (fr, hora, base) => `<tr class="brk">${gut(fr, hora, base)}<td colspan="${DIAS.length}"><div class="brk__rule"><span>${esc(clean(fr))} ${esc(clean(hora || ''))}</span></div></td></tr>`;
 
   // Fila sintética de coordinación general (no viene en el dato): martes 16:00-16:45.
@@ -298,9 +315,12 @@
           const tipAttr = hasSal
             ? ` data-tip='${esc(JSON.stringify({ salidas: salidas.map(s => ({ alumno: clean(s.alumno), a: clean(s.a), a_nombre: s.a_nombre ? clean(s.a_nombre) : null })) }))}'`
             : '';
+          // Clave de fusión: misma área + mismos adultos (así el apoyo NO se fusiona con el no-apoyo).
+          // Las salidas quedan fuera de la clave: al fusionar se combinan, no se pierden.
+          const mk = cleanAsig(c.asig) + '#' + (c.adultos || []).join(',') + '#' + externa.map(e => e.alumno + (e.desde || '')).join(';');
           // El tinte y la barra de color van en la <td> para que rellene toda la fila.
-          return `<td class="cell${hasSal ? ' cell--sal' : ''}${apoyo ? ' cell--apoyo' : ''}" data-day="${day}" style="background:${tint(col,.30)};border-left-color:${col}"${tipAttr}>
-            <div class="cx">${hasSal ? '<span class="cx__flag" aria-hidden="true">↗</span>' : ''}${apoyo ? '<span class="cx__apoyo" title="Franja con apoyo (2 adultos)" aria-label="Apoyo">+</span>' : ''}<span class="cx__asig">${esc(clean(c.asig))}</span>${codes ? `<span class="cx__codes">${codes}</span>` : ''}${extHTML}</div></td>`;
+          return `<td class="cell${hasSal ? ' cell--sal' : ''}${apoyo ? ' cell--apoyo' : ''}" data-day="${day}" data-mk="${esc(mk)}" style="background:${tint(col,.30)};border-left-color:${col}"${tipAttr}>
+            <div class="cx">${hasSal ? '<span class="cx__flag" aria-hidden="true">↗</span>' : ''}${apoyo ? '<span class="cx__apoyo" title="Franja con apoyo (2 adultos)" aria-label="Apoyo">+</span>' : ''}<span class="cx__asig">${esc(cleanAsig(c.asig))}</span>${codes ? `<span class="cx__codes">${codes}</span>` : ''}${extHTML}</div></td>`;
         }
         return `<td class="cell" data-day="${day}"><div class="cx"><span class="cx__nl">·</span></div></td>`;
       }).join('');
@@ -332,13 +352,11 @@
         const extLines = rawLines.filter(l => l.startsWith('⇱')).map(l => l.replace(/^⇱\s*/, '').trim());
         // Quitar la "L · " (marca de Lectivo) del inicio de la línea principal.
         const mainLine = (rawLines.filter(l => !l.startsWith('↗') && !l.startsWith('⇱'))[0] || '').replace(/^L\s*·\s*/, '');
-        // Color por aula. Si no viene el campo `aula` (p.ej. EF conjunta "Oeste/Sur"),
-        // lo deduzco del propio texto para que la celda no quede en blanco.
-        let col = c.aula ? aulaColor(c.aula) : null;
-        if (!col && c.tipo === 'lectivo') {
-          const am = /^([^:]+):/.exec(mainLine);
-          if (am) { const a0 = am[1].split('/')[0].trim(); if (AULA_COLORS[a0]) col = aulaColor(a0); }
-        }
+        // Color por ÁREA (igual que en Clases y en las fichas de los niños): si la línea
+        // principal es un área, se pinta con su color; si no (p. ej. sesión individual de
+        // terapeuta = nombre de niño), se cae al color del aula, y si no, al color de estado.
+        let area = c.tipo === 'lectivo' ? areaDe(mainLine) : null;
+        let col = area ? asigColor(area) : (c.aula ? aulaColor(c.aula) : null);
         if (!col) col = estadoColor(c.tipo);
         const muted = c.tipo === 'no_lectivo';
         const style = col ? ` style="background:${tint(col,.28)};border-left-color:${col}"` : '';
@@ -354,7 +372,9 @@
           ? `<div class="cx__ext">${extLines.map(t =>
               `<span class="cx__extrow"><span class="cx__exticon" aria-hidden="true">⇱</span><span>${esc(t)}</span></span>`).join('')}</div>`
           : '';
-        return `<td class="cell${hasSal ? ' cell--sal' : ''}" data-day="${day}"${style}${tipAttr}>
+        // Fusión de franjas consecutivas con la misma área (las salidas se combinan al fusionar).
+        const mk = area ? (area + '#' + (c.aula || '') + '#' + extLines.join(';')) : '';
+        return `<td class="cell${hasSal ? ' cell--sal' : ''}" data-day="${day}" data-mk="${esc(mk)}"${style}${tipAttr}>
           <div class="cx${oneLine}"><span class="${muted ? 'cx__nl' : 'cx__txt'}">${esc(mainLine || '·')}</span>${room}${salHTML}${extHTML}</div></td>`;
       }).join('');
       return `<tr>${gut(f.franja, f.hora)}${cells}</tr>`;
@@ -373,10 +393,10 @@
         if (!c) return empty(day);
         if (c.asig) {                                  // está en su aula -> color de asignatura
           const col = asigColor(c.asig);
-          return `<td class="cell" data-day="${day}" style="background:${tint(col,.30)};border-left-color:${col}"><div class="cx"><span class="cx__asig">${esc(clean(c.asig))}</span></div></td>`;
+          return `<td class="cell" data-day="${day}" data-mk="A#${esc(cleanAsig(c.asig))}" style="background:${tint(col,.30)};border-left-color:${col}"><div class="cx"><span class="cx__asig">${esc(cleanAsig(c.asig))}</span></div></td>`;
         }
-        if (c.salida) {                                // sale a terapia -> rosa + "↗ CÓD · Nombre"
-          const dest = c.dest_nombre ? ' · ' + clean(c.dest_nombre) : '';
+        if (c.salida) {                                // sale a terapia -> rosa + "↗ CÓD · Sesión"
+          const dest = ' · ' + SESION(c.salida);       // el TIPO de sesión, no el nombre del profesional
           return `<td class="cell" data-day="${day}" style="background:${SALIDA_BG};border-left-color:${SALIDA_LINE}"><div class="cx"><span class="cx__txt cx__go">↗ ${esc(clean(c.salida))}${esc(dest)}</span></div></td>`;
         }
         if (c.label) {                                 // mediodía / salida externa -> etiqueta
@@ -520,6 +540,61 @@
     }));
     els('.day-switch__dot', host).forEach(d => d.addEventListener('click', () => { state.day = parseInt(d.dataset.di, 10); syncDays(); }));
     host._paint = paint; paint();
+    mergeCells(host);
+  }
+  // Fusiona verticalmente celdas consecutivas idénticas (mismo data-mk) por columna. Mobile-safe:
+  // no borra celdas; la primera del bloque lleva rowspan y las siguientes se ocultan en escritorio
+  // (en móvil, que muestra un día a la vez, se vuelven a ver como celdas normales).
+  function mergeCells(host) {
+    const table = el('table.grid', host); if (!table) return;
+    const rows = els('tbody tr', table);
+    const mat = rows.map(tr => tr.classList.contains('brk') ? { brk: true } : { tds: els('td.cell', tr) });
+    for (let c = 0; c < DIAS.length; c++) {
+      let run = [];
+      const flush = () => { if (run.length > 1) combineRun(run); run = []; };
+      for (const row of mat) {
+        if (row.brk || !row.tds) { flush(); continue; }
+        const td = row.tds[c];
+        const mk = td && td.getAttribute('data-mk');
+        if (mk && run.length && run[run.length - 1].getAttribute('data-mk') === mk) run.push(td);
+        else { flush(); run = mk ? [td] : []; }
+      }
+      flush();
+    }
+  }
+  // Fusiona un bloque de celdas idénticas: la 1ª lleva rowspan; las demás se ocultan (escritorio).
+  // Las salidas que difieran entre franjas se COMBINAN en la celda líder para no perder nada.
+  function combineRun(run) {
+    const leader = run[0]; leader.rowSpan = run.length;
+    const lcx = el('.cx', leader);
+    const seen = new Set(els('.cx__salrow, .cx__extrow', lcx).map(n => n.textContent.replace(/\s+/g, ' ').trim()));
+    const parseTip = td => { try { return JSON.parse(td.getAttribute('data-tip') || '{}').salidas || []; } catch (e) { return []; } };
+    const tipSal = parseTip(leader);
+    for (let i = 1; i < run.length; i++) {
+      const td = run[i]; td.classList.add('cell--merged');
+      const ccx = el('.cx', td);
+      els('.cx__sal, .cx__ext', ccx).forEach(group => {
+        const cls = group.classList.contains('cx__ext') ? 'cx__ext' : 'cx__sal';
+        let target = el('.' + cls, lcx);
+        els(':scope > *', group).forEach(row => {
+          const t = row.textContent.replace(/\s+/g, ' ').trim();
+          if (seen.has(t)) return; seen.add(t);
+          if (!target) { target = document.createElement('div'); target.className = cls; lcx.appendChild(target); }
+          target.appendChild(row.cloneNode(true));
+        });
+      });
+      parseTip(td).forEach(s => { const k = s.alumno + '>' + s.a; if (!tipSal.some(x => x.alumno + '>' + x.a === k)) tipSal.push(s); });
+    }
+    if (tipSal.length) {
+      leader.setAttribute('data-tip', JSON.stringify({ salidas: tipSal }));
+      if (!leader.classList.contains('cell--sal')) {
+        leader.classList.add('cell--sal');
+        if (!el('.cx__flag', lcx)) { const f = document.createElement('span'); f.className = 'cx__flag'; f.setAttribute('aria-hidden', 'true'); f.textContent = '↗'; lcx.insertBefore(f, lcx.firstChild); }
+      }
+      leader.addEventListener('mouseenter', () => showTip(leader));   // idempotente: re-pinta el mismo tip
+      leader.addEventListener('mousemove', moveTip);
+      leader.addEventListener('mouseleave', hideTip);
+    }
   }
   function syncDays() {
     els('.grid-host').forEach(h => h._paint && h._paint());
@@ -575,7 +650,7 @@
     if (d.rows) html += d.rows.map(r => `<div class="tip__r">${esc(r[0])} <b>${esc(r[1])}</b></div>`).join('');
     if (d.salidas && d.salidas.length) {
       html += `<div class="tip__salen">Salen:</div>` + d.salidas.map(s =>
-        `<div class="tip__out"><span class="tip__arrow">↗</span><span>${esc(s.alumno)} → ${esc(s.a)}${s.a_nombre ? ` · ${esc(s.a_nombre)}` : ''}</span></div>`).join('');
+        `<div class="tip__out"><span class="tip__arrow">↗</span><span>${esc(s.alumno)} → ${esc(s.a)} · ${esc(SESION(s.a))}</span></div>`).join('');
     }
     if (!html) return;
     tip.innerHTML = html;

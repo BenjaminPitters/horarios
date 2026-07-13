@@ -296,6 +296,9 @@ td.cell:last-child{border-right:0}
   color:#fff;background:var(--accent);box-shadow:0 0 0 1.5px var(--paper);
 }
 .cell--apoyo .cx__asig{padding-left:14px}
+/* Fusión de franjas: la celda continuación se oculta en escritorio (la de arriba lleva rowspan
+   y la cubre). En móvil (un día a la vez) el selector td.cell.on la vuelve a mostrar como normal. */
+.cell.cell--merged{display:none}
 
 /* filas de mediodía: regla editorial sutil, no banda pesada */
 tr.brk td{background:var(--bg);padding:.32rem 0;vertical-align:middle}
