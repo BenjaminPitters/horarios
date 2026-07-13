@@ -491,12 +491,15 @@
           return;
         }
         // Entrada y Asamblea: cada asamblea muestra SU AULA (Estrella: T1, Sol: T2…), no combinadas.
-        const am = line.match(/^(Asamblea|Conjunta):\s*(.+)$/);
+        // "Asamblea: Tx" o la conjunta Oeste+Sur, que tras la reorg viene por aula:
+        // "Conjunta con Sur: T6" / "Conjunta con Oeste: T6 (T7 coordina)".
+        const am = line.match(/^(Asamblea|Conjunta)(?: con [^:]+)?:\s*(.+)$/);
         if (am) {
+          const isConj = am[1] === 'Conjunta';
           const first = (am[2].split('+')[0].trim().match(CODE_RE) || [])[1];
-          const prefA = am[1] === 'Conjunta' ? 'Conjunta' : (TUTOR_AULA[first] || 'Asamblea');
+          const prefA = isConj ? 'Conjunta' : (TUTOR_AULA[first] || 'Asamblea');
           const chipsA = am[2].split('+').map(s => { s = s.trim(); const m = s.match(CODE_RE); return m ? { code: m[1], nombre: (m[2] || '').trim() || (DIR[m[1]] ? DIR[m[1]].nombre : '') } : { code: s, nombre: '' }; }).filter(c => c.code);
-          entries.push({ chips: chipsA, pref: prefA, nota: '', coord: false, asm: am[1] === 'Asamblea', conj: am[1] === 'Conjunta' });
+          entries.push({ chips: chipsA, pref: prefA, nota: '', coord: false, asm: !isConj, conj: isConj });
           return;
         }
         let pref = '';
@@ -543,8 +546,13 @@
       DIAS.forEach(d => perDay[d].filter(e => e.asm).forEach(e => { if (!(e.pref in aulaByPref)) { aulaByPref[e.pref] = {}; aulas.push(e.pref); } (aulaByPref[e.pref][d] = aulaByPref[e.pref][d] || []).push(e); }));
       aulas.sort((a, x) => { const ia = ORDER.indexOf(a), ix = ORDER.indexOf(x); return (ia < 0 ? 99 : ia) - (ix < 0 ? 99 : ix) || a.localeCompare(x); });
       let rows = aulas.map(p => rowHtml(p, d => aulaByPref[p][d] || [])).join('');
-      // fila Conjunta (EBO)
-      rows += rowHtml('Conjunta', d => perDay[d].filter(e => e.conj));
+      // fila Conjunta (EBO): la conjunta Oeste+Sur viene en 2 líneas (una por aula), con los
+      // mismos códigos; se colapsan en una, conservando la nota "(Tx coordina)".
+      rows += rowHtml('Conjunta', d => {
+        const cj = perDay[d].filter(e => e.conj), seen = {}, merged = [];
+        cj.forEach(e => { const k = e.chips.map(c => c.code).join('+'); if (!(k in seen)) { seen[k] = e; merged.push(e); } else if (e.nota && !seen[k].nota) seen[k].nota = e.nota; });
+        return merged;
+      });
       return rows;
     }
     // Comedores como matriz: 1ª columna = el comedor (aula). El dato viene plano, así que se
