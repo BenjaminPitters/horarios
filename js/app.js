@@ -85,6 +85,23 @@
     for (const k of _ASIG_KEYS) if (m === k || m.startsWith(k + ' ')) return k;
     return null;
   }
+  // Formatea la línea principal de una agenda para mostrar (sin paréntesis):
+  //  · "Est.leng." -> "Estimulación del Lenguaje"
+  //  · "(apoyo)"   -> se quita
+  //  · "Actividad (Aula[+Aula])" -> "Aula y Aula: Actividad"  (cuando no es su clase de referencia)
+  const AULA_FULL = new Set(['Estrella', 'Sol', 'Norte', 'Luna', 'Este', 'Oeste', 'Sur']);
+  const AULA_ABBR = { 'Est': 'Estrella' };
+  function formatMain(m) {
+    m = String(m || "").replace(/Est\.?\s*leng\.?/i, "Estimulación del Lenguaje");
+    m = m.replace(/\s*\(\s*apoyo\s*\)/gi, "").trim();          // quita "(apoyo)"
+    const pm = m.match(/^(.*?)\s*\(([^)]+)\)\s*$/);            // "resto (Aula[+Aula])"
+    if (pm) {
+      const aulas = pm[2].split("+").map(a => AULA_ABBR[a.trim()] || a.trim());
+      if (aulas.every(a => AULA_FULL.has(a))) m = aulas.join(" y ") + ": " + pm[1].trim();
+      else m = pm[1].trim();
+    }
+    return m.replace(/\s{2,}/g, " ").trim();
+  }
   function estadoColor(tipo) {
     if (!tipo || tipo === 'lectivo') return null;
     return (META.colores_estado && META.colores_estado[tipo]) ||
@@ -368,6 +385,7 @@
         const extLines = rawLines.filter(l => l.startsWith('⇱')).map(l => l.replace(/^⇱\s*/, '').trim());
         // Quitar la "L · " (marca de Lectivo) del inicio de la línea principal.
         const mainLine = (rawLines.filter(l => !l.startsWith('↗') && !l.startsWith('⇱'))[0] || '').replace(/^L\s*·\s*/, '');
+        const displayMain = formatMain(mainLine);   // sin paréntesis, con aula como prefijo
         // Color por ÁREA (igual que en Clases y en las fichas de los niños): si la línea
         // principal es un área, se pinta con su color; si no (p. ej. sesión individual de
         // terapeuta = nombre de niño), se cae al color del aula, y si no, al color de estado.
@@ -376,7 +394,7 @@
         if (!col) col = estadoColor(c.tipo);
         const muted = c.tipo === 'no_lectivo';
         const style = col ? ` style="background:${tint(col,.28)};border-left-color:${col}"` : '';
-        const room = c.aula ? `<span class="cx__room">${esc(c.aula)}</span>` : '';
+        const room = (c.aula && displayMain.indexOf(c.aula) < 0) ? `<span class="cx__room">${esc(c.aula)}</span>` : '';
         const oneLine = c.tipo === 'comedor' ? ' cx--1line' : '';
         const tipAttr = hasSal ? ` data-tip='${esc(JSON.stringify({ salidas }))}'` : '';
         // Salidas escritas en la propia celda: "↗ Alumno → cód" (una línea por niño).
@@ -388,10 +406,11 @@
           ? `<div class="cx__ext">${extLines.map(t =>
               `<span class="cx__extrow"><span class="cx__exticon" aria-hidden="true">⇱</span><span>${esc(t)}</span></span>`).join('')}</div>`
           : '';
-        // Fusión de franjas consecutivas con la misma área (las salidas se combinan al fusionar).
-        const mk = area ? (area + '#' + (c.aula || '') + '#' + extLines.join(';')) : '';
+        // Fusión SOLO si el contenido mostrado es idéntico (misma actividad, códigos y salidas):
+        // así no se ocultan apoyos ni salidas de media sesión (bug de T5/T6/T7).
+        const mk = area ? (displayMain + '#' + salidas.map(s => s.alumno + '>' + s.a).join(';') + '#' + extLines.join(';')) : '';
         return `<td class="cell${hasSal ? ' cell--sal' : ''}" data-day="${day}" data-mk="${esc(mk)}"${style}${tipAttr}>
-          <div class="cx${oneLine}"><span class="${muted ? 'cx__nl' : 'cx__txt'}">${esc(mainLine || '·')}</span>${room}${salHTML}${extHTML}</div></td>`;
+          <div class="cx${oneLine}"><span class="${muted ? 'cx__nl' : 'cx__txt'}">${esc(displayMain || '·')}</span>${room}${salHTML}${extHTML}</div></td>`;
       }).join('');
       return `<tr>${gut(f.franja, f.hora)}${cells}</tr>`;
     }).join('');
