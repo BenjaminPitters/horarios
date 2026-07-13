@@ -1309,7 +1309,7 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Asamblea",
        "adultos": [
-        "T7"
+        "I2"
        ]
       }
      }
@@ -1915,7 +1915,7 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Asamblea",
        "adultos": [
-        "T6"
+        "I2"
        ]
       },
       "Martes": {
@@ -2057,31 +2057,36 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Snack",
        "adultos": [
-        "T3"
+        "T3",
+        "I2"
        ]
       },
       "Martes": {
        "asig": "Snack",
        "adultos": [
-        "L1"
+        "L1",
+        "I2"
        ]
       },
       "Miércoles": {
        "asig": "Snack",
        "adultos": [
-        "T3"
+        "T3",
+        "I2"
        ]
       },
       "Jueves": {
        "asig": "Snack",
        "adultos": [
-        "L1"
+        "L1",
+        "I2"
        ]
       },
       "Viernes": {
        "asig": "Snack",
        "adultos": [
-        "T3"
+        "T3",
+        "I2"
        ]
       }
      }
@@ -2166,7 +2171,7 @@ window.HORARIOS = {
        "asig": "Prerrequisitos de Aprendizaje",
        "adultos": [
         "T3",
-        "I1"
+        "I2"
        ]
       }
      }
@@ -2594,7 +2599,8 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Lengua",
        "adultos": [
-        "T5"
+        "T5",
+        "I2"
        ]
       },
       "Martes": {
@@ -2607,7 +2613,8 @@ window.HORARIOS = {
       "Miércoles": {
        "asig": "Lengua",
        "adultos": [
-        "T5"
+        "T5",
+        "I2"
        ]
       },
       "Jueves": {
@@ -2620,7 +2627,8 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Matemáticas",
        "adultos": [
-        "T5"
+        "T5",
+        "I2"
        ]
       }
      }
@@ -3099,9 +3107,9 @@ window.HORARIOS = {
      "hora": "9:00",
      "dias": {
       "Lunes": {
-       "asig": "Asamblea Conjunta",
+       "asig": "Asamblea",
        "adultos": [
-        "T7"
+        "T6"
        ]
       },
       "Martes": {
@@ -3111,9 +3119,9 @@ window.HORARIOS = {
        ]
       },
       "Miércoles": {
-       "asig": "Asamblea Conjunta",
+       "asig": "Asamblea",
        "adultos": [
-        "T7"
+        "I2"
        ]
       },
       "Jueves": {
@@ -3123,7 +3131,7 @@ window.HORARIOS = {
        ]
       },
       "Viernes": {
-       "asig": "Asamblea Conjunta",
+       "asig": "Asamblea",
        "adultos": [
         "T6"
        ]
@@ -3150,13 +3158,15 @@ window.HORARIOS = {
       "Martes": {
        "asig": "Lengua",
        "adultos": [
-        "T6"
+        "T6",
+        "I2"
        ]
       },
       "Miércoles": {
        "asig": "Lengua",
        "adultos": [
-        "T6"
+        "T6",
+        "I2"
        ]
       },
       "Jueves": {
@@ -3175,7 +3185,8 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Lengua",
        "adultos": [
-        "T6"
+        "T6",
+        "I2"
        ]
       }
      }
@@ -3713,7 +3724,7 @@ window.HORARIOS = {
      "hora": "9:00",
      "dias": {
       "Lunes": {
-       "asig": "Asamblea Conjunta",
+       "asig": "Asamblea",
        "adultos": [
         "T7"
        ]
@@ -3725,7 +3736,7 @@ window.HORARIOS = {
        ]
       },
       "Miércoles": {
-       "asig": "Asamblea Conjunta",
+       "asig": "Asamblea",
        "adultos": [
         "T7"
        ]
@@ -3737,9 +3748,9 @@ window.HORARIOS = {
        ]
       },
       "Viernes": {
-       "asig": "Asamblea Conjunta",
+       "asig": "Asamblea",
        "adultos": [
-        "T6"
+        "T7"
        ]
       }
      }
@@ -3794,7 +3805,8 @@ window.HORARIOS = {
       "Martes": {
        "asig": "Lengua",
        "adultos": [
-        "T7"
+        "T7",
+        "I2"
        ]
       },
       "Miércoles": {
@@ -3806,7 +3818,8 @@ window.HORARIOS = {
       "Jueves": {
        "asig": "Lengua",
        "adultos": [
-        "T7"
+        "T7",
+        "I2"
        ],
        "salidas": [
         {
@@ -4514,7 +4527,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Juego · T6\n↗ Inés→TO1",
+       "txt": "L · Juego\n↗ Inés→TO1",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -4858,7 +4871,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "L · Juego · T6\n↗ Eva→O1",
+       "txt": "L · Juego\n↗ Eva→O1",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -5090,7 +5103,7 @@ window.HORARIOS = {
      "hora": "10:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Snack",
+       "txt": "L · Snack · I2",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -5098,7 +5111,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "L · Snack",
+       "txt": "L · Snack · I2",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -5106,7 +5119,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Viernes": {
-       "txt": "L · Snack",
+       "txt": "L · Snack · I2",
        "tipo": "lectivo"
       }
      }
@@ -5158,7 +5171,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Prerrequisitos de Aprendizaje · I1",
+       "txt": "L · Prerrequisitos de Aprendizaje · I2",
        "tipo": "lectivo"
       }
      }
@@ -5752,7 +5765,7 @@ window.HORARIOS = {
      "hora": "10:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Lengua",
+       "txt": "L · Lengua · I2",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -5760,7 +5773,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Lengua",
+       "txt": "L · Lengua · I2",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -5768,7 +5781,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Matemáticas",
+       "txt": "L · Matemáticas · I2",
        "tipo": "lectivo"
       }
      }
@@ -5860,7 +5873,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Matemáticas · T1\n↗ Catalina B.→L3\n↗ Yago→Ps3",
+       "txt": "L · Matemáticas\n↗ Catalina B.→L3\n↗ Yago→Ps3",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -6044,7 +6057,7 @@ window.HORARIOS = {
      "hora": "9:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Asamblea Luna",
+       "txt": "L · Asamblea",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -6060,7 +6073,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Asamblea Conjunta",
+       "txt": "L · Asamblea",
        "tipo": "lectivo"
       }
      }
@@ -6074,11 +6087,11 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Lengua",
+       "txt": "L · Lengua · I2",
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Lengua",
+       "txt": "L · Lengua · I2",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -6086,7 +6099,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Lengua",
+       "txt": "L · Lengua · I2",
        "tipo": "lectivo"
       }
      }
@@ -6389,7 +6402,7 @@ window.HORARIOS = {
      "hora": "9:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Asamblea Conjunta",
+       "txt": "L · Asamblea",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -6397,7 +6410,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "L · Asamblea Conjunta",
+       "txt": "L · Asamblea",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -6405,7 +6418,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Asamblea Norte",
+       "txt": "L · Asamblea",
        "tipo": "lectivo"
       }
      }
@@ -6445,7 +6458,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Lengua",
+       "txt": "L · Lengua · I2",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -6453,7 +6466,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Lengua\n↗ Ángela→TO2",
+       "txt": "L · Lengua · I2\n↗ Ángela→TO2",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -7467,7 +7480,7 @@ window.HORARIOS = {
    ]
   },
   "I2": {
-   "nombre": "(por contratar)",
+   "nombre": "María Granados",
    "rol": "Inglés",
    "filas": [
     {
@@ -7475,24 +7488,24 @@ window.HORARIOS = {
      "hora": "9:00",
      "dias": {
       "Lunes": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "L · Asamblea Luna",
+       "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "L · Asamblea Oeste",
+       "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Viernes": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "L · Asamblea Norte",
+       "tipo": "lectivo"
       }
      }
     },
@@ -7501,24 +7514,27 @@ window.HORARIOS = {
      "hora": "9:30",
      "dias": {
       "Lunes": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Martes": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "L · Oeste: Lengua · T6",
+       "tipo": "lectivo",
+       "aula": "Oeste"
       },
       "Miércoles": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "L · Oeste: Lengua · T6",
+       "tipo": "lectivo",
+       "aula": "Oeste"
       },
       "Jueves": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Viernes": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "L · Oeste: Lengua · T6",
+       "tipo": "lectivo",
+       "aula": "Oeste"
       }
      }
     },
@@ -7527,24 +7543,29 @@ window.HORARIOS = {
      "hora": "10:00",
      "dias": {
       "Lunes": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "L · Este: Lengua · T5",
+       "tipo": "lectivo",
+       "aula": "Este"
       },
       "Martes": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "L · Sur: Lengua · T7",
+       "tipo": "lectivo",
+       "aula": "Sur"
       },
       "Miércoles": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "L · Este: Lengua · T5",
+       "tipo": "lectivo",
+       "aula": "Este"
       },
       "Jueves": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "L · Sur: Lengua · T7",
+       "tipo": "lectivo",
+       "aula": "Sur"
       },
       "Viernes": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "L · Este: Matemáticas · T5",
+       "tipo": "lectivo",
+       "aula": "Este"
       }
      }
     },
@@ -7553,24 +7574,29 @@ window.HORARIOS = {
      "hora": "10:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Disponible (por asignar)",
-       "tipo": "lectivo"
+       "txt": "L · Luna: Snack · T3",
+       "tipo": "lectivo",
+       "aula": "Luna"
       },
       "Martes": {
-       "txt": "L · Disponible (por asignar)",
-       "tipo": "lectivo"
+       "txt": "L · Luna: Snack · L1",
+       "tipo": "lectivo",
+       "aula": "Luna"
       },
       "Miércoles": {
-       "txt": "L · Disponible (por asignar)",
-       "tipo": "lectivo"
+       "txt": "L · Luna: Snack · T3",
+       "tipo": "lectivo",
+       "aula": "Luna"
       },
       "Jueves": {
-       "txt": "L · Disponible (por asignar)",
-       "tipo": "lectivo"
+       "txt": "L · Luna: Snack · L1",
+       "tipo": "lectivo",
+       "aula": "Luna"
       },
       "Viernes": {
-       "txt": "L · Disponible (por asignar)",
-       "tipo": "lectivo"
+       "txt": "L · Luna: Snack · T3",
+       "tipo": "lectivo",
+       "aula": "Luna"
       }
      }
     },
@@ -7716,24 +7742,24 @@ window.HORARIOS = {
      "hora": "13:45",
      "dias": {
       "Lunes": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Martes": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Jueves": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Viernes": {
-       "txt": "—",
-       "tipo": "fuera"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       }
      }
     },
@@ -8074,7 +8100,7 @@ window.HORARIOS = {
         "tipo": "comida"
        },
        "Jueves": {
-        "txt": "L · Comedor Estrella",
+        "txt": "L · Comedor EBO/Luna",
         "tipo": "comedor"
        },
        "Viernes": {
@@ -9018,7 +9044,7 @@ window.HORARIOS = {
         "aula": "Sur"
        },
        "Martes": {
-        "txt": "L · Luna: Snack",
+        "txt": "L · Luna: Snack · I2",
         "tipo": "lectivo",
         "aula": "Luna"
        },
@@ -9028,7 +9054,7 @@ window.HORARIOS = {
         "aula": "Oeste"
        },
        "Jueves": {
-        "txt": "L · Luna: Snack",
+        "txt": "L · Luna: Snack · I2",
         "tipo": "lectivo",
         "aula": "Luna"
        },
@@ -9174,7 +9200,7 @@ window.HORARIOS = {
         "tipo": "comedor"
        },
        "Jueves": {
-        "txt": "L · Comedor EBO/Luna",
+        "txt": "L · Comedor Estrella",
         "tipo": "comedor"
        },
        "Viernes": {
@@ -10090,7 +10116,7 @@ window.HORARIOS = {
       "hora": "9:30",
       "dias": {
        "Lunes": {
-        "txt": "L · Sol: Psicomotricidad · EF1\n↗ Álvaro→L3",
+        "txt": "L · Sol: Psicomotricidad\n↗ Álvaro→L3",
         "tipo": "lectivo",
         "aula": "Sol"
        },
@@ -10100,7 +10126,7 @@ window.HORARIOS = {
         "aula": "Norte"
        },
        "Miércoles": {
-        "txt": "L · Sol: Psicomotricidad · EF1\n↗ Santiago→L3",
+        "txt": "L · Sol: Psicomotricidad\n↗ Santiago→L3",
         "tipo": "lectivo",
         "aula": "Sol"
        },
@@ -10110,7 +10136,7 @@ window.HORARIOS = {
         "aula": "Luna"
        },
        "Viernes": {
-        "txt": "L · Sol: Psicomotricidad · EF1\n↗ Eva→O1",
+        "txt": "L · Sol: Psicomotricidad\n↗ Eva→O1",
         "tipo": "lectivo",
         "aula": "Sol"
        }
@@ -16760,19 +16786,19 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
        },
        "Viernes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        }
       }
      },
@@ -17041,19 +17067,19 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
        },
        "Viernes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        }
       }
      },
@@ -17322,19 +17348,19 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
        },
        "Viernes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        }
       }
      },
@@ -17603,19 +17629,19 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
        },
        "Viernes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        }
       }
      },
@@ -17884,19 +17910,19 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
        },
        "Viernes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        }
       }
      },
@@ -18165,19 +18191,19 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
        },
        "Viernes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        }
       }
      },
@@ -18448,19 +18474,19 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
        },
        "Viernes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        }
       }
      },
@@ -18729,19 +18755,19 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
        },
        "Viernes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        }
       }
      },
@@ -19010,19 +19036,19 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
        },
        "Viernes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        }
       }
      },
@@ -19291,19 +19317,19 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
        },
        "Viernes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        }
       }
      },
@@ -19572,19 +19598,19 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
        },
        "Viernes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        }
       }
      },
@@ -19853,19 +19879,19 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
        },
        "Viernes": {
-        "asig": "Asamblea Conjunta"
+        "asig": "Asamblea"
        }
       }
      },
@@ -20139,9 +20165,10 @@ window.HORARIOS = {
        "Asamblea: T1",
        "Asamblea: T2",
        "Asamblea: T4",
-       "Asamblea: T6\n(T3 coordina)",
+       "Asamblea: I2\n(T3 coordina)",
        "Asamblea: T5",
-       "Conjunta: T7\n(T6 sale a cubrir)",
+       "Asamblea: T6",
+       "Asamblea: T7",
        "Luna: T3+L1+O1+TO1"
       ],
       "Martes": [
@@ -20150,7 +20177,8 @@ window.HORARIOS = {
        "Asamblea: T4",
        "Asamblea: T3",
        "Asamblea: T5",
-       "Conjunta: T6\n(T7 coordina)",
+       "Conjunta con Sur: T6",
+       "Conjunta con Oeste: T6\n(T7 coordina)",
        "Sur: T7+L1+L2+L3+O1+O2+TO2"
       ],
       "Miércoles": [
@@ -20159,7 +20187,8 @@ window.HORARIOS = {
        "Asamblea: T4",
        "Asamblea: T3",
        "Asamblea: EF1\n(T5 coordina)",
-       "Conjunta: T7\n(T6 coordina)",
+       "Asamblea: I2\n(T6 coordina)",
+       "Asamblea: T7",
        "Este: T5+L1+L3+TO1\nOeste: T6+L1+L2+O1+O2+TO2"
       ],
       "Jueves": [
@@ -20168,16 +20197,18 @@ window.HORARIOS = {
        "Asamblea: T4",
        "Asamblea: T3",
        "Asamblea: T5",
-       "Conjunta: T6\n(T7 sale a cubrir)",
+       "Conjunta con Sur: T6",
+       "Conjunta con Oeste: T6\n(T7 cubre Sol)",
        "Estrella: T1+L1+O2+TO1\nSol: T2+L2+L3+O1+TO2"
       ],
       "Viernes": [
        "Asamblea: T1",
        "Asamblea: T2",
-       "Asamblea: T7\n(T4 coordina)",
+       "Asamblea: I2\n(T4 coordina)",
        "Asamblea: T3",
        "Asamblea: T5",
-       "Conjunta: T6\n(T7 sale a cubrir)",
+       "Asamblea: T6",
+       "Asamblea: T7",
        "Norte: T4+L2+O1+TO1"
       ]
      }
@@ -20193,33 +20224,33 @@ window.HORARIOS = {
        "T5 Jesús",
        "T7 Raquel",
        "EF1 Fernando",
-       "I2 (por contratar)",
+       "I2 María G.",
        "TO2 Aitana"
       ],
       "Martes": [
        "T4 Marta O.",
        "T7 Raquel",
        "EF1 Fernando",
-       "I2 (por contratar)",
+       "I2 María G.",
        "T1 María C."
       ],
       "Miércoles": [
        "T7 Raquel",
        "EF1 Fernando",
-       "I2 (por contratar)",
+       "I2 María G.",
        "TO2 Aitana",
        "T6 Marta La."
       ],
       "Jueves": [
        "EF1 Fernando",
-       "I2 (por contratar)",
+       "I2 María G.",
        "O1 (por contratar)",
        "TO2 Aitana",
        "T4 Marta O."
       ],
       "Viernes": [
        "EF1 Fernando",
-       "I2 (por contratar)",
+       "I2 María G.",
        "O1 (por contratar)",
        "L3 (por contratar)",
        "TO2 Aitana"
@@ -20241,7 +20272,7 @@ window.HORARIOS = {
        "T4 Marta O.",
        "L2 Sheila",
        "T3 Silvia",
-       "I2 (por contratar)",
+       "I2 María G.",
        "L1 Luis"
       ],
       "Martes": [
@@ -20252,7 +20283,7 @@ window.HORARIOS = {
        "T4 Marta O.",
        "L2 Sheila",
        "T3 Silvia",
-       "I2 (por contratar)",
+       "I2 María G.",
        "L1 Luis"
       ],
       "Miércoles": [
@@ -20263,19 +20294,19 @@ window.HORARIOS = {
        "T4 Marta O.",
        "L2 Sheila",
        "T3 Silvia",
-       "I2 (por contratar)",
+       "I2 María G.",
        "L1 Luis"
       ],
       "Jueves": [
        "T1 María C.",
-       "O1 (por contratar)",
+       "L1 Luis",
        "T2 Carol",
        "TO2 Aitana",
        "T4 Marta O.",
        "L2 Sheila",
        "T3 Silvia",
-       "I2 (por contratar)",
-       "L1 Luis"
+       "I2 María G.",
+       "O1 (por contratar)"
       ],
       "Viernes": [
        "T1 María C.",
@@ -20285,7 +20316,7 @@ window.HORARIOS = {
        "T4 Marta O.",
        "L2 Sheila",
        "T3 Silvia",
-       "I2 (por contratar)",
+       "I2 María G.",
        "L1 Luis"
       ]
      }
