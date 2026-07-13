@@ -4438,7 +4438,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio",
-     "hora": "11:00",
+     "hora": "11:00–11:30",
      "dias": {
       "Lunes": {
        "txt": "NL",
@@ -4542,7 +4542,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Comida",
-     "hora": "13:00",
+     "hora": "13:00–13:45",
      "dias": {
       "Lunes": {
        "txt": "L · Comedor",
@@ -4568,7 +4568,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio tarde",
-     "hora": "13:45",
+     "hora": "13:45–14:30",
      "dias": {
       "Lunes": {
        "txt": "Comida",
@@ -4782,7 +4782,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio",
-     "hora": "11:00",
+     "hora": "11:00–11:30",
      "dias": {
       "Lunes": {
        "txt": "NL",
@@ -4886,7 +4886,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Comida",
-     "hora": "13:00",
+     "hora": "13:00–13:45",
      "dias": {
       "Lunes": {
        "txt": "L · Comedor",
@@ -4912,7 +4912,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio tarde",
-     "hora": "13:45",
+     "hora": "13:45–14:30",
      "dias": {
       "Lunes": {
        "txt": "Comida",
@@ -5126,7 +5126,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio",
-     "hora": "11:00",
+     "hora": "11:00–11:30",
      "dias": {
       "Lunes": {
        "txt": "NL",
@@ -5230,7 +5230,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Comida",
-     "hora": "13:00",
+     "hora": "13:00–13:45",
      "dias": {
       "Lunes": {
        "txt": "L · Comedor",
@@ -5256,7 +5256,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio tarde",
-     "hora": "13:45",
+     "hora": "13:45–14:30",
      "dias": {
       "Lunes": {
        "txt": "Comida",
@@ -5470,7 +5470,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio",
-     "hora": "11:00",
+     "hora": "11:00–11:30",
      "dias": {
       "Lunes": {
        "txt": "NL",
@@ -5574,7 +5574,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Comida",
-     "hora": "13:00",
+     "hora": "13:00–13:45",
      "dias": {
       "Lunes": {
        "txt": "L · Comedor",
@@ -5600,7 +5600,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio tarde",
-     "hora": "13:45",
+     "hora": "13:45–14:30",
      "dias": {
       "Lunes": {
        "txt": "Comida",
@@ -5814,7 +5814,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio",
-     "hora": "11:00",
+     "hora": "11:00–11:30",
      "dias": {
       "Lunes": {
        "txt": "L · Patio",
@@ -5918,7 +5918,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Comida",
-     "hora": "13:00",
+     "hora": "13:00–13:45",
      "dias": {
       "Lunes": {
        "txt": "Comida",
@@ -5944,7 +5944,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio tarde",
-     "hora": "13:45",
+     "hora": "13:45–14:30",
      "dias": {
       "Lunes": {
        "txt": "L · Patio",
@@ -6158,7 +6158,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio",
-     "hora": "11:00",
+     "hora": "11:00–11:30",
      "dias": {
       "Lunes": {
        "txt": "NL",
@@ -6262,7 +6262,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Comida",
-     "hora": "13:00",
+     "hora": "13:00–13:45",
      "dias": {
       "Lunes": {
        "txt": "Comida",
@@ -6288,7 +6288,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio tarde",
-     "hora": "13:45",
+     "hora": "13:45–14:30",
      "dias": {
       "Lunes": {
        "txt": "L · Patio",
@@ -6503,7 +6503,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio",
-     "hora": "11:00",
+     "hora": "11:00–11:30",
      "dias": {
       "Lunes": {
        "txt": "L · Patio",
@@ -6607,7 +6607,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Comida",
-     "hora": "13:00",
+     "hora": "13:00–13:45",
      "dias": {
       "Lunes": {
        "txt": "Comida",
@@ -6633,7 +6633,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio tarde",
-     "hora": "13:45",
+     "hora": "13:45–14:30",
      "dias": {
       "Lunes": {
        "txt": "L · Patio",
@@ -6853,7 +6853,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio",
-     "hora": "11:00",
+     "hora": "11:00–11:30",
      "dias": {
       "Lunes": {
        "txt": "L · Patio",
@@ -6972,7 +6972,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Comida",
-     "hora": "13:00",
+     "hora": "13:00–13:45",
      "dias": {
       "Lunes": {
        "txt": "Comida",
@@ -6998,7 +6998,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio tarde",
-     "hora": "13:45",
+     "hora": "13:45–14:30",
      "dias": {
       "Lunes": {
        "txt": "L · Patio",
@@ -7234,7 +7234,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio",
-     "hora": "11:00",
+     "hora": "11:00–11:30",
      "dias": {
       "Lunes": {
        "txt": "Proyecto Inglés",
@@ -7346,7 +7346,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Comida",
-     "hora": "13:00",
+     "hora": "13:00–13:45",
      "dias": {
       "Lunes": {
        "txt": "Proyecto Inglés",
@@ -7372,7 +7372,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio tarde",
-     "hora": "13:45",
+     "hora": "13:45–14:30",
      "dias": {
       "Lunes": {
        "txt": "Comida",
@@ -7602,7 +7602,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio",
-     "hora": "11:00",
+     "hora": "11:00–11:30",
      "dias": {
       "Lunes": {
        "txt": "L · Patio",
@@ -7713,7 +7713,7 @@ window.HORARIOS = {
     },
     {
      "franja": "Comida",
-     "hora": "13:00",
+     "hora": "13:00–13:45",
      "dias": {
       "Lunes": {
        "txt": "L · Comedor EBO/Luna",
@@ -7739,27 +7739,27 @@ window.HORARIOS = {
     },
     {
      "franja": "Patio tarde",
-     "hora": "13:45",
+     "hora": "13:45–14:00",
      "dias": {
       "Lunes": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "L · Transición de patio",
+       "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "L · Transición de patio",
+       "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "L · Transición de patio",
+       "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "L · Transición de patio",
+       "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "L · Transición de patio",
+       "tipo": "lectivo"
       }
      }
     },
@@ -7970,7 +7970,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio",
-      "hora": "11:00",
+      "hora": "11:00–11:30",
       "dias": {
        "Lunes": {
         "txt": "NL",
@@ -8085,7 +8085,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Comida",
-      "hora": "13:00",
+      "hora": "13:00–13:45",
       "dias": {
        "Lunes": {
         "txt": "Comida",
@@ -8111,7 +8111,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio tarde",
-      "hora": "13:45",
+      "hora": "13:45–14:30",
       "dias": {
        "Lunes": {
         "txt": "L · Patio",
@@ -8344,7 +8344,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio",
-      "hora": "11:00",
+      "hora": "11:00–11:30",
       "dias": {
        "Lunes": {
         "txt": "—",
@@ -8454,7 +8454,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Comida",
-      "hora": "13:00",
+      "hora": "13:00–13:45",
       "dias": {
        "Lunes": {
         "txt": "—",
@@ -8480,7 +8480,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio tarde",
-      "hora": "13:45",
+      "hora": "13:45–14:30",
       "dias": {
        "Lunes": {
         "txt": "—",
@@ -8698,7 +8698,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio",
-      "hora": "11:00",
+      "hora": "11:00–11:30",
       "dias": {
        "Lunes": {
         "txt": "—",
@@ -8808,7 +8808,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Comida",
-      "hora": "13:00",
+      "hora": "13:00–13:45",
       "dias": {
        "Lunes": {
         "txt": "—",
@@ -8834,7 +8834,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio tarde",
-      "hora": "13:45",
+      "hora": "13:45–14:30",
       "dias": {
        "Lunes": {
         "txt": "—",
@@ -9066,7 +9066,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio",
-      "hora": "11:00",
+      "hora": "11:00–11:30",
       "dias": {
        "Lunes": {
         "txt": "NL",
@@ -9185,7 +9185,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Comida",
-      "hora": "13:00",
+      "hora": "13:00–13:45",
       "dias": {
        "Lunes": {
         "txt": "L · Comedor EBO/Luna",
@@ -9211,7 +9211,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio tarde",
-      "hora": "13:45",
+      "hora": "13:45–14:30",
       "dias": {
        "Lunes": {
         "txt": "Comida",
@@ -9446,7 +9446,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio",
-      "hora": "11:00",
+      "hora": "11:00–11:30",
       "dias": {
        "Lunes": {
         "txt": "NL",
@@ -9565,7 +9565,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Comida",
-      "hora": "13:00",
+      "hora": "13:00–13:45",
       "dias": {
        "Lunes": {
         "txt": "L · Comedor Norte",
@@ -9591,7 +9591,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio tarde",
-      "hora": "13:45",
+      "hora": "13:45–14:30",
       "dias": {
        "Lunes": {
         "txt": "Comida",
@@ -9832,7 +9832,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio",
-      "hora": "11:00",
+      "hora": "11:00–11:30",
       "dias": {
        "Lunes": {
         "txt": "NL",
@@ -9949,7 +9949,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Comida",
-      "hora": "13:00",
+      "hora": "13:00–13:45",
       "dias": {
        "Lunes": {
         "txt": "—",
@@ -9975,7 +9975,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio tarde",
-      "hora": "13:45",
+      "hora": "13:45–14:30",
       "dias": {
        "Lunes": {
         "txt": "—",
@@ -10206,7 +10206,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio",
-      "hora": "11:00",
+      "hora": "11:00–11:30",
       "dias": {
        "Lunes": {
         "txt": "NL",
@@ -10325,7 +10325,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Comida",
-      "hora": "13:00",
+      "hora": "13:00–13:45",
       "dias": {
        "Lunes": {
         "txt": "L · Comedor Estrella",
@@ -10351,7 +10351,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio tarde",
-      "hora": "13:45",
+      "hora": "13:45–14:30",
       "dias": {
        "Lunes": {
         "txt": "Comida",
@@ -10591,7 +10591,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio",
-      "hora": "11:00",
+      "hora": "11:00–11:30",
       "dias": {
        "Lunes": {
         "txt": "L · Patio",
@@ -10706,7 +10706,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Comida",
-      "hora": "13:00",
+      "hora": "13:00–13:45",
       "dias": {
        "Lunes": {
         "txt": "L · Comedor Sol",
@@ -10732,7 +10732,7 @@ window.HORARIOS = {
      },
      {
       "franja": "Patio tarde",
-      "hora": "13:45",
+      "hora": "13:45–14:30",
       "dias": {
        "Lunes": {
         "txt": "Comida",
