@@ -187,6 +187,16 @@ img{max-width:100%}
 .pk__code{font-family:var(--mono);font-size:.72rem;opacity:.7}
 .pk.is-active .pk__code{opacity:.85}
 .picker--sub .pk.is-active{background:var(--ink);border-color:var(--ink)}
+/* tonos de pastilla por tipo: verde = tutor/profesionales · azul = niños · rojo = aula */
+.pk--green{color:#3F6B52}
+.pk--green:hover{border-color:#CFE0D5;color:#345B45}
+.pk--green.is-active{background:#5B8C6E;border-color:#5B8C6E;color:#fff}
+.pk--blue{color:#3E5E88}
+.pk--blue:hover{border-color:#D2DEEC;color:#345074}
+.pk--blue.is-active{background:#5B7BA6;border-color:#5B7BA6;color:#fff}
+.pk--red{color:var(--accent-strong)}
+.pk--red:hover{border-color:var(--accent-line);color:var(--accent-strong)}
+.pk--red.is-active{background:var(--accent);border-color:var(--accent);color:#fff}
 
 /* ===================== GRID ===================== */
 .grid-host{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow)}

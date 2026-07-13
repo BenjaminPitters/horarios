@@ -25,7 +25,6 @@
       <nav class="nav" id="nav" aria-label="Secciones">
         <button class="nav__item is-active" data-view="inicio"><span class="nav__ico" data-ico="house"></span><span class="nav__label">Inicio</span></button>
         <button class="nav__item" data-view="clases"><span class="nav__ico" data-ico="clases"></span><span class="nav__label">Clases</span><span class="nav__count" data-count="clases"></span></button>
-        <button class="nav__item" data-view="tutoras"><span class="nav__ico" data-ico="tutoras"></span><span class="nav__label">Tutoras</span><span class="nav__count" data-count="tutoras"></span></button>
         <button class="nav__item" data-view="especialistas"><span class="nav__ico" data-ico="especialistas"></span><span class="nav__label">Especialistas</span><span class="nav__count" data-count="especialistas"></span></button>
         <button class="nav__item" data-view="terapeutas"><span class="nav__ico" data-ico="terapeutas"></span><span class="nav__label">Terapeutas</span><span class="nav__count" data-count="terapeutas"></span></button>
         <button class="nav__item" data-view="momentos"><span class="nav__ico" data-ico="momentos"></span><span class="nav__label">Turnos</span></button>
@@ -55,7 +54,6 @@
         <nav class="mobilebar__nav" id="mobileNav" aria-label="Secciones">
           <button class="mnav is-active" data-view="inicio">Inicio</button>
           <button class="mnav" data-view="clases">Clases</button>
-          <button class="mnav" data-view="tutoras">Tutoras</button>
           <button class="mnav" data-view="especialistas">Especialistas</button>
           <button class="mnav" data-view="terapeutas">Terapeutas</button>
           <button class="mnav" data-view="momentos">Turnos</button>
@@ -94,22 +92,13 @@
       <!-- ============ CLASES ============ -->
       <section class="view" id="view-clases">
         <header class="viewhead">
-          <div class="viewhead__title"><h2>Clases</h2><p>Horario semanal del aula (grupo) y horario individual de cada alumno o alumna de esa clase.</p></div>
+          <div class="viewhead__title"><h2>Clases</h2><p>Elige un aula y consulta su tutor o tutora, el horario del grupo y el de cada alumno o alumna.</p></div>
           <div class="picker-stack">
             <div class="picker picker--sub" data-for="clases" aria-label="Aulas"></div>
             <div class="picker" data-for="clases-alumnos" aria-label="Aula o alumno"></div>
           </div>
         </header>
         <div class="grid-host" data-grid="clases"></div>
-      </section>
-
-      <!-- ============ TUTORAS ============ -->
-      <section class="view" id="view-tutoras">
-        <header class="viewhead">
-          <div class="viewhead__title"><h2>Tutoras</h2><p>El horario individual de cada tutora, franja a franja.</p></div>
-          <div class="picker" data-for="tutoras" aria-label="Tutoras"></div>
-        </header>
-        <div class="grid-host" data-grid="tutoras"></div>
       </section>
 
       <!-- ============ ESPECIALISTAS ============ -->

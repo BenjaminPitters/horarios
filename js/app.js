@@ -175,7 +175,7 @@
   function buildIndex() {
     const idx = [];
     Object.keys(H.clases).forEach(a => idx.push({ label: a, sub: H.clases[a].tutor + ' · ' + (H.clases[a].tutor_nombre || ''), kind: 'Aula', view: 'clases', key: GRUPO, subgroup: a }));
-    Object.keys(H.tutoras).forEach(k => idx.push({ label: H.tutoras[k].nombre, sub: 'Tutora · aula ' + (H.tutoras[k].aula || ''), kind: k, view: 'tutoras', key: k }));
+    Object.keys(H.tutoras).forEach(k => idx.push({ label: H.tutoras[k].nombre, sub: 'Tutor/a · aula ' + (H.tutoras[k].aula || ''), kind: k, view: 'clases', key: '__tutor__', subgroup: H.tutoras[k].aula }));
     Object.keys(H.especialistas).forEach(k => idx.push({ label: H.especialistas[k].nombre, sub: H.especialistas[k].rol || '', kind: k, view: 'especialistas', key: k }));
     terGroups().forEach(g => Object.keys(H.terapeutas[g] || {}).forEach(k =>
       idx.push({ label: H.terapeutas[g][k].nombre, sub: H.terapeutas[g][k].rol || '', kind: k, view: 'terapeutas', key: k, subgroup: g })));
@@ -220,7 +220,7 @@
      ============================================================ */
   function pills(container, items, activeKey, onPick) {
     container.innerHTML = items.map(it =>
-      `<button class="pk${it.key === activeKey ? ' is-active' : ''}" data-key="${esc(it.key)}"><span>${esc(it.label)}</span>${it.code ? `<span class="pk__code">${esc(it.code)}</span>` : ''}</button>`).join('');
+      `<button class="pk${it.tone ? ' pk--' + it.tone : ''}${it.key === activeKey ? ' is-active' : ''}" data-key="${esc(it.key)}"><span>${esc(it.label)}</span>${it.code ? `<span class="pk__code">${esc(it.code)}</span>` : ''}</button>`).join('');
     els('.pk', container).forEach(p => p.addEventListener('click', () => {
       els('.pk', container).forEach(x => x.classList.remove('is-active'));
       p.classList.add('is-active'); onPick(p.dataset.key);
@@ -558,32 +558,34 @@
   const VIEWS = {
     inicio: renderInicio,
     clases() {
-      // Dos niveles: aula (subselector) -> "Aula (grupo)" o un alumno de esa aula.
+      // Dos niveles: aula (subselector) -> Tutor / "Aula (grupo)" / un alumno de esa aula.
       const keys = Object.keys(H.clases).sort(byCode(k => H.clases[k].tutor));
       const subWrap = el('.picker[data-for="clases-alumnos"]');
+      const TUTOR = '__tutor__';
       function draw(aula, sel2) {
-        if (sel2 === GRUPO) renderClase(aula);
+        if (sel2 === TUTOR) {
+          const tc = H.clases[aula].tutor;
+          const t = H.tutoras[tc];
+          if (t) renderPersona('[data-grid="clases"]', tc, Object.assign({}, t, { rol: 'Tutor/a · aula ' + aula }));
+          else renderClase(aula);
+        }
+        else if (sel2 === GRUPO) renderClase(aula);
         else renderAlumno('[data-grid="clases"]', aula, sel2);
       }
       function selAula(aula) {
         const ninos = (H.alumnado && H.alumnado[aula]) ? Object.keys(H.alumnado[aula]) : [];
-        const items = [{ key: GRUPO, label: 'Aula' }].concat(ninos.map(n => ({ key: n, label: n })));
-        pills(subWrap, items, GRUPO, sel2 => draw(aula, sel2));
-        draw(aula, GRUPO);
+        const items = [{ key: TUTOR, label: 'Tutor/a', tone: 'green' }, { key: GRUPO, label: 'Aula', tone: 'red' }]
+          .concat(ninos.map(n => ({ key: n, label: n, tone: 'blue' })));
+        pills(subWrap, items, TUTOR, sel2 => draw(aula, sel2));
+        draw(aula, TUTOR);
       }
       pills(el('.picker[data-for="clases"]'), keys.map(k => ({ key: k, label: k })), keys[0], selAula);
       selAula(keys[0]);
     },
-    tutoras() {
-      const keys = Object.keys(H.tutoras).sort(byCode(k => k));
-      const draw = k => renderPersona('[data-grid="tutoras"]', k, H.tutoras[k]);
-      pills(el('.picker[data-for="tutoras"]'), keys.map(k => ({ key: k, label: H.tutoras[k].nombre, code: k })), keys[0], draw);
-      draw(keys[0]);
-    },
     especialistas() {
       const keys = Object.keys(H.especialistas).sort(byCode(k => k));
       const draw = k => renderPersona('[data-grid="especialistas"]', k, H.especialistas[k]);
-      pills(el('.picker[data-for="especialistas"]'), keys.map(k => ({ key: k, label: H.especialistas[k].nombre, code: k })), keys[0], draw);
+      pills(el('.picker[data-for="especialistas"]'), keys.map(k => ({ key: k, label: H.especialistas[k].nombre, code: k, tone: 'green' })), keys[0], draw);
       draw(keys[0]);
     },
     terapeutas() {
@@ -595,7 +597,7 @@
       function drawP(g, k) { renderPersona('[data-grid="terapeutas"]', k, H.terapeutas[g][k], 'terapeutas'); }
       function selG(g) {
         const keys = Object.keys(H.terapeutas[g]).sort(byCode(k => k));
-        pills(persWrap, keys.map(k => ({ key: k, label: H.terapeutas[g][k].nombre, code: k })), keys[0], k => drawP(g, k));
+        pills(persWrap, keys.map(k => ({ key: k, label: H.terapeutas[g][k].nombre, code: k, tone: 'green' })), keys[0], k => drawP(g, k));
         drawP(g, keys[0]);
       }
       pills(el('.picker[data-for="terapeutas"]'), groups.map(g => ({ key: g.key, label: g.label })), groups[0].key, selG);
