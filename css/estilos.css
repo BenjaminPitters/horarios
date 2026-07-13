@@ -341,7 +341,7 @@ tr.brk th.tgut .h{color:var(--ink-3)}
 .mom-note{font-size:.66rem;color:#5f7a52;font-style:italic;margin-top:1px}
 /* "Entrada y Asamblea" como matriz: una fila por aula (clase en la 1ª columna), filas bajas */
 .mom-table--matrix .mom-lbl{font-weight:600;font-size:.78rem;color:var(--ink);white-space:nowrap;padding:.2rem .6rem;background:var(--bg-2)}
-.mom-table--matrix .mom-cell{min-height:0;padding:.16rem .5rem;flex-direction:row;flex-wrap:wrap;align-items:center;gap:.25rem}
+.mom-table--matrix .mom-cell{min-height:0;padding:.16rem .55rem;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:.3rem}
 .mom-table--matrix .mom-note{margin:0}
 .mom-ther{display:inline-flex;align-items:center;gap:.25rem;margin-right:.55rem}
 .mom-ther .mom-pref{font-weight:600;font-size:.68rem;color:var(--ink-2)}
@@ -440,6 +440,7 @@ tr.brk th.tgut .h{color:var(--ink-3)}
   .mom-table{min-width:0}
   .mom-table thead{display:none}
   .mom-table tr{display:grid;grid-template-columns:118px 1fr;border-bottom:1px solid var(--line)}
+  .mom-table--nolbl tr{grid-template-columns:1fr}   /* sin columna de etiqueta (patios, comidas) */
   .mom-table tr:last-child{border-bottom:0}
   .mom-lbl{border-right:1px solid var(--line);border-bottom:0}
   .mom-c{border-right:0;border-bottom:0}

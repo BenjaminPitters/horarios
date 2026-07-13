@@ -551,10 +551,14 @@
       let name = raw.replace(/\s*\([^)]*\)/g, '').replace(/\s*·\s*turno.*/i, '').trim();
       if (comidaNo) name = 'Turno ' + comidaNo + ' de comida';
       const isEntrada = /Entrada|Asamblea/i.test(name);
+      // ¿alguna fila lleva etiqueta de aula/comedor? Si no (patios, comidas…), fuera la 1ª columna vacía.
+      const hasLbl = isEntrada || (b.filas || []).some(f => label(f.label).trim());
+      const lblTh = hasLbl ? '<th></th>' : '';
       const rows = isEntrada ? entradaMatrix(b) : (b.filas || []).map(f =>
-        `<tr><th class="mom-lbl" scope="row">${esc(label(f.label))}</th>${DIAS.map(d => `<td class="mom-c" data-day="${d}">${cell(f.dias && f.dias[d])}</td>`).join('')}</tr>`).join('');
+        `<tr>${hasLbl ? `<th class="mom-lbl" scope="row">${esc(label(f.label))}</th>` : ''}${DIAS.map(d => `<td class="mom-c" data-day="${d}">${cell(f.dias && f.dias[d])}</td>`).join('')}</tr>`).join('');
+      const cls = 'mom-table' + (isEntrada ? ' mom-table--matrix' : '') + (hasLbl ? '' : ' mom-table--nolbl');
       return `<div class="mom-block"><div class="mom-head"><h3>${esc(name)}</h3>${hora ? `<span class="mom-head__hora">${esc(hora)}</span>` : ''}</div>` +
-        `<div class="grid-scroll"><table class="mom-table${isEntrada ? ' mom-table--matrix' : ''}"><thead><tr><th></th>${DIAS.map(d => `<th>${esc(d)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div></div>`;
+        `<div class="grid-scroll"><table class="${cls}"><thead><tr>${lblTh}${DIAS.map(d => `<th>${esc(d)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div></div>`;
     };
     // Tres grupos que se pueden imprimir por separado (cada uno con su botón):
     // coordinaciones/asambleas, patios+comedores y turnos de comida.
