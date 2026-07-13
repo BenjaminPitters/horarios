@@ -472,10 +472,22 @@
         let line = raw.trim(); if (!line) return;
         if (line.startsWith('(')) {
           const n = line.replace(/^\(/, '').replace(/\)$/, '').trim();
-          if (entries.length) { const e = entries[entries.length - 1]; e.nota = n; e.coord = /coordina/i.test(n); }
+          if (entries.length) {
+            const e = entries[entries.length - 1]; e.nota = n; e.coord = /coordina/i.test(n);
+            // Asamblea cubierta ("Ty coordina"): el aula es la del tutor que coordina (Ty).
+            if (e.asm && e.coord) { const ty = (n.match(/(T\d)\s*coordina/i) || [])[1]; if (ty && TUTOR_AULA[ty]) e.pref = TUTOR_AULA[ty]; }
+          }
           return;
         }
-        line = line.replace(/^(Asamblea|Conjunta):\s*/, '');          // fuera el prefijo redundante
+        // Entrada y Asamblea: cada asamblea muestra SU AULA (Estrella: T1, Sol: T2…), no combinadas.
+        const am = line.match(/^(Asamblea|Conjunta):\s*(.+)$/);
+        if (am) {
+          const first = (am[2].split('+')[0].trim().match(CODE_RE) || [])[1];
+          const prefA = am[1] === 'Conjunta' ? 'Conjunta' : (TUTOR_AULA[first] || 'Asamblea');
+          const chipsA = am[2].split('+').map(s => { s = s.trim(); const m = s.match(CODE_RE); return m ? { code: m[1], nombre: (m[2] || '').trim() || (DIR[m[1]] ? DIR[m[1]].nombre : '') } : { code: s, nombre: '' }; }).filter(c => c.code);
+          entries.push({ chips: chipsA, pref: prefA, nota: '', coord: false, asm: am[1] === 'Asamblea' });
+          return;
+        }
         let pref = '';
         const lm = line.match(/^([A-Za-zÁÉÍÓÚÑñ .\/]+?):\s*(.+)$/);    // "Sur: T7+L1+..." (Coordinan)
         if (lm && /\+/.test(lm[2])) { pref = lm[1].trim(); line = lm[2]; }
@@ -496,7 +508,7 @@
         const chips = plain.flatMap(x => x.chips), notes = plain.map(x => x.nota).filter(Boolean);
         html += `<div class="mom-cell${plain.some(x => x.coord) ? ' is-coord' : ''}"><span class="mom-chips">${chips.map(chip).join('')}</span>${notes.length ? `<span class="mom-note">${esc(notes.join(' · '))}</span>` : ''}</div>`;
       }
-      labeled.forEach(x => { html += `<div class="mom-cell"><span class="mom-pref">${esc(x.pref)}</span><span class="mom-chips">${x.chips.map(chip).join('')}</span></div>`; });
+      labeled.forEach(x => { html += `<div class="mom-cell${x.coord ? ' is-coord' : ''}"><span class="mom-pref">${esc(x.pref)}</span><span class="mom-chips">${x.chips.map(chip).join('')}</span>${x.nota ? `<span class="mom-note">${esc(x.nota)}</span>` : ''}</div>`; });
       return html;
     }
     // Etiqueta de fila: "Coordinan..." -> "Coordinación"; fuera TODOS los paréntesis

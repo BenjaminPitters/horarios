@@ -167,7 +167,8 @@ img{max-width:100%}
 .chip__code{font-family:var(--mono);font-size:.72rem;color:var(--ink-3)}
 
 /* ===================== VIEW HEAD ===================== */
-.viewhead{display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.3rem}
+.viewhead{display:flex;align-items:flex-end;gap:1.25rem;margin-bottom:1.3rem}
+.viewhead__lead{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:.9rem;align-items:flex-start}
 .viewhead__title h2{font-size:clamp(1.55rem,3vw,2rem);letter-spacing:-.03em}
 .viewhead__title p{margin:.4rem 0 0;color:var(--ink-2);font-size:.92rem;max-width:52ch}
 /* selectores de dos niveles: anclados a la IZQUIERDA para que no se muevan
@@ -211,9 +212,8 @@ img{max-width:100%}
 .gridbanner__role{font-size:.82rem;color:var(--ink-3);margin-top:1px}
 .gridbanner__meta{font-family:var(--mono);font-size:.74rem;color:var(--ink-3)}
 .gridbanner__right{margin-left:auto;display:flex;align-items:center;gap:.85rem;flex:none}
-/* Cabecera de vista: pills a la izquierda, controles de impresión a la derecha, misma fila (sin hueco) */
-.viewhead__right{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap;justify-content:flex-end}
-.printbar{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem;flex:none}
+/* Cabecera de vista: título+pills a la izquierda; controles de impresión fijados a la derecha */
+.printbar{flex:0 0 auto;display:flex;flex-direction:column;align-items:flex-end;gap:.4rem}
 .orient{display:inline-flex;border:1px solid var(--line-2);border-radius:var(--r-pill);overflow:hidden;background:var(--paper)}
 .orient__opt{border:0;background:transparent;color:var(--ink-3);font:inherit;font-size:.72rem;font-weight:500;padding:.26rem .62rem;cursor:pointer;transition:background .14s,color .14s}
 .orient__opt.is-active{background:var(--ink);color:#fff}
@@ -390,8 +390,8 @@ tr.brk th.tgut .h{color:var(--ink-3)}
   .mnav.is-active{background:var(--accent);border-color:var(--accent);color:#fff}
 
   .landing{grid-template-columns:1fr;gap:1.6rem;align-items:start}
-  .viewhead{align-items:stretch}
-  .viewhead__right{width:100%;justify-content:flex-start}
+  .viewhead{flex-direction:column;align-items:stretch}
+  .viewhead__lead{width:100%}
   .printbar{align-items:flex-start}
   .picker,.picker-stack{justify-content:flex-start;align-items:stretch}
   .picker{flex-wrap:nowrap;overflow-x:auto;padding-bottom:.25rem}
