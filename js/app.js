@@ -473,7 +473,8 @@
         if (line.startsWith('(')) {
           const n = line.replace(/^\(/, '').replace(/\)$/, '').trim();
           if (entries.length) {
-            const e = entries[entries.length - 1]; e.nota = n; e.coord = /coordina/i.test(n);
+            const e = entries[entries.length - 1]; e.coord = /coordina/i.test(n);
+            if (!/sale a cubrir/i.test(n)) e.nota = n;   // "Tx sale a cubrir" es redundante (su código ya aparece en el aula que cubre)
             // Asamblea cubierta ("Ty coordina"): el aula es la del tutor que coordina (Ty).
             if (e.asm && e.coord) { const ty = (n.match(/(T\d)\s*coordina/i) || [])[1]; if (ty && TUTOR_AULA[ty]) e.pref = TUTOR_AULA[ty]; }
           }
