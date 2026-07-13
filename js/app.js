@@ -275,20 +275,13 @@
     if (sel.indexOf('terapeutas') >= 0) return { kind: 'terapeutas', label: 'Imprimir todos' };
     return null;
   }
-  function banner(mono, name, role, meta, printAll) {
-    const orientToggle = `<div class="orient noprint" role="group" aria-label="Orientación de impresión">
-        <button class="orient__opt${orient === 'portrait' ? ' is-active' : ''}" data-orient="portrait" type="button">Vertical</button>
-        <button class="orient__opt${orient === 'landscape' ? ' is-active' : ''}" data-orient="landscape" type="button">Horizontal</button>
-      </div>`;
-    const printAllBtn = printAll
-      ? `<button class="gb-print printall-btn noprint" type="button" data-printall="${esc(printAll.kind)}"><span class="gb-print__ico">${ICON.printer}</span>${esc(printAll.label)}</button>`
-      : '';
+  function banner(mono, name, role, meta, printAll) {   // printAll ya no se usa aquí (va en el viewhead)
     return `<div class="gridbanner">
       <span class="gridbanner__mono">${esc(mono)}</span>
       <div><div class="gridbanner__name">${esc(name)}</div>${role ? `<div class="gridbanner__role">${esc(role)}</div>` : ''}</div>
       <div class="gridbanner__right">
         ${meta ? `<span class="gridbanner__meta">${esc(meta)}</span>` : ''}
-        <div class="gridbanner__print">${orientToggle}${printAllBtn}<button class="gb-print gb-print--one noprint" type="button" aria-label="Imprimir este horario"><span class="gb-print__ico">${ICON.printer}</span>Imprimir</button></div>
+        <button class="gb-print gb-print--one noprint" type="button" aria-label="Imprimir este horario"><span class="gb-print__ico">${ICON.printer}</span>Imprimir</button>
       </div>
     </div>`;
   }
@@ -557,9 +550,7 @@
 
   function mount(sel, html) {
     const host = el(sel); host.innerHTML = html;
-    els('.gb-print--one', host).forEach(b => b.addEventListener('click', () => window.print()));           // imprimir este horario
-    els('[data-printall]', host).forEach(b => b.addEventListener('click', () => handlePrintAll(b.dataset.printall)));  // imprimir todo
-    els('[data-orient]', host).forEach(b => b.addEventListener('click', () => setOrient(b.dataset.orient)));           // orientación
+    els('.gb-print--one', host).forEach(b => b.addEventListener('click', () => window.print()));   // imprimir este horario
     els('[data-tip]', host).forEach(n => {
       n.addEventListener('mouseenter', () => showTip(n));
       n.addEventListener('mousemove', moveTip);
@@ -776,6 +767,12 @@
     });
   })();
 
-  setOrient(orient);   // crea el <style> de @page (vertical por defecto)
+  // Controles de impresión estáticos en las cabeceras (viewhead): orientación + "Imprimir todo".
+  els('[data-printall]').forEach(b => {
+    const ico = el('.gb-print__ico', b); if (ico && !ico.innerHTML.trim()) ico.innerHTML = ICON.printer;
+    b.addEventListener('click', () => handlePrintAll(b.dataset.printall));
+  });
+  els('[data-orient]').forEach(b => b.addEventListener('click', () => setOrient(b.dataset.orient)));
+  setOrient(orient);   // crea el <style> de @page (vertical por defecto) y marca el toggle activo
   renderInicio(); rendered.inicio = true;
 })();

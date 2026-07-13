@@ -211,8 +211,9 @@ img{max-width:100%}
 .gridbanner__role{font-size:.82rem;color:var(--ink-3);margin-top:1px}
 .gridbanner__meta{font-family:var(--mono);font-size:.74rem;color:var(--ink-3)}
 .gridbanner__right{margin-left:auto;display:flex;align-items:center;gap:.85rem;flex:none}
-/* Controles de impresión apilados: orientación · "Imprimir todo" · "Imprimir" */
-.gridbanner__print{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem}
+/* Cabecera de vista: pills a la izquierda, controles de impresión a la derecha, misma fila (sin hueco) */
+.viewhead__right{display:flex;align-items:flex-end;gap:1rem;flex-wrap:wrap;justify-content:flex-end}
+.printbar{display:flex;flex-direction:column;align-items:flex-end;gap:.4rem;flex:none}
 .orient{display:inline-flex;border:1px solid var(--line-2);border-radius:var(--r-pill);overflow:hidden;background:var(--paper)}
 .orient__opt{border:0;background:transparent;color:var(--ink-3);font:inherit;font-size:.72rem;font-weight:500;padding:.26rem .62rem;cursor:pointer;transition:background .14s,color .14s}
 .orient__opt.is-active{background:var(--ink);color:#fff}
@@ -390,9 +391,8 @@ tr.brk th.tgut .h{color:var(--ink-3)}
 
   .landing{grid-template-columns:1fr;gap:1.6rem;align-items:start}
   .viewhead{align-items:stretch}
-  .gridbanner{flex-wrap:wrap}
-  .gridbanner__right{margin-left:0;width:100%}
-  .gridbanner__print{align-items:flex-start}
+  .viewhead__right{width:100%;justify-content:flex-start}
+  .printbar{align-items:flex-start}
   .picker,.picker-stack{justify-content:flex-start;align-items:stretch}
   .picker{flex-wrap:nowrap;overflow-x:auto;padding-bottom:.25rem}
   .picker,.picker-stack{min-width:0;max-width:100%;width:100%}
