@@ -220,6 +220,13 @@ img{max-width:100%}
 .gb-print:hover{border-color:var(--accent-line);color:var(--accent-strong);background:var(--accent-tint)}
 .gb-print__ico{width:16px;height:16px;display:block}
 .gb-print__ico svg{width:100%;height:100%}
+/* Cabecera: bloque derecho (selectores + botón "Imprimir todo") */
+.viewhead__right{display:flex;flex-direction:column;align-items:flex-end;gap:.6rem}
+/* "Imprimir todo": pastilla coral, para distinguirla del "Imprimir" simple de cada horario */
+.printall-btn{align-self:flex-end;border-color:var(--accent-line);color:var(--accent-strong);background:var(--accent-tint)}
+.printall-btn:hover{border-color:var(--accent);color:#fff;background:var(--accent)}
+/* Contenedor de "Imprimir todo": oculto en pantalla; solo se ve al imprimir (ver @media print) */
+#printall{display:none}
 
 /* cabecera de impresión: oculta en pantalla, visible solo al imprimir (ver @media print) */
 .printhead{display:none}
@@ -374,6 +381,8 @@ tr.brk th.tgut .h{color:var(--ink-3)}
 
   .landing{grid-template-columns:1fr;gap:1.6rem;align-items:start}
   .viewhead{align-items:stretch}
+  .viewhead__right{width:100%;align-items:stretch}
+  .printall-btn{align-self:flex-start}
   .picker,.picker-stack{justify-content:flex-start;align-items:stretch}
   .picker{flex-wrap:nowrap;overflow-x:auto;padding-bottom:.25rem}
   .picker,.picker-stack{min-width:0;max-width:100%;width:100%}
@@ -490,6 +499,12 @@ tr.brk th.tgut .h{color:var(--ink-3)}
   .cx__extfrom{ font-size:6pt !important; }
   .cx__apoyo{ width:9px !important; height:9px !important; font-size:6pt !important; top:1.5px !important; left:2px !important; }
   .cell--apoyo .cx__asig{ padding-left:10px !important; }
+
+  /* "Imprimir todo": ocultar la vista normal y sacar el contenedor con todos los horarios */
+  body.printall .view{ display:none !important; }
+  body.printall #printall{ display:block !important; }
+  #printall .printall__item{ break-inside:avoid; }
+  #printall .printall__item + .printall__item{ break-before:page; }   /* un horario por página */
   .code{ font-size:6pt !important; padding:0 1px !important; line-height:1.3 !important; }
   .cx__flag{ font-size:6.5pt !important; }
   .brk__rule span{ font-size:6.5pt !important; }

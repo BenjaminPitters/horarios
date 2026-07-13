@@ -83,9 +83,10 @@
   /* ---- iconos en el markup ---- */
   els('[data-ico]').forEach(n => { n.innerHTML = ICON[n.dataset.ico] || ''; });
 
-  /* Tras imprimir un grupo de Turnos, quitar las marcas del <body>. */
+  /* Tras imprimir, quitar las marcas del <body> y vaciar el contenedor "Imprimir todo". */
   window.addEventListener('afterprint', () => {
-    document.body.classList.remove('printgroup', 'printgroup--coord', 'printgroup--patios', 'printgroup--comida');
+    document.body.classList.remove('printgroup', 'printgroup--coord', 'printgroup--patios', 'printgroup--comida', 'printall');
+    const pa = el('#printall'); if (pa) pa.innerHTML = '';
   });
 
   /* ============================================================
@@ -275,7 +276,7 @@
   const NO_COORD = new Set(['Ps3', 'L3', 'I2']);
 
   // ---- CLASE ----
-  function renderClase(aula) {
+  function renderClase(aula, sel) {
     const cl = H.clases[aula];
     const rows = cl.filas.map(f => {
       if (BREAK.has(f.franja)) return brkRow(f.franja, f.hora);   // banda de descanso (base normal)
@@ -306,7 +307,7 @@
       // Filas de clase con altura uniforme (caben asignatura de 2 líneas + chips).
       return `<tr>${gut(f.franja, f.hora, CLASE_ROW)}${cells}</tr>`;
     }).join('');
-    mount('[data-grid="clases"]', shell(banner('Aula', aula, 'Tutor/a ' + (cl.tutor_nombre || cl.tutor || ''), cl.tutor || ''), rows));
+    mount(sel || '[data-grid="clases"]', shell(banner('Aula', aula, 'Tutor/a ' + (cl.tutor_nombre || cl.tutor || ''), cl.tutor || ''), rows));
   }
 
   // ---- PERSONA ----
@@ -525,6 +526,46 @@
     const m = el('[data-momentos]'); if (m && m._paintMom) m._paintMom();   // Turnos también, día a día
   }
 
+  /* ---- IMPRIMIR TODO: varios horarios de golpe (sin quitar el "Imprimir" simple) ----
+     Monta cada horario en un contenedor #printall que solo se ve al imprimir. */
+  function printItems(builders) {
+    const host = el('#printall');
+    if (!host || !builders.length) return;
+    host.innerHTML = builders.map((_, i) => `<div class="printall__item"><div class="grid-host" data-pa="${i}"></div></div>`).join('');
+    builders.forEach((fn, i) => fn(`#printall [data-pa="${i}"]`));
+    document.body.classList.add('printall');
+    window.print();
+  }
+  function printAllAula(aula) {
+    if (!aula || !H.clases[aula]) return;
+    const tc = H.clases[aula].tutor, t = H.tutoras[tc];
+    const ninos = (H.alumnado && H.alumnado[aula]) ? Object.keys(H.alumnado[aula]) : [];
+    const items = [];
+    if (t) items.push(sel => renderPersona(sel, tc, Object.assign({}, t, { rol: 'Tutor/a · aula ' + aula })));
+    items.push(sel => renderClase(aula, sel));                       // rejilla del aula
+    ninos.forEach(n => items.push(sel => renderAlumno(sel, aula, n)));   // cada niño
+    printItems(items);
+  }
+  function printAllPersonas(lista) {
+    printItems(lista.map(p => (sel => renderPersona(sel, p.code, p.data))));
+  }
+  function wirePrintAll() {
+    els('[data-printall]').forEach(btn => {
+      const ico = el('.gb-print__ico', btn); if (ico && !ico.innerHTML.trim()) ico.innerHTML = ICON.printer;
+      btn.addEventListener('click', () => {
+      const kind = btn.dataset.printall;
+      if (kind === 'clases') {
+        const act = el('.picker[data-for="clases"] .pk.is-active');
+        printAllAula(act && act.dataset.key);
+      } else if (kind === 'especialistas') {
+        printAllPersonas(Object.keys(H.especialistas).sort(byCode(k => k)).map(k => ({ code: k, data: H.especialistas[k] })));
+      } else if (kind === 'terapeutas') {
+        printAllPersonas(terGroups().flatMap(g => Object.keys(H.terapeutas[g] || {}).sort(byCode(k => k)).map(k => ({ code: k, data: H.terapeutas[g][k] }))));
+      }
+      });
+    });
+  }
+
   /* tooltip */
   const tip = el('#tip');
   function showTip(n) {
@@ -621,5 +662,6 @@
     });
   })();
 
+  wirePrintAll();
   renderInicio(); rendered.inicio = true;
 })();

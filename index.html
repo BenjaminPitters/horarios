@@ -93,9 +93,12 @@
       <section class="view" id="view-clases">
         <header class="viewhead">
           <div class="viewhead__title"><h2>Clases</h2><p>Elige un aula y consulta su tutor o tutora, el horario del grupo y el de cada alumno o alumna.</p></div>
-          <div class="picker-stack">
-            <div class="picker picker--sub" data-for="clases" aria-label="Aulas"></div>
-            <div class="picker" data-for="clases-alumnos" aria-label="Aula o alumno"></div>
+          <div class="viewhead__right">
+            <div class="picker-stack">
+              <div class="picker picker--sub" data-for="clases" aria-label="Aulas"></div>
+              <div class="picker" data-for="clases-alumnos" aria-label="Aula o alumno"></div>
+            </div>
+            <button class="gb-print printall-btn noprint" type="button" data-printall="clases" aria-label="Imprimir todos los horarios del aula"><span class="gb-print__ico"></span>Imprimir todo el aula</button>
           </div>
         </header>
         <div class="grid-host" data-grid="clases"></div>
@@ -105,7 +108,10 @@
       <section class="view" id="view-especialistas">
         <header class="viewhead">
           <div class="viewhead__title"><h2>Especialistas</h2><p>Educación Física, Inglés y demás perfiles especialistas del centro.</p></div>
-          <div class="picker" data-for="especialistas" aria-label="Especialistas"></div>
+          <div class="viewhead__right">
+            <div class="picker" data-for="especialistas" aria-label="Especialistas"></div>
+            <button class="gb-print printall-btn noprint" type="button" data-printall="especialistas" aria-label="Imprimir todos los especialistas"><span class="gb-print__ico"></span>Imprimir todo</button>
+          </div>
         </header>
         <div class="grid-host" data-grid="especialistas"></div>
       </section>
@@ -114,9 +120,12 @@
       <section class="view" id="view-terapeutas">
         <header class="viewhead">
           <div class="viewhead__title"><h2>Terapeutas</h2><p>Psicólogas, logopedas y terapeutas ocupacionales, con el detalle de sus sesiones.</p></div>
-          <div class="picker-stack">
-            <div class="picker picker--sub" data-for="terapeutas" aria-label="Subgrupos"></div>
-            <div class="picker" data-for="terapeutas-personas" aria-label="Persona"></div>
+          <div class="viewhead__right">
+            <div class="picker-stack">
+              <div class="picker picker--sub" data-for="terapeutas" aria-label="Subgrupos"></div>
+              <div class="picker" data-for="terapeutas-personas" aria-label="Persona"></div>
+            </div>
+            <button class="gb-print printall-btn noprint" type="button" data-printall="terapeutas" aria-label="Imprimir todos los terapeutas"><span class="gb-print__ico"></span>Imprimir todo</button>
           </div>
         </header>
         <div class="grid-host" data-grid="terapeutas"></div>
@@ -129,6 +138,9 @@
         </header>
         <div class="momentos" data-momentos></div>
       </section>
+
+      <!-- Contenedor de "Imprimir todo": vacío en pantalla, se llena y solo se ve al imprimir -->
+      <div id="printall" aria-hidden="true"></div>
     </main>
   </div>
 
