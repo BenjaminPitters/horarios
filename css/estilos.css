@@ -39,7 +39,9 @@ body{
   margin:0;background:var(--bg);color:var(--ink);
   font-family:'Geist',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
   font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  caret-color:transparent;   /* oculta el cursor titilante (caret browsing / selección) fuera de campos */
 }
+input,textarea,[contenteditable]{caret-color:auto}   /* el buscador sí muestra su cursor */
 h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.02em;line-height:1.08}
 button{font-family:inherit;cursor:pointer;color:inherit}
 img{max-width:100%}
