@@ -401,7 +401,7 @@
           const co = aula ? coAdultos(aula, day, f.franja, mono) : [];
           mainLine = co.length ? mainLine.replace(/\s*\(apoyo\)/i, ' · ' + co.join('+')) : mainLine.replace(/\s*\(apoyo\)/i, ' · apoyo');
         }
-        if (short) mainLine = mainLine.replace(/^Transici[oó]n de patio$/i, 'Transición');   // 1 línea en la fila compacta
+        if (short) mainLine = mainLine.replace(/^Transici[oó]n de patio$/i, 'Transición a patio');   // 1 línea en la fila compacta
         const displayMain = formatMain(mainLine);   // sin paréntesis, con aula como prefijo
         // Color por ÁREA (igual que en Clases y en las fichas de los niños): si la línea
         // principal es un área, se pinta con su color; si no (p. ej. sesión individual de
@@ -409,6 +409,7 @@
         let area = c.tipo === 'lectivo' ? areaDe(mainLine) : null;
         let col = area ? asigColor(area) : (c.aula ? aulaColor(c.aula) : null);
         if (!col) col = estadoColor(c.tipo);
+        if (short) col = estadoColor('patio') || col;   // transición de patio: morado del patio
         const muted = c.tipo === 'no_lectivo';
         const style = col ? ` style="background:${tint(col,.28)};border-left-color:${col}"` : '';
         const room = (c.aula && displayMain.indexOf(c.aula) < 0) ? `<span class="cx__room">${esc(c.aula)}</span>` : '';
