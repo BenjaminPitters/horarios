@@ -548,7 +548,7 @@
       let rows = aulas.map(p => rowHtml(p, d => aulaByPref[p][d] || [])).join('');
       // fila Conjunta (EBO): la conjunta Oeste+Sur viene en 2 líneas (una por aula), con los
       // mismos códigos; se colapsan en una, conservando la nota "(Tx coordina)".
-      rows += rowHtml('Conjunta', d => {
+      rows += rowHtml('S/O Conjunta', d => {
         const cj = perDay[d].filter(e => e.conj), seen = {}, merged = [];
         cj.forEach(e => { const k = e.chips.map(c => c.code).join('+'); if (!(k in seen)) { seen[k] = e; merged.push(e); } else if (e.nota && !seen[k].nota) seen[k].nota = e.nota; });
         return merged;
