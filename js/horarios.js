@@ -50,7 +50,7 @@ window.HORARIOS = {
    "Jueves",
    "Viernes"
   ],
-  "generado": "2026-07-13"
+  "generado": "2026-07-15"
  },
  "clases": {
   "Estrella": {
@@ -755,7 +755,7 @@ window.HORARIOS = {
         {
          "alumno": "Gonzalo",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -768,7 +768,7 @@ window.HORARIOS = {
         {
          "alumno": "Eva",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       }
@@ -822,7 +822,7 @@ window.HORARIOS = {
         {
          "alumno": "Santiago",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       }
@@ -922,7 +922,7 @@ window.HORARIOS = {
         {
          "alumno": "Santiago",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -1019,7 +1019,7 @@ window.HORARIOS = {
         {
          "alumno": "Álvaro",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -1033,7 +1033,7 @@ window.HORARIOS = {
         {
          "alumno": "Gonzalo",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -1046,7 +1046,7 @@ window.HORARIOS = {
         {
          "alumno": "Eva",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -1205,7 +1205,7 @@ window.HORARIOS = {
         {
          "alumno": "Álvaro",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -1347,7 +1347,7 @@ window.HORARIOS = {
         {
          "alumno": "Catalina F.",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -1380,7 +1380,7 @@ window.HORARIOS = {
         {
          "alumno": "Catalina F.",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -1413,7 +1413,7 @@ window.HORARIOS = {
         {
          "alumno": "Leonor",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -1512,7 +1512,7 @@ window.HORARIOS = {
         {
          "alumno": "Leonor",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         },
         {
          "alumno": "Miguel",
@@ -1957,7 +1957,7 @@ window.HORARIOS = {
         {
          "alumno": "Lucas",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -1970,7 +1970,7 @@ window.HORARIOS = {
         {
          "alumno": "Darío",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -2023,7 +2023,7 @@ window.HORARIOS = {
         {
          "alumno": "Manuela",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -2196,7 +2196,7 @@ window.HORARIOS = {
         {
          "alumno": "Luis",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -2216,7 +2216,7 @@ window.HORARIOS = {
         {
          "alumno": "Lucas",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -2229,7 +2229,7 @@ window.HORARIOS = {
         {
          "alumno": "Darío",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       }
@@ -2280,7 +2280,7 @@ window.HORARIOS = {
         {
          "alumno": "Luis",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -2293,7 +2293,7 @@ window.HORARIOS = {
         {
          "alumno": "Manuela",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       }
@@ -3219,7 +3219,7 @@ window.HORARIOS = {
         {
          "alumno": "Micke",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -3266,7 +3266,7 @@ window.HORARIOS = {
         {
          "alumno": "Emma",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -3855,7 +3855,7 @@ window.HORARIOS = {
         {
          "alumno": "Ángela",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -3898,7 +3898,7 @@ window.HORARIOS = {
         {
          "alumno": "Jacobo",
          "a": "O1",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -7847,7 +7847,7 @@ window.HORARIOS = {
  "terapeutas": {
   "psicologas": {
    "O1": {
-    "nombre": "(por contratar)",
+    "nombre": "Lucía Cubillas",
     "rol": "Orientadora (psicóloga)",
     "filas": [
      {
@@ -12020,7 +12020,7 @@ window.HORARIOS = {
        },
        "Jueves": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Viernes": {
         "asig": "Psicomotricidad"
@@ -12143,7 +12143,7 @@ window.HORARIOS = {
        },
        "Martes": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Miércoles": {
         "asig": "Juego"
@@ -12422,7 +12422,7 @@ window.HORARIOS = {
       "dias": {
        "Lunes": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Martes": {
         "asig": "Juego"
@@ -12513,7 +12513,7 @@ window.HORARIOS = {
        },
        "Miércoles": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Jueves": {
         "asig": "Cuentacuentos"
@@ -12609,7 +12609,7 @@ window.HORARIOS = {
        },
        "Viernes": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        }
       }
      },
@@ -12667,7 +12667,7 @@ window.HORARIOS = {
        },
        "Miércoles": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Jueves": {
         "asig": "Prerrequisitos de Grafomotricidad"
@@ -12869,7 +12869,7 @@ window.HORARIOS = {
        },
        "Viernes": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        }
       }
      },
@@ -12991,7 +12991,7 @@ window.HORARIOS = {
        },
        "Miércoles": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Jueves": {
         "asig": "Juego"
@@ -13147,7 +13147,7 @@ window.HORARIOS = {
        },
        "Miércoles": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Jueves": {
         "asig": "Estimulación del Lenguaje"
@@ -13163,7 +13163,7 @@ window.HORARIOS = {
       "dias": {
        "Lunes": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Martes": {
         "asig": "Prerrequisitos de Aprendizaje"
@@ -13453,7 +13453,7 @@ window.HORARIOS = {
        },
        "Jueves": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Viernes": {
         "asig": "Prerrequisitos de Aprendizaje"
@@ -13508,7 +13508,7 @@ window.HORARIOS = {
       "dias": {
        "Lunes": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Martes": {
         "salida": "TO1",
@@ -14274,7 +14274,7 @@ window.HORARIOS = {
        },
        "Martes": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Miércoles": {
         "asig": "Prerrequisitos de Lectoescritura"
@@ -14390,7 +14390,7 @@ window.HORARIOS = {
        },
        "Viernes": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        }
       }
      },
@@ -14663,7 +14663,7 @@ window.HORARIOS = {
        },
        "Martes": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Miércoles": {
         "asig": "Prerrequisitos de Grafomotricidad"
@@ -14691,7 +14691,7 @@ window.HORARIOS = {
        },
        "Jueves": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Viernes": {
         "asig": "Psicomotricidad"
@@ -14859,7 +14859,7 @@ window.HORARIOS = {
        },
        "Martes": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Miércoles": {
         "asig": "Estimulación del Lenguaje"
@@ -14975,7 +14975,7 @@ window.HORARIOS = {
        },
        "Viernes": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        }
       }
      },
@@ -15117,7 +15117,7 @@ window.HORARIOS = {
       "dias": {
        "Lunes": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Martes": {
         "asig": "Prerrequisitos de Lectoescritura"
@@ -15232,7 +15232,7 @@ window.HORARIOS = {
        },
        "Jueves": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Viernes": {
         "asig": "Prerrequisitos de Grafomotricidad"
@@ -17397,7 +17397,7 @@ window.HORARIOS = {
        },
        "Miércoles": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Jueves": {
         "asig": "Lengua"
@@ -17696,7 +17696,7 @@ window.HORARIOS = {
        },
        "Martes": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Miércoles": {
         "asig": "Escritura"
@@ -19101,7 +19101,7 @@ window.HORARIOS = {
       "dias": {
        "Lunes": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Martes": {
         "asig": "Lengua"
@@ -19952,7 +19952,7 @@ window.HORARIOS = {
        },
        "Jueves": {
         "salida": "O1",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Lucía Cubillas"
        },
        "Viernes": {
         "asig": "Capacitación Digital"
@@ -20244,14 +20244,14 @@ window.HORARIOS = {
       "Jueves": [
        "EF1 Fernando",
        "I2 María G.",
-       "O1 (por contratar)",
+       "O1 Lucía C.",
        "TO2 Aitana",
        "T4 Marta O."
       ],
       "Viernes": [
        "EF1 Fernando",
        "I2 María G.",
-       "O1 (por contratar)",
+       "O1 Lucía C.",
        "L3 (por contratar)",
        "TO2 Aitana"
       ]
@@ -20306,7 +20306,7 @@ window.HORARIOS = {
        "L2 Sheila",
        "T3 Silvia",
        "I2 María G.",
-       "O1 (por contratar)"
+       "O1 Lucía C."
       ],
       "Viernes": [
        "T1 María C.",
@@ -20333,7 +20333,7 @@ window.HORARIOS = {
        "T6 Marta La.",
        "T7 Raquel",
        "EF1 Fernando",
-       "O1 (por contratar)"
+       "O1 Lucía C."
       ],
       "Martes": [
        "T5 Jesús",
@@ -20347,7 +20347,7 @@ window.HORARIOS = {
        "T6 Marta La.",
        "T7 Raquel",
        "EF1 Fernando",
-       "O1 (por contratar)"
+       "O1 Lucía C."
       ],
       "Jueves": [
        "T5 Jesús",
@@ -20361,7 +20361,7 @@ window.HORARIOS = {
        "T6 Marta La.",
        "T7 Raquel",
        "EF1 Fernando",
-       "O1 (por contratar)"
+       "O1 Lucía C."
       ]
      }
     }
@@ -20377,7 +20377,7 @@ window.HORARIOS = {
        "T6 Marta La.",
        "T7 Raquel",
        "EF1 Fernando",
-       "O1 (por contratar)"
+       "O1 Lucía C."
       ],
       "Martes": [
        "T5 Jesús",
@@ -20390,7 +20390,7 @@ window.HORARIOS = {
        "T6 Marta La.",
        "T7 Raquel",
        "EF1 Fernando",
-       "O1 (por contratar)"
+       "O1 Lucía C."
       ],
       "Jueves": [
        "T5 Jesús",
@@ -20404,7 +20404,7 @@ window.HORARIOS = {
        "T6 Marta La.",
        "T7 Raquel",
        "EF1 Fernando",
-       "O1 (por contratar)"
+       "O1 Lucía C."
       ]
      }
     }
@@ -20432,7 +20432,7 @@ window.HORARIOS = {
        "T4 Marta O.",
        "T3 Silvia",
        "I1 Benjie",
-       "O1 (por contratar)",
+       "O1 Lucía C.",
        "O2 Sara",
        "L1 Luis",
        "L2 Sheila",
@@ -20456,7 +20456,7 @@ window.HORARIOS = {
        "T4 Marta O.",
        "T3 Silvia",
        "I1 Benjie",
-       "O1 (por contratar)",
+       "O1 Lucía C.",
        "L1 Luis",
        "L2 Sheila",
        "TO1 Irene",
