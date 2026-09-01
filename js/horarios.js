@@ -2007,6 +2007,13 @@ window.HORARIOS = {
        "adultos": [
         "L1",
         "T3"
+       ],
+       "salidas": [
+        {
+         "alumno": "Mateo",
+         "a": "O1",
+         "a_nombre": "Lucía Cubillas"
+        }
        ]
       }
      }
@@ -2125,11 +2132,6 @@ window.HORARIOS = {
          "alumno": "Darío",
          "a": "L1",
          "a_nombre": "Luis"
-        },
-        {
-         "alumno": "Mateo",
-         "a": "O1",
-         "a_nombre": "Lucía Cubillas"
         }
        ]
       },
@@ -2151,6 +2153,13 @@ window.HORARIOS = {
        "adultos": [
         "T3",
         "TO1"
+       ],
+       "salidas": [
+        {
+         "alumno": "Mateo",
+         "a": "L1",
+         "a_nombre": "Luis"
+        }
        ]
       },
       "Martes": {
@@ -2171,6 +2180,13 @@ window.HORARIOS = {
        "adultos": [
         "T3",
         "TO1"
+       ],
+       "salidas": [
+        {
+         "alumno": "Mateo",
+         "a": "O1",
+         "a_nombre": "Lucía Cubillas"
+        }
        ]
       },
       "Jueves": {
@@ -2331,11 +2347,6 @@ window.HORARIOS = {
          "alumno": "Lucas",
          "a": "L1",
          "a_nombre": "Luis"
-        },
-        {
-         "alumno": "Mateo",
-         "a": "TO1",
-         "a_nombre": "Irene"
         }
        ]
       },
@@ -2355,6 +2366,11 @@ window.HORARIOS = {
          "alumno": "Darío",
          "a": "TO1",
          "a_nombre": "Irene"
+        },
+        {
+         "alumno": "Luis",
+         "a": "L1",
+         "a_nombre": "Luis"
         }
        ]
       },
@@ -2374,11 +2390,6 @@ window.HORARIOS = {
          "alumno": "Manuela",
          "a": "L1",
          "a_nombre": "Luis"
-        },
-        {
-         "alumno": "Mateo",
-         "a": "O1",
-         "a_nombre": "Lucía Cubillas"
         }
        ]
       }
@@ -2404,11 +2415,6 @@ window.HORARIOS = {
          "alumno": "Lucas",
          "a": "TO1",
          "a_nombre": "Irene"
-        },
-        {
-         "alumno": "Mateo",
-         "a": "L1",
-         "a_nombre": "Luis"
         }
        ]
       },
@@ -2419,9 +2425,9 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Luis",
-         "a": "L1",
-         "a_nombre": "Luis"
+         "alumno": "Mateo",
+         "a": "TO1",
+         "a_nombre": "Irene"
         }
        ]
       },
@@ -5079,7 +5085,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Est.leng. (apoyo)",
+       "txt": "L · Est.leng. (apoyo)\n↗ Mateo→O1",
        "tipo": "lectivo"
       }
      }
@@ -5153,7 +5159,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Prerrequisitos de Aprendizaje\n↗ Darío→L1\n↗ Mateo→O1",
+       "txt": "L · Prerrequisitos de Aprendizaje\n↗ Darío→L1",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -5167,7 +5173,7 @@ window.HORARIOS = {
      "hora": "12:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Prerrequisitos de Grafomotricidad · TO1",
+       "txt": "L · Prerrequisitos de Grafomotricidad · TO1\n↗ Mateo→L1",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -5175,7 +5181,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Prerrequisitos de Grafomotricidad · TO1",
+       "txt": "L · Prerrequisitos de Grafomotricidad · TO1\n↗ Mateo→O1",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -5271,7 +5277,7 @@ window.HORARIOS = {
      "hora": "14:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Conocimiento del Entorno\n↗ Lucas→L1\n↗ Mateo→TO1",
+       "txt": "L · Conocimiento del Entorno\n↗ Lucas→L1",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -5279,7 +5285,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "L · Conocimiento del Entorno\n↗ Darío→TO1",
+       "txt": "L · Conocimiento del Entorno\n↗ Darío→TO1\n↗ Luis→L1",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -5287,7 +5293,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Viernes": {
-       "txt": "L · Conocimiento del Entorno\n↗ Manuela→L1\n↗ Mateo→O1",
+       "txt": "L · Conocimiento del Entorno\n↗ Manuela→L1",
        "tipo": "lectivo"
       }
      }
@@ -5301,11 +5307,11 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Martes": {
-       "txt": "L · Juego\n↗ Lucas→TO1\n↗ Mateo→L1",
+       "txt": "L · Juego\n↗ Lucas→TO1",
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Juego\n↗ Luis→L1",
+       "txt": "L · Juego\n↗ Mateo→TO1",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -7915,8 +7921,9 @@ window.HORARIOS = {
         "aula": "Norte"
        },
        "Viernes": {
-        "txt": "NL",
-        "tipo": "no_lectivo"
+        "txt": "L · Luna: Mateo",
+        "tipo": "lectivo",
+        "aula": "Luna"
        }
       }
      },
@@ -7995,9 +8002,8 @@ window.HORARIOS = {
         "tipo": "no_lectivo"
        },
        "Jueves": {
-        "txt": "L · Luna: Mateo",
-        "tipo": "lectivo",
-        "aula": "Luna"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Viernes": {
         "txt": "NL",
@@ -8019,8 +8025,9 @@ window.HORARIOS = {
         "aula": "Luna"
        },
        "Miércoles": {
-        "txt": "NL",
-        "tipo": "no_lectivo"
+        "txt": "L · Luna: Mateo",
+        "tipo": "lectivo",
+        "aula": "Luna"
        },
        "Jueves": {
         "txt": "L · Luna: Lucas",
@@ -8142,9 +8149,8 @@ window.HORARIOS = {
         "aula": "Norte"
        },
        "Viernes": {
-        "txt": "L · Luna: Mateo",
-        "tipo": "lectivo",
-        "aula": "Luna"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        }
       }
      },
@@ -9109,8 +9115,9 @@ window.HORARIOS = {
       "hora": "12:00",
       "dias": {
        "Lunes": {
-        "txt": "NL",
-        "tipo": "no_lectivo"
+        "txt": "L · Luna: Mateo",
+        "tipo": "lectivo",
+        "aula": "Luna"
        },
        "Martes": {
         "txt": "L · Sol: Bernardo",
@@ -9231,8 +9238,9 @@ window.HORARIOS = {
         "tipo": "no_lectivo"
        },
        "Miércoles": {
-        "txt": "NL",
-        "tipo": "no_lectivo"
+        "txt": "L · Luna: Luis",
+        "tipo": "lectivo",
+        "aula": "Luna"
        },
        "Jueves": {
         "txt": "NL",
@@ -9255,14 +9263,12 @@ window.HORARIOS = {
         "aula": "Estrella"
        },
        "Martes": {
-        "txt": "L · Luna: Mateo",
-        "tipo": "lectivo",
-        "aula": "Luna"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Miércoles": {
-        "txt": "L · Luna: Luis",
-        "tipo": "lectivo",
-        "aula": "Luna"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Jueves": {
         "txt": "L · Luna: Mateo",
@@ -10358,9 +10364,8 @@ window.HORARIOS = {
       "hora": "14:30",
       "dias": {
        "Lunes": {
-        "txt": "L · Luna: Mateo",
-        "tipo": "lectivo",
-        "aula": "Luna"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Martes": {
         "txt": "L · Norte: Autonomía · O1",
@@ -10397,8 +10402,9 @@ window.HORARIOS = {
         "aula": "Luna"
        },
        "Miércoles": {
-        "txt": "NL",
-        "tipo": "no_lectivo"
+        "txt": "L · Luna: Mateo",
+        "tipo": "lectivo",
+        "aula": "Luna"
        },
        "Jueves": {
         "txt": "L · Luna: Manuela",
@@ -14445,7 +14451,8 @@ window.HORARIOS = {
         "asig": "Inglés"
        },
        "Miércoles": {
-        "asig": "Conocimiento del Entorno"
+        "salida": "L1",
+        "dest_nombre": "Luis"
        },
        "Jueves": {
         "asig": "Inglés"
@@ -14466,8 +14473,7 @@ window.HORARIOS = {
         "asig": "Juego"
        },
        "Miércoles": {
-        "salida": "L1",
-        "dest_nombre": "Luis"
+        "asig": "Juego"
        },
        "Jueves": {
         "asig": "Juego"
@@ -15125,7 +15131,8 @@ window.HORARIOS = {
         "asig": "Estimulación del Lenguaje"
        },
        "Viernes": {
-        "asig": "Estimulación del Lenguaje"
+        "salida": "O1",
+        "dest_nombre": "Lucía Cubillas"
        }
       }
      },
@@ -15185,8 +15192,7 @@ window.HORARIOS = {
         "asig": "Prerrequisitos de Aprendizaje"
        },
        "Jueves": {
-        "salida": "O1",
-        "dest_nombre": "Lucía Cubillas"
+        "asig": "Prerrequisitos de Aprendizaje"
        },
        "Viernes": {
         "asig": "Prerrequisitos de Aprendizaje"
@@ -15198,13 +15204,15 @@ window.HORARIOS = {
       "hora": "12:00",
       "dias": {
        "Lunes": {
-        "asig": "Prerrequisitos de Grafomotricidad"
+        "salida": "L1",
+        "dest_nombre": "Luis"
        },
        "Martes": {
         "asig": "Prerrequisitos de Grafomotricidad"
        },
        "Miércoles": {
-        "asig": "Prerrequisitos de Grafomotricidad"
+        "salida": "O1",
+        "dest_nombre": "Lucía Cubillas"
        },
        "Jueves": {
         "asig": "Prerrequisitos de Grafomotricidad"
@@ -15282,8 +15290,7 @@ window.HORARIOS = {
       "hora": "14:30",
       "dias": {
        "Lunes": {
-        "salida": "TO1",
-        "dest_nombre": "Irene"
+        "asig": "Conocimiento del Entorno"
        },
        "Martes": {
         "asig": "Inglés"
@@ -15295,8 +15302,7 @@ window.HORARIOS = {
         "asig": "Inglés"
        },
        "Viernes": {
-        "salida": "O1",
-        "dest_nombre": "Lucía Cubillas"
+        "asig": "Conocimiento del Entorno"
        }
       }
      },
@@ -15308,11 +15314,11 @@ window.HORARIOS = {
         "asig": "Inteligencia Emocional"
        },
        "Martes": {
-        "salida": "L1",
-        "dest_nombre": "Luis"
+        "asig": "Juego"
        },
        "Miércoles": {
-        "asig": "Juego"
+        "salida": "TO1",
+        "dest_nombre": "Irene"
        },
        "Jueves": {
         "salida": "L1",
