@@ -7013,9 +7013,8 @@ window.HORARIOS = {
      "hora": "14:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Estrella: Juego · T1\n↗ Gonzalo→L2",
-       "tipo": "lectivo",
-       "aula": "Estrella"
+       "txt": "L · Juego (Est+Sol)\n↗ Gonzalo→L2",
+       "tipo": "lectivo"
       },
       "Martes": {
        "txt": "L · Este: Educación Física\n↗ Catalina B.→Ps3",
@@ -7023,9 +7022,8 @@ window.HORARIOS = {
        "aula": "Este"
       },
       "Miércoles": {
-       "txt": "L · Estrella: Juego · T1",
-       "tipo": "lectivo",
-       "aula": "Estrella"
+       "txt": "L · Juego (Est+Sol)",
+       "tipo": "lectivo"
       },
       "Jueves": {
        "txt": "L · Este: Educación Física\n↗ Daniel→Ps3",
@@ -7033,9 +7031,8 @@ window.HORARIOS = {
        "aula": "Este"
       },
       "Viernes": {
-       "txt": "L · Estrella: Juego · T1",
-       "tipo": "lectivo",
-       "aula": "Estrella"
+       "txt": "L · Juego (Est+Sol)",
+       "tipo": "lectivo"
       }
      }
     },
@@ -9790,29 +9787,24 @@ window.HORARIOS = {
       "hora": "10:30",
       "dias": {
        "Lunes": {
-        "txt": "L · Estrella: Snack · T1",
-        "tipo": "lectivo",
-        "aula": "Estrella"
+        "txt": "L · Snack (Est+Sol)",
+        "tipo": "lectivo"
        },
        "Martes": {
-        "txt": "L · Estrella: Snack · T1",
-        "tipo": "lectivo",
-        "aula": "Estrella"
+        "txt": "L · Snack (Est+Sol)",
+        "tipo": "lectivo"
        },
        "Miércoles": {
-        "txt": "L · Estrella: Snack · T1",
-        "tipo": "lectivo",
-        "aula": "Estrella"
+        "txt": "L · Snack (Est+Sol)",
+        "tipo": "lectivo"
        },
        "Jueves": {
-        "txt": "L · Estrella: Snack · T1",
-        "tipo": "lectivo",
-        "aula": "Estrella"
+        "txt": "L · Snack (Est+Sol)",
+        "tipo": "lectivo"
        },
        "Viernes": {
-        "txt": "L · Estrella: Snack · T1",
-        "tipo": "lectivo",
-        "aula": "Estrella"
+        "txt": "L · Snack (Est+Sol)",
+        "tipo": "lectivo"
        }
       }
      },
@@ -10445,9 +10437,8 @@ window.HORARIOS = {
         "aula": "Este"
        },
        "Viernes": {
-        "txt": "L · Estrella+Sol: Música · apoyo",
-        "tipo": "lectivo",
-        "aula": "Estrella+Sol"
+        "txt": "L · Música (Est+Sol)",
+        "tipo": "lectivo"
        }
       }
      }
@@ -10752,9 +10743,8 @@ window.HORARIOS = {
         "aula": "Sur"
        },
        "Martes": {
-        "txt": "L · Estrella+Sol: Juego · apoyo",
-        "tipo": "lectivo",
-        "aula": "Estrella+Sol"
+        "txt": "L · Juego (Est+Sol)",
+        "tipo": "lectivo"
        },
        "Miércoles": {
         "txt": "NL",
