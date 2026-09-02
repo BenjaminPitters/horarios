@@ -325,9 +325,9 @@
   const gut = (fr, hora, base) => `<th class="tgut" scope="row" style="height:${rowH(fr, base, hora)}px"><span class="f">${esc(clean(fr))}</span>${hora ? `<span class="h">${esc(clean(hora))}</span>` : ''}</th>`;
   const brkRow = (fr, hora, base) => `<tr class="brk">${gut(fr, hora, base)}<td colspan="${DIAS.length}"><div class="brk__rule"><span>${esc(clean(fr))} ${esc(clean(hora || ''))}</span></div></td></tr>`;
 
-  // Fila sintética de coordinación general (no viene en el dato): martes 16:00-16:45.
+  // Fila sintética de coordinación general (no viene en el dato): martes 16:00-17:00.
   // Mismo color/estilo que NL y las demás coordinaciones (tipo no_lectivo).
-  const COORD_ROW = { franja: 'Coord.', hora: '16:00-16:45', dias: {
+  const COORD_ROW = { franja: 'Coord.', hora: '16:00-17:00', dias: {
     'Lunes': {}, 'Martes': { txt: 'Coordinación general', tipo: 'no_lectivo' }, 'Miércoles': {}, 'Jueves': {}, 'Viernes': {}
   } };
   // Personas que NO van a la coordinación general (no se les pone la franja).
