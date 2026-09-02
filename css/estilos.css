@@ -516,6 +516,10 @@ tr.brk th.tgut .h{color:var(--ink-3)}
   table.grid thead th{ display:table-cell !important; position:static !important; padding:1.2mm 1mm !important; font-size:7pt !important; }
   th.tgut{ display:table-cell !important; position:static !important; width:19mm !important; height:auto !important; padding:1mm 2mm !important; vertical-align:middle !important; }
   td.cell, td.cell[data-day]{ display:table-cell !important; height:auto !important; }
+  /* Celdas fusionadas verticalmente (mergeCells): la líder lleva rowspan y estas quedan
+     ocultas. Mantenerlas ocultas también al imprimir; si no, reaparecen y desbordan la
+     fila hacia la derecha (fuera del papel). Especificidad extra para ganar a la regla de arriba. */
+  td.cell.cell--merged{ display:none !important; }
   tr.brk td{ display:table-cell !important; }
   tr.brk th.tgut{ display:table-cell !important; }
   .cx{ min-height:0 !important; height:auto !important; padding:1mm 1.6mm !important; gap:.4mm !important; }
