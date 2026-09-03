@@ -681,26 +681,48 @@
   }
   // Fusiona un bloque de celdas idénticas: la 1ª lleva rowspan; las demás se ocultan (escritorio).
   // Las salidas que difieran entre franjas se COMBINAN en la celda líder para no perder nada.
+  // IMPORTANTE: si el bloque abarca varias franjas con salidas distintas (típico en la vista de
+  // aula, donde Matemáticas F4 y F5 se fusionan aunque salgan niños diferentes), cada salida se
+  // ETIQUETA con la hora de su franja de origen, tanto en la celda como en el tooltip. Antes se
+  // volcaban todas en una sola lista sin distinguir a qué franja pertenecía cada niño.
   function combineRun(run) {
     const leader = run[0]; leader.rowSpan = run.length;
     const lcx = el('.cx', leader);
-    const seen = new Set(els('.cx__salrow, .cx__extrow', lcx).map(n => n.textContent.replace(/\s+/g, ' ').trim()));
     const parseTip = td => { try { return JSON.parse(td.getAttribute('data-tip') || '{}').salidas || []; } catch (e) { return []; } };
-    const tipSal = parseTip(leader);
+    const horaOf = td => { const tr = td.closest('tr'); const h = tr && el('th.tgut .h', tr); const fr = tr && el('th.tgut .f', tr); return (h && h.textContent.trim()) || (fr && fr.textContent.trim()) || ''; };
+    // ¿las salidas del bloque vienen de más de una franja? Solo entonces hace falta etiquetar.
+    const salHoras = new Set();
+    run.forEach(td => { const cx = el('.cx', td); if ((cx && el('.cx__salrow', cx)) || parseTip(td).length) salHoras.add(horaOf(td)); });
+    const multi = salHoras.size > 1;
+    const tagRow = (row, hora) => {   // antepone la hora de origen a una fila de salida (solo si multi)
+      if (multi && hora && row.classList && row.classList.contains('cx__salrow') && !el('.cx__salfr', row)) {
+        const fr = document.createElement('span'); fr.className = 'cx__salfr'; fr.textContent = hora;
+        row.insertBefore(fr, row.firstChild);
+      }
+      return row;
+    };
+    // etiquetar las salidas que ya trae la propia líder (su franja)
+    els('.cx__salrow', lcx).forEach(r => tagRow(r, horaOf(leader)));
+    const seen = new Set(els('.cx__salrow, .cx__extrow', lcx).map(n => (multi ? horaOf(leader) + '|' : '') + n.textContent.replace(/\s+/g, ' ').trim()));
+    const tipSal = parseTip(leader).map(s => (multi ? Object.assign({}, s, { fr: horaOf(leader) }) : s));
     for (let i = 1; i < run.length; i++) {
       const td = run[i]; td.classList.add('cell--merged');
+      const hora = horaOf(td);
       const ccx = el('.cx', td);
       els('.cx__sal, .cx__ext', ccx).forEach(group => {
         const cls = group.classList.contains('cx__ext') ? 'cx__ext' : 'cx__sal';
         let target = el('.' + cls, lcx);
         els(':scope > *', group).forEach(row => {
-          const t = row.textContent.replace(/\s+/g, ' ').trim();
-          if (seen.has(t)) return; seen.add(t);
+          const key = (multi ? hora + '|' : '') + row.textContent.replace(/\s+/g, ' ').trim();
+          if (seen.has(key)) return; seen.add(key);
           if (!target) { target = document.createElement('div'); target.className = cls; lcx.appendChild(target); }
-          target.appendChild(row.cloneNode(true));
+          target.appendChild(tagRow(row.cloneNode(true), hora));
         });
       });
-      parseTip(td).forEach(s => { const k = s.alumno + '>' + s.a; if (!tipSal.some(x => x.alumno + '>' + x.a === k)) tipSal.push(s); });
+      parseTip(td).forEach(s => {
+        const k = (multi ? hora + '|' : '') + s.alumno + '>' + s.a;
+        if (!tipSal.some(x => (multi ? (x.fr || '') + '|' : '') + x.alumno + '>' + x.a === k)) tipSal.push(multi ? Object.assign({}, s, { fr: hora }) : s);
+      });
     }
     if (tipSal.length) {
       leader.setAttribute('data-tip', JSON.stringify({ salidas: tipSal }));
@@ -770,7 +792,7 @@
     if (d.rows) html += d.rows.map(r => `<div class="tip__r">${esc(r[0])} <b>${esc(r[1])}</b></div>`).join('');
     if (d.salidas && d.salidas.length) {
       html += `<div class="tip__salen">Salen:</div>` + d.salidas.map(s =>
-        `<div class="tip__out"><span class="tip__arrow">↗</span><span>${esc(s.alumno)} → ${esc(s.a)} · ${esc(SESION(s.a))}</span></div>`).join('');
+        `<div class="tip__out"><span class="tip__arrow">↗</span><span>${s.fr ? `<b class="tip__fr">${esc(s.fr)}</b> ` : ''}${esc(s.alumno)} → ${esc(s.a)} · ${esc(SESION(s.a))}</span></div>`).join('');
     }
     if (!html) return;
     tip.innerHTML = html;

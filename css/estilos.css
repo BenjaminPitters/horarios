@@ -300,6 +300,8 @@ tr.short th.tgut .h{font-size:.62rem;margin-top:0}
 .cx__salarr{font-size:.64rem;font-weight:700;opacity:.9;flex:none}
 .cx__salwho{font-weight:500;overflow-wrap:break-word}
 .cx__saldest{font-family:var(--mono);font-size:.64rem;color:var(--ink-3);font-weight:500;flex:none}
+/* Etiqueta de hora en una salida de celda fusionada: marca a qué franja pertenece cada niño */
+.cx__salfr{font-family:var(--mono);font-size:.6rem;font-weight:600;color:var(--ink-3);opacity:.85;flex:none}
 /* Salida externa (fuera del centro): anotación ⇱ en celdas y ficha */
 .cx__ext{display:flex;flex-direction:column;gap:.08rem;margin-top:.14rem}
 .cx__extrow{display:flex;align-items:baseline;gap:.2rem;font-size:.7rem;line-height:1.16;color:#9A6B2F;overflow-wrap:break-word}
@@ -383,6 +385,7 @@ tr.brk th.tgut .h{color:var(--ink-3)}
 .tip__salen{margin-top:0;font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.62)}
 .tip__out{display:flex;gap:.36rem;align-items:baseline;color:rgba(255,255,255,.94);font-size:.78rem;line-height:1.4;margin-top:.2rem}
 .tip__arrow{color:#E9A39C;flex:none;font-size:.74rem}
+.tip__fr{font-family:var(--mono);font-size:.7rem;font-weight:600;color:rgba(255,255,255,.72)}
 
 /* marca de celda con salidas (solo en Clases) */
 .cell--sal{cursor:help}

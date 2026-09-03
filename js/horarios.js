@@ -409,11 +409,6 @@ window.HORARIOS = {
          "alumno": "Naomi",
          "a": "TO2",
          "a_nombre": "Aitana"
-        },
-        {
-         "alumno": "Bernardo",
-         "a": "TO1",
-         "a_nombre": "Irene"
         }
        ]
       },
@@ -528,6 +523,13 @@ window.HORARIOS = {
        "adultos": [
         "T1",
         "EF1"
+       ],
+       "salidas": [
+        {
+         "alumno": "Bernardo",
+         "a": "TO1",
+         "a_nombre": "Irene"
+        }
        ]
       },
       "Martes": {
@@ -940,6 +942,13 @@ window.HORARIOS = {
        "asig": "Inglés",
        "adultos": [
         "I2"
+       ],
+       "salidas": [
+        {
+         "alumno": "Mateo",
+         "a": "L1",
+         "a_nombre": "Luis"
+        }
        ]
       },
       "Martes": {
@@ -1144,6 +1153,11 @@ window.HORARIOS = {
          "alumno": "Eva",
          "a": "TO2",
          "a_nombre": "Aitana"
+        },
+        {
+         "alumno": "Mateo",
+         "a": "L1",
+         "a_nombre": "Luis"
         }
        ]
       },
@@ -1171,13 +1185,6 @@ window.HORARIOS = {
        "adultos": [
         "T2",
         "T7"
-       ],
-       "salidas": [
-        {
-         "alumno": "Mateo",
-         "a": "L1",
-         "a_nombre": "Luis"
-        }
        ]
       },
       "Miércoles": {
@@ -1203,13 +1210,6 @@ window.HORARIOS = {
        "adultos": [
         "T2",
         "T7"
-       ],
-       "salidas": [
-        {
-         "alumno": "Mateo",
-         "a": "L1",
-         "a_nombre": "Luis"
-        }
        ]
       },
       "Viernes": {
@@ -2380,6 +2380,11 @@ window.HORARIOS = {
          "alumno": "Darío",
          "a": "TO1",
          "a_nombre": "Irene"
+        },
+        {
+         "alumno": "Luis",
+         "a": "L1",
+         "a_nombre": "Luis"
         }
        ]
       },
@@ -2431,13 +2436,6 @@ window.HORARIOS = {
        "asig": "Juego",
        "adultos": [
         "T3"
-       ],
-       "salidas": [
-        {
-         "alumno": "Luis",
-         "a": "L1",
-         "a_nombre": "Luis"
-        }
        ]
       },
       "Jueves": {
@@ -3940,13 +3938,6 @@ window.HORARIOS = {
        "asig": "Inglés",
        "adultos": [
         "I1"
-       ],
-       "salidas": [
-        {
-         "alumno": "Bosco",
-         "a": "TO2",
-         "a_nombre": "Aitana"
-        }
        ]
       },
       "Martes": {
@@ -4228,6 +4219,13 @@ window.HORARIOS = {
        "asig": "Educación Física (conj.)",
        "adultos": [
         "EF1"
+       ],
+       "salidas": [
+        {
+         "alumno": "Bosco",
+         "a": "TO2",
+         "a_nombre": "Aitana"
+        }
        ]
       },
       "Martes": {
@@ -4515,7 +4513,7 @@ window.HORARIOS = {
      "hora": "12:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Juego · T6\n↗ Naomi→TO2\n↗ Bernardo→TO1",
+       "txt": "L · Juego · T6\n↗ Naomi→TO2",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -4593,7 +4591,7 @@ window.HORARIOS = {
      "hora": "14:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Juego · EF1",
+       "txt": "L · Juego · EF1\n↗ Bernardo→TO1",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -4949,7 +4947,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Juego\n↗ Eva→TO2",
+       "txt": "L · Juego\n↗ Eva→TO2\n↗ Mateo→L1",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -4967,7 +4965,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Cuentacuentos · T7\n↗ Mateo→L1",
+       "txt": "L · Cuentacuentos · T7",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -4975,7 +4973,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Cuentacuentos · T7\n↗ Mateo→L1",
+       "txt": "L · Cuentacuentos · T7",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -5289,7 +5287,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "L · Conocimiento del Entorno\n↗ Darío→TO1",
+       "txt": "L · Conocimiento del Entorno\n↗ Darío→TO1\n↗ Luis→L1",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -5315,7 +5313,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Juego\n↗ Luis→L1",
+       "txt": "L · Juego",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -7023,7 +7021,7 @@ window.HORARIOS = {
      "hora": "14:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Juego (Est+Sol)\n↗ Gonzalo→L2",
+       "txt": "L · Juego (Est+Sol)\n↗ Gonzalo→L2\n↗ Bernardo→TO1",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -7051,7 +7049,7 @@ window.HORARIOS = {
      "hora": "15:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "txt": "L · Oeste/Sur: Educación Física (conj.)\n↗ Bosco→TO2",
        "tipo": "lectivo",
        "aula": "Oeste/Sur"
       },
@@ -7653,7 +7651,7 @@ window.HORARIOS = {
      "hora": "12:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Sol: Inglés",
+       "txt": "L · Sol: Inglés\n↗ Mateo→L1",
        "tipo": "lectivo",
        "aula": "Sol"
       },
@@ -9119,8 +9117,9 @@ window.HORARIOS = {
       "hora": "12:00",
       "dias": {
        "Lunes": {
-        "txt": "NL",
-        "tipo": "no_lectivo"
+        "txt": "L · Sol: Mateo",
+        "tipo": "lectivo",
+        "aula": "Sol"
        },
        "Martes": {
         "txt": "L · Estrella: Bernardo",
@@ -9241,12 +9240,14 @@ window.HORARIOS = {
         "tipo": "no_lectivo"
        },
        "Miércoles": {
-        "txt": "NL",
-        "tipo": "no_lectivo"
+        "txt": "L · Luna: Luis",
+        "tipo": "lectivo",
+        "aula": "Luna"
        },
        "Jueves": {
-        "txt": "NL",
-        "tipo": "no_lectivo"
+        "txt": "L · Sol: Mateo",
+        "tipo": "lectivo",
+        "aula": "Sol"
        },
        "Viernes": {
         "txt": "L · Luna: Manuela",
@@ -9265,19 +9266,16 @@ window.HORARIOS = {
         "aula": "Estrella"
        },
        "Martes": {
-        "txt": "L · Sol: Mateo",
-        "tipo": "lectivo",
-        "aula": "Sol"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Miércoles": {
-        "txt": "L · Luna: Luis",
-        "tipo": "lectivo",
-        "aula": "Luna"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Jueves": {
-        "txt": "L · Sol: Mateo",
-        "tipo": "lectivo",
-        "aula": "Sol"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Viernes": {
         "txt": "L · Estrella: Lucía",
@@ -10285,9 +10283,8 @@ window.HORARIOS = {
       "hora": "12:30",
       "dias": {
        "Lunes": {
-        "txt": "L · Estrella: Bernardo",
-        "tipo": "lectivo",
-        "aula": "Estrella"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Martes": {
         "txt": "L · Estrella: Lucía",
@@ -10368,8 +10365,9 @@ window.HORARIOS = {
       "hora": "14:30",
       "dias": {
        "Lunes": {
-        "txt": "NL",
-        "tipo": "no_lectivo"
+        "txt": "L · Estrella: Bernardo",
+        "tipo": "lectivo",
+        "aula": "Estrella"
        },
        "Martes": {
         "txt": "L · Norte: Autonomía · O1",
@@ -10607,9 +10605,8 @@ window.HORARIOS = {
       "hora": "11:30",
       "dias": {
        "Lunes": {
-        "txt": "L · Sur: Bosco",
-        "tipo": "lectivo",
-        "aula": "Sur"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Martes": {
         "txt": "L · Sol: Prerrequisitos de Grafomotricidad · T2",
@@ -10778,8 +10775,9 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "txt": "NL",
-        "tipo": "no_lectivo"
+        "txt": "L · Sur: Bosco",
+        "tipo": "lectivo",
+        "aula": "Sur"
        },
        "Martes": {
         "txt": "NL",
@@ -11841,8 +11839,7 @@ window.HORARIOS = {
       "hora": "12:30",
       "dias": {
        "Lunes": {
-        "salida": "TO1",
-        "dest_nombre": "Irene"
+        "asig": "Juego"
        },
        "Martes": {
         "asig": "Juego"
@@ -11906,7 +11903,8 @@ window.HORARIOS = {
       "hora": "14:30",
       "dias": {
        "Lunes": {
-        "asig": "Juego"
+        "salida": "TO1",
+        "dest_nombre": "Irene"
        },
        "Martes": {
         "asig": "Juego"
@@ -12949,7 +12947,8 @@ window.HORARIOS = {
       "hora": "12:00",
       "dias": {
        "Lunes": {
-        "asig": "Inglés"
+        "salida": "L1",
+        "dest_nombre": "Luis"
        },
        "Martes": {
         "asig": "Prerrequisitos de Aprendizaje"
@@ -13042,7 +13041,8 @@ window.HORARIOS = {
         "asig": "Juego"
        },
        "Jueves": {
-        "asig": "Juego"
+        "salida": "L1",
+        "dest_nombre": "Luis"
        },
        "Viernes": {
         "asig": "Juego"
@@ -13057,16 +13057,14 @@ window.HORARIOS = {
         "asig": "Conocimiento del Entorno"
        },
        "Martes": {
-        "salida": "L1",
-        "dest_nombre": "Luis"
+        "asig": "Cuentacuentos"
        },
        "Miércoles": {
         "salida": "TO1",
         "dest_nombre": "Irene"
        },
        "Jueves": {
-        "salida": "L1",
-        "dest_nombre": "Luis"
+        "asig": "Cuentacuentos"
        },
        "Viernes": {
         "asig": "Conocimiento del Entorno"
@@ -14737,7 +14735,8 @@ window.HORARIOS = {
         "asig": "Inglés"
        },
        "Miércoles": {
-        "asig": "Conocimiento del Entorno"
+        "salida": "L1",
+        "dest_nombre": "Luis"
        },
        "Jueves": {
         "asig": "Inglés"
@@ -14758,8 +14757,7 @@ window.HORARIOS = {
         "asig": "Juego"
        },
        "Miércoles": {
-        "salida": "L1",
-        "dest_nombre": "Luis"
+        "asig": "Juego"
        },
        "Jueves": {
         "asig": "Juego"
@@ -18847,8 +18845,7 @@ window.HORARIOS = {
       "hora": "11:30",
       "dias": {
        "Lunes": {
-        "salida": "TO2",
-        "dest_nombre": "Aitana"
+        "asig": "Inglés"
        },
        "Martes": {
         "asig": "Inteligencia Emocional"
@@ -18975,7 +18972,8 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "asig": "Educación Física (conj.)"
+        "salida": "TO2",
+        "dest_nombre": "Aitana"
        },
        "Martes": {
         "salida": "L2",
