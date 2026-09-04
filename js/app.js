@@ -599,7 +599,7 @@
     };
     // Tres grupos que se pueden imprimir por separado (cada uno con su botón):
     // coordinaciones/asambleas, patios+comedores y turnos de comida.
-    const groupOf = t => /\bComida\b/i.test(t) ? 'comida' : /patio|comedor/i.test(t) ? 'patios' : 'coord';
+    const groupOf = t => /\bComida\b/i.test(t) ? 'comida' : /patio|comedor|siesta/i.test(t) ? 'patios' : 'coord';
     const GROUPS = [
       { id: 'coord',  label: 'Coordinaciones y asambleas' },
       { id: 'patios', label: 'Patios y comedores' },

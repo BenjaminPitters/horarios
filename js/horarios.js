@@ -20320,27 +20320,23 @@ window.HORARIOS = {
        "T5 Marta Vera",
        "T6 Marta La.",
        "T7 Raquel",
-       "EF1 Fernando",
-       "O1 Lucía C."
+       "EF1 Fernando"
       ],
       "Martes": [
        "T5 Marta Vera",
        "T6 Marta La.",
        "T7 Raquel",
-       "EF1 Fernando",
        "Ps3 Bárbara"
       ],
       "Miércoles": [
        "T5 Marta Vera",
        "T6 Marta La.",
        "T7 Raquel",
-       "EF1 Fernando",
-       "O1 Lucía C."
+       "EF1 Fernando"
       ],
       "Jueves": [
        "T5 Marta Vera",
        "T7 Raquel",
-       "EF1 Fernando",
        "O2 Sara",
        "Ps3 Bárbara"
       ],
@@ -20348,7 +20344,30 @@ window.HORARIOS = {
        "T5 Marta Vera",
        "T6 Marta La.",
        "T7 Raquel",
-       "EF1 Fernando",
+       "EF1 Fernando"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "titulo": "Siesta de Estrella (13:45–14:30)",
+   "filas": [
+    {
+     "dias": {
+      "Lunes": [
+       "O1 Lucía C."
+      ],
+      "Martes": [
+       "EF1 Fernando"
+      ],
+      "Miércoles": [
+       "O1 Lucía C."
+      ],
+      "Jueves": [
+       "EF1 Fernando"
+      ],
+      "Viernes": [
        "O1 Lucía C."
       ]
      }
@@ -20362,37 +20381,23 @@ window.HORARIOS = {
      "dias": {
       "Lunes": [
        "T5 Marta Vera",
-       "T6 Marta La.",
-       "T7 Raquel",
-       "EF1 Fernando",
-       "O1 Lucía C."
+       "T6 Marta La."
       ],
       "Martes": [
        "T5 Marta Vera",
-       "T6 Marta La.",
-       "T7 Raquel",
-       "EF1 Fernando"
+       "T6 Marta La."
       ],
       "Miércoles": [
        "T5 Marta Vera",
-       "T6 Marta La.",
-       "T7 Raquel",
-       "EF1 Fernando",
-       "O1 Lucía C."
+       "T6 Marta La."
       ],
       "Jueves": [
        "T5 Marta Vera",
-       "T6 Marta La.",
-       "T7 Raquel",
-       "EF1 Fernando",
-       "O2 Sara"
+       "T6 Marta La."
       ],
       "Viernes": [
        "T5 Marta Vera",
-       "T6 Marta La.",
-       "T7 Raquel",
-       "EF1 Fernando",
-       "O1 Lucía C."
+       "T6 Marta La."
       ]
      }
     }
