@@ -356,9 +356,13 @@
           const tipAttr = hasSal
             ? ` data-tip='${esc(JSON.stringify({ salidas: salidas.map(s => ({ alumno: clean(s.alumno), a: clean(s.a), a_nombre: s.a_nombre ? clean(s.a_nombre) : null })) }))}'`
             : '';
-          // Clave de fusión: misma área + mismos adultos (así el apoyo NO se fusiona con el no-apoyo).
-          // Las salidas quedan fuera de la clave: al fusionar se combinan, no se pierden.
-          const mk = cleanAsig(c.asig) + '#' + (c.adultos || []).join(',') + '#' + externa.map(e => e.alumno + (e.desde || '')).join(';');
+          // Clave de fusión: misma área + mismos adultos + mismas externas + MISMAS SALIDAS.
+          // Incluir las salidas en la clave hace que dos franjas de 30 min con salidas distintas
+          // (p.ej. Matemáticas F4 y F5, con niños distintos) NO se fusionen: se ven como dos medias
+          // horas separadas, cada una con su propia anotación y su borde discontinuo solo si tiene
+          // salida. Antes se fusionaban y se mezclaban las salidas de ambas franjas sin distinguir.
+          const salKey = salidas.map(s => clean(s.alumno) + '>' + clean(s.a)).sort().join(';');
+          const mk = cleanAsig(c.asig) + '#' + (c.adultos || []).join(',') + '#' + externa.map(e => e.alumno + (e.desde || '')).join(';') + '#' + salKey;
           // El tinte y la barra de color van en la <td> para que rellene toda la fila.
           return `<td class="cell${hasSal ? ' cell--sal' : ''}${apoyo ? ' cell--apoyo' : ''}" data-day="${day}" data-mk="${esc(mk)}" style="background:${tint(col,.30)};border-left-color:${col}"${tipAttr}>
             <div class="cx">${hasSal ? '<span class="cx__flag" aria-hidden="true">↗</span>' : ''}${apoyo ? '<span class="cx__apoyo" title="Franja con apoyo (2 adultos)" aria-label="Apoyo">+</span>' : ''}<span class="cx__asig">${esc(cleanAsig(c.asig))}</span>${codes ? `<span class="cx__codes">${codes}</span>` : ''}${extHTML}</div></td>`;
@@ -680,49 +684,31 @@
     }
   }
   // Fusiona un bloque de celdas idénticas: la 1ª lleva rowspan; las demás se ocultan (escritorio).
-  // Las salidas que difieran entre franjas se COMBINAN en la celda líder para no perder nada.
-  // IMPORTANTE: si el bloque abarca varias franjas con salidas distintas (típico en la vista de
-  // aula, donde Matemáticas F4 y F5 se fusionan aunque salgan niños diferentes), cada salida se
-  // ETIQUETA con la hora de su franja de origen, tanto en la celda como en el tooltip. Antes se
-  // volcaban todas en una sola lista sin distinguir a qué franja pertenecía cada niño.
+  // Solo se fusionan celdas de contenido IDÉNTICO (misma actividad, códigos, externas Y salidas):
+  // en la vista de aula la clave de fusión incluye ahora las salidas, así que dos franjas de 30 min
+  // con salidas distintas (p.ej. Matemáticas F4 y F5 con niños diferentes) NO se fusionan y se ven
+  // como dos medias horas separadas, cada una con su borde discontinuo solo si tiene salida. Cuando
+  // sí se fusionan (contenido idéntico), las salidas coinciden, así que combinarlas no pierde nada.
   function combineRun(run) {
     const leader = run[0]; leader.rowSpan = run.length;
     const lcx = el('.cx', leader);
+    const seen = new Set(els('.cx__salrow, .cx__extrow', lcx).map(n => n.textContent.replace(/\s+/g, ' ').trim()));
     const parseTip = td => { try { return JSON.parse(td.getAttribute('data-tip') || '{}').salidas || []; } catch (e) { return []; } };
-    const horaOf = td => { const tr = td.closest('tr'); const h = tr && el('th.tgut .h', tr); const fr = tr && el('th.tgut .f', tr); return (h && h.textContent.trim()) || (fr && fr.textContent.trim()) || ''; };
-    // ¿las salidas del bloque vienen de más de una franja? Solo entonces hace falta etiquetar.
-    const salHoras = new Set();
-    run.forEach(td => { const cx = el('.cx', td); if ((cx && el('.cx__salrow', cx)) || parseTip(td).length) salHoras.add(horaOf(td)); });
-    const multi = salHoras.size > 1;
-    const tagRow = (row, hora) => {   // antepone la hora de origen a una fila de salida (solo si multi)
-      if (multi && hora && row.classList && row.classList.contains('cx__salrow') && !el('.cx__salfr', row)) {
-        const fr = document.createElement('span'); fr.className = 'cx__salfr'; fr.textContent = hora;
-        row.insertBefore(fr, row.firstChild);
-      }
-      return row;
-    };
-    // etiquetar las salidas que ya trae la propia líder (su franja)
-    els('.cx__salrow', lcx).forEach(r => tagRow(r, horaOf(leader)));
-    const seen = new Set(els('.cx__salrow, .cx__extrow', lcx).map(n => (multi ? horaOf(leader) + '|' : '') + n.textContent.replace(/\s+/g, ' ').trim()));
-    const tipSal = parseTip(leader).map(s => (multi ? Object.assign({}, s, { fr: horaOf(leader) }) : s));
+    const tipSal = parseTip(leader);
     for (let i = 1; i < run.length; i++) {
       const td = run[i]; td.classList.add('cell--merged');
-      const hora = horaOf(td);
       const ccx = el('.cx', td);
       els('.cx__sal, .cx__ext', ccx).forEach(group => {
         const cls = group.classList.contains('cx__ext') ? 'cx__ext' : 'cx__sal';
         let target = el('.' + cls, lcx);
         els(':scope > *', group).forEach(row => {
-          const key = (multi ? hora + '|' : '') + row.textContent.replace(/\s+/g, ' ').trim();
-          if (seen.has(key)) return; seen.add(key);
+          const t = row.textContent.replace(/\s+/g, ' ').trim();
+          if (seen.has(t)) return; seen.add(t);
           if (!target) { target = document.createElement('div'); target.className = cls; lcx.appendChild(target); }
-          target.appendChild(tagRow(row.cloneNode(true), hora));
+          target.appendChild(row.cloneNode(true));
         });
       });
-      parseTip(td).forEach(s => {
-        const k = (multi ? hora + '|' : '') + s.alumno + '>' + s.a;
-        if (!tipSal.some(x => (multi ? (x.fr || '') + '|' : '') + x.alumno + '>' + x.a === k)) tipSal.push(multi ? Object.assign({}, s, { fr: hora }) : s);
-      });
+      parseTip(td).forEach(s => { const k = s.alumno + '>' + s.a; if (!tipSal.some(x => x.alumno + '>' + x.a === k)) tipSal.push(s); });
     }
     if (tipSal.length) {
       leader.setAttribute('data-tip', JSON.stringify({ salidas: tipSal }));
@@ -792,7 +778,7 @@
     if (d.rows) html += d.rows.map(r => `<div class="tip__r">${esc(r[0])} <b>${esc(r[1])}</b></div>`).join('');
     if (d.salidas && d.salidas.length) {
       html += `<div class="tip__salen">Salen:</div>` + d.salidas.map(s =>
-        `<div class="tip__out"><span class="tip__arrow">↗</span><span>${s.fr ? `<b class="tip__fr">${esc(s.fr)}</b> ` : ''}${esc(s.alumno)} → ${esc(s.a)} · ${esc(SESION(s.a))}</span></div>`).join('');
+        `<div class="tip__out"><span class="tip__arrow">↗</span><span>${esc(s.alumno)} → ${esc(s.a)} · ${esc(SESION(s.a))}</span></div>`).join('');
     }
     if (!html) return;
     tip.innerHTML = html;
