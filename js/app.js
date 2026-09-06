@@ -65,6 +65,8 @@
   const els = (s, c) => Array.prototype.slice.call((c || document).querySelectorAll(s));
   const codeNum = x => parseInt(String(x || '').replace(/\D/g, ''), 10) || 0;   // "T3" -> 3
   const byCode = fn => (a, b) => codeNum(fn(a)) - codeNum(fn(b));
+  // Especialistas: agrupar por prefijo (EF antes que I) y luego por número → EF1, EF2, I1, I2.
+  const byEsp = (a, b) => (String(a).replace(/\d+/g, '').localeCompare(String(b).replace(/\d+/g, ''))) || (codeNum(a) - codeNum(b));
   const asigColor = a => (META.colores_asignatura && META.colores_asignatura[cleanAsig(a)]) || '#D8D2CE';
   const aulaColor = a => AULA_COLORS[a] || '#C9C2BD';
   // Limpia el nombre de área para mostrar/colorear: quita (conj.), (1h), (2h)… (EF de Oeste/Sur).
@@ -331,7 +333,7 @@
     'Lunes': {}, 'Martes': { txt: 'Coordinación general', tipo: 'no_lectivo' }, 'Miércoles': {}, 'Jueves': {}, 'Viernes': {}
   } };
   // Personas que NO van a la coordinación general (no se les pone la franja).
-  const NO_COORD = new Set(['Ps3', 'L3', 'I2']);
+  const NO_COORD = new Set(['Ps3', 'L3', 'I2', 'EF2']);
 
   // ---- CLASE ----
   function renderClase(aula, sel) {
@@ -754,7 +756,7 @@
       const act = el('.picker[data-for="clases"] .pk.is-active');
       printAllAula(act && act.dataset.key);
     } else if (kind === 'especialistas') {
-      printAllPersonas(Object.keys(H.especialistas).sort(byCode(k => k)).map(k => ({ code: k, data: H.especialistas[k] })));
+      printAllPersonas(Object.keys(H.especialistas).sort(byEsp).map(k => ({ code: k, data: H.especialistas[k] })));
     } else if (kind === 'terapeutas') {
       printAllPersonas(terGroups().flatMap(g => Object.keys(H.terapeutas[g] || {}).sort(byCode(k => k)).map(k => ({ code: k, data: H.terapeutas[g][k] }))));
     }
@@ -830,7 +832,7 @@
       selAula(keys[0]);
     },
     especialistas() {
-      const keys = Object.keys(H.especialistas).sort(byCode(k => k));
+      const keys = Object.keys(H.especialistas).sort(byEsp);
       const draw = k => renderPersona('[data-grid="especialistas"]', k, H.especialistas[k]);
       pills(el('.picker[data-for="especialistas"]'), keys.map(k => ({ key: k, label: H.especialistas[k].nombre, code: k, tone: 'green' })), keys[0], draw);
       draw(keys[0]);

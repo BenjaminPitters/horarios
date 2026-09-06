@@ -1,4 +1,4 @@
-// Datos de horarios del Colegio Querer - v14 (nombres reales; Catalina desambiguada B./F.).
+// Datos de horarios del Colegio Querer - v14 (individuales colocadas, apoyo T6, EF1 Sol psico M/J, máx 3h).
 window.HORARIOS = {
  "meta": {
   "centro": "Colegio Querer",
@@ -49,8 +49,7 @@ window.HORARIOS = {
    "Miércoles",
    "Jueves",
    "Viernes"
-  ],
-  "generado": "2026-09-04"
+  ]
  },
  "clases": {
   "Estrella": {
@@ -1339,7 +1338,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina F.",
+         "alumno": "Catalina",
          "a": "O1",
          "a_nombre": "Lucía Cubillas"
         }
@@ -1372,7 +1371,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina F.",
+         "alumno": "Catalina",
          "a": "O1",
          "a_nombre": "Lucía Cubillas"
         }
@@ -1518,7 +1517,8 @@ window.HORARIOS = {
       "Martes": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
@@ -1538,7 +1538,8 @@ window.HORARIOS = {
       "Jueves": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
@@ -1564,7 +1565,8 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
@@ -1583,7 +1585,8 @@ window.HORARIOS = {
       "Miércoles": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ]
       },
       "Jueves": {
@@ -1595,11 +1598,12 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
-         "alumno": "Catalina F.",
+         "alumno": "Catalina",
          "a": "TO1",
          "a_nombre": "Irene"
         }
@@ -1644,7 +1648,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina F.",
+         "alumno": "Catalina",
          "a": "L2",
          "a_nombre": "Sheila"
         }
@@ -1781,7 +1785,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina F.",
+         "alumno": "Catalina",
          "a": "L2",
          "a_nombre": "Sheila"
         }
@@ -1794,7 +1798,7 @@ window.HORARIOS = {
        ],
        "externa": [
         {
-         "alumno": "Catalina F.",
+         "alumno": "Catalina",
          "desde": "15:15"
         }
        ]
@@ -1813,7 +1817,7 @@ window.HORARIOS = {
        ],
        "externa": [
         {
-         "alumno": "Catalina F.",
+         "alumno": "Catalina",
          "desde": "15:15"
         }
        ]
@@ -1825,7 +1829,7 @@ window.HORARIOS = {
        ],
        "externa": [
         {
-         "alumno": "Catalina F.",
+         "alumno": "Catalina",
          "desde": "15:15"
         }
        ]
@@ -1862,7 +1866,7 @@ window.HORARIOS = {
        ],
        "externa": [
         {
-         "alumno": "Catalina F."
+         "alumno": "Catalina"
         }
        ]
       },
@@ -1873,7 +1877,7 @@ window.HORARIOS = {
        ],
        "externa": [
         {
-         "alumno": "Catalina F."
+         "alumno": "Catalina"
         }
        ]
       },
@@ -1884,7 +1888,7 @@ window.HORARIOS = {
        ],
        "externa": [
         {
-         "alumno": "Catalina F."
+         "alumno": "Catalina"
         }
        ]
       },
@@ -2236,13 +2240,15 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ]
       },
       "Martes": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
@@ -2255,7 +2261,8 @@ window.HORARIOS = {
       "Miércoles": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
@@ -2268,7 +2275,8 @@ window.HORARIOS = {
       "Jueves": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
@@ -2281,7 +2289,8 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
@@ -2718,7 +2727,8 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Educación Física",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ]
       },
       "Martes": {
@@ -2737,7 +2747,8 @@ window.HORARIOS = {
       "Miércoles": {
        "asig": "Educación Física",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ]
       },
       "Jueves": {
@@ -2747,7 +2758,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina B.",
+         "alumno": "Catalina",
          "a": "TO1",
          "a_nombre": "Irene"
         },
@@ -2761,7 +2772,8 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Educación Física",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
@@ -2790,7 +2802,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina B.",
+         "alumno": "Catalina",
          "a": "L3",
          "a_nombre": "(por contratar)"
         },
@@ -2879,7 +2891,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina B.",
+         "alumno": "Catalina",
          "a": "L3",
          "a_nombre": "(por contratar)"
         },
@@ -2970,11 +2982,12 @@ window.HORARIOS = {
       "Martes": {
        "asig": "Educación Física",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
-         "alumno": "Catalina B.",
+         "alumno": "Catalina",
          "a": "Ps3",
          "a_nombre": "Bárbara"
         }
@@ -2989,7 +3002,8 @@ window.HORARIOS = {
       "Jueves": {
        "asig": "Educación Física",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
@@ -3626,19 +3640,22 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Educación Física (conj.)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ]
       },
       "Martes": {
        "asig": "Educación Física (conj.)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ]
       },
       "Miércoles": {
        "asig": "Educación Física (conj.)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ]
       },
       "Jueves": {
@@ -3650,7 +3667,8 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Educación Física (1h)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ]
       }
      }
@@ -3662,7 +3680,8 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Educación Física (conj.)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
@@ -3675,13 +3694,15 @@ window.HORARIOS = {
       "Martes": {
        "asig": "Educación Física (conj.)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ]
       },
       "Miércoles": {
        "asig": "Educación Física (conj.)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
@@ -3700,7 +3721,8 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Educación Física (1h)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ]
       }
      }
@@ -4216,7 +4238,8 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Educación Física (conj.)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
@@ -4229,7 +4252,8 @@ window.HORARIOS = {
       "Martes": {
        "asig": "Educación Física (conj.)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
@@ -4242,13 +4266,15 @@ window.HORARIOS = {
       "Miércoles": {
        "asig": "Educación Física (conj.)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ]
       },
       "Jueves": {
        "asig": "Educación Física (1h)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
@@ -4279,13 +4305,15 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Educación Física (conj.)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ]
       },
       "Martes": {
        "asig": "Educación Física (conj.)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ],
        "salidas": [
         {
@@ -4298,13 +4326,15 @@ window.HORARIOS = {
       "Miércoles": {
        "asig": "Educación Física (conj.)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ]
       },
       "Jueves": {
        "asig": "Educación Física (1h)",
        "adultos": [
-        "EF1"
+        "EF1",
+        "EF2"
        ]
       },
       "Viernes": {
@@ -5412,7 +5442,7 @@ window.HORARIOS = {
      "hora": "10:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Prerrequisitos de Aprendizaje\n↗ Catalina F.→O1",
+       "txt": "L · Prerrequisitos de Aprendizaje\n↗ CatalinaF→O1",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -5550,7 +5580,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Juego\n↗ Catalina F.→L2",
+       "txt": "L · Juego\n↗ CatalinaF→L2",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -5646,7 +5676,7 @@ window.HORARIOS = {
      "hora": "15:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Conocimiento del Entorno\n↗ Catalina F.→L2",
+       "txt": "L · Conocimiento del Entorno\n↗ CatalinaF→L2",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -5846,7 +5876,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Matemáticas\n↗ Catalina B.→TO1\n↗ Martina→L3",
+       "txt": "L · Matemáticas\n↗ CatalinaB→TO1\n↗ Martina→L3",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -5864,7 +5894,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Matemáticas\n↗ Catalina B.→L3\n↗ Yago→Ps3",
+       "txt": "L · Matemáticas\n↗ CatalinaB→L3\n↗ Yago→Ps3",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -5898,7 +5928,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Ciencias\n↗ Catalina B.→L3\n↗ Yago→TO1",
+       "txt": "L · Ciencias\n↗ CatalinaB→L3\n↗ Yago→TO1",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -6925,7 +6955,7 @@ window.HORARIOS = {
        "aula": "Oeste"
       },
       "Viernes": {
-       "txt": "L · Norte: Psicomotricidad\n↗ Catalina F.→TO1",
+       "txt": "L · Norte: Psicomotricidad\n↗ CatalinaF→TO1",
        "tipo": "lectivo",
        "aula": "Norte"
       }
@@ -7025,7 +7055,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Este: Educación Física\n↗ Catalina B.→Ps3",
+       "txt": "L · Este: Educación Física\n↗ CatalinaB→Ps3",
        "tipo": "lectivo",
        "aula": "Este"
       },
@@ -7091,6 +7121,375 @@ window.HORARIOS = {
       },
       "Miércoles": {
        "txt": "L · Oeste/Sur: Educación Física (conj.)\n↗ Elvira→L2",
+       "tipo": "lectivo",
+       "aula": "Oeste/Sur"
+      },
+      "Jueves": {
+       "txt": "L · Sur: Educación Física (1h)",
+       "tipo": "lectivo",
+       "aula": "Sur"
+      },
+      "Viernes": {
+       "txt": "L · Oeste: Educación Física (1h)",
+       "tipo": "lectivo",
+       "aula": "Oeste"
+      }
+     }
+    }
+   ]
+  },
+  "EF2": {
+   "nombre": "Alberto",
+   "rol": "Ed. Física (apoyo, Fundación Atleti)",
+   "filas": [
+    {
+     "franja": "F0",
+     "hora": "9:00",
+     "dias": {
+      "Lunes": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Martes": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Miércoles": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Jueves": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Viernes": {
+       "txt": "—",
+       "tipo": "fuera"
+      }
+     }
+    },
+    {
+     "franja": "F1",
+     "hora": "9:30",
+     "dias": {
+      "Lunes": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Martes": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Miércoles": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Jueves": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Viernes": {
+       "txt": "—",
+       "tipo": "fuera"
+      }
+     }
+    },
+    {
+     "franja": "F2",
+     "hora": "10:00",
+     "dias": {
+      "Lunes": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Martes": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Miércoles": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Jueves": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Viernes": {
+       "txt": "—",
+       "tipo": "fuera"
+      }
+     }
+    },
+    {
+     "franja": "F3",
+     "hora": "10:30",
+     "dias": {
+      "Lunes": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Martes": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Miércoles": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Jueves": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Viernes": {
+       "txt": "—",
+       "tipo": "fuera"
+      }
+     }
+    },
+    {
+     "franja": "Patio",
+     "hora": "11:00–11:30",
+     "dias": {
+      "Lunes": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Martes": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Miércoles": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Jueves": {
+       "txt": "—",
+       "tipo": "fuera"
+      },
+      "Viernes": {
+       "txt": "—",
+       "tipo": "fuera"
+      }
+     }
+    },
+    {
+     "franja": "F4",
+     "hora": "11:30",
+     "dias": {
+      "Lunes": {
+       "txt": "L · Este: Educación Física",
+       "tipo": "lectivo",
+       "aula": "Este"
+      },
+      "Martes": {
+       "txt": "L · Norte: Psicomotricidad",
+       "tipo": "lectivo",
+       "aula": "Norte"
+      },
+      "Miércoles": {
+       "txt": "L · Este: Educación Física",
+       "tipo": "lectivo",
+       "aula": "Este"
+      },
+      "Jueves": {
+       "txt": "L · Norte: Psicomotricidad",
+       "tipo": "lectivo",
+       "aula": "Norte"
+      },
+      "Viernes": {
+       "txt": "L · Este: Educación Física",
+       "tipo": "lectivo",
+       "aula": "Este"
+      }
+     }
+    },
+    {
+     "franja": "F5",
+     "hora": "12:00",
+     "dias": {
+      "Lunes": {
+       "txt": "L · Norte: Psicomotricidad",
+       "tipo": "lectivo",
+       "aula": "Norte"
+      },
+      "Martes": {
+       "txt": "Proyecto",
+       "tipo": "otro"
+      },
+      "Miércoles": {
+       "txt": "L · Norte: Psicomotricidad",
+       "tipo": "lectivo",
+       "aula": "Norte"
+      },
+      "Jueves": {
+       "txt": "Proyecto",
+       "tipo": "otro"
+      },
+      "Viernes": {
+       "txt": "L · Norte: Psicomotricidad",
+       "tipo": "lectivo",
+       "aula": "Norte"
+      }
+     }
+    },
+    {
+     "franja": "F6",
+     "hora": "12:30",
+     "dias": {
+      "Lunes": {
+       "txt": "L · Luna: Psicomotricidad",
+       "tipo": "lectivo",
+       "aula": "Luna"
+      },
+      "Martes": {
+       "txt": "L · Luna: Psicomotricidad",
+       "tipo": "lectivo",
+       "aula": "Luna"
+      },
+      "Miércoles": {
+       "txt": "L · Luna: Psicomotricidad",
+       "tipo": "lectivo",
+       "aula": "Luna"
+      },
+      "Jueves": {
+       "txt": "L · Luna: Psicomotricidad",
+       "tipo": "lectivo",
+       "aula": "Luna"
+      },
+      "Viernes": {
+       "txt": "L · Luna: Psicomotricidad",
+       "tipo": "lectivo",
+       "aula": "Luna"
+      }
+     }
+    },
+    {
+     "franja": "Comida",
+     "hora": "13:00–13:45",
+     "dias": {
+      "Lunes": {
+       "txt": "Comida",
+       "tipo": "comida"
+      },
+      "Martes": {
+       "txt": "Comida",
+       "tipo": "comida"
+      },
+      "Miércoles": {
+       "txt": "Comida",
+       "tipo": "comida"
+      },
+      "Jueves": {
+       "txt": "Comida",
+       "tipo": "comida"
+      },
+      "Viernes": {
+       "txt": "Comida",
+       "tipo": "comida"
+      }
+     }
+    },
+    {
+     "franja": "Patio tarde",
+     "hora": "13:45–14:30",
+     "dias": {
+      "Lunes": {
+       "txt": "Proyecto",
+       "tipo": "otro"
+      },
+      "Martes": {
+       "txt": "Proyecto",
+       "tipo": "otro"
+      },
+      "Miércoles": {
+       "txt": "Proyecto",
+       "tipo": "otro"
+      },
+      "Jueves": {
+       "txt": "Proyecto",
+       "tipo": "otro"
+      },
+      "Viernes": {
+       "txt": "Proyecto",
+       "tipo": "otro"
+      }
+     }
+    },
+    {
+     "franja": "F7",
+     "hora": "14:30",
+     "dias": {
+      "Lunes": {
+       "txt": "Proyecto",
+       "tipo": "otro"
+      },
+      "Martes": {
+       "txt": "L · Este: Educación Física",
+       "tipo": "lectivo",
+       "aula": "Este"
+      },
+      "Miércoles": {
+       "txt": "Proyecto",
+       "tipo": "otro"
+      },
+      "Jueves": {
+       "txt": "L · Este: Educación Física",
+       "tipo": "lectivo",
+       "aula": "Este"
+      },
+      "Viernes": {
+       "txt": "Proyecto",
+       "tipo": "otro"
+      }
+     }
+    },
+    {
+     "franja": "F8",
+     "hora": "15:00",
+     "dias": {
+      "Lunes": {
+       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "tipo": "lectivo",
+       "aula": "Oeste/Sur"
+      },
+      "Martes": {
+       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "tipo": "lectivo",
+       "aula": "Oeste/Sur"
+      },
+      "Miércoles": {
+       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "tipo": "lectivo",
+       "aula": "Oeste/Sur"
+      },
+      "Jueves": {
+       "txt": "L · Sur: Educación Física (1h)",
+       "tipo": "lectivo",
+       "aula": "Sur"
+      },
+      "Viernes": {
+       "txt": "L · Oeste: Educación Física (1h)",
+       "tipo": "lectivo",
+       "aula": "Oeste"
+      }
+     }
+    },
+    {
+     "franja": "F9",
+     "hora": "15:30",
+     "dias": {
+      "Lunes": {
+       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "tipo": "lectivo",
+       "aula": "Oeste/Sur"
+      },
+      "Martes": {
+       "txt": "L · Oeste/Sur: Educación Física (conj.)",
+       "tipo": "lectivo",
+       "aula": "Oeste/Sur"
+      },
+      "Miércoles": {
+       "txt": "L · Oeste/Sur: Educación Física (conj.)",
        "tipo": "lectivo",
        "aula": "Oeste/Sur"
       },
@@ -7882,7 +8281,7 @@ window.HORARIOS = {
         "aula": "Luna"
        },
        "Miércoles": {
-        "txt": "L · Norte: Catalina F.",
+        "txt": "L · Norte: Catalina",
         "tipo": "lectivo",
         "aula": "Norte"
        },
@@ -7903,7 +8302,7 @@ window.HORARIOS = {
       "hora": "10:00",
       "dias": {
        "Lunes": {
-        "txt": "L · Norte: Catalina F.",
+        "txt": "L · Norte: Catalina",
         "tipo": "lectivo",
         "aula": "Norte"
        },
@@ -8861,7 +9260,7 @@ window.HORARIOS = {
         "tipo": "fuera"
        },
        "Martes": {
-        "txt": "L · Este: Catalina B.",
+        "txt": "L · Este: Catalina",
         "tipo": "lectivo",
         "aula": "Este"
        },
@@ -9361,7 +9760,7 @@ window.HORARIOS = {
         "aula": "Norte"
        },
        "Miércoles": {
-        "txt": "L · Norte: Estimulación del Lenguaje\n↗ Catalina F.→O1",
+        "txt": "L · Norte: Estimulación del Lenguaje\n↗ CatalinaF→O1",
         "tipo": "lectivo",
         "aula": "Norte"
        },
@@ -9541,7 +9940,7 @@ window.HORARIOS = {
         "aula": "Sur"
        },
        "Miércoles": {
-        "txt": "L · Norte: Catalina F.",
+        "txt": "L · Norte: Catalina",
         "tipo": "lectivo",
         "aula": "Norte"
        },
@@ -9644,7 +10043,7 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "txt": "L · Norte: Catalina F.",
+        "txt": "L · Norte: Catalina",
         "tipo": "lectivo",
         "aula": "Norte"
        },
@@ -9885,7 +10284,7 @@ window.HORARIOS = {
         "aula": "Estrella"
        },
        "Martes": {
-        "txt": "L · Este: Catalina B.",
+        "txt": "L · Este: Catalina",
         "tipo": "lectivo",
         "aula": "Este"
        },
@@ -9926,7 +10325,7 @@ window.HORARIOS = {
         "aula": "Sur"
        },
        "Jueves": {
-        "txt": "L · Este: Catalina B.",
+        "txt": "L · Este: Catalina",
         "tipo": "lectivo",
         "aula": "Este"
        },
@@ -10239,7 +10638,7 @@ window.HORARIOS = {
         "aula": "Norte"
        },
        "Jueves": {
-        "txt": "L · Este: Catalina B.",
+        "txt": "L · Este: Catalina",
         "tipo": "lectivo",
         "aula": "Este"
        },
@@ -10275,7 +10674,7 @@ window.HORARIOS = {
         "aula": "Estrella"
        },
        "Viernes": {
-        "txt": "L · Norte: Catalina F.",
+        "txt": "L · Norte: Catalina",
         "tipo": "lectivo",
         "aula": "Norte"
        }
@@ -13100,7 +13499,7 @@ window.HORARIOS = {
    }
   },
   "Norte": {
-   "Catalina F.": {
+   "Catalina": {
     "filas": [
      {
       "franja": "F0",
@@ -15922,7 +16321,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Catalina B.": {
+   "Catalina": {
     "filas": [
      {
       "franja": "F0",
