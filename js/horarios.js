@@ -1174,7 +1174,8 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Conocimiento del Entorno",
        "adultos": [
-        "T2"
+        "T2",
+        "T6"
        ]
       },
       "Martes": {
@@ -3113,9 +3114,9 @@ window.HORARIOS = {
      "hora": "9:00",
      "dias": {
       "Lunes": {
-       "asig": "Asamblea",
+       "asig": "Asamblea Conjunta",
        "adultos": [
-        "T6"
+        "T7"
        ]
       },
       "Martes": {
@@ -3738,7 +3739,7 @@ window.HORARIOS = {
      "hora": "9:00",
      "dias": {
       "Lunes": {
-       "asig": "Asamblea",
+       "asig": "Asamblea Conjunta",
        "adultos": [
         "T7"
        ]
@@ -4988,7 +4989,7 @@ window.HORARIOS = {
      "hora": "15:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Conocimiento del Entorno",
+       "txt": "L · Conocimiento del Entorno · T6",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -6078,8 +6079,8 @@ window.HORARIOS = {
      "hora": "9:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Asamblea",
-       "tipo": "lectivo"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Martes": {
        "txt": "L · Asamblea Conjunta",
@@ -6364,8 +6365,9 @@ window.HORARIOS = {
      "hora": "15:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "L · Sol: Conocimiento del Entorno (apoyo)",
+       "tipo": "lectivo",
+       "aula": "Sol"
       },
       "Martes": {
        "txt": "L · Cuentacuentos · T1 (Estrella)",
@@ -6380,8 +6382,8 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "L · Tutoría",
+       "tipo": "lectivo"
       }
      }
     },
@@ -6390,8 +6392,8 @@ window.HORARIOS = {
      "hora": "15:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Martes": {
        "txt": "NL",
@@ -6407,8 +6409,8 @@ window.HORARIOS = {
        "aula": "Sol"
       },
       "Viernes": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "L · Tutoría",
+       "tipo": "lectivo"
       }
      }
     }
@@ -6423,7 +6425,7 @@ window.HORARIOS = {
      "hora": "9:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Asamblea",
+       "txt": "L · Asamblea Conjunta",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -17173,7 +17175,7 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
@@ -17454,7 +17456,7 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
@@ -17735,7 +17737,7 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
@@ -18016,7 +18018,7 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
@@ -18297,7 +18299,7 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
@@ -18578,7 +18580,7 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
@@ -18861,7 +18863,7 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
@@ -19142,7 +19144,7 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
@@ -19423,7 +19425,7 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
@@ -19704,7 +19706,7 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
@@ -19985,7 +19987,7 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
@@ -20266,7 +20268,7 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Martes": {
         "asig": "Asamblea Conjunta"
