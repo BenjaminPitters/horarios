@@ -7142,7 +7142,7 @@ window.HORARIOS = {
   },
   "EF2": {
    "nombre": "Alberto",
-   "rol": "Ed. Física (apoyo, Fundación Atleti)",
+   "rol": "Fútbol Terapéutico. Atlético de Madrid",
    "filas": [
     {
      "franja": "F0",
