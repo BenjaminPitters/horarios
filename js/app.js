@@ -765,7 +765,10 @@
     orient = o === 'landscape' ? 'landscape' : 'portrait';
     let st = el('#pageOrient');
     if (!st) { st = document.createElement('style'); st.id = 'pageOrient'; document.head.appendChild(st); }
-    st.textContent = `@page{ size:A4 ${orient}; margin:20mm 8mm 9mm; }`;
+    // En horizontal la hoja es baja (210mm): márgenes verticales más ajustados para que quepa en 1 pág.
+    const marg = orient === 'landscape' ? '12mm 7mm 6mm' : '20mm 8mm 9mm';
+    st.textContent = `@page{ size:A4 ${orient}; margin:${marg}; }`;
+    document.body.classList.toggle('is-land', orient === 'landscape');
     els('[data-orient]').forEach(b => b.classList.toggle('is-active', b.dataset.orient === orient));
   }
 

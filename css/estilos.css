@@ -500,7 +500,7 @@ tr.brk th.tgut .h{color:var(--ink-3)}
   .printhead__sub{ font-family:var(--mono); font-size:7.5pt; letter-spacing:.03em; color:#8b827d; }
   /* El logo se fija: aparece arriba a la derecha en TODAS las páginas (position:fixed se
      repite en cada hoja al imprimir en Chrome). El margen superior de @page le deja sitio. */
-  .printhead__logo{ position:fixed; top:4mm; right:8mm; height:12mm; width:auto; display:block; object-fit:contain; z-index:100; background:#fff; }
+  .printhead__logo{ position:fixed; top:2.5mm; right:8mm; height:11.5mm; width:auto; display:block; object-fit:contain; z-index:100; background:#fff; }
 
   /* Impresión GRANDE: la rejilla llena la hoja y los colores salen más vivos (saturate). */
   .grid-host{ box-shadow:none !important; border:1px solid #d8d2ce !important; border-radius:4px !important; break-inside:avoid; filter:saturate(1.8) brightness(.97); }
@@ -558,4 +558,28 @@ tr.brk th.tgut .h{color:var(--ink-3)}
   body.printgroup--coord  .mom-group[data-group="coord"]{ display:flex !important; }
   body.printgroup--patios .mom-group[data-group="patios"]{ display:flex !important; }
   body.printgroup--comida .mom-group[data-group="comida"]{ display:flex !important; }
+
+  /* ===== HORIZONTAL: comprimir en vertical para que el horario quepa y LLENE una sola hoja.
+     (La hoja apaisada solo tiene 210mm de alto; las filas altas del modo vertical la desbordan.) ===== */
+  body.is-land .printhead{ margin:0 0 1.4mm; padding:0 0 1mm; }
+  body.is-land .printhead__title{ font-size:11pt; }
+  body.is-land .printhead__logo{ top:2mm; height:9mm; }
+  body.is-land .viewhead{ margin:0 0 1.4mm !important; }
+  body.is-land .viewhead__title h2{ font-size:11pt !important; }
+  body.is-land .gridbanner{ padding:.9mm 3mm !important; }
+  body.is-land .gridbanner__name{ font-size:11pt !important; }
+  body.is-land .gridbanner__role{ font-size:8.5pt !important; }
+  body.is-land table.grid{ font-size:8.5pt !important; }
+  body.is-land table.grid thead th{ padding:.9mm 1.2mm !important; font-size:7.5pt !important; }
+  body.is-land th.tgut{ padding:1mm 2mm !important; }
+  body.is-land th.tgut .f{ font-size:9pt !important; }
+  body.is-land th.tgut .h{ font-size:6.5pt !important; }
+  body.is-land .cx{ min-height:7mm !important; padding:1mm 1.8mm !important; gap:.4mm !important; }
+  body.is-land .cx__asig{ font-size:8.5pt !important; line-height:1.12 !important; }
+  body.is-land .cx__txt{ font-size:8pt !important; line-height:1.14 !important; }
+  body.is-land .cx__room,.cx__nl{ font-size:7pt !important; }
+  body.is-land .cx__sal,.cx__ext{ margin-top:.5mm !important; gap:.4mm !important; }
+  body.is-land .cx__salrow,.cx__extrow{ font-size:7pt !important; line-height:1.1 !important; }
+  body.is-land .cx__salarr,.cx__saldest,.cx__extfrom{ font-size:6.5pt !important; }
+  body.is-land .code{ font-size:6.5pt !important; }
 }
