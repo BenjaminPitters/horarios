@@ -5701,7 +5701,7 @@ window.HORARIOS = {
      "hora": "15:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Conocimiento del Entorno\n↗ Catalina F.→L2",
+       "txt": "L · Conocimiento del Entorno\n⇱ Manuel: salida externa (desde 15:00)\n↗ Catalina F.→L2",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -5709,7 +5709,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Conocimiento del Entorno\n⇱ Cata: salida externa\n↗ Leonor→L2",
+       "txt": "L · Conocimiento del Entorno\n⇱ Cata: salida externa\n⇱ Manuel: salida externa (desde 15:00)\n↗ Leonor→L2",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -5727,7 +5727,7 @@ window.HORARIOS = {
      "hora": "15:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Juego",
+       "txt": "L · Juego\n⇱ Manuel: salida externa",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -5735,7 +5735,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Juego\n⇱ Cata: salida externa",
+       "txt": "L · Juego\n⇱ Cata: salida externa\n⇱ Manuel: salida externa",
        "tipo": "lectivo"
       },
       "Jueves": {
