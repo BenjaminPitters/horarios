@@ -337,6 +337,15 @@
   };
   const gut = (fr, hora, base) => `<th class="tgut" scope="row" style="height:${rowH(fr, base, hora)}px"><span class="f">${esc(clean(fr))}</span>${hora ? `<span class="h">${esc(horaSpan(fr, hora))}</span>` : ''}</th>`;
   const brkRow = (fr, hora, base) => `<tr class="brk">${gut(fr, hora, base)}<td colspan="${DIAS.length}"><div class="brk__rule"><span>${esc(clean(fr))} ${esc(clean(hora || ''))}</span></div></td></tr>`;
+  // Hora en minutos desde el primer "H:MM" de un texto (inicio de la franja, o el "desde").
+  const parseHM = s => { const m = String(s || '').match(/(\d{1,2}):(\d{2})/); return m ? +m[1] * 60 + +m[2] : null; };
+  // En las salidas externas, "(desde H:MM)" sobra si la ausencia empieza justo con la franja
+  // (p. ej. Manuel sale a las 15:00 y su franja F8 ya empieza a las 15:00 → solo "salida externa").
+  // Se mantiene cuando la hora NO coincide con el inicio (p. ej. Cata 14:15 en una franja de 14:30).
+  const trimDesde = (txt, horaFranja) => {
+    const ini = parseHM(horaFranja);
+    return String(txt || '').replace(/\s*\(desde\s+(\d{1,2}:\d{2})\)/gi, (m, h) => parseHM(h) === ini ? '' : m);
+  };
 
   // Fila sintética de coordinación general (no viene en el dato): martes 16:00-17:00.
   // Mismo color/estilo que NL y las demás coordinaciones (tipo no_lectivo).
@@ -364,7 +373,7 @@
           const externa = (c.externa || []).filter(e => e && e.alumno);
           const extHTML = externa.length
             ? `<div class="cx__ext">${externa.map(e =>
-                `<span class="cx__extrow"><span class="cx__exticon" aria-hidden="true">⇱</span><span>${esc(clean(e.alumno))} fuera${e.desde ? ` <span class="cx__extfrom">${esc(clean(e.desde))}</span>` : ''}</span></span>`).join('')}</div>`
+                `<span class="cx__extrow"><span class="cx__exticon" aria-hidden="true">⇱</span><span>${esc(clean(e.alumno))} fuera${e.desde && parseHM(e.desde) !== parseHM(f.hora) ? ` <span class="cx__extfrom">${esc(clean(e.desde))}</span>` : ''}</span></span>`).join('')}</div>`
             : '';
           const tipAttr = hasSal
             ? ` data-tip='${esc(JSON.stringify({ salidas: salidas.map(s => ({ alumno: clean(s.alumno), a: clean(s.a), a_nombre: s.a_nombre ? clean(s.a_nombre) : null })) }))}'`
@@ -408,7 +417,7 @@
         }).filter(Boolean);
         const hasSal = salidas.length > 0;
         // Anotaciones de salida externa (fuera del centro): líneas que empiezan por "⇱".
-        const extLines = rawLines.filter(l => l.startsWith('⇱')).map(l => l.replace(/^⇱\s*/, '').trim());
+        const extLines = rawLines.filter(l => l.startsWith('⇱')).map(l => trimDesde(l.replace(/^⇱\s*/, '').trim(), f.hora));
         // Quitar la "L · " (marca de Lectivo) del inicio de la línea principal.
         let mainLine = (rawLines.filter(l => !l.startsWith('↗') && !l.startsWith('⇱'))[0] || '').replace(/^L\s*·\s*/, '');
         // "(apoyo)" -> con quién está: el otro adulto del aula en esa franja (según la rejilla).
@@ -471,7 +480,7 @@
         }
         if (c.label) {                                 // mediodía / salida externa -> etiqueta
           const isExt = /externa/i.test(c.label);
-          return `<td class="cell" data-day="${day}" style="background:${MID_BG}"><div class="cx"><span class="cx__txt ${isExt ? 'cx__extlbl' : 'cx__mid'}">${isExt ? '⇱ ' : ''}${esc(clean(c.label))}</span></div></td>`;
+          return `<td class="cell" data-day="${day}" style="background:${MID_BG}"><div class="cx"><span class="cx__txt ${isExt ? 'cx__extlbl' : 'cx__mid'}">${isExt ? '⇱ ' : ''}${esc(clean(trimDesde(c.label, f.hora)))}</span></div></td>`;
         }
         return empty(day);
       }).join('');
