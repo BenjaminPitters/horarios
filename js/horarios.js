@@ -1,4 +1,4 @@
-// Datos de horarios del Colegio Querer - v14 (individuales colocadas, apoyo T6, EF1 Sol psico M/J, máx 3h).
+// Datos de horarios del Colegio Querer - v14 (nombres reales; Catalina desambiguada B./F.).
 window.HORARIOS = {
  "meta": {
   "centro": "Colegio Querer",
@@ -49,7 +49,8 @@ window.HORARIOS = {
    "Miércoles",
    "Jueves",
    "Viernes"
-  ]
+  ],
+  "generado": "2026-09-07"
  },
  "clases": {
   "Estrella": {
@@ -1339,7 +1340,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina",
+         "alumno": "Catalina F.",
          "a": "O1",
          "a_nombre": "Lucía Cubillas"
         }
@@ -1372,7 +1373,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina",
+         "alumno": "Catalina F.",
          "a": "O1",
          "a_nombre": "Lucía Cubillas"
         }
@@ -1604,7 +1605,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina",
+         "alumno": "Catalina F.",
          "a": "TO1",
          "a_nombre": "Irene"
         }
@@ -1649,7 +1650,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina",
+         "alumno": "Catalina F.",
          "a": "L2",
          "a_nombre": "Sheila"
         }
@@ -1786,7 +1787,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina",
+         "alumno": "Catalina F.",
          "a": "L2",
          "a_nombre": "Sheila"
         }
@@ -1799,7 +1800,7 @@ window.HORARIOS = {
        ],
        "externa": [
         {
-         "alumno": "Catalina",
+         "alumno": "Catalina F.",
          "desde": "15:15"
         }
        ]
@@ -1818,7 +1819,7 @@ window.HORARIOS = {
        ],
        "externa": [
         {
-         "alumno": "Catalina",
+         "alumno": "Catalina F.",
          "desde": "15:15"
         }
        ]
@@ -1830,7 +1831,7 @@ window.HORARIOS = {
        ],
        "externa": [
         {
-         "alumno": "Catalina",
+         "alumno": "Catalina F.",
          "desde": "15:15"
         }
        ]
@@ -1867,7 +1868,7 @@ window.HORARIOS = {
        ],
        "externa": [
         {
-         "alumno": "Catalina"
+         "alumno": "Catalina F."
         }
        ]
       },
@@ -1878,7 +1879,7 @@ window.HORARIOS = {
        ],
        "externa": [
         {
-         "alumno": "Catalina"
+         "alumno": "Catalina F."
         }
        ]
       },
@@ -1889,7 +1890,7 @@ window.HORARIOS = {
        ],
        "externa": [
         {
-         "alumno": "Catalina"
+         "alumno": "Catalina F."
         }
        ]
       },
@@ -2759,7 +2760,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina",
+         "alumno": "Catalina B.",
          "a": "TO1",
          "a_nombre": "Irene"
         },
@@ -2803,7 +2804,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina",
+         "alumno": "Catalina B.",
          "a": "L3",
          "a_nombre": "(por contratar)"
         },
@@ -2892,7 +2893,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina",
+         "alumno": "Catalina B.",
          "a": "L3",
          "a_nombre": "(por contratar)"
         },
@@ -2988,7 +2989,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Catalina",
+         "alumno": "Catalina B.",
          "a": "Ps3",
          "a_nombre": "Bárbara"
         }
@@ -5443,7 +5444,7 @@ window.HORARIOS = {
      "hora": "10:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Prerrequisitos de Aprendizaje\n↗ CatalinaF→O1",
+       "txt": "L · Prerrequisitos de Aprendizaje\n↗ Catalina F.→O1",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -5581,7 +5582,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Juego\n↗ CatalinaF→L2",
+       "txt": "L · Juego\n↗ Catalina F.→L2",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -5677,7 +5678,7 @@ window.HORARIOS = {
      "hora": "15:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Conocimiento del Entorno\n↗ CatalinaF→L2",
+       "txt": "L · Conocimiento del Entorno\n↗ Catalina F.→L2",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -5877,7 +5878,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Matemáticas\n↗ CatalinaB→TO1\n↗ Martina→L3",
+       "txt": "L · Matemáticas\n↗ Catalina B.→TO1\n↗ Martina→L3",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -5895,7 +5896,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Matemáticas\n↗ CatalinaB→L3\n↗ Yago→Ps3",
+       "txt": "L · Matemáticas\n↗ Catalina B.→L3\n↗ Yago→Ps3",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -5929,7 +5930,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Ciencias\n↗ CatalinaB→L3\n↗ Yago→TO1",
+       "txt": "L · Ciencias\n↗ Catalina B.→L3\n↗ Yago→TO1",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -6957,7 +6958,7 @@ window.HORARIOS = {
        "aula": "Oeste"
       },
       "Viernes": {
-       "txt": "L · Norte: Psicomotricidad\n↗ CatalinaF→TO1",
+       "txt": "L · Norte: Psicomotricidad\n↗ Catalina F.→TO1",
        "tipo": "lectivo",
        "aula": "Norte"
       }
@@ -7057,7 +7058,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Este: Educación Física\n↗ CatalinaB→Ps3",
+       "txt": "L · Este: Educación Física\n↗ Catalina B.→Ps3",
        "tipo": "lectivo",
        "aula": "Este"
       },
@@ -8283,7 +8284,7 @@ window.HORARIOS = {
         "aula": "Luna"
        },
        "Miércoles": {
-        "txt": "L · Norte: Catalina",
+        "txt": "L · Norte: Catalina F.",
         "tipo": "lectivo",
         "aula": "Norte"
        },
@@ -8304,7 +8305,7 @@ window.HORARIOS = {
       "hora": "10:00",
       "dias": {
        "Lunes": {
-        "txt": "L · Norte: Catalina",
+        "txt": "L · Norte: Catalina F.",
         "tipo": "lectivo",
         "aula": "Norte"
        },
@@ -9262,7 +9263,7 @@ window.HORARIOS = {
         "tipo": "fuera"
        },
        "Martes": {
-        "txt": "L · Este: Catalina",
+        "txt": "L · Este: Catalina B.",
         "tipo": "lectivo",
         "aula": "Este"
        },
@@ -9762,7 +9763,7 @@ window.HORARIOS = {
         "aula": "Norte"
        },
        "Miércoles": {
-        "txt": "L · Norte: Estimulación del Lenguaje\n↗ CatalinaF→O1",
+        "txt": "L · Norte: Estimulación del Lenguaje\n↗ Catalina F.→O1",
         "tipo": "lectivo",
         "aula": "Norte"
        },
@@ -9942,7 +9943,7 @@ window.HORARIOS = {
         "aula": "Sur"
        },
        "Miércoles": {
-        "txt": "L · Norte: Catalina",
+        "txt": "L · Norte: Catalina F.",
         "tipo": "lectivo",
         "aula": "Norte"
        },
@@ -10045,7 +10046,7 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "txt": "L · Norte: Catalina",
+        "txt": "L · Norte: Catalina F.",
         "tipo": "lectivo",
         "aula": "Norte"
        },
@@ -10286,7 +10287,7 @@ window.HORARIOS = {
         "aula": "Estrella"
        },
        "Martes": {
-        "txt": "L · Este: Catalina",
+        "txt": "L · Este: Catalina B.",
         "tipo": "lectivo",
         "aula": "Este"
        },
@@ -10327,7 +10328,7 @@ window.HORARIOS = {
         "aula": "Sur"
        },
        "Jueves": {
-        "txt": "L · Este: Catalina",
+        "txt": "L · Este: Catalina B.",
         "tipo": "lectivo",
         "aula": "Este"
        },
@@ -10640,7 +10641,7 @@ window.HORARIOS = {
         "aula": "Norte"
        },
        "Jueves": {
-        "txt": "L · Este: Catalina",
+        "txt": "L · Este: Catalina B.",
         "tipo": "lectivo",
         "aula": "Este"
        },
@@ -10676,7 +10677,7 @@ window.HORARIOS = {
         "aula": "Estrella"
        },
        "Viernes": {
-        "txt": "L · Norte: Catalina",
+        "txt": "L · Norte: Catalina F.",
         "tipo": "lectivo",
         "aula": "Norte"
        }
@@ -13501,7 +13502,7 @@ window.HORARIOS = {
    }
   },
   "Norte": {
-   "Catalina": {
+   "Catalina F.": {
     "filas": [
      {
       "franja": "F0",
@@ -16323,7 +16324,7 @@ window.HORARIOS = {
      }
     ]
    },
-   "Catalina": {
+   "Catalina B.": {
     "filas": [
      {
       "franja": "F0",
@@ -20782,23 +20783,42 @@ window.HORARIOS = {
      "dias": {
       "Lunes": [
        "T5 Marta Vera",
-       "T6 Marta La."
+       "T6 Marta La.",
+       "T7 Raquel",
+       "EF1 Fernando",
+       "O1 Lucía C.",
+       "EF2 Alberto"
       ],
       "Martes": [
        "T5 Marta Vera",
-       "T6 Marta La."
+       "T6 Marta La.",
+       "T7 Raquel",
+       "EF1 Fernando",
+       "EF2 Alberto"
       ],
       "Miércoles": [
        "T5 Marta Vera",
-       "T6 Marta La."
+       "T6 Marta La.",
+       "T7 Raquel",
+       "EF1 Fernando",
+       "O1 Lucía C.",
+       "EF2 Alberto"
       ],
       "Jueves": [
        "T5 Marta Vera",
-       "T6 Marta La."
+       "T6 Marta La.",
+       "T7 Raquel",
+       "EF1 Fernando",
+       "O2 Sara",
+       "EF2 Alberto"
       ],
       "Viernes": [
        "T5 Marta Vera",
-       "T6 Marta La."
+       "T6 Marta La.",
+       "T7 Raquel",
+       "EF1 Fernando",
+       "O1 Lucía C.",
+       "EF2 Alberto"
       ]
      }
     }
