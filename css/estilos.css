@@ -525,7 +525,11 @@ tr.brk th.tgut .h{color:var(--ink-3)}
   td.cell.cell--merged{ display:none !important; }
   tr.brk td{ display:table-cell !important; }
   tr.brk th.tgut{ display:table-cell !important; }
-  .cx{ min-height:11mm !important; height:auto !important; padding:1.9mm 2.1mm !important; gap:.6mm !important; }
+  .cx{ min-height:11mm !important; height:auto !important; padding:1.9mm 1.6mm !important; gap:.6mm !important; }
+  /* Al imprimir NO partir palabras a mitad (p. ej. "Cuentacuentos"): envolver solo en los
+     espacios. El padding lateral reducido de arriba da algo más de ancho para las palabras
+     largas, que así caben enteras. */
+  .cx__asig, .cx__txt, .cx__salrow, .cx__extrow, .cx__salwho{ overflow-wrap:normal !important; word-break:normal !important; hyphens:none !important; }
 
   /* textos grandes y legibles (la rejilla llena la hoja) */
   th.tgut .f{ font-size:10pt !important; }
