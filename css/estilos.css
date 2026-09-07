@@ -202,7 +202,9 @@ img{max-width:100%}
 .pk--red.is-active{background:var(--accent);border-color:var(--accent);color:#fff}
 
 /* ===================== GRID ===================== */
-.grid-host{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow)}
+/* Colores de las celdas más vivos, igual que al imprimir (saturate). Solo afecta a la rejilla
+   de horario, no al resto de la página. El tooltip (#tip) va a nivel de body, no le afecta. */
+.grid-host{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);filter:saturate(1.8) brightness(.97)}
 
 .gridbanner{display:flex;align-items:center;gap:.85rem;padding:1rem 1.15rem;border-bottom:1px solid var(--line)}
 .gridbanner__mono{
