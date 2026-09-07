@@ -593,7 +593,8 @@ window.HORARIOS = {
       "Miércoles": {
        "asig": "Conocimiento del Entorno",
        "adultos": [
-        "T1"
+        "T1",
+        "T7"
        ]
       },
       "Jueves": {
@@ -854,7 +855,7 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Snack",
        "adultos": [
-        "T7",
+        "I2",
         "L3"
        ]
       }
@@ -2108,8 +2109,7 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Snack",
        "adultos": [
-        "T3",
-        "I2"
+        "T3"
        ]
       }
      }
@@ -4677,7 +4677,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Conocimiento del Entorno",
+       "txt": "L · Conocimiento del Entorno · T7",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -5165,7 +5165,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Snack · I2",
+       "txt": "L · Snack",
        "tipo": "lectivo"
       }
      }
@@ -6517,8 +6517,8 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "L · Tutoría",
+       "tipo": "lectivo"
       }
      }
     },
@@ -6543,7 +6543,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Snack · L3 (Sol)",
+       "txt": "L · Tutoría",
        "tipo": "lectivo"
       }
      }
@@ -6743,8 +6743,9 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "L · Estrella: Conocimiento del Entorno · T1",
+       "tipo": "lectivo",
+       "aula": "Estrella"
       },
       "Jueves": {
        "txt": "L · Cuentacuentos · T2 (Sol)",
@@ -6769,8 +6770,8 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Jueves": {
        "txt": "NL",
@@ -8010,9 +8011,9 @@ window.HORARIOS = {
        "aula": "Luna"
       },
       "Viernes": {
-       "txt": "L · Luna: Snack · T3",
+       "txt": "L · Sol: Snack · L3",
        "tipo": "lectivo",
-       "aula": "Luna"
+       "aula": "Sol"
       }
      }
     },
