@@ -20581,8 +20581,8 @@ window.HORARIOS = {
        "Asamblea: T4",
        "Asamblea: I2\n(T3 coordina)",
        "Asamblea: T5",
-       "Asamblea: T6",
-       "Asamblea: T7",
+       "Conjunta con Sur: T7",
+       "Conjunta con Oeste: T7",
        "Luna: T3+L1+O1+TO1"
       ],
       "Martes": [
