@@ -324,7 +324,18 @@
     return DUR45.has(fr) ? 45 : 30;
   };
   const rowH = (fr, base, hora) => Math.round((base || BASE_ROW) * durMin(fr, hora) / 30);
-  const gut = (fr, hora, base) => `<th class="tgut" scope="row" style="height:${rowH(fr, base, hora)}px"><span class="f">${esc(clean(fr))}</span>${hora ? `<span class="h">${esc(clean(hora))}</span>` : ''}</th>`;
+  // La hora del dato suele ser solo el INICIO ("9:00"); mostramos inicio–fin en TODAS las franjas
+  // (fin = inicio + duración de la franja, vía durMin). Si el dato ya trae un rango, se respeta.
+  const horaSpan = (fr, hora) => {
+    const s = clean(String(hora || '')).trim();
+    if (!s) return '';
+    if (/\d\s*[–-]\s*\d/.test(s)) return s;                       // ya viene como inicio–fin
+    const m = s.match(/(\d{1,2}):(\d{2})/); if (!m) return s;
+    const ini = +m[1] * 60 + +m[2], fin = ini + durMin(fr, hora);
+    const fmt = t => Math.floor(t / 60) + ':' + String(t % 60).padStart(2, '0');
+    return fmt(ini) + '-' + fmt(fin);
+  };
+  const gut = (fr, hora, base) => `<th class="tgut" scope="row" style="height:${rowH(fr, base, hora)}px"><span class="f">${esc(clean(fr))}</span>${hora ? `<span class="h">${esc(horaSpan(fr, hora))}</span>` : ''}</th>`;
   const brkRow = (fr, hora, base) => `<tr class="brk">${gut(fr, hora, base)}<td colspan="${DIAS.length}"><div class="brk__rule"><span>${esc(clean(fr))} ${esc(clean(hora || ''))}</span></div></td></tr>`;
 
   // Fila sintética de coordinación general (no viene en el dato): martes 16:00-17:00.
