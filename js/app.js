@@ -378,6 +378,14 @@
           const tipAttr = hasSal
             ? ` data-tip='${esc(JSON.stringify({ salidas: salidas.map(s => ({ alumno: clean(s.alumno), a: clean(s.a), a_nombre: s.a_nombre ? clean(s.a_nombre) : null })) }))}'`
             : '';
+          // Salidas SÓLO para impresión: en pantalla la celda de aula enseña solo el flag ↗ + el
+          // tooltip; en papel el tooltip se pierde. Se emite el mismo detalle oculto (display:none
+          // en pantalla, display:flex en @media print). Clase propia cx__sal--print para que
+          // combineRun NO lo procese (solo copia desde .cx__sal/.cx__ext exactos, no de --print).
+          const salPrint = hasSal
+            ? `<div class="cx__sal--print" aria-hidden="true">${salidas.map(s =>
+                `<span class="cx__salrow"><span class="cx__salarr" aria-hidden="true">↗</span><span class="cx__salwho">${esc(clean(s.alumno))}</span><span class="cx__saldest">→ ${esc(clean(s.a))}</span></span>`).join('')}</div>`
+            : '';
           // Clave de fusión: misma área + mismos adultos + mismas externas + MISMAS SALIDAS.
           // Incluir las salidas en la clave hace que dos franjas de 30 min con salidas distintas
           // (p.ej. Matemáticas F4 y F5, con niños distintos) NO se fusionen: se ven como dos medias
@@ -387,7 +395,7 @@
           const mk = cleanAsig(c.asig) + '#' + (c.adultos || []).join(',') + '#' + externa.map(e => e.alumno + (e.desde || '') + (e.hasta || '')).join(';') + '#' + salKey;
           // El tinte y la barra de color van en la <td> para que rellene toda la fila.
           return `<td class="cell${hasSal ? ' cell--sal' : ''}${apoyo ? ' cell--apoyo' : ''}" data-day="${day}" data-mk="${esc(mk)}" style="background:${tint(col,.30)};border-left-color:${col}"${tipAttr}>
-            <div class="cx">${hasSal ? '<span class="cx__flag" aria-hidden="true">↗</span>' : ''}${apoyo ? '<span class="cx__apoyo" title="Franja con apoyo (2 adultos)" aria-label="Apoyo">+</span>' : ''}<span class="cx__asig">${esc(cleanAsig(c.asig))}</span>${codes ? `<span class="cx__codes">${codes}</span>` : ''}${extHTML}</div></td>`;
+            <div class="cx">${hasSal ? '<span class="cx__flag" aria-hidden="true">↗</span>' : ''}${apoyo ? '<span class="cx__apoyo" title="Franja con apoyo (2 adultos)" aria-label="Apoyo">+</span>' : ''}<span class="cx__asig">${esc(cleanAsig(c.asig))}</span>${codes ? `<span class="cx__codes">${codes}</span>` : ''}${extHTML}${salPrint}</div></td>`;
         }
         return `<td class="cell" data-day="${day}"><div class="cx"><span class="cx__nl">·</span></div></td>`;
       }).join('');
@@ -809,7 +817,7 @@
     let st = el('#pageOrient');
     if (!st) { st = document.createElement('style'); st.id = 'pageOrient'; document.head.appendChild(st); }
     // En horizontal la hoja es baja (210mm): márgenes verticales más ajustados para que quepa en 1 pág.
-    const marg = orient === 'landscape' ? '12mm 7mm 6mm' : '20mm 8mm 9mm';
+    const marg = orient === 'landscape' ? '10mm 7mm 5mm' : '20mm 8mm 9mm';
     st.textContent = `@page{ size:A4 ${orient}; margin:${marg}; }`;
     document.body.classList.toggle('is-land', orient === 'landscape');
     els('[data-orient]').forEach(b => b.classList.toggle('is-active', b.dataset.orient === orient));
