@@ -557,6 +557,11 @@
       .replace(/^Coordinan\b.*$/i, 'Coordinación')
       .replace(/\s*\([^)]*\)/g, '')
       .trim();
+    // Color del aula para la 1ª columna de las matrices (Asambleas, Comedores): coherente con
+    // el color por aula del resto de la plataforma (Clases, selector de aulas). Devuelve null
+    // para etiquetas sin aula concreta (p. ej. "S/O Conjunta").
+    const momCol = lbl => AULA_COLORS[String(lbl || '').replace('EBO/', '').trim()] || null;
+    const momLblAttr = lbl => { const c = momCol(lbl); return c ? ` style="border-left:5px solid ${c};background:${tint(c, .6)}"` : ''; };
     // Título: sin subtítulo (fuera lo de " — ..."), la hora sale como meta (sin paréntesis),
     // y las comidas se numeran "Turno N de comida".
     // "Entrada y Asamblea": matriz aula×día. Primera columna = la clase; cada celda, quién la
@@ -566,7 +571,7 @@
       const perDay = {};
       DIAS.forEach(d => { const arr = (b.filas && b.filas[0] && b.filas[0].dias && b.filas[0].dias[d]) || []; perDay[d] = parseLines(arr.join('\n')); });
       const chipsHtml = es => es.length ? es.map(e => `<span class="mom-chips">${e.chips.map(chip).join('')}</span>${e.nota ? `<span class="mom-note">${esc(e.nota)}</span>` : ''}`).join('') : '<span class="mom-e__nl">·</span>';
-      const rowHtml = (label, pick) => `<tr><th class="mom-lbl" scope="row">${esc(label)}</th>${DIAS.map(d => { const es = pick(d); return `<td class="mom-c${es.some(e => e.coord) ? ' is-coord' : ''}" data-day="${d}"><div class="mom-cell">${chipsHtml(es)}</div></td>`; }).join('')}</tr>`;
+      const rowHtml = (label, pick) => `<tr><th class="mom-lbl"${momLblAttr(label)} scope="row">${esc(label)}</th>${DIAS.map(d => { const es = pick(d); return `<td class="mom-c${es.some(e => e.coord) ? ' is-coord' : ''}" data-day="${d}"><div class="mom-cell">${chipsHtml(es)}</div></td>`; }).join('')}</tr>`;
       // filas de aula (solo el asamblea: quién la toca)
       const aulaByPref = {}; const aulas = [];
       DIAS.forEach(d => perDay[d].filter(e => e.asm).forEach(e => { if (!(e.pref in aulaByPref)) { aulaByPref[e.pref] = {}; aulas.push(e.pref); } (aulaByPref[e.pref][d] = aulaByPref[e.pref][d] || []).push(e); }));
@@ -596,7 +601,7 @@
         });
       });
       aulas.sort((a, x) => { const ia = ORDER.indexOf(a), ix = ORDER.indexOf(x); return (ia < 0 ? 99 : ia) - (ix < 0 ? 99 : ix) || a.localeCompare(x); });
-      return aulas.map(a => `<tr><th class="mom-lbl" scope="row">${esc(a === 'Luna' ? 'EBO/Luna' : a)}</th>${DIAS.map(d => {
+      return aulas.map(a => `<tr><th class="mom-lbl"${momLblAttr(a)} scope="row">${esc(a === 'Luna' ? 'EBO/Luna' : a)}</th>${DIAS.map(d => {
         const cs = byAula[a][d] || [];
         return `<td class="mom-c" data-day="${d}"><div class="mom-cell">${cs.length ? `<span class="mom-chips">${cs.map(chip).join('')}</span>` : '<span class="mom-e__nl">·</span>'}</div></td>`;
       }).join('')}</tr>`).join('');
@@ -616,7 +621,17 @@
       const rows = isEntrada ? entradaMatrix(b) : isComedor ? comedorMatrix(b) : (b.filas || []).map(f =>
         `<tr>${hasLbl ? `<th class="mom-lbl" scope="row">${esc(label(f.label))}</th>` : ''}${DIAS.map(d => `<td class="mom-c" data-day="${d}">${cell(f.dias && f.dias[d])}</td>`).join('')}</tr>`).join('');
       const cls = 'mom-table' + (isMatrix ? ' mom-table--matrix' : '') + (hasLbl ? '' : ' mom-table--nolbl');
-      return `<div class="mom-block"><div class="mom-head"><h3>${esc(name)}</h3>${hora ? `<span class="mom-head__hora">${esc(hora)}</span>` : ''}</div>` +
+      // Acento de color por bloque. Las matrices (Asamblea/Comedores) ya llevan color por aula
+      // en sus filas; a los bloques planos (Patios, Comida, Siesta) se les da un acento coherente
+      // con la paleta: patio lila, comida cálido, siesta el color del aula Estrella.
+      const accent = isMatrix ? null
+        : /Patio/i.test(name)  ? '#C9A8E0'
+        : /Comida/i.test(name) ? '#E0A87A'
+        : /Siesta/i.test(name) ? aulaColor('Estrella')
+        : null;
+      const blkStyle = accent ? ` style="border-left:4px solid ${accent}"` : '';
+      const headStyle = accent ? ` style="background:${tint(accent, .84)}"` : '';
+      return `<div class="mom-block"${blkStyle}><div class="mom-head"${headStyle}><h3>${esc(name)}</h3>${hora ? `<span class="mom-head__hora">${esc(hora)}</span>` : ''}</div>` +
         `<div class="grid-scroll"><table class="${cls}"><thead><tr>${lblTh}${DIAS.map(d => `<th>${esc(d)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div></div>`;
     };
     // Tres grupos que se pueden imprimir por separado (cada uno con su botón):
