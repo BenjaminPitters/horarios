@@ -191,8 +191,7 @@ window.HORARIOS = {
       "Miércoles": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "TO1",
-        "EF1"
+        "TO1"
        ],
        "externa": [
         {
@@ -217,7 +216,8 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "TO1"
+        "TO1",
+        "EF1"
        ]
       }
      }
@@ -6895,9 +6895,8 @@ window.HORARIOS = {
        "aula": "Sol"
       },
       "Miércoles": {
-       "txt": "L · Estrella: Psicomotricidad · TO1",
-       "tipo": "lectivo",
-       "aula": "Estrella"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Jueves": {
        "txt": "L · Sol: Psicomotricidad · TO1",
@@ -6905,8 +6904,9 @@ window.HORARIOS = {
        "aula": "Sol"
       },
       "Viernes": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "L · Estrella: Psicomotricidad · TO1",
+       "tipo": "lectivo",
+       "aula": "Estrella"
       }
      }
     },
@@ -8606,7 +8606,7 @@ window.HORARIOS = {
         "aula": "Norte"
        },
        "Miércoles": {
-        "txt": "L · Norte: Autonomía · T4",
+        "txt": "L · Norte: Autonomía · T4\n⇱ Cata: salida externa (desde 14:15)",
         "tipo": "lectivo",
         "aula": "Norte"
        },
@@ -9443,7 +9443,7 @@ window.HORARIOS = {
         "aula": "Estrella"
        },
        "Miércoles": {
-        "txt": "L · Estrella: Estimulación del Lenguaje\n↗ Naomi→O2",
+        "txt": "L · Estrella: Estimulación del Lenguaje\n⇱ Inés: entra a las 12:30\n↗ Naomi→O2",
         "tipo": "lectivo",
         "aula": "Estrella"
        },
@@ -10268,7 +10268,7 @@ window.HORARIOS = {
         "tipo": "lectivo"
        },
        "Miércoles": {
-        "txt": "L · Snack (Est+Sol)",
+        "txt": "L · Snack (Est+Sol)\n⇱ Inés: entra a las 12:30",
         "tipo": "lectivo"
        },
        "Jueves": {
@@ -10608,7 +10608,7 @@ window.HORARIOS = {
         "aula": "Sol"
        },
        "Miércoles": {
-        "txt": "L · Estrella: Psicomotricidad · TO1",
+        "txt": "L · Estrella: Psicomotricidad\n⇱ Inés: entra a las 12:30",
         "tipo": "lectivo",
         "aula": "Estrella"
        },
@@ -10618,7 +10618,7 @@ window.HORARIOS = {
         "aula": "Sol"
        },
        "Viernes": {
-        "txt": "L · Estrella: Psicomotricidad",
+        "txt": "L · Estrella: Psicomotricidad · EF1",
         "tipo": "lectivo",
         "aula": "Estrella"
        }
