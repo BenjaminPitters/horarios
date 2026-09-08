@@ -77,6 +77,12 @@ window.HORARIOS = {
        "asig": "Asamblea",
        "adultos": [
         "T1"
+       ],
+       "externa": [
+        {
+         "alumno": "Inés",
+         "hasta": "12:30"
+        }
        ]
       },
       "Jueves": {
@@ -127,6 +133,12 @@ window.HORARIOS = {
          "alumno": "Naomi",
          "a": "O2",
          "a_nombre": "Sara"
+        }
+       ],
+       "externa": [
+        {
+         "alumno": "Inés",
+         "hasta": "12:30"
         }
        ]
       },
@@ -181,6 +193,12 @@ window.HORARIOS = {
        "adultos": [
         "TO1",
         "EF1"
+       ],
+       "externa": [
+        {
+         "alumno": "Inés",
+         "hasta": "12:30"
+        }
        ]
       },
       "Jueves": {
@@ -227,6 +245,12 @@ window.HORARIOS = {
        "adultos": [
         "T1",
         "L3"
+       ],
+       "externa": [
+        {
+         "alumno": "Inés",
+         "hasta": "12:30"
+        }
        ]
       },
       "Jueves": {
@@ -299,6 +323,12 @@ window.HORARIOS = {
          "a": "L1",
          "a_nombre": "Luis"
         }
+       ],
+       "externa": [
+        {
+         "alumno": "Inés",
+         "hasta": "12:30"
+        }
        ]
       },
       "Jueves": {
@@ -361,6 +391,12 @@ window.HORARIOS = {
          "alumno": "Naomi",
          "a": "L1",
          "a_nombre": "Luis"
+        }
+       ],
+       "externa": [
+        {
+         "alumno": "Inés",
+         "hasta": "12:30"
         }
        ]
       },
@@ -4391,7 +4427,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Asamblea",
+       "txt": "L · Asamblea\n⇱ Inés: entra a las 12:30",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -4469,7 +4505,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Snack · L3",
+       "txt": "L · Snack · L3\n⇱ Inés: entra a las 12:30",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -4521,7 +4557,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Prerrequisitos de Grafomotricidad\n↗ Lucía→L1",
+       "txt": "L · Prerrequisitos de Grafomotricidad\n⇱ Inés: entra a las 12:30\n↗ Lucía→L1",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -4547,7 +4583,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Prerrequisitos de Aprendizaje\n↗ Naomi→L1",
+       "txt": "L · Prerrequisitos de Aprendizaje\n⇱ Inés: entra a las 12:30\n↗ Naomi→L1",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -11561,7 +11597,7 @@ window.HORARIOS = {
         "asig": "Asamblea"
        },
        "Miércoles": {
-        "asig": "Asamblea"
+        "label": "Entra a las 12:30"
        },
        "Jueves": {
         "asig": "Asamblea"
@@ -11582,7 +11618,7 @@ window.HORARIOS = {
         "asig": "Estimulación del Lenguaje"
        },
        "Miércoles": {
-        "asig": "Estimulación del Lenguaje"
+        "label": "Entra a las 12:30"
        },
        "Jueves": {
         "salida": "O2",
@@ -11604,7 +11640,7 @@ window.HORARIOS = {
         "asig": "Prerrequisitos de Aprendizaje"
        },
        "Miércoles": {
-        "asig": "Psicomotricidad"
+        "label": "Entra a las 12:30"
        },
        "Jueves": {
         "asig": "Prerrequisitos de Aprendizaje"
@@ -11625,7 +11661,7 @@ window.HORARIOS = {
         "asig": "Snack"
        },
        "Miércoles": {
-        "asig": "Snack"
+        "label": "Entra a las 12:30"
        },
        "Jueves": {
         "asig": "Snack"
@@ -11646,7 +11682,7 @@ window.HORARIOS = {
         "label": "Recreo"
        },
        "Miércoles": {
-        "label": "Recreo"
+        "label": "Entra a las 12:30"
        },
        "Jueves": {
         "label": "Recreo"
@@ -11667,7 +11703,7 @@ window.HORARIOS = {
         "asig": "Inglés"
        },
        "Miércoles": {
-        "asig": "Prerrequisitos de Grafomotricidad"
+        "label": "Entra a las 12:30"
        },
        "Jueves": {
         "asig": "Inglés"
@@ -11689,7 +11725,7 @@ window.HORARIOS = {
         "dest_nombre": "Sara"
        },
        "Miércoles": {
-        "asig": "Prerrequisitos de Aprendizaje"
+        "label": "Entra a las 12:30"
        },
        "Jueves": {
         "asig": "Psicomotricidad"

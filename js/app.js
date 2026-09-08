@@ -373,7 +373,7 @@
           const externa = (c.externa || []).filter(e => e && e.alumno);
           const extHTML = externa.length
             ? `<div class="cx__ext">${externa.map(e =>
-                `<span class="cx__extrow"><span class="cx__exticon" aria-hidden="true">⇱</span><span>${esc(clean(e.alumno))} fuera${e.desde && parseHM(e.desde) !== parseHM(f.hora) ? ` <span class="cx__extfrom">${esc(clean(e.desde))}</span>` : ''}</span></span>`).join('')}</div>`
+                `<span class="cx__extrow"><span class="cx__exticon" aria-hidden="true">⇱</span><span>${esc(clean(e.alumno))} fuera${e.desde && parseHM(e.desde) !== parseHM(f.hora) ? ` <span class="cx__extfrom">${esc(clean(e.desde))}</span>` : e.hasta ? ` <span class="cx__extfrom">hasta ${esc(clean(e.hasta))}</span>` : ''}</span></span>`).join('')}</div>`
             : '';
           const tipAttr = hasSal
             ? ` data-tip='${esc(JSON.stringify({ salidas: salidas.map(s => ({ alumno: clean(s.alumno), a: clean(s.a), a_nombre: s.a_nombre ? clean(s.a_nombre) : null })) }))}'`
@@ -384,7 +384,7 @@
           // horas separadas, cada una con su propia anotación y su borde discontinuo solo si tiene
           // salida. Antes se fusionaban y se mezclaban las salidas de ambas franjas sin distinguir.
           const salKey = salidas.map(s => clean(s.alumno) + '>' + clean(s.a)).sort().join(';');
-          const mk = cleanAsig(c.asig) + '#' + (c.adultos || []).join(',') + '#' + externa.map(e => e.alumno + (e.desde || '')).join(';') + '#' + salKey;
+          const mk = cleanAsig(c.asig) + '#' + (c.adultos || []).join(',') + '#' + externa.map(e => e.alumno + (e.desde || '') + (e.hasta || '')).join(';') + '#' + salKey;
           // El tinte y la barra de color van en la <td> para que rellene toda la fila.
           return `<td class="cell${hasSal ? ' cell--sal' : ''}${apoyo ? ' cell--apoyo' : ''}" data-day="${day}" data-mk="${esc(mk)}" style="background:${tint(col,.30)};border-left-color:${col}"${tipAttr}>
             <div class="cx">${hasSal ? '<span class="cx__flag" aria-hidden="true">↗</span>' : ''}${apoyo ? '<span class="cx__apoyo" title="Franja con apoyo (2 adultos)" aria-label="Apoyo">+</span>' : ''}<span class="cx__asig">${esc(cleanAsig(c.asig))}</span>${codes ? `<span class="cx__codes">${codes}</span>` : ''}${extHTML}</div></td>`;
