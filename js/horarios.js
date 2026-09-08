@@ -50,7 +50,7 @@ window.HORARIOS = {
    "Jueves",
    "Viernes"
   ],
-  "generado": "2026-09-07"
+  "generado": "2026-09-08"
  },
  "clases": {
   "Estrella": {
@@ -20680,17 +20680,6 @@ window.HORARIOS = {
      "dias": {
       "Lunes": [
        "T1 María C.",
-       "L1 Luis",
-       "T2 Carol",
-       "TO2 Aitana",
-       "T4 Marta O.",
-       "L2 Sheila",
-       "T3 Silvia",
-       "I2 María G.",
-       "TO1 Irene"
-      ],
-      "Martes": [
-       "T1 María C.",
        "TO1 Irene",
        "T2 Carol",
        "TO2 Aitana",
@@ -20699,6 +20688,17 @@ window.HORARIOS = {
        "T3 Silvia",
        "I2 María G.",
        "L1 Luis"
+      ],
+      "Martes": [
+       "T1 María C.",
+       "L1 Luis",
+       "T2 Carol",
+       "TO2 Aitana",
+       "T4 Marta O.",
+       "L2 Sheila",
+       "T3 Silvia",
+       "I2 María G.",
+       "TO1 Irene"
       ],
       "Miércoles": [
        "T1 María C.",
