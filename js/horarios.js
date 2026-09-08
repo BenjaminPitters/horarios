@@ -230,21 +230,21 @@ window.HORARIOS = {
        "asig": "Snack",
        "adultos": [
         "T1",
-        "L3"
+        "I2"
        ]
       },
       "Martes": {
        "asig": "Snack",
        "adultos": [
         "T1",
-        "L3"
+        "I2"
        ]
       },
       "Miércoles": {
        "asig": "Snack",
        "adultos": [
         "T1",
-        "L3"
+        "I2"
        ],
        "externa": [
         {
@@ -257,7 +257,7 @@ window.HORARIOS = {
        "asig": "Snack",
        "adultos": [
         "T1",
-        "L3"
+        "I2"
        ]
       },
       "Viernes": {
@@ -892,7 +892,7 @@ window.HORARIOS = {
        "asig": "Snack",
        "adultos": [
         "I2",
-        "L3"
+        "O1"
        ]
       }
      }
@@ -1499,8 +1499,7 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Snack",
        "adultos": [
-        "T4",
-        "O1"
+        "T4"
        ]
       }
      }
@@ -2118,34 +2117,35 @@ window.HORARIOS = {
        "asig": "Snack",
        "adultos": [
         "T3",
-        "I2"
+        "L3"
        ]
       },
       "Martes": {
        "asig": "Snack",
        "adultos": [
         "L1",
-        "I2"
+        "L3"
        ]
       },
       "Miércoles": {
        "asig": "Snack",
        "adultos": [
         "T3",
-        "I2"
+        "L3"
        ]
       },
       "Jueves": {
        "asig": "Snack",
        "adultos": [
         "L1",
-        "I2"
+        "L3"
        ]
       },
       "Viernes": {
        "asig": "Snack",
        "adultos": [
-        "T3"
+        "T3",
+        "O1"
        ]
       }
      }
@@ -4497,19 +4497,19 @@ window.HORARIOS = {
      "hora": "10:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Snack · L3",
+       "txt": "L · Snack · I2",
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Snack · L3",
+       "txt": "L · Snack · I2",
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Snack · L3\n⇱ Inés: entra a las 12:30",
+       "txt": "L · Snack · I2\n⇱ Inés: entra a las 12:30",
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Snack · L3",
+       "txt": "L · Snack · I2",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -5185,7 +5185,7 @@ window.HORARIOS = {
      "hora": "10:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Snack · I2",
+       "txt": "L · Snack · L3",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -5193,7 +5193,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Snack · I2",
+       "txt": "L · Snack · L3",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -5201,7 +5201,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Snack",
+       "txt": "L · Snack · O1",
        "tipo": "lectivo"
       }
      }
@@ -5545,7 +5545,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Snack · O1",
+       "txt": "L · Snack",
        "tipo": "lectivo"
       }
      }
@@ -8027,27 +8027,27 @@ window.HORARIOS = {
      "hora": "10:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Luna: Snack · T3",
+       "txt": "L · Estrella: Snack · T1",
        "tipo": "lectivo",
-       "aula": "Luna"
+       "aula": "Estrella"
       },
       "Martes": {
-       "txt": "L · Luna: Snack · L1",
+       "txt": "L · Estrella: Snack · T1",
        "tipo": "lectivo",
-       "aula": "Luna"
+       "aula": "Estrella"
       },
       "Miércoles": {
-       "txt": "L · Luna: Snack · T3",
+       "txt": "L · Estrella: Snack · T1\n⇱ Inés: entra a las 12:30",
        "tipo": "lectivo",
-       "aula": "Luna"
+       "aula": "Estrella"
       },
       "Jueves": {
-       "txt": "L · Luna: Snack · L1",
+       "txt": "L · Estrella: Snack · T1",
        "tipo": "lectivo",
-       "aula": "Luna"
+       "aula": "Estrella"
       },
       "Viernes": {
-       "txt": "L · Sol: Snack · L3",
+       "txt": "L · Sol: Snack · O1",
        "tipo": "lectivo",
        "aula": "Sol"
       }
@@ -8415,9 +8415,8 @@ window.HORARIOS = {
         "aula": "Sur"
        },
        "Viernes": {
-        "txt": "L · Norte: Snack · apoyo",
-        "tipo": "lectivo",
-        "aula": "Norte"
+        "txt": "L · Snack (Sol+Luna)",
+        "tipo": "lectivo"
        }
       }
      },
@@ -9500,7 +9499,7 @@ window.HORARIOS = {
         "aula": "Sur"
        },
        "Martes": {
-        "txt": "L · Luna: Snack · I2",
+        "txt": "L · Luna: Snack · L3",
         "tipo": "lectivo",
         "aula": "Luna"
        },
@@ -9510,7 +9509,7 @@ window.HORARIOS = {
         "aula": "Oeste"
        },
        "Jueves": {
-        "txt": "L · Luna: Snack · I2",
+        "txt": "L · Luna: Snack · L3",
         "tipo": "lectivo",
         "aula": "Luna"
        },
@@ -10260,24 +10259,25 @@ window.HORARIOS = {
       "hora": "10:30",
       "dias": {
        "Lunes": {
-        "txt": "L · Snack (Est+Sol)",
+        "txt": "L · Snack (Sol+Luna)",
         "tipo": "lectivo"
        },
        "Martes": {
-        "txt": "L · Snack (Est+Sol)",
+        "txt": "L · Snack (Sol+Luna)",
         "tipo": "lectivo"
        },
        "Miércoles": {
-        "txt": "L · Snack (Est+Sol)\n⇱ Inés: entra a las 12:30",
+        "txt": "L · Snack (Sol+Luna)\n⇱ Inés: entra a las 12:30",
         "tipo": "lectivo"
        },
        "Jueves": {
-        "txt": "L · Snack (Est+Sol)",
+        "txt": "L · Snack (Sol+Luna)",
         "tipo": "lectivo"
        },
        "Viernes": {
-        "txt": "L · Snack (Est+Sol)",
-        "tipo": "lectivo"
+        "txt": "L · Estrella: Snack · T1",
+        "tipo": "lectivo",
+        "aula": "Estrella"
        }
       }
      },
