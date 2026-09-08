@@ -465,6 +465,7 @@
   function renderAlumno(sel, clase, nombre) {
     const nino = H.alumnado[clase][nombre];
     const empty = day => `<td class="cell" data-day="${day}"><div class="cx"><span class="cx__nl">·</span></div></td>`;
+    const seenLbl = {};                                // etiqueta ya mostrada hoy (día|texto): no repetir
     const rows = nino.filas.map(f => {
       if (BREAK.has(f.franja)) return brkRow(f.franja, f.hora);   // Comida/Patio como banda, igual que el aula
       const cells = DIAS.map(day => {
@@ -480,7 +481,12 @@
         }
         if (c.label) {                                 // mediodía / salida externa -> etiqueta
           const isExt = /externa/i.test(c.label);
-          return `<td class="cell" data-day="${day}" style="background:${MID_BG}"><div class="cx"><span class="cx__txt ${isExt ? 'cx__extlbl' : 'cx__mid'}">${isExt ? '⇱ ' : ''}${esc(clean(trimDesde(c.label, f.hora)))}</span></div></td>`;
+          const lbl = clean(trimDesde(c.label, f.hora));
+          // La misma etiqueta (p. ej. "Entra a las 12:30") se repetía en todas las franjas de la
+          // ausencia; se muestra SOLO en la primera del día. El resto mantiene el tinte (sigue fuera).
+          const key = day + '|' + lbl, rep = seenLbl[key]; seenLbl[key] = true;
+          const inner = rep ? '' : `<span class="cx__txt ${isExt ? 'cx__extlbl' : 'cx__mid'}">${isExt ? '⇱ ' : ''}${esc(lbl)}</span>`;
+          return `<td class="cell" data-day="${day}" style="background:${MID_BG}"><div class="cx">${inner}</div></td>`;
         }
         return empty(day);
       }).join('');
