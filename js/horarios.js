@@ -50,7 +50,7 @@ window.HORARIOS = {
    "Jueves",
    "Viernes"
   ],
-  "generado": "2026-09-08"
+  "generado": "2026-09-15"
  },
  "clases": {
   "Estrella": {
@@ -751,7 +751,7 @@ window.HORARIOS = {
         {
          "alumno": "Álvaro",
          "a": "L3",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Beatriz Bolaños"
         }
        ]
       },
@@ -1014,7 +1014,7 @@ window.HORARIOS = {
         {
          "alumno": "Álvaro",
          "a": "L3",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Beatriz Bolaños"
         }
        ]
       },
@@ -2635,7 +2635,7 @@ window.HORARIOS = {
         {
          "alumno": "Yago",
          "a": "L3",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Beatriz Bolaños"
         }
        ]
       },
@@ -2655,7 +2655,7 @@ window.HORARIOS = {
         {
          "alumno": "Daniel",
          "a": "L3",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Beatriz Bolaños"
         }
        ]
       }
@@ -2826,7 +2826,7 @@ window.HORARIOS = {
         {
          "alumno": "Martina",
          "a": "L3",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Beatriz Bolaños"
         }
        ]
       },
@@ -2840,7 +2840,7 @@ window.HORARIOS = {
         {
          "alumno": "Yago",
          "a": "L3",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Beatriz Bolaños"
         }
        ]
       }
@@ -2865,7 +2865,7 @@ window.HORARIOS = {
         {
          "alumno": "Catalina B.",
          "a": "L3",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Beatriz Bolaños"
         },
         {
          "alumno": "Yago",
@@ -2883,7 +2883,7 @@ window.HORARIOS = {
         {
          "alumno": "Daniel",
          "a": "L3",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Beatriz Bolaños"
         }
        ]
       },
@@ -2935,7 +2935,7 @@ window.HORARIOS = {
         {
          "alumno": "Martina",
          "a": "L3",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Beatriz Bolaños"
         }
        ]
       },
@@ -2954,7 +2954,7 @@ window.HORARIOS = {
         {
          "alumno": "Catalina B.",
          "a": "L3",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Beatriz Bolaños"
         },
         {
          "alumno": "Yago",
@@ -4036,7 +4036,7 @@ window.HORARIOS = {
         {
          "alumno": "Silvana",
          "a": "L3",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Beatriz Bolaños"
         }
        ]
       },
@@ -4117,7 +4117,7 @@ window.HORARIOS = {
         {
          "alumno": "Carmen",
          "a": "L3",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Beatriz Bolaños"
         }
        ]
       }
@@ -4137,7 +4137,7 @@ window.HORARIOS = {
         {
          "alumno": "Silvana",
          "a": "L3",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Beatriz Bolaños"
         }
        ]
       },
@@ -4165,7 +4165,7 @@ window.HORARIOS = {
         {
          "alumno": "Carmen",
          "a": "L3",
-         "a_nombre": "(por contratar)"
+         "a_nombre": "Beatriz Bolaños"
         }
        ]
       },
@@ -10163,7 +10163,7 @@ window.HORARIOS = {
     ]
    },
    "L3": {
-    "nombre": "(por contratar)",
+    "nombre": "Beatriz Bolaños",
     "rol": "Logopeda",
     "filas": [
      {
@@ -10267,7 +10267,7 @@ window.HORARIOS = {
         "tipo": "lectivo"
        },
        "Miércoles": {
-        "txt": "L · Snack (Sol+Luna)\n⇱ Inés: entra a las 12:30",
+        "txt": "L · Snack (Sol+Luna)",
         "tipo": "lectivo"
        },
        "Jueves": {
@@ -12743,7 +12743,7 @@ window.HORARIOS = {
       "dias": {
        "Lunes": {
         "salida": "L3",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Beatriz Bolaños"
        },
        "Martes": {
         "salida": "TO2",
@@ -12859,7 +12859,7 @@ window.HORARIOS = {
        },
        "Jueves": {
         "salida": "L3",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Beatriz Bolaños"
        },
        "Viernes": {
         "asig": "Prerrequisitos de Aprendizaje"
@@ -15946,7 +15946,7 @@ window.HORARIOS = {
        },
        "Jueves": {
         "salida": "L3",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Beatriz Bolaños"
        },
        "Viernes": {
         "asig": "Educación Física"
@@ -15983,7 +15983,7 @@ window.HORARIOS = {
        },
        "Martes": {
         "salida": "L3",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Beatriz Bolaños"
        },
        "Miércoles": {
         "asig": "Ciencias"
@@ -16138,7 +16138,7 @@ window.HORARIOS = {
        },
        "Miércoles": {
         "salida": "L3",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Beatriz Bolaños"
        },
        "Jueves": {
         "asig": "Lengua"
@@ -16229,7 +16229,7 @@ window.HORARIOS = {
        },
        "Viernes": {
         "salida": "L3",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Beatriz Bolaños"
        }
       }
      },
@@ -16522,7 +16522,7 @@ window.HORARIOS = {
        },
        "Martes": {
         "salida": "L3",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Beatriz Bolaños"
        },
        "Miércoles": {
         "asig": "Matemáticas"
@@ -16550,7 +16550,7 @@ window.HORARIOS = {
        },
        "Jueves": {
         "salida": "L3",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Beatriz Bolaños"
        },
        "Viernes": {
         "asig": "Ciencias"
@@ -16987,7 +16987,7 @@ window.HORARIOS = {
        },
        "Viernes": {
         "salida": "L3",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Beatriz Bolaños"
        }
       }
      },
@@ -17087,7 +17087,7 @@ window.HORARIOS = {
        },
        "Miércoles": {
         "salida": "L3",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Beatriz Bolaños"
        },
        "Jueves": {
         "asig": "Matemáticas"
@@ -19064,7 +19064,7 @@ window.HORARIOS = {
        },
        "Viernes": {
         "salida": "L3",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Beatriz Bolaños"
        }
       }
      },
@@ -19080,7 +19080,7 @@ window.HORARIOS = {
        },
        "Miércoles": {
         "salida": "L3",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Beatriz Bolaños"
        },
        "Jueves": {
         "asig": "Inglés"
@@ -20160,7 +20160,7 @@ window.HORARIOS = {
        },
        "Miércoles": {
         "salida": "L3",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Beatriz Bolaños"
        },
        "Jueves": {
         "asig": "Arte"
@@ -20198,7 +20198,7 @@ window.HORARIOS = {
       "dias": {
        "Lunes": {
         "salida": "L3",
-        "dest_nombre": "(por contratar)"
+        "dest_nombre": "Beatriz Bolaños"
        },
        "Martes": {
         "asig": "Matemáticas"
@@ -20702,7 +20702,7 @@ window.HORARIOS = {
        "EF1 Fernando",
        "I2 María G.",
        "O1 Lucía C.",
-       "L3 (por contratar)",
+       "L3 Beatriz",
        "TO2 Aitana"
       ]
      }
