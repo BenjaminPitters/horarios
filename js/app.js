@@ -337,6 +337,34 @@
   };
   const gut = (fr, hora, base) => `<th class="tgut" scope="row" style="height:${rowH(fr, base, hora)}px"><span class="f">${esc(clean(fr))}</span>${hora ? `<span class="h">${esc(horaSpan(fr, hora))}</span>` : ''}</th>`;
   const brkRow = (fr, hora, base) => `<tr class="brk">${gut(fr, hora, base)}<td colspan="${DIAS.length}"><div class="brk__rule"><span>${esc(clean(fr))} ${esc(clean(hora || ''))}</span></div></td></tr>`;
+  // Siesta de Estrella (13:45-14:30): en su aula no hay «Patio tarde», hay siesta. En vez de la banda
+  // se pinta una fila por días con «Siesta» y quién acompaña, sacado del bloque «Siesta de Estrella»
+  // de Turnos (Resumen_Momentos del Excel): «O1 Lucía C.», «I2 María G. (hasta 14:00)»…
+  const SIESTA = (() => {
+    const b = (H.momentos || []).find(m => /^Siesta de Estrella/i.test(String(m.titulo || '')));
+    if (!b) return null;
+    const out = {};
+    for (const day of DIAS) out[day] = [];
+    for (const f of b.filas || []) for (const day of DIAS) for (const x of ((f.dias || {})[day] || [])) {
+      const m = clean(x).trim().match(/^([A-Za-zÑ]{1,3}\d+)\s*(.*?)\s*(?:\(([^()]+)\))?$/);
+      if (m) out[day].push({ code: m[1], nombre: m[2], nota: (m[3] || '').trim() });
+    }
+    return out;
+  })();
+  // familias=true: nombres («Lucía C. · María G. hasta 14:00»); si no, códigos como el resto del aula.
+  const siestaRow = (aula, f, familias) => {
+    if (aula !== 'Estrella' || f.franja !== 'Patio tarde' || !SIESTA) return null;
+    const col = aulaColor('Estrella');
+    const cells = DIAS.map(day => {
+      const ps = SIESTA[day] || [];
+      const who = familias
+        ? (ps.length ? `<span class="cx__room">${esc(ps.map(p => (p.nombre || p.code) + (p.nota ? ' ' + p.nota : '')).join(' · '))}</span>` : '')
+        : (ps.length ? `<span class="cx__codes">${ps.map(p => `<span class="code">${esc(p.code)}</span>`).join('')}</span>` : '') +
+          ps.filter(p => p.nota).map(p => `<span class="cx__room">${esc(p.code + ' ' + p.nota)}</span>`).join('');
+      return `<td class="cell" data-day="${day}" style="background:${tint(col, .28)};border-left-color:${col}"><div class="cx"><span class="cx__asig">Siesta</span>${who}</div></td>`;
+    }).join('');
+    return `<tr class="siesta">${gut(f.franja, f.hora).replace('>Patio tarde<', '>Siesta<')}${cells}</tr>`;
+  };
   // Hora en minutos desde el primer "H:MM" de un texto (inicio de la franja, o el "desde").
   const parseHM = s => { const m = String(s || '').match(/(\d{1,2}):(\d{2})/); return m ? +m[1] * 60 + +m[2] : null; };
   // En las salidas externas, "(desde H:MM)" sobra si la ausencia empieza justo con la franja
@@ -359,7 +387,7 @@
   function renderClase(aula, sel) {
     const cl = H.clases[aula];
     const rows = cl.filas.map(f => {
-      if (BREAK.has(f.franja)) return brkRow(f.franja, f.hora);   // banda de descanso (base normal)
+      if (BREAK.has(f.franja)) return siestaRow(aula, f) || brkRow(f.franja, f.hora);   // banda de descanso (Estrella: siesta)
       const cells = DIAS.map(day => {
         const c = f.dias[day] || {};
         if (c.asig) {
@@ -476,7 +504,7 @@
     const empty = day => `<td class="cell" data-day="${day}"><div class="cx"><span class="cx__nl">·</span></div></td>`;
     const seenLbl = {};                                // etiqueta ya mostrada hoy (día|texto): no repetir
     const rows = nino.filas.map(f => {
-      if (BREAK.has(f.franja)) return brkRow(f.franja, f.hora);   // Comida/Patio como banda, igual que el aula
+      if (BREAK.has(f.franja)) return siestaRow(clase, f, true) || brkRow(f.franja, f.hora);   // Comida/Patio como banda, igual que el aula
       const cells = DIAS.map(day => {
         const c = f.dias[day];
         if (!c) return empty(day);

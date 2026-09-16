@@ -15,6 +15,7 @@ window.HORARIOS = {
    "Cuentacuentos": "#C5DCE8",
    "Educación Física": "#A9CCE3",
    "Escritura": "#C9E4C5",
+   "Escritura en Lengua": "#BBE5B3",
    "Estimulación del Lenguaje": "#8FCB9B",
    "Inglés": "#F8C471",
    "Inteligencia Emocional": "#F2A9B8",
@@ -3871,10 +3872,10 @@ window.HORARIOS = {
      "hora": "10:00",
      "dias": {
       "Lunes": {
-       "asig": "Lengua",
+       "asig": "Escritura en Lengua",
        "adultos": [
-        "T7",
-        "TO2"
+        "TO2",
+        "T7"
        ]
       },
       "Martes": {
@@ -3953,10 +3954,10 @@ window.HORARIOS = {
        ]
       },
       "Miércoles": {
-       "asig": "Lengua",
+       "asig": "Escritura en Lengua",
        "adultos": [
-        "T7",
-        "TO2"
+        "TO2",
+        "T7"
        ]
       },
       "Jueves": {
@@ -6537,7 +6538,7 @@ window.HORARIOS = {
      "hora": "10:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Lengua · TO2",
+       "txt": "L · Escritura en Lengua · TO2",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -6571,7 +6572,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Lengua · TO2",
+       "txt": "L · Escritura en Lengua · TO2",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -8306,7 +8307,7 @@ window.HORARIOS = {
   "psicologas": {
    "O1": {
     "nombre": "Lucía Cubillas",
-    "rol": "Orientadora (psicóloga)",
+    "rol": "Orientadora",
     "filas": [
      {
       "franja": "F0",
@@ -8688,7 +8689,7 @@ window.HORARIOS = {
    },
    "O2": {
     "nombre": "Sara",
-    "rol": "Psicóloga",
+    "rol": "Orientadora",
     "filas": [
      {
       "franja": "F0",
@@ -10989,7 +10990,7 @@ window.HORARIOS = {
       "hora": "10:00",
       "dias": {
        "Lunes": {
-        "txt": "L · Sur: Lengua · T7",
+        "txt": "L · Sur: Escritura en Lengua · T7",
         "tipo": "lectivo",
         "aula": "Sur"
        },
@@ -11030,7 +11031,7 @@ window.HORARIOS = {
         "aula": "Oeste"
        },
        "Miércoles": {
-        "txt": "L · Sur: Lengua · T7",
+        "txt": "L · Sur: Escritura en Lengua · T7",
         "tipo": "lectivo",
         "aula": "Sur"
        },
@@ -18971,7 +18972,7 @@ window.HORARIOS = {
       "hora": "10:00",
       "dias": {
        "Lunes": {
-        "asig": "Lengua"
+        "asig": "Escritura en Lengua"
        },
        "Martes": {
         "asig": "Lengua"
@@ -18999,7 +19000,7 @@ window.HORARIOS = {
         "dest_nombre": "Bárbara"
        },
        "Miércoles": {
-        "asig": "Lengua"
+        "asig": "Escritura en Lengua"
        },
        "Jueves": {
         "asig": "Lengua"
@@ -19252,7 +19253,7 @@ window.HORARIOS = {
       "hora": "10:00",
       "dias": {
        "Lunes": {
-        "asig": "Lengua"
+        "asig": "Escritura en Lengua"
        },
        "Martes": {
         "asig": "Lengua"
@@ -19279,7 +19280,7 @@ window.HORARIOS = {
         "asig": "Lengua"
        },
        "Miércoles": {
-        "asig": "Lengua"
+        "asig": "Escritura en Lengua"
        },
        "Jueves": {
         "salida": "O2",
@@ -19533,7 +19534,7 @@ window.HORARIOS = {
       "hora": "10:00",
       "dias": {
        "Lunes": {
-        "asig": "Lengua"
+        "asig": "Escritura en Lengua"
        },
        "Martes": {
         "asig": "Lengua"
@@ -19562,7 +19563,7 @@ window.HORARIOS = {
         "asig": "Lengua"
        },
        "Miércoles": {
-        "asig": "Lengua"
+        "asig": "Escritura en Lengua"
        },
        "Jueves": {
         "asig": "Lengua"
@@ -19814,7 +19815,7 @@ window.HORARIOS = {
       "hora": "10:00",
       "dias": {
        "Lunes": {
-        "asig": "Lengua"
+        "asig": "Escritura en Lengua"
        },
        "Martes": {
         "asig": "Lengua"
@@ -19843,7 +19844,7 @@ window.HORARIOS = {
         "dest_nombre": "Sara"
        },
        "Miércoles": {
-        "asig": "Lengua"
+        "asig": "Escritura en Lengua"
        },
        "Jueves": {
         "asig": "Lengua"
@@ -20095,7 +20096,7 @@ window.HORARIOS = {
       "hora": "10:00",
       "dias": {
        "Lunes": {
-        "asig": "Lengua"
+        "asig": "Escritura en Lengua"
        },
        "Martes": {
         "asig": "Lengua"
@@ -20122,7 +20123,7 @@ window.HORARIOS = {
         "asig": "Lengua"
        },
        "Miércoles": {
-        "asig": "Lengua"
+        "asig": "Escritura en Lengua"
        },
        "Jueves": {
         "asig": "Lengua"
@@ -20376,7 +20377,7 @@ window.HORARIOS = {
       "hora": "10:00",
       "dias": {
        "Lunes": {
-        "asig": "Lengua"
+        "asig": "Escritura en Lengua"
        },
        "Martes": {
         "asig": "Lengua"
@@ -20403,7 +20404,7 @@ window.HORARIOS = {
         "asig": "Lengua"
        },
        "Miércoles": {
-        "asig": "Lengua"
+        "asig": "Escritura en Lengua"
        },
        "Jueves": {
         "salida": "O1",
