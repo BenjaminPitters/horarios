@@ -50,7 +50,7 @@ window.HORARIOS = {
    "Jueves",
    "Viernes"
   ],
-  "generado": "2026-09-15"
+  "generado": "2026-09-16"
  },
  "clases": {
   "Estrella": {
@@ -8195,24 +8195,29 @@ window.HORARIOS = {
      "hora": "13:45–14:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Transición de patio",
-       "tipo": "lectivo"
+       "txt": "L · Estrella: Siesta",
+       "tipo": "lectivo",
+       "aula": "Estrella"
       },
       "Martes": {
-       "txt": "L · Transición de patio",
-       "tipo": "lectivo"
+       "txt": "L · Estrella: Siesta",
+       "tipo": "lectivo",
+       "aula": "Estrella"
       },
       "Miércoles": {
-       "txt": "L · Transición de patio",
-       "tipo": "lectivo"
+       "txt": "L · Estrella: Siesta",
+       "tipo": "lectivo",
+       "aula": "Estrella"
       },
       "Jueves": {
-       "txt": "L · Transición de patio",
-       "tipo": "lectivo"
+       "txt": "L · Estrella: Siesta",
+       "tipo": "lectivo",
+       "aula": "Estrella"
       },
       "Viernes": {
-       "txt": "L · Transición de patio",
-       "tipo": "lectivo"
+       "txt": "L · Estrella: Siesta",
+       "tipo": "lectivo",
+       "aula": "Estrella"
       }
      }
     },
@@ -20818,19 +20823,24 @@ window.HORARIOS = {
     {
      "dias": {
       "Lunes": [
-       "O1 Lucía C."
+       "O1 Lucía C.",
+       "I2 María G. (hasta 14:00)"
       ],
       "Martes": [
-       "EF1 Fernando"
+       "EF1 Fernando",
+       "I2 María G. (hasta 14:00)"
       ],
       "Miércoles": [
-       "O1 Lucía C."
+       "O1 Lucía C.",
+       "I2 María G. (hasta 14:00)"
       ],
       "Jueves": [
-       "EF1 Fernando"
+       "EF1 Fernando",
+       "I2 María G. (hasta 14:00)"
       ],
       "Viernes": [
-       "O1 Lucía C."
+       "O1 Lucía C.",
+       "I2 María G. (hasta 14:00)"
       ]
      }
     }

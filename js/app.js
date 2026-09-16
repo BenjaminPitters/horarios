@@ -315,7 +315,7 @@
   // La hora del dato es solo el inicio, así que la duración se sabe por la franja:
   // 45 min → Comida, Patio tarde y Coordinación; el resto son 30 min.
   const DUR45 = new Set(['Comida', 'Patio tarde', 'Coord', 'Coord.']);   // franjas de 45 min
-  // Si la hora es un RANGO ("13:45–14:00") la duración sale de ahí — así la transición de patio
+  // Si la hora es un RANGO ("13:45–14:00") la duración sale de ahí — así la siesta en Estrella
   // de I2 (15 min) no ocupa la altura del patio de tarde completo (45 min). Si es solo el inicio,
   // se usa la duración por defecto de la franja.
   const durMin = (fr, hora) => {
@@ -410,7 +410,7 @@
     // + coordinación general (martes), salvo para quien no va (Ps3, L3, I2).
     const filas = NO_COORD.has(mono) ? persona.filas : persona.filas.concat([COORD_ROW]);
     const rows = filas.map(f => {
-      const short = durMin(f.franja, f.hora) < 30;   // franja < 30 min (transición de patio de I2): fila compacta
+      const short = durMin(f.franja, f.hora) < 30;   // franja < 30 min (siesta de I2, 13:45–14:00): fila compacta
       const cells = DIAS.map(day => {
         const c = f.dias[day] || {};
         // El txt puede ser multilínea: actividad principal + líneas "↗ alumno→dest".
@@ -435,7 +435,6 @@
           const co = aula ? coAdultos(aula, day, f.franja, mono) : [];
           mainLine = co.length ? mainLine.replace(/\s*\(apoyo\)/i, ' · ' + co.join('+')) : mainLine.replace(/\s*\(apoyo\)/i, ' · apoyo');
         }
-        if (short) mainLine = mainLine.replace(/^Transici[oó]n de patio$/i, 'Transición a patio');   // 1 línea en la fila compacta
         const displayMain = formatMain(mainLine);   // sin paréntesis, con aula como prefijo
         // Color por ÁREA (igual que en Clases y en las fichas de los niños): si la línea
         // principal es un área, se pinta con su color; si no (p. ej. sesión individual de
@@ -443,7 +442,9 @@
         let area = c.tipo === 'lectivo' ? areaDe(mainLine) : null;
         let col = area ? asigColor(area) : (c.aula ? aulaColor(c.aula) : null);
         if (!col) col = estadoColor(c.tipo);
-        if (short) col = estadoColor('patio') || col;   // transición de patio: morado del patio
+        // Fila compacta (I2, 13:45–14:00): si es la siesta, el color de su aula (Estrella), como el
+        // bloque de Turnos; en cualquier otro caso, el morado del patio.
+        if (short) col = /Siesta/i.test(mainLine) ? aulaColor(c.aula || 'Estrella') : (estadoColor('patio') || col);
         const muted = c.tipo === 'no_lectivo';
         const style = col ? ` style="background:${tint(col,.28)};border-left-color:${col}"` : '';
         const room = (c.aula && displayMain.indexOf(c.aula) < 0) ? `<span class="cx__room">${esc(c.aula)}</span>` : '';
@@ -543,13 +544,19 @@
           return;
         }
         let pref = '';
+        // «I2 María G. (hasta 14:00)»: el paréntesis final sale como NOTA visible («I2 hasta 14:00»);
+        // si se quedara en el nombre del chip, solo se vería en el tooltip.
+        let nota = '';
+        const pm = line.match(/^(.*\S)\s*\(([^()]+)\)$/);
+        if (pm) { line = pm[1]; nota = pm[2].trim(); }
         const lm = line.match(/^([A-Za-zÁÉÍÓÚÑñ .\/]+?):\s*(.+)$/);    // "Sur: T7+L1+..." (Coordinan)
         if (lm && /\+/.test(lm[2])) { pref = lm[1].trim(); line = lm[2]; }
         const chips = line.split('+').map(s => {
           s = s.trim(); const m = s.match(CODE_RE);
           return m ? { code: m[1], nombre: (m[2] || '').trim() || (DIR[m[1]] ? DIR[m[1]].nombre : '') } : { code: s, nombre: '' };
         }).filter(c => c.code);
-        entries.push({ chips, pref, nota: '', coord: false });
+        if (nota && chips.length === 1) nota = chips[0].code + ' ' + nota;
+        entries.push({ chips, pref, nota, coord: false });
       });
       return entries;
     }
