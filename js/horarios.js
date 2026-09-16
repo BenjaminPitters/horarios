@@ -880,6 +880,13 @@ window.HORARIOS = {
        "adultos": [
         "T2",
         "L3"
+       ],
+       "salidas": [
+        {
+         "alumno": "Mateo",
+         "a": "TO1",
+         "a_nombre": "Irene"
+        }
        ]
       },
       "Jueves": {
@@ -1236,11 +1243,6 @@ window.HORARIOS = {
          "alumno": "Álvaro",
          "a": "O1",
          "a_nombre": "Lucía Cubillas"
-        },
-        {
-         "alumno": "Mateo",
-         "a": "TO1",
-         "a_nombre": "Irene"
         }
        ]
       },
@@ -2733,13 +2735,6 @@ window.HORARIOS = {
        "asig": "Escritura",
        "adultos": [
         "T5"
-       ],
-       "salidas": [
-        {
-         "alumno": "Marco",
-         "a": "TO1",
-         "a_nombre": "Irene"
-        }
        ]
       },
       "Jueves": {
@@ -3105,6 +3100,13 @@ window.HORARIOS = {
        "asig": "Autonomía",
        "adultos": [
         "T5"
+       ],
+       "salidas": [
+        {
+         "alumno": "Marco",
+         "a": "TO1",
+         "a_nombre": "Irene"
+        }
        ]
       },
       "Jueves": {
@@ -4850,7 +4852,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Snack · L3",
+       "txt": "L · Snack · L3\n↗ Mateo→TO1",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -5058,7 +5060,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Conocimiento del Entorno\n↗ Álvaro→O1\n↗ Mateo→TO1",
+       "txt": "L · Conocimiento del Entorno\n↗ Álvaro→O1",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -5882,7 +5884,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Escritura\n↗ Marco→TO1",
+       "txt": "L · Escritura",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -6090,7 +6092,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Autonomía",
+       "txt": "L · Autonomía\n↗ Marco→TO1",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -10273,7 +10275,7 @@ window.HORARIOS = {
         "tipo": "lectivo"
        },
        "Miércoles": {
-        "txt": "L · Snack (Sol+Luna)",
+        "txt": "L · Snack (Sol+Luna)\n↗ Mateo→TO1",
         "tipo": "lectivo"
        },
        "Jueves": {
@@ -10645,9 +10647,9 @@ window.HORARIOS = {
         "aula": "Este"
        },
        "Miércoles": {
-        "txt": "L · Este: Marco",
+        "txt": "L · Sol: Mateo",
         "tipo": "lectivo",
-        "aula": "Este"
+        "aula": "Sol"
        },
        "Jueves": {
         "txt": "L · Este: Escritura · T5",
@@ -10875,9 +10877,9 @@ window.HORARIOS = {
         "aula": "Luna"
        },
        "Miércoles": {
-        "txt": "L · Sol: Mateo",
+        "txt": "L · Este: Marco",
         "tipo": "lectivo",
-        "aula": "Sol"
+        "aula": "Este"
        },
        "Jueves": {
         "txt": "L · Luna: Manuela",
@@ -13361,7 +13363,8 @@ window.HORARIOS = {
         "asig": "Snack"
        },
        "Miércoles": {
-        "asig": "Snack"
+        "salida": "TO1",
+        "dest_nombre": "Irene"
        },
        "Jueves": {
         "asig": "Snack"
@@ -13532,8 +13535,7 @@ window.HORARIOS = {
         "asig": "Cuentacuentos"
        },
        "Miércoles": {
-        "salida": "TO1",
-        "dest_nombre": "Irene"
+        "asig": "Conocimiento del Entorno"
        },
        "Jueves": {
         "asig": "Cuentacuentos"
@@ -16747,8 +16749,7 @@ window.HORARIOS = {
         "asig": "Escritura"
        },
        "Miércoles": {
-        "salida": "TO1",
-        "dest_nombre": "Irene"
+        "asig": "Escritura"
        },
        "Jueves": {
         "asig": "Escritura"
@@ -16918,7 +16919,8 @@ window.HORARIOS = {
         "asig": "Arte"
        },
        "Miércoles": {
-        "asig": "Autonomía"
+        "salida": "TO1",
+        "dest_nombre": "Irene"
        },
        "Jueves": {
         "asig": "Inteligencia Emocional"
