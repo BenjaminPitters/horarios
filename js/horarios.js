@@ -2747,6 +2747,13 @@ window.HORARIOS = {
        "adultos": [
         "T5",
         "TO1"
+       ],
+       "salidas": [
+        {
+         "alumno": "Dominique",
+         "a": "TO2",
+         "a_nombre": "Aitana"
+        }
        ]
       }
      }
@@ -2811,13 +2818,6 @@ window.HORARIOS = {
        "adultos": [
         "EF1",
         "EF2"
-       ],
-       "salidas": [
-        {
-         "alumno": "Dominique",
-         "a": "TO2",
-         "a_nombre": "Aitana"
-        }
        ]
       },
       "Jueves": {
@@ -5912,7 +5912,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Escritura · TO1",
+       "txt": "L · Escritura · TO1\n↗ Dominique→TO2",
        "tipo": "lectivo"
       }
      }
@@ -7000,7 +7000,7 @@ window.HORARIOS = {
        "aula": "Norte"
       },
       "Miércoles": {
-       "txt": "L · Este: Educación Física\n↗ Dominique→TO2",
+       "txt": "L · Este: Educación Física",
        "tipo": "lectivo",
        "aula": "Este"
       },
@@ -10680,7 +10680,7 @@ window.HORARIOS = {
         "aula": "Este"
        },
        "Viernes": {
-        "txt": "L · Este: Escritura · T5",
+        "txt": "L · Este: Escritura · T5\n↗ Dominique→TO2",
         "tipo": "lectivo",
         "aula": "Este"
        }
@@ -11066,8 +11066,9 @@ window.HORARIOS = {
         "aula": "Oeste"
        },
        "Viernes": {
-        "txt": "NL",
-        "tipo": "no_lectivo"
+        "txt": "L · Este: Dominique",
+        "tipo": "lectivo",
+        "aula": "Este"
        }
       }
      },
@@ -11111,9 +11112,8 @@ window.HORARIOS = {
         "aula": "Sol"
        },
        "Miércoles": {
-        "txt": "L · Este: Dominique",
-        "tipo": "lectivo",
-        "aula": "Este"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Jueves": {
         "txt": "L · Sol: Prerrequisitos de Grafomotricidad · T2",
@@ -17340,7 +17340,8 @@ window.HORARIOS = {
         "asig": "Escritura"
        },
        "Viernes": {
-        "asig": "Escritura"
+        "salida": "TO2",
+        "dest_nombre": "Aitana"
        }
       }
      },
@@ -17377,8 +17378,7 @@ window.HORARIOS = {
         "dest_nombre": "Beatriz Bolaños"
        },
        "Miércoles": {
-        "salida": "TO2",
-        "dest_nombre": "Aitana"
+        "asig": "Educación Física"
        },
        "Jueves": {
         "asig": "Matemáticas"
