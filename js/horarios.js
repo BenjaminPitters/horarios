@@ -4558,8 +4558,8 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Jueves": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Viernes": {
        "txt": "NL",
@@ -4576,16 +4576,16 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Miércoles": {
        "txt": "L · Prerrequisitos de Grafomotricidad\n⇱ Inés: entra a las 12:30\n↗ Lucía→L1",
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Viernes": {
        "txt": "L · Prerrequisitos de Grafomotricidad\n↗ Naomi→L1",
@@ -4602,8 +4602,8 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Miércoles": {
        "txt": "L · Prerrequisitos de Aprendizaje\n⇱ Inés: entra a las 12:30\n↗ Naomi→L1",
@@ -4816,8 +4816,8 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Martes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Miércoles": {
        "txt": "NL",
@@ -4828,8 +4828,8 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Viernes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       }
      }
     },
@@ -4842,8 +4842,8 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Miércoles": {
        "txt": "L · Est.leng. (apoyo)",
@@ -4854,8 +4854,8 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Viernes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       }
      }
     },
@@ -5212,16 +5212,16 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Miércoles": {
        "txt": "L · Snack · L3",
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Viernes": {
        "txt": "L · Snack · O1",
@@ -5238,16 +5238,16 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Martes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Miércoles": {
        "txt": "NL",
        "tipo": "no_lectivo"
       },
       "Jueves": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Viernes": {
        "txt": "NL",
@@ -5608,16 +5608,16 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Miércoles": {
        "txt": "L · Prerrequisitos de Grafomotricidad · TO1",
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Viernes": {
        "txt": "L · Prerrequisitos de Grafomotricidad · TO1",
@@ -5634,16 +5634,16 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Martes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Miércoles": {
        "txt": "NL",
        "tipo": "no_lectivo"
       },
       "Jueves": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Viernes": {
        "txt": "NL",
@@ -5930,8 +5930,8 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Jueves": {
        "txt": "NL",
@@ -5956,8 +5956,8 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Jueves": {
        "txt": "L · Matemáticas\n↗ Catalina B.→TO1\n↗ Martina→L3",
@@ -6090,8 +6090,8 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Jueves": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Viernes": {
        "txt": "NL",
@@ -6116,8 +6116,8 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Viernes": {
        "txt": "L · Autonomía",
@@ -6457,16 +6457,16 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Jueves": {
        "txt": "L · Cuentacuentos · T1 (Estrella)",
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       }
      }
     },
@@ -6483,8 +6483,8 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Jueves": {
        "txt": "L · Sol: Autonomía (apoyo)",
@@ -6492,8 +6492,8 @@ window.HORARIOS = {
        "aula": "Sol"
       },
       "Viernes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       }
      }
     }
@@ -6576,8 +6576,8 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       }
      }
     },
@@ -6602,8 +6602,8 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       }
      }
     },
@@ -6794,8 +6794,8 @@ window.HORARIOS = {
      "hora": "15:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Martes": {
        "txt": "L · Cuentacuentos · T2 (Sol)",
@@ -6821,8 +6821,8 @@ window.HORARIOS = {
      "hora": "15:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Tutoría",
-       "tipo": "lectivo"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Martes": {
        "txt": "NL",
