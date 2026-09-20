@@ -772,7 +772,8 @@ window.HORARIOS = {
       "Miércoles": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "TO1"
+        "TO1",
+        "EF1"
        ]
       },
       "Jueves": {
@@ -817,8 +818,7 @@ window.HORARIOS = {
       "Martes": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "TO1",
-        "EF1"
+        "TO1"
        ],
        "salidas": [
         {
@@ -6968,8 +6968,9 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "L · Sol: Psicomotricidad · TO1",
+       "tipo": "lectivo",
+       "aula": "Sol"
       },
       "Jueves": {
        "txt": "NL",
@@ -6991,9 +6992,8 @@ window.HORARIOS = {
        "aula": "Estrella"
       },
       "Martes": {
-       "txt": "L · Sol: Psicomotricidad · TO1\n↗ Gonzalo→TO2",
-       "tipo": "lectivo",
-       "aula": "Sol"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Miércoles": {
        "txt": "NL",
@@ -10684,7 +10684,7 @@ window.HORARIOS = {
         "aula": "Norte"
        },
        "Miércoles": {
-        "txt": "L · Sol: Psicomotricidad",
+        "txt": "L · Sol: Psicomotricidad · EF1",
         "tipo": "lectivo",
         "aula": "Sol"
        },
@@ -10710,7 +10710,7 @@ window.HORARIOS = {
         "aula": "Estrella"
        },
        "Martes": {
-        "txt": "L · Sol: Psicomotricidad · EF1\n↗ Gonzalo→TO2",
+        "txt": "L · Sol: Psicomotricidad\n↗ Gonzalo→TO2",
         "tipo": "lectivo",
         "aula": "Sol"
        },
