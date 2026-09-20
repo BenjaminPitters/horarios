@@ -51,7 +51,7 @@ window.HORARIOS = {
    "Jueves",
    "Viernes"
   ],
-  "generado": "2026-09-18"
+  "generado": "2026-09-20"
  },
  "clases": {
   "Estrella": {
@@ -710,7 +710,7 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Asamblea",
        "adultos": [
-        "T2"
+        "EF1"
        ]
       },
       "Martes": {
@@ -722,7 +722,7 @@ window.HORARIOS = {
       "Miércoles": {
        "asig": "Asamblea",
        "adultos": [
-        "T2"
+        "EF1"
        ]
       },
       "Jueves": {
@@ -972,7 +972,8 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Prerrequisitos de Grafomotricidad",
        "adultos": [
-        "T2"
+        "T2",
+        "I2"
        ]
       }
      }
@@ -1688,8 +1689,7 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "EF1",
-        "EF2"
+        "EF1"
        ],
        "salidas": [
         {
@@ -2294,7 +2294,8 @@ window.HORARIOS = {
       "Miércoles": {
        "asig": "Prerrequisitos de Aprendizaje",
        "adultos": [
-        "T3"
+        "T3",
+        "I2"
        ]
       },
       "Jueves": {
@@ -2313,8 +2314,7 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Prerrequisitos de Aprendizaje",
        "adultos": [
-        "T3",
-        "I2"
+        "T3"
        ]
       }
      }
@@ -2385,8 +2385,7 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "EF1",
-        "EF2"
+        "EF1"
        ]
       },
       "Martes": {
@@ -2674,7 +2673,7 @@ window.HORARIOS = {
       "Miércoles": {
        "asig": "Asamblea",
        "adultos": [
-        "EF1"
+        "I2"
        ]
       },
       "Jueves": {
@@ -2871,8 +2870,7 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Educación Física",
        "adultos": [
-        "EF1",
-        "EF2"
+        "EF1"
        ]
       },
       "Martes": {
@@ -3291,9 +3289,9 @@ window.HORARIOS = {
        ]
       },
       "Miércoles": {
-       "asig": "Asamblea",
+       "asig": "Asamblea Conjunta",
        "adultos": [
-        "I2"
+        "T7"
        ]
       },
       "Jueves": {
@@ -3914,7 +3912,7 @@ window.HORARIOS = {
        ]
       },
       "Miércoles": {
-       "asig": "Asamblea",
+       "asig": "Asamblea Conjunta",
        "adultos": [
         "T7"
        ]
@@ -4866,16 +4864,16 @@ window.HORARIOS = {
      "hora": "9:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Asamblea",
-       "tipo": "lectivo"
+       "txt": "—",
+       "tipo": "fuera"
       },
       "Martes": {
        "txt": "L · Asamblea",
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Asamblea",
-       "tipo": "lectivo"
+       "txt": "—",
+       "tipo": "fuera"
       },
       "Jueves": {
        "txt": "Coordinación",
@@ -4892,16 +4890,16 @@ window.HORARIOS = {
      "hora": "9:30",
      "dias": {
       "Lunes": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "—",
+       "tipo": "fuera"
       },
       "Martes": {
        "txt": "Tutoría",
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "—",
+       "tipo": "fuera"
       },
       "Jueves": {
        "txt": "NL",
@@ -4970,16 +4968,16 @@ window.HORARIOS = {
      "hora": "11:00–11:30",
      "dias": {
       "Lunes": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "L · Patio",
+       "tipo": "patio"
       },
       "Martes": {
        "txt": "NL",
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "L · Patio",
+       "tipo": "patio"
       },
       "Jueves": {
        "txt": "NL",
@@ -5012,7 +5010,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Prerrequisitos de Grafomotricidad",
+       "txt": "L · Prerrequisitos de Grafomotricidad · I2",
        "tipo": "lectivo"
       }
      }
@@ -5348,7 +5346,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Prerrequisitos de Aprendizaje",
+       "txt": "L · Prerrequisitos de Aprendizaje · I2",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -5356,7 +5354,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Prerrequisitos de Aprendizaje · I2",
+       "txt": "L · Prerrequisitos de Aprendizaje",
        "tipo": "lectivo"
       }
      }
@@ -6596,7 +6594,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "L · Asamblea",
+       "txt": "L · Asamblea Conjunta",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -6936,15 +6934,15 @@ window.HORARIOS = {
      "hora": "9:00",
      "dias": {
       "Lunes": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "L · Asamblea Sol",
+       "tipo": "lectivo"
       },
       "Martes": {
        "txt": "NL",
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "L · Asamblea Este",
+       "txt": "L · Asamblea Sol",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -7044,8 +7042,8 @@ window.HORARIOS = {
      "hora": "11:00–11:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Patio",
-       "tipo": "patio"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Martes": {
        "txt": "L · Patio",
@@ -7443,9 +7441,8 @@ window.HORARIOS = {
      "hora": "11:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Este: Educación Física",
-       "tipo": "lectivo",
-       "aula": "Este"
+       "txt": "—",
+       "tipo": "fuera"
       },
       "Martes": {
        "txt": "L · Norte: Psicomotricidad",
@@ -7474,9 +7471,8 @@ window.HORARIOS = {
      "hora": "12:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Norte: Psicomotricidad",
-       "tipo": "lectivo",
-       "aula": "Norte"
+       "txt": "—",
+       "tipo": "fuera"
       },
       "Martes": {
        "txt": "Proyecto",
@@ -7503,9 +7499,8 @@ window.HORARIOS = {
      "hora": "12:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Luna: Psicomotricidad",
-       "tipo": "lectivo",
-       "aula": "Luna"
+       "txt": "—",
+       "tipo": "fuera"
       },
       "Martes": {
        "txt": "L · Luna: Psicomotricidad",
@@ -7534,8 +7529,8 @@ window.HORARIOS = {
      "hora": "13:00–13:45",
      "dias": {
       "Lunes": {
-       "txt": "Comida",
-       "tipo": "comida"
+       "txt": "—",
+       "tipo": "fuera"
       },
       "Martes": {
        "txt": "Comida",
@@ -7560,8 +7555,8 @@ window.HORARIOS = {
      "hora": "13:45–14:30",
      "dias": {
       "Lunes": {
-       "txt": "Proyecto",
-       "tipo": "otro"
+       "txt": "—",
+       "tipo": "fuera"
       },
       "Martes": {
        "txt": "Proyecto",
@@ -7586,8 +7581,8 @@ window.HORARIOS = {
      "hora": "14:30",
      "dias": {
       "Lunes": {
-       "txt": "Proyecto",
-       "tipo": "otro"
+       "txt": "—",
+       "tipo": "fuera"
       },
       "Martes": {
        "txt": "L · Este: Educación Física",
@@ -8052,7 +8047,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "L · Asamblea Oeste",
+       "txt": "L · Asamblea Este",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -8169,8 +8164,8 @@ window.HORARIOS = {
        "tipo": "patio"
       },
       "Miércoles": {
-       "txt": "L · Patio",
-       "tipo": "patio"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Jueves": {
        "txt": "L · Patio",
@@ -8196,8 +8191,9 @@ window.HORARIOS = {
        "aula": "Estrella"
       },
       "Miércoles": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "L · Luna: Prerrequisitos de Aprendizaje · T3",
+       "tipo": "lectivo",
+       "aula": "Luna"
       },
       "Jueves": {
        "txt": "L · Estrella: Inglés",
@@ -8205,9 +8201,9 @@ window.HORARIOS = {
        "aula": "Estrella"
       },
       "Viernes": {
-       "txt": "L · Luna: Prerrequisitos de Aprendizaje · T3",
+       "txt": "L · Sol: Prerrequisitos de Grafomotricidad · T2",
        "tipo": "lectivo",
-       "aula": "Luna"
+       "aula": "Sol"
       }
      }
     },
@@ -17634,7 +17630,7 @@ window.HORARIOS = {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
@@ -17915,7 +17911,7 @@ window.HORARIOS = {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
@@ -18196,7 +18192,7 @@ window.HORARIOS = {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
@@ -18477,7 +18473,7 @@ window.HORARIOS = {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
@@ -18758,7 +18754,7 @@ window.HORARIOS = {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
@@ -19039,7 +19035,7 @@ window.HORARIOS = {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
@@ -19322,7 +19318,7 @@ window.HORARIOS = {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
@@ -19603,7 +19599,7 @@ window.HORARIOS = {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
@@ -19884,7 +19880,7 @@ window.HORARIOS = {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
@@ -20165,7 +20161,7 @@ window.HORARIOS = {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
@@ -20446,7 +20442,7 @@ window.HORARIOS = {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
@@ -20727,7 +20723,7 @@ window.HORARIOS = {
         "asig": "Asamblea Conjunta"
        },
        "Miércoles": {
-        "asig": "Asamblea"
+        "asig": "Asamblea Conjunta"
        },
        "Jueves": {
         "asig": "Asamblea Conjunta"
@@ -21005,7 +21001,7 @@ window.HORARIOS = {
      "dias": {
       "Lunes": [
        "Asamblea: T1",
-       "Asamblea: T2",
+       "Asamblea: EF1",
        "Asamblea: T4",
        "Asamblea: I2\n(T3 coordina)",
        "Asamblea: T5",
@@ -21025,12 +21021,12 @@ window.HORARIOS = {
       ],
       "Miércoles": [
        "Asamblea: T1",
-       "Asamblea: T2",
+       "Asamblea: EF1",
        "Asamblea: T4",
        "Asamblea: T3",
-       "Asamblea: EF1\n(T5 coordina)",
-       "Asamblea: I2\n(T6 coordina)",
-       "Asamblea: T7",
+       "Asamblea: I2\n(T5 coordina)",
+       "Conjunta con Sur: T7\n(T6 coordina)",
+       "Conjunta con Oeste: T7",
        "Este: T5+L1+L3+TO1\nOeste: T6+L1+L2+O1+O2+TO2"
       ],
       "Jueves": [
@@ -21065,7 +21061,7 @@ window.HORARIOS = {
       "Lunes": [
        "T5 Marta Vera",
        "T7 Raquel",
-       "EF1 Fernando",
+       "T2 Carol",
        "I2 María G.",
        "TO2 Aitana"
       ],
@@ -21079,7 +21075,7 @@ window.HORARIOS = {
       "Miércoles": [
        "T7 Raquel",
        "EF1 Fernando",
-       "I2 María G.",
+       "T2 Carol",
        "TO2 Aitana",
        "T6 Marta La."
       ],
@@ -21243,8 +21239,7 @@ window.HORARIOS = {
        "T6 Marta La.",
        "T7 Raquel",
        "EF1 Fernando",
-       "O1 Lucía C.",
-       "EF2 Alberto"
+       "O1 Lucía C."
       ],
       "Martes": [
        "T5 Marta Vera",
