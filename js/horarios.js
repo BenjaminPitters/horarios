@@ -51,7 +51,7 @@ window.HORARIOS = {
    "Jueves",
    "Viernes"
   ],
-  "generado": "2026-09-20"
+  "generado": "2026-09-24"
  },
  "clases": {
   "Estrella": {
@@ -590,8 +590,7 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Juego",
        "adultos": [
-        "T1",
-        "EF1"
+        "T1"
        ],
        "salidas": [
         {
@@ -1232,7 +1231,7 @@ window.HORARIOS = {
        ]
       },
       "Viernes": {
-       "asig": "Juego",
+       "asig": "Música",
        "adultos": [
         "T2",
         "EF1"
@@ -4796,7 +4795,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Juego · EF1\n↗ Bernardo→TO1",
+       "txt": "L · Juego\n↗ Bernardo→TO1",
        "tipo": "lectivo"
       }
      }
@@ -5140,7 +5139,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Juego · EF1\n⇱ Mateo: salida externa (desde 14:30)",
+       "txt": "L · Música · EF1\n⇱ Mateo: salida externa (desde 14:30)",
        "tipo": "lectivo"
       }
      }
@@ -7233,8 +7232,9 @@ window.HORARIOS = {
        "aula": "Este"
       },
       "Viernes": {
-       "txt": "L · Juego (Est+Sol)\n⇱ Mateo: salida externa (desde 14:30)\n↗ Bernardo→TO1",
-       "tipo": "lectivo"
+       "txt": "L · Sol: Música · T2\n⇱ Mateo: salida externa (desde 14:30)",
+       "tipo": "lectivo",
+       "aula": "Sol"
       }
      }
     },
@@ -12773,7 +12773,7 @@ window.HORARIOS = {
         "asig": "Juego"
        },
        "Viernes": {
-        "asig": "Juego"
+        "asig": "Música"
        }
       }
      },
@@ -13054,7 +13054,7 @@ window.HORARIOS = {
         "asig": "Juego"
        },
        "Viernes": {
-        "asig": "Juego"
+        "asig": "Música"
        }
       }
      },
@@ -13336,7 +13336,7 @@ window.HORARIOS = {
         "dest_nombre": "Aitana"
        },
        "Viernes": {
-        "asig": "Juego"
+        "asig": "Música"
        }
       }
      },
