@@ -51,7 +51,7 @@ window.HORARIOS = {
    "Jueves",
    "Viernes"
   ],
-  "generado": "2026-09-24"
+  "generado": "2026-09-29"
  },
  "clases": {
   "Estrella": {
@@ -8299,9 +8299,8 @@ window.HORARIOS = {
        "aula": "Estrella"
       },
       "Martes": {
-       "txt": "L · Estrella: Siesta",
-       "tipo": "lectivo",
-       "aula": "Estrella"
+       "txt": "—",
+       "tipo": "fuera"
       },
       "Miércoles": {
        "txt": "L · Estrella: Siesta",
@@ -8309,9 +8308,8 @@ window.HORARIOS = {
        "aula": "Estrella"
       },
       "Jueves": {
-       "txt": "L · Estrella: Siesta",
-       "tipo": "lectivo",
-       "aula": "Estrella"
+       "txt": "—",
+       "tipo": "fuera"
       },
       "Viernes": {
        "txt": "L · Estrella: Siesta",
@@ -21210,16 +21208,14 @@ window.HORARIOS = {
        "I2 María G. (hasta 14:00)"
       ],
       "Martes": [
-       "EF1 Fernando",
-       "I2 María G. (hasta 14:00)"
+       "EF1 Fernando"
       ],
       "Miércoles": [
        "O1 Lucía C.",
        "I2 María G. (hasta 14:00)"
       ],
       "Jueves": [
-       "EF1 Fernando",
-       "I2 María G. (hasta 14:00)"
+       "EF1 Fernando"
       ],
       "Viernes": [
        "O1 Lucía C.",
