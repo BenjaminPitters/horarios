@@ -471,8 +471,10 @@
         let col = area ? asigColor(area) : (c.aula ? aulaColor(c.aula) : null);
         if (!col) col = estadoColor(c.tipo);
         // Fila compacta (I2, 13:45–14:00): si es la siesta, el color de su aula (Estrella), como el
-        // bloque de Turnos; en cualquier otro caso, el morado del patio.
-        if (short) col = /Siesta/i.test(mainLine) ? aulaColor(c.aula || 'Estrella') : (estadoColor('patio') || col);
+        // bloque de Turnos; si es otra actividad, el morado del patio. Fuera de jornada y NL
+        // conservan su color de estado (gris / verde), como en cualquier otra franja.
+        if (short && c.tipo !== 'fuera' && c.tipo !== 'no_lectivo')
+          col = /Siesta/i.test(mainLine) ? aulaColor(c.aula || 'Estrella') : (estadoColor('patio') || col);
         const muted = c.tipo === 'no_lectivo';
         const style = col ? ` style="background:${tint(col,.28)};border-left-color:${col}"` : '';
         const room = (c.aula && displayMain.indexOf(c.aula) < 0) ? `<span class="cx__room">${esc(c.aula)}</span>` : '';
