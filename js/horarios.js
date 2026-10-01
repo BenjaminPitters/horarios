@@ -51,7 +51,7 @@ window.HORARIOS = {
    "Jueves",
    "Viernes"
   ],
-  "generado": "2026-09-29"
+  "generado": "2026-10-01"
  },
  "clases": {
   "Estrella": {
@@ -2098,7 +2098,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Lucas",
+         "alumno": "Manuela",
          "a": "O1",
          "a_nombre": "Lucía Cubillas"
         }
@@ -2131,7 +2131,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Luis",
+         "alumno": "Lucas",
          "a": "TO1",
          "a_nombre": "Irene"
         }
@@ -2164,7 +2164,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Manuela",
+         "alumno": "Lucas",
          "a": "O1",
          "a_nombre": "Lucía Cubillas"
         }
@@ -2576,7 +2576,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Lucas",
+         "alumno": "Luis",
          "a": "TO1",
          "a_nombre": "Irene"
         }
@@ -5233,7 +5233,7 @@ window.HORARIOS = {
      "hora": "9:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Prerrequisitos de Lectoescritura\n↗ Lucas→O1",
+       "txt": "L · Prerrequisitos de Lectoescritura\n↗ Manuela→O1",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -5245,7 +5245,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Prerrequisitos de Lectoescritura\n↗ Luis→TO1",
+       "txt": "L · Prerrequisitos de Lectoescritura\n↗ Lucas→TO1",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -5497,7 +5497,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Martes": {
-       "txt": "L · Juego\n↗ Lucas→TO1",
+       "txt": "L · Juego\n↗ Luis→TO1",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -8294,27 +8294,24 @@ window.HORARIOS = {
      "hora": "13:45–14:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Estrella: Siesta",
-       "tipo": "lectivo",
-       "aula": "Estrella"
+       "txt": "L · Ida al jardín terapéutico (Oeste)",
+       "tipo": "lectivo"
       },
       "Martes": {
        "txt": "—",
        "tipo": "fuera"
       },
       "Miércoles": {
-       "txt": "L · Estrella: Siesta",
-       "tipo": "lectivo",
-       "aula": "Estrella"
+       "txt": "L · Ida al jardín terapéutico (Sur)",
+       "tipo": "lectivo"
       },
       "Jueves": {
        "txt": "—",
        "tipo": "fuera"
       },
       "Viernes": {
-       "txt": "L · Estrella: Siesta",
-       "tipo": "lectivo",
-       "aula": "Estrella"
+       "txt": "L · Ida al jardín terapéutico (Este)",
+       "tipo": "lectivo"
       }
      }
     },
@@ -8436,7 +8433,7 @@ window.HORARIOS = {
       "hora": "9:30",
       "dias": {
        "Lunes": {
-        "txt": "L · Luna: Lucas",
+        "txt": "L · Luna: Manuela",
         "tipo": "lectivo",
         "aula": "Luna"
        },
@@ -8472,7 +8469,7 @@ window.HORARIOS = {
         "aula": "Norte"
        },
        "Martes": {
-        "txt": "L · Luna: Manuela",
+        "txt": "L · Luna: Lucas",
         "tipo": "lectivo",
         "aula": "Luna"
        },
@@ -9571,7 +9568,7 @@ window.HORARIOS = {
         "aula": "Luna"
        },
        "Martes": {
-        "txt": "L · Luna: Estimulación del Lenguaje\n↗ Manuela→O1",
+        "txt": "L · Luna: Estimulación del Lenguaje\n↗ Lucas→O1",
         "tipo": "lectivo",
         "aula": "Luna"
        },
@@ -10687,7 +10684,7 @@ window.HORARIOS = {
         "aula": "Sol"
        },
        "Jueves": {
-        "txt": "L · Luna: Luis",
+        "txt": "L · Luna: Lucas",
         "tipo": "lectivo",
         "aula": "Luna"
        },
@@ -10969,7 +10966,7 @@ window.HORARIOS = {
         "tipo": "no_lectivo"
        },
        "Martes": {
-        "txt": "L · Luna: Lucas",
+        "txt": "L · Luna: Luis",
         "tipo": "lectivo",
         "aula": "Luna"
        },
@@ -15116,8 +15113,7 @@ window.HORARIOS = {
         "asig": "Prerrequisitos de Lectoescritura"
        },
        "Jueves": {
-        "salida": "TO1",
-        "dest_nombre": "Irene"
+        "asig": "Prerrequisitos de Lectoescritura"
        },
        "Viernes": {
         "asig": "Prerrequisitos de Lectoescritura"
@@ -15325,7 +15321,8 @@ window.HORARIOS = {
         "asig": "Inteligencia Emocional"
        },
        "Martes": {
-        "asig": "Juego"
+        "salida": "TO1",
+        "dest_nombre": "Irene"
        },
        "Miércoles": {
         "asig": "Juego"
@@ -15389,7 +15386,8 @@ window.HORARIOS = {
       "hora": "9:30",
       "dias": {
        "Lunes": {
-        "asig": "Prerrequisitos de Lectoescritura"
+        "salida": "O1",
+        "dest_nombre": "Lucía Cubillas"
        },
        "Martes": {
         "asig": "Prerrequisitos de Lectoescritura"
@@ -15413,8 +15411,7 @@ window.HORARIOS = {
         "asig": "Estimulación del Lenguaje"
        },
        "Martes": {
-        "salida": "O1",
-        "dest_nombre": "Lucía Cubillas"
+        "asig": "Estimulación del Lenguaje"
        },
        "Miércoles": {
         "asig": "Estimulación del Lenguaje"
@@ -15671,8 +15668,7 @@ window.HORARIOS = {
       "hora": "9:30",
       "dias": {
        "Lunes": {
-        "salida": "O1",
-        "dest_nombre": "Lucía Cubillas"
+        "asig": "Prerrequisitos de Lectoescritura"
        },
        "Martes": {
         "asig": "Prerrequisitos de Lectoescritura"
@@ -15681,7 +15677,8 @@ window.HORARIOS = {
         "asig": "Prerrequisitos de Lectoescritura"
        },
        "Jueves": {
-        "asig": "Prerrequisitos de Lectoescritura"
+        "salida": "TO1",
+        "dest_nombre": "Irene"
        },
        "Viernes": {
         "asig": "Prerrequisitos de Lectoescritura"
@@ -15696,7 +15693,8 @@ window.HORARIOS = {
         "asig": "Estimulación del Lenguaje"
        },
        "Martes": {
-        "asig": "Estimulación del Lenguaje"
+        "salida": "O1",
+        "dest_nombre": "Lucía Cubillas"
        },
        "Miércoles": {
         "asig": "Estimulación del Lenguaje"
@@ -15888,8 +15886,7 @@ window.HORARIOS = {
         "asig": "Inteligencia Emocional"
        },
        "Martes": {
-        "salida": "TO1",
-        "dest_nombre": "Irene"
+        "asig": "Juego"
        },
        "Miércoles": {
         "asig": "Juego"
@@ -21204,22 +21201,19 @@ window.HORARIOS = {
     {
      "dias": {
       "Lunes": [
-       "O1 Lucía C.",
-       "I2 María G. (hasta 14:00)"
+       "O1 Lucía C."
       ],
       "Martes": [
        "EF1 Fernando"
       ],
       "Miércoles": [
-       "O1 Lucía C.",
-       "I2 María G. (hasta 14:00)"
+       "O1 Lucía C."
       ],
       "Jueves": [
        "EF1 Fernando"
       ],
       "Viernes": [
-       "O1 Lucía C.",
-       "I2 María G. (hasta 14:00)"
+       "O1 Lucía C."
       ]
      }
     }
@@ -21334,6 +21328,26 @@ window.HORARIOS = {
        "L2 Sheila",
        "TO1 Irene",
        "TO2 Aitana"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "titulo": "Ida al jardín terapéutico en el patio de tarde (13:45–14:00)",
+   "filas": [
+    {
+     "dias": {
+      "Lunes": [
+       "I2 María G. (con Oeste)"
+      ],
+      "Martes": [],
+      "Miércoles": [
+       "I2 María G. (con Sur)"
+      ],
+      "Jueves": [],
+      "Viernes": [
+       "I2 María G. (con Este)"
       ]
      }
     }
