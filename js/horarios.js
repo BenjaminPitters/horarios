@@ -51,7 +51,7 @@ window.HORARIOS = {
    "Jueves",
    "Viernes"
   ],
-  "generado": "2026-10-01"
+  "generado": "2026-10-11"
  },
  "clases": {
   "Estrella": {
@@ -1177,12 +1177,6 @@ window.HORARIOS = {
          "a": "L2",
          "a_nombre": "Sheila"
         }
-       ],
-       "externa": [
-        {
-         "alumno": "Mateo",
-         "desde": "14:30"
-        }
        ]
       },
       "Martes": {
@@ -1190,12 +1184,6 @@ window.HORARIOS = {
        "adultos": [
         "T2",
         "TO2"
-       ],
-       "externa": [
-        {
-         "alumno": "Mateo",
-         "desde": "14:30"
-        }
        ]
       },
       "Miércoles": {
@@ -1203,12 +1191,6 @@ window.HORARIOS = {
        "adultos": [
         "T2",
         "EF1"
-       ],
-       "externa": [
-        {
-         "alumno": "Mateo",
-         "desde": "14:30"
-        }
        ]
       },
       "Jueves": {
@@ -1222,12 +1204,6 @@ window.HORARIOS = {
          "a": "TO2",
          "a_nombre": "Aitana"
         }
-       ],
-       "externa": [
-        {
-         "alumno": "Mateo",
-         "desde": "14:30"
-        }
        ]
       },
       "Viernes": {
@@ -1235,12 +1211,6 @@ window.HORARIOS = {
        "adultos": [
         "T2",
         "EF1"
-       ],
-       "externa": [
-        {
-         "alumno": "Mateo",
-         "desde": "14:30"
-        }
        ]
       }
      }
@@ -1254,11 +1224,6 @@ window.HORARIOS = {
        "adultos": [
         "T2",
         "T6"
-       ],
-       "externa": [
-        {
-         "alumno": "Mateo"
-        }
        ]
       },
       "Martes": {
@@ -1266,11 +1231,6 @@ window.HORARIOS = {
        "adultos": [
         "T2",
         "T7"
-       ],
-       "externa": [
-        {
-         "alumno": "Mateo"
-        }
        ]
       },
       "Miércoles": {
@@ -1284,11 +1244,6 @@ window.HORARIOS = {
          "a": "O1",
          "a_nombre": "Lucía Cubillas"
         }
-       ],
-       "externa": [
-        {
-         "alumno": "Mateo"
-        }
        ]
       },
       "Jueves": {
@@ -1296,11 +1251,6 @@ window.HORARIOS = {
        "adultos": [
         "T2",
         "T7"
-       ],
-       "externa": [
-        {
-         "alumno": "Mateo"
-        }
        ]
       },
       "Viernes": {
@@ -1313,11 +1263,6 @@ window.HORARIOS = {
          "alumno": "Eva",
          "a": "L2",
          "a_nombre": "Sheila"
-        }
-       ],
-       "externa": [
-        {
-         "alumno": "Mateo"
         }
        ]
       }
@@ -1332,11 +1277,6 @@ window.HORARIOS = {
        "adultos": [
         "T2",
         "TO2"
-       ],
-       "externa": [
-        {
-         "alumno": "Mateo"
-        }
        ]
       },
       "Martes": {
@@ -1344,11 +1284,6 @@ window.HORARIOS = {
        "adultos": [
         "T2",
         "TO2"
-       ],
-       "externa": [
-        {
-         "alumno": "Mateo"
-        }
        ]
       },
       "Miércoles": {
@@ -1356,11 +1291,6 @@ window.HORARIOS = {
        "adultos": [
         "T2",
         "TO2"
-       ],
-       "externa": [
-        {
-         "alumno": "Mateo"
-        }
        ]
       },
       "Jueves": {
@@ -1368,11 +1298,6 @@ window.HORARIOS = {
        "adultos": [
         "T2",
         "T6"
-       ],
-       "externa": [
-        {
-         "alumno": "Mateo"
-        }
        ]
       },
       "Viernes": {
@@ -1380,11 +1305,6 @@ window.HORARIOS = {
        "adultos": [
         "T2",
         "T7"
-       ],
-       "externa": [
-        {
-         "alumno": "Mateo"
-        }
        ]
       }
      }
@@ -5123,23 +5043,23 @@ window.HORARIOS = {
      "hora": "14:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Juego · EF1\n⇱ Mateo: salida externa (desde 14:30)\n↗ Gonzalo→L2",
+       "txt": "L · Juego · EF1\n↗ Gonzalo→L2",
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Juego · TO2\n⇱ Mateo: salida externa (desde 14:30)",
+       "txt": "L · Juego · TO2",
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Juego · EF1\n⇱ Mateo: salida externa (desde 14:30)",
+       "txt": "L · Juego · EF1",
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Juego\n⇱ Mateo: salida externa (desde 14:30)\n↗ Eva→TO2",
+       "txt": "L · Juego\n↗ Eva→TO2",
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Música · EF1\n⇱ Mateo: salida externa (desde 14:30)",
+       "txt": "L · Música · EF1",
        "tipo": "lectivo"
       }
      }
@@ -5149,23 +5069,23 @@ window.HORARIOS = {
      "hora": "15:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Conocimiento del Entorno · T6\n⇱ Mateo: salida externa",
+       "txt": "L · Conocimiento del Entorno · T6",
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Cuentacuentos · T7\n⇱ Mateo: salida externa",
+       "txt": "L · Cuentacuentos · T7",
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Conocimiento del Entorno\n⇱ Mateo: salida externa\n↗ Álvaro→O1",
+       "txt": "L · Conocimiento del Entorno\n↗ Álvaro→O1",
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Cuentacuentos · T7\n⇱ Mateo: salida externa",
+       "txt": "L · Cuentacuentos · T7",
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Conocimiento del Entorno\n⇱ Mateo: salida externa\n↗ Eva→L2",
+       "txt": "L · Conocimiento del Entorno\n↗ Eva→L2",
        "tipo": "lectivo"
       }
      }
@@ -5175,23 +5095,23 @@ window.HORARIOS = {
      "hora": "15:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Autonomía · TO2\n⇱ Mateo: salida externa",
+       "txt": "L · Autonomía · TO2",
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Autonomía · TO2\n⇱ Mateo: salida externa",
+       "txt": "L · Autonomía · TO2",
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Autonomía · TO2\n⇱ Mateo: salida externa",
+       "txt": "L · Autonomía · TO2",
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Autonomía · T6\n⇱ Mateo: salida externa",
+       "txt": "L · Autonomía · T6",
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Autonomía · T7\n⇱ Mateo: salida externa",
+       "txt": "L · Autonomía · T7",
        "tipo": "lectivo"
       }
      }
@@ -6525,7 +6445,7 @@ window.HORARIOS = {
      "hora": "15:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Sol: Conocimiento del Entorno (apoyo)\n⇱ Mateo: salida externa",
+       "txt": "L · Sol: Conocimiento del Entorno (apoyo)",
        "tipo": "lectivo",
        "aula": "Sol"
       },
@@ -6564,7 +6484,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Jueves": {
-       "txt": "L · Sol: Autonomía (apoyo)\n⇱ Mateo: salida externa",
+       "txt": "L · Sol: Autonomía (apoyo)",
        "tipo": "lectivo",
        "aula": "Sol"
       },
@@ -6875,7 +6795,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Martes": {
-       "txt": "L · Cuentacuentos · T2 (Sol)\n⇱ Mateo: salida externa",
+       "txt": "L · Cuentacuentos · T2 (Sol)",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -6884,7 +6804,7 @@ window.HORARIOS = {
        "aula": "Estrella"
       },
       "Jueves": {
-       "txt": "L · Cuentacuentos · T2 (Sol)\n⇱ Mateo: salida externa",
+       "txt": "L · Cuentacuentos · T2 (Sol)",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -6914,7 +6834,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Viernes": {
-       "txt": "L · Sol: Autonomía · T2\n⇱ Mateo: salida externa",
+       "txt": "L · Sol: Autonomía · T2",
        "tipo": "lectivo",
        "aula": "Sol"
       }
@@ -7214,7 +7134,7 @@ window.HORARIOS = {
      "hora": "14:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Juego (Est+Sol)\n⇱ Mateo: salida externa (desde 14:30)\n↗ Gonzalo→L2",
+       "txt": "L · Juego (Est+Sol)\n↗ Gonzalo→L2",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -7223,7 +7143,7 @@ window.HORARIOS = {
        "aula": "Este"
       },
       "Miércoles": {
-       "txt": "L · Juego (Est+Sol)\n⇱ Mateo: salida externa (desde 14:30)",
+       "txt": "L · Juego (Est+Sol)",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -7232,7 +7152,7 @@ window.HORARIOS = {
        "aula": "Este"
       },
       "Viernes": {
-       "txt": "L · Sol: Música · T2\n⇱ Mateo: salida externa (desde 14:30)",
+       "txt": "L · Sol: Música · T2",
        "tipo": "lectivo",
        "aula": "Sol"
       }
@@ -11319,7 +11239,7 @@ window.HORARIOS = {
         "aula": "Sur"
        },
        "Martes": {
-        "txt": "L · Juego (Est+Sol)\n⇱ Mateo: salida externa (desde 14:30)",
+        "txt": "L · Juego (Est+Sol)",
         "tipo": "lectivo"
        },
        "Miércoles": {
@@ -11372,17 +11292,17 @@ window.HORARIOS = {
       "hora": "15:30",
       "dias": {
        "Lunes": {
-        "txt": "L · Sol: Autonomía · T2\n⇱ Mateo: salida externa",
+        "txt": "L · Sol: Autonomía · T2",
         "tipo": "lectivo",
         "aula": "Sol"
        },
        "Martes": {
-        "txt": "L · Sol: Autonomía · T2\n⇱ Mateo: salida externa",
+        "txt": "L · Sol: Autonomía · T2",
         "tipo": "lectivo",
         "aula": "Sol"
        },
        "Miércoles": {
-        "txt": "L · Sol: Autonomía · T2\n⇱ Mateo: salida externa",
+        "txt": "L · Sol: Autonomía · T2",
         "tipo": "lectivo",
         "aula": "Sol"
        },
@@ -13602,19 +13522,19 @@ window.HORARIOS = {
       "hora": "14:30",
       "dias": {
        "Lunes": {
-        "label": "Salida externa (desde 14:30)"
+        "asig": "Juego"
        },
        "Martes": {
-        "label": "Salida externa (desde 14:30)"
+        "asig": "Juego"
        },
        "Miércoles": {
-        "label": "Salida externa (desde 14:30)"
+        "asig": "Juego"
        },
        "Jueves": {
-        "label": "Salida externa (desde 14:30)"
+        "asig": "Juego"
        },
        "Viernes": {
-        "label": "Salida externa (desde 14:30)"
+        "asig": "Música"
        }
       }
      },
@@ -13623,19 +13543,19 @@ window.HORARIOS = {
       "hora": "15:00",
       "dias": {
        "Lunes": {
-        "label": "Salida externa"
+        "asig": "Conocimiento del Entorno"
        },
        "Martes": {
-        "label": "Salida externa"
+        "asig": "Cuentacuentos"
        },
        "Miércoles": {
-        "label": "Salida externa"
+        "asig": "Conocimiento del Entorno"
        },
        "Jueves": {
-        "label": "Salida externa"
+        "asig": "Cuentacuentos"
        },
        "Viernes": {
-        "label": "Salida externa"
+        "asig": "Conocimiento del Entorno"
        }
       }
      },
@@ -13644,19 +13564,19 @@ window.HORARIOS = {
       "hora": "15:30",
       "dias": {
        "Lunes": {
-        "label": "Salida externa"
+        "asig": "Autonomía"
        },
        "Martes": {
-        "label": "Salida externa"
+        "asig": "Autonomía"
        },
        "Miércoles": {
-        "label": "Salida externa"
+        "asig": "Autonomía"
        },
        "Jueves": {
-        "label": "Salida externa"
+        "asig": "Autonomía"
        },
        "Viernes": {
-        "label": "Salida externa"
+        "asig": "Autonomía"
        }
       }
      }
