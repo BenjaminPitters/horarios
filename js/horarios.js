@@ -51,7 +51,7 @@ window.HORARIOS = {
    "Jueves",
    "Viernes"
   ],
-  "generado": "2026-10-21"
+  "generado": "2026-10-26"
  },
  "clases": {
   "Estrella": {
@@ -1430,7 +1430,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Miguel",
+         "alumno": "Leonor",
          "a": "Ps3",
          "a_nombre": "Bárbara"
         }
@@ -1679,7 +1679,7 @@ window.HORARIOS = {
        ],
        "salidas": [
         {
-         "alumno": "Leonor",
+         "alumno": "Miguel",
          "a": "Ps3",
          "a_nombre": "Bárbara"
         }
@@ -5607,7 +5607,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Prerrequisitos de Aprendizaje\n↗ Miguel→Ps3",
+       "txt": "L · Prerrequisitos de Aprendizaje\n↗ Leonor→Ps3",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -5737,7 +5737,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Juego\n↗ Leonor→Ps3",
+       "txt": "L · Juego\n↗ Miguel→Ps3",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -9440,7 +9440,7 @@ window.HORARIOS = {
         "tipo": "fuera"
        },
        "Martes": {
-        "txt": "L · Norte: Miguel",
+        "txt": "L · Norte: Leonor",
         "tipo": "lectivo",
         "aula": "Norte"
        },
@@ -9576,7 +9576,7 @@ window.HORARIOS = {
         "tipo": "fuera"
        },
        "Martes": {
-        "txt": "L · Norte: Leonor",
+        "txt": "L · Norte: Miguel",
         "tipo": "lectivo",
         "aula": "Norte"
        },
@@ -14336,7 +14336,8 @@ window.HORARIOS = {
         "asig": "Prerrequisitos de Aprendizaje"
        },
        "Martes": {
-        "asig": "Prerrequisitos de Aprendizaje"
+        "salida": "Ps3",
+        "dest_nombre": "Bárbara"
        },
        "Miércoles": {
         "asig": "Prerrequisitos de Aprendizaje"
@@ -14443,8 +14444,7 @@ window.HORARIOS = {
         "dest_nombre": "Sheila"
        },
        "Martes": {
-        "salida": "Ps3",
-        "dest_nombre": "Bárbara"
+        "asig": "Juego"
        },
        "Miércoles": {
         "asig": "Juego"
@@ -14618,8 +14618,7 @@ window.HORARIOS = {
         "asig": "Prerrequisitos de Aprendizaje"
        },
        "Martes": {
-        "salida": "Ps3",
-        "dest_nombre": "Bárbara"
+        "asig": "Prerrequisitos de Aprendizaje"
        },
        "Miércoles": {
         "asig": "Prerrequisitos de Aprendizaje"
@@ -14726,7 +14725,8 @@ window.HORARIOS = {
         "asig": "Juego"
        },
        "Martes": {
-        "asig": "Juego"
+        "salida": "Ps3",
+        "dest_nombre": "Bárbara"
        },
        "Miércoles": {
         "asig": "Juego"
