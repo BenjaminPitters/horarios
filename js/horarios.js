@@ -51,7 +51,7 @@ window.HORARIOS = {
    "Jueves",
    "Viernes"
   ],
-  "generado": "2026-10-26"
+  "generado": "2026-11-01"
  },
  "clases": {
   "Estrella": {
@@ -625,7 +625,7 @@ window.HORARIOS = {
        "asig": "Cuentacuentos",
        "adultos": [
         "T1",
-        "T6"
+        "T7"
        ]
       },
       "Miércoles": {
@@ -639,7 +639,7 @@ window.HORARIOS = {
        "asig": "Cuentacuentos",
        "adultos": [
         "T1",
-        "T6"
+        "T7"
        ]
       },
       "Viernes": {
@@ -693,7 +693,7 @@ window.HORARIOS = {
        "asig": "Música",
        "adultos": [
         "T1",
-        "TO1"
+        "T7"
        ]
       }
      }
@@ -1232,7 +1232,7 @@ window.HORARIOS = {
        "asig": "Cuentacuentos",
        "adultos": [
         "T2",
-        "T7"
+        "T6"
        ]
       },
       "Miércoles": {
@@ -1252,7 +1252,7 @@ window.HORARIOS = {
        "asig": "Cuentacuentos",
        "adultos": [
         "T2",
-        "T7"
+        "T6"
        ]
       },
       "Viernes": {
@@ -1306,7 +1306,7 @@ window.HORARIOS = {
        "asig": "Autonomía",
        "adultos": [
         "T2",
-        "T7"
+        "TO1"
        ]
       }
      }
@@ -4731,7 +4731,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Cuentacuentos · T6",
+       "txt": "L · Cuentacuentos · T7",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -4739,7 +4739,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Cuentacuentos · T6",
+       "txt": "L · Cuentacuentos · T7",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -4769,7 +4769,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Música · TO1",
+       "txt": "L · Música · T7",
        "tipo": "lectivo"
       }
      }
@@ -5101,7 +5101,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Cuentacuentos · T7",
+       "txt": "L · Cuentacuentos · T6",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -5109,7 +5109,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Cuentacuentos · T7",
+       "txt": "L · Cuentacuentos · T6",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -5139,7 +5139,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Autonomía · T7",
+       "txt": "L · Autonomía · TO1",
        "tipo": "lectivo"
       }
      }
@@ -6582,7 +6582,7 @@ window.HORARIOS = {
        "aula": "Sol"
       },
       "Martes": {
-       "txt": "L · Cuentacuentos · T1 (Estrella)",
+       "txt": "L · Cuentacuentos · T2 (Sol)",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -6590,7 +6590,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Jueves": {
-       "txt": "L · Cuentacuentos · T1 (Estrella)",
+       "txt": "L · Cuentacuentos · T2 (Sol)",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -6953,7 +6953,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Martes": {
-       "txt": "L · Cuentacuentos · T2 (Sol)",
+       "txt": "L · Cuentacuentos · T1 (Estrella)",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -6962,7 +6962,7 @@ window.HORARIOS = {
        "aula": "Estrella"
       },
       "Jueves": {
-       "txt": "L · Cuentacuentos · T2 (Sol)",
+       "txt": "L · Cuentacuentos · T1 (Estrella)",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -6992,9 +6992,9 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Viernes": {
-       "txt": "L · Sol: Autonomía · T2",
+       "txt": "L · Estrella: Música · T1",
        "tipo": "lectivo",
-       "aula": "Sol"
+       "aula": "Estrella"
       }
      }
     },
@@ -11298,9 +11298,9 @@ window.HORARIOS = {
         "aula": "Este"
        },
        "Viernes": {
-        "txt": "L · Estrella: Música · T1",
+        "txt": "L · Sol: Autonomía · T2",
         "tipo": "lectivo",
-        "aula": "Estrella"
+        "aula": "Sol"
        }
       }
      },
