@@ -51,7 +51,7 @@ window.HORARIOS = {
    "Jueves",
    "Viernes"
   ],
-  "generado": "2026-11-01"
+  "generado": "2026-11-06"
  },
  "clases": {
   "Estrella": {
@@ -3148,8 +3148,7 @@ window.HORARIOS = {
       "Martes": {
        "asig": "Autonomía",
        "adultos": [
-        "T5",
-        "TO1"
+        "T5"
        ],
        "salidas": [
         {
@@ -6237,7 +6236,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Autonomía · TO1\n↗ Dominique→O2",
+       "txt": "L · Autonomía\n↗ Dominique→O2",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -11283,9 +11282,8 @@ window.HORARIOS = {
         "aula": "Luna"
        },
        "Martes": {
-        "txt": "L · Este: Autonomía · T5\n↗ Dominique→O2",
-        "tipo": "lectivo",
-        "aula": "Este"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Miércoles": {
         "txt": "L · Luna: Autonomía · T3",
