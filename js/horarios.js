@@ -820,7 +820,8 @@ window.HORARIOS = {
       "Martes": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "TO1"
+        "TO1",
+        "T2"
        ],
        "salidas": [
         {
@@ -4867,8 +4868,8 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "Tutoría",
-       "tipo": "no_lectivo"
+       "txt": "L · Psicomotricidad · TO1\n↗ Álvaro→TO2",
+       "tipo": "lectivo"
       },
       "Miércoles": {
        "txt": "L · Est.leng. (apoyo)",
@@ -4915,16 +4916,16 @@ window.HORARIOS = {
      "hora": "11:00–11:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Patio",
-       "tipo": "patio"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Martes": {
        "txt": "NL",
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "L · Patio",
-       "tipo": "patio"
+       "txt": "Tutoría",
+       "tipo": "no_lectivo"
       },
       "Jueves": {
        "txt": "NL",
@@ -10992,7 +10993,7 @@ window.HORARIOS = {
         "aula": "Estrella"
        },
        "Martes": {
-        "txt": "L · Sol: Psicomotricidad\n↗ Álvaro→TO2",
+        "txt": "L · Sol: Psicomotricidad · T2\n↗ Álvaro→TO2",
         "tipo": "lectivo",
         "aula": "Sol"
        },
@@ -21394,7 +21395,6 @@ window.HORARIOS = {
       "Lunes": [
        "T5 Marta Vera",
        "T7 Raquel",
-       "T2 Carol",
        "I2 María G.",
        "TO2 Aitana"
       ],
@@ -21408,7 +21408,6 @@ window.HORARIOS = {
       "Miércoles": [
        "T7 Raquel",
        "EF1 Fernando",
-       "T2 Carol",
        "TO2 Aitana",
        "T6 Marta La."
       ],
