@@ -793,7 +793,8 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Psicomotricidad",
        "adultos": [
-        "TO1"
+        "TO1",
+        "T2"
        ],
        "salidas": [
         {
@@ -999,7 +1000,8 @@ window.HORARIOS = {
       "Martes": {
        "asig": "Prerrequisitos de Aprendizaje",
        "adultos": [
-        "T2"
+        "T2",
+        "EF1"
        ],
        "salidas": [
         {
@@ -1256,7 +1258,8 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Conocimiento del Entorno",
        "adultos": [
-        "T2"
+        "T2",
+        "T7"
        ],
        "salidas": [
         {
@@ -3504,8 +3507,7 @@ window.HORARIOS = {
       "Martes": {
        "asig": "Matemáticas",
        "adultos": [
-        "T6",
-        "EF1"
+        "T6"
        ],
        "salidas": [
         {
@@ -4374,8 +4376,7 @@ window.HORARIOS = {
       "Viernes": {
        "asig": "Actividades de la Vida Diaria",
        "adultos": [
-        "TO2",
-        "T7"
+        "TO2"
        ]
       }
      }
@@ -4852,8 +4853,8 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Viernes": {
-       "txt": "Tutoría",
-       "tipo": "no_lectivo"
+       "txt": "L · Psicomotricidad · TO1\n↗ Eva→O1",
+       "tipo": "lectivo"
       }
      }
     },
@@ -4970,7 +4971,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Martes": {
-       "txt": "L · Prerrequisitos de Aprendizaje\n↗ Eva→L2",
+       "txt": "L · Prerrequisitos de Aprendizaje · EF1\n↗ Eva→L2",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -5112,7 +5113,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Conocimiento del Entorno\n↗ Eva→L2",
+       "txt": "L · Conocimiento del Entorno · T7\n↗ Eva→L2",
        "tipo": "lectivo"
       }
      }
@@ -6450,7 +6451,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Matemáticas · EF1\n↗ Micke→TO2",
+       "txt": "L · Matemáticas\n↗ Micke→TO2",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -6965,8 +6966,9 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Viernes": {
-       "txt": "L · Actividades de la Vida Diaria · TO2",
-       "tipo": "lectivo"
+       "txt": "L · Sol: Conocimiento del Entorno · T2\n↗ Eva→L2",
+       "tipo": "lectivo",
+       "aula": "Sol"
       }
      }
     },
@@ -7206,9 +7208,9 @@ window.HORARIOS = {
        "aula": "Norte"
       },
       "Martes": {
-       "txt": "L · Oeste: Matemáticas · T6\n↗ Micke→TO2",
+       "txt": "L · Sol: Prerrequisitos de Aprendizaje · T2\n↗ Eva→L2",
        "tipo": "lectivo",
-       "aula": "Oeste"
+       "aula": "Sol"
       },
       "Miércoles": {
        "txt": "L · Norte: Psicomotricidad",
@@ -10974,7 +10976,7 @@ window.HORARIOS = {
         "aula": "Luna"
        },
        "Viernes": {
-        "txt": "L · Sol: Psicomotricidad\n↗ Eva→O1",
+        "txt": "L · Sol: Psicomotricidad · T2\n↗ Eva→O1",
         "tipo": "lectivo",
         "aula": "Sol"
        }
@@ -11671,7 +11673,7 @@ window.HORARIOS = {
         "aula": "Oeste"
        },
        "Viernes": {
-        "txt": "L · Sur: Actividades de la Vida Diaria · T7",
+        "txt": "L · Sur: Actividades de la Vida Diaria",
         "tipo": "lectivo",
         "aula": "Sur"
        }
