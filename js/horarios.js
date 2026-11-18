@@ -51,7 +51,7 @@ window.HORARIOS = {
    "Jueves",
    "Viernes"
   ],
-  "generado": "2026-11-16"
+  "generado": "2026-11-18"
  },
  "clases": {
   "Estrella": {
@@ -1015,7 +1015,8 @@ window.HORARIOS = {
       "Miércoles": {
        "asig": "Inglés",
        "adultos": [
-        "I2"
+        "I2",
+        "I1"
        ]
       },
       "Jueves": {
@@ -8008,8 +8009,9 @@ window.HORARIOS = {
        "tipo": "otro"
       },
       "Miércoles": {
-       "txt": "Proyecto Inglés",
-       "tipo": "otro"
+       "txt": "L · Sol: Inglés · I2",
+       "tipo": "lectivo",
+       "aula": "Sol"
       },
       "Jueves": {
        "txt": "Programación clases",
@@ -8155,8 +8157,8 @@ window.HORARIOS = {
        "tipo": "otro"
       },
       "Viernes": {
-       "txt": "L · Inglés rotativo",
-       "tipo": "lectivo"
+       "txt": "Proyecto Inglés",
+       "tipo": "otro"
       }
      }
     },
@@ -8406,7 +8408,7 @@ window.HORARIOS = {
        "aula": "Norte"
       },
       "Miércoles": {
-       "txt": "L · Sol: Inglés",
+       "txt": "L · Sol: Inglés · I1",
        "tipo": "lectivo",
        "aula": "Sol"
       },
