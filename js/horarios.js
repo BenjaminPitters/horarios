@@ -51,7 +51,7 @@ window.HORARIOS = {
    "Jueves",
    "Viernes"
   ],
-  "generado": "2026-11-18"
+  "generado": "2026-11-19"
  },
  "clases": {
   "Estrella": {
@@ -2714,13 +2714,6 @@ window.HORARIOS = {
        "asig": "Escritura",
        "adultos": [
         "T5"
-       ],
-       "salidas": [
-        {
-         "alumno": "Martina",
-         "a": "TO1",
-         "a_nombre": "Irene"
-        }
        ]
       },
       "Martes": {
@@ -3051,6 +3044,13 @@ window.HORARIOS = {
        "asig": "Inglés",
        "adultos": [
         "I1"
+       ],
+       "salidas": [
+        {
+         "alumno": "Martina",
+         "a": "TO1",
+         "a_nombre": "Irene"
+        }
        ]
       },
       "Martes": {
@@ -6001,7 +6001,7 @@ window.HORARIOS = {
      "hora": "10:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Escritura\n↗ Martina→TO1",
+       "txt": "L · Escritura",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -8112,7 +8112,7 @@ window.HORARIOS = {
      "hora": "14:30",
      "dias": {
       "Lunes": {
-       "txt": "L · Este: Inglés",
+       "txt": "L · Este: Inglés\n↗ Martina→TO1",
        "tipo": "lectivo",
        "aula": "Este"
       },
@@ -11021,9 +11021,8 @@ window.HORARIOS = {
       "hora": "10:30",
       "dias": {
        "Lunes": {
-        "txt": "L · Este: Martina",
-        "tipo": "lectivo",
-        "aula": "Este"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Martes": {
         "txt": "L · Este: Escritura · T5",
@@ -11222,8 +11221,9 @@ window.HORARIOS = {
       "hora": "14:30",
       "dias": {
        "Lunes": {
-        "txt": "NL",
-        "tipo": "no_lectivo"
+        "txt": "L · Este: Martina",
+        "tipo": "lectivo",
+        "aula": "Este"
        },
        "Martes": {
         "txt": "L · Norte: Autonomía · O1",
@@ -16335,8 +16335,7 @@ window.HORARIOS = {
       "hora": "10:30",
       "dias": {
        "Lunes": {
-        "salida": "TO1",
-        "dest_nombre": "Irene"
+        "asig": "Escritura"
        },
        "Martes": {
         "asig": "Escritura"
@@ -16486,7 +16485,8 @@ window.HORARIOS = {
       "hora": "14:30",
       "dias": {
        "Lunes": {
-        "asig": "Inglés"
+        "salida": "TO1",
+        "dest_nombre": "Irene"
        },
        "Martes": {
         "asig": "Educación Física"
