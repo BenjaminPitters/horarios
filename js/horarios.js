@@ -51,7 +51,7 @@ window.HORARIOS = {
    "Jueves",
    "Viernes"
   ],
-  "generado": "2026-11-19"
+  "generado": "2026-11-20"
  },
  "clases": {
   "Estrella": {
@@ -114,27 +114,14 @@ window.HORARIOS = {
       "Martes": {
        "asig": "Estimulación del Lenguaje",
        "adultos": [
-        "L1"
-       ],
-       "salidas": [
-        {
-         "alumno": "Bernardo",
-         "a": "O2",
-         "a_nombre": "Sara"
-        }
+        "L1",
+        "T1"
        ]
       },
       "Miércoles": {
        "asig": "Estimulación del Lenguaje",
        "adultos": [
         "L1"
-       ],
-       "salidas": [
-        {
-         "alumno": "Naomi",
-         "a": "O2",
-         "a_nombre": "Sara"
-        }
        ],
        "externa": [
         {
@@ -193,6 +180,13 @@ window.HORARIOS = {
        "asig": "Psicomotricidad",
        "adultos": [
         "TO1"
+       ],
+       "salidas": [
+        {
+         "alumno": "Naomi",
+         "a": "O2",
+         "a_nombre": "Sara"
+        }
        ],
        "externa": [
         {
@@ -624,8 +618,14 @@ window.HORARIOS = {
       "Martes": {
        "asig": "Cuentacuentos",
        "adultos": [
-        "T1",
         "T7"
+       ],
+       "salidas": [
+        {
+         "alumno": "Bernardo",
+         "a": "O2",
+         "a_nombre": "Sara"
+        }
        ]
       },
       "Miércoles": {
@@ -3260,6 +3260,13 @@ window.HORARIOS = {
        "adultos": [
         "T6",
         "I2"
+       ],
+       "salidas": [
+        {
+         "alumno": "Andrés",
+         "a": "O2",
+         "a_nombre": "Sara"
+        }
        ]
       },
       "Jueves": {
@@ -3313,11 +3320,6 @@ window.HORARIOS = {
          "alumno": "Micke",
          "a": "O1",
          "a_nombre": "Lucía Cubillas"
-        },
-        {
-         "alumno": "Andrés",
-         "a": "O2",
-         "a_nombre": "Sara"
         }
        ]
       },
@@ -4473,8 +4475,8 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "NL",
-       "tipo": "no_lectivo"
+       "txt": "L · Est.leng. (apoyo)",
+       "tipo": "lectivo"
       },
       "Miércoles": {
        "txt": "NL",
@@ -4733,8 +4735,8 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Martes": {
-       "txt": "L · Cuentacuentos · T7",
-       "tipo": "lectivo"
+       "txt": "NL",
+       "tipo": "no_lectivo"
       },
       "Miércoles": {
        "txt": "L · Conocimiento del Entorno · T7",
@@ -6327,7 +6329,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Lengua · I2",
+       "txt": "L · Lengua · I2\n↗ Andrés→O2",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -6353,7 +6355,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Lengua · L2\n↗ Micke→O1\n↗ Andrés→O2",
+       "txt": "L · Lengua · L2\n↗ Micke→O1",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -6955,8 +6957,9 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Martes": {
-       "txt": "L · Cuentacuentos · T1 (Estrella)",
-       "tipo": "lectivo"
+       "txt": "L · Estrella: Cuentacuentos\n↗ Bernardo→O2",
+       "tipo": "lectivo",
+       "aula": "Estrella"
       },
       "Miércoles": {
        "txt": "L · Estrella: Conocimiento del Entorno · T1",
@@ -8260,7 +8263,7 @@ window.HORARIOS = {
        "aula": "Oeste"
       },
       "Miércoles": {
-       "txt": "L · Oeste: Lengua · T6",
+       "txt": "L · Oeste: Lengua · T6\n↗ Andrés→O2",
        "tipo": "lectivo",
        "aula": "Oeste"
       },
@@ -9031,14 +9034,13 @@ window.HORARIOS = {
         "tipo": "fuera"
        },
        "Martes": {
-        "txt": "L · Estrella: Bernardo",
-        "tipo": "lectivo",
-        "aula": "Estrella"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Miércoles": {
-        "txt": "L · Estrella: Naomi",
+        "txt": "L · Oeste: Andrés",
         "tipo": "lectivo",
-        "aula": "Estrella"
+        "aula": "Oeste"
        },
        "Jueves": {
         "txt": "L · Estrella: Inés",
@@ -9065,9 +9067,9 @@ window.HORARIOS = {
         "aula": "Estrella"
        },
        "Miércoles": {
-        "txt": "L · Oeste: Andrés",
+        "txt": "L · Estrella: Naomi",
         "tipo": "lectivo",
-        "aula": "Oeste"
+        "aula": "Estrella"
        },
        "Jueves": {
         "txt": "L · Estrella: Bernardo",
@@ -9306,8 +9308,9 @@ window.HORARIOS = {
         "tipo": "fuera"
        },
        "Martes": {
-        "txt": "NL",
-        "tipo": "no_lectivo"
+        "txt": "L · Estrella: Bernardo",
+        "tipo": "lectivo",
+        "aula": "Estrella"
        },
        "Miércoles": {
         "txt": "—",
@@ -9775,12 +9778,12 @@ window.HORARIOS = {
         "aula": "Estrella"
        },
        "Martes": {
-        "txt": "L · Estrella: Estimulación del Lenguaje\n↗ Bernardo→O2",
+        "txt": "L · Estrella: Estimulación del Lenguaje · T1",
         "tipo": "lectivo",
         "aula": "Estrella"
        },
        "Miércoles": {
-        "txt": "L · Estrella: Estimulación del Lenguaje\n⇱ Inés: entra a las 12:30\n↗ Naomi→O2",
+        "txt": "L · Estrella: Estimulación del Lenguaje\n⇱ Inés: entra a las 12:30",
         "tipo": "lectivo",
         "aula": "Estrella"
        },
@@ -10217,7 +10220,7 @@ window.HORARIOS = {
         "aula": "Oeste"
        },
        "Miércoles": {
-        "txt": "L · Oeste: Lengua · T6\n↗ Micke→O1\n↗ Andrés→O2",
+        "txt": "L · Oeste: Lengua · T6\n↗ Micke→O1",
         "tipo": "lectivo",
         "aula": "Oeste"
        },
@@ -11000,7 +11003,7 @@ window.HORARIOS = {
         "aula": "Sol"
        },
        "Miércoles": {
-        "txt": "L · Estrella: Psicomotricidad\n⇱ Inés: entra a las 12:30",
+        "txt": "L · Estrella: Psicomotricidad\n⇱ Inés: entra a las 12:30\n↗ Naomi→O2",
         "tipo": "lectivo",
         "aula": "Estrella"
        },
@@ -11779,8 +11782,7 @@ window.HORARIOS = {
         "asig": "Estimulación del Lenguaje"
        },
        "Miércoles": {
-        "salida": "O2",
-        "dest_nombre": "Sara"
+        "asig": "Estimulación del Lenguaje"
        },
        "Jueves": {
         "asig": "Estimulación del Lenguaje"
@@ -11801,7 +11803,8 @@ window.HORARIOS = {
         "asig": "Prerrequisitos de Aprendizaje"
        },
        "Miércoles": {
-        "asig": "Psicomotricidad"
+        "salida": "O2",
+        "dest_nombre": "Sara"
        },
        "Jueves": {
         "asig": "Prerrequisitos de Aprendizaje"
@@ -12622,8 +12625,7 @@ window.HORARIOS = {
         "asig": "Estimulación del Lenguaje"
        },
        "Martes": {
-        "salida": "O2",
-        "dest_nombre": "Sara"
+        "asig": "Estimulación del Lenguaje"
        },
        "Miércoles": {
         "asig": "Estimulación del Lenguaje"
@@ -12837,7 +12839,8 @@ window.HORARIOS = {
         "asig": "Conocimiento del Entorno"
        },
        "Martes": {
-        "asig": "Cuentacuentos"
+        "salida": "O2",
+        "dest_nombre": "Sara"
        },
        "Miércoles": {
         "asig": "Conocimiento del Entorno"
@@ -19392,7 +19395,8 @@ window.HORARIOS = {
         "asig": "Lengua"
        },
        "Miércoles": {
-        "asig": "Lengua"
+        "salida": "O2",
+        "dest_nombre": "Sara"
        },
        "Jueves": {
         "salida": "TO2",
@@ -19414,8 +19418,7 @@ window.HORARIOS = {
         "asig": "Lengua"
        },
        "Miércoles": {
-        "salida": "O2",
-        "dest_nombre": "Sara"
+        "asig": "Lengua"
        },
        "Jueves": {
         "asig": "Lengua"
