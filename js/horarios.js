@@ -711,31 +711,36 @@ window.HORARIOS = {
       "Lunes": {
        "asig": "Asamblea",
        "adultos": [
-        "EF1"
+        "EF1",
+        "L3"
        ]
       },
       "Martes": {
        "asig": "Asamblea",
        "adultos": [
-        "T2"
+        "T2",
+        "L3"
        ]
       },
       "Miércoles": {
        "asig": "Asamblea",
        "adultos": [
-        "EF1"
+        "EF1",
+        "L3"
        ]
       },
       "Jueves": {
        "asig": "Asamblea",
        "adultos": [
-        "T7"
+        "T7",
+        "L3"
        ]
       },
       "Viernes": {
        "asig": "Asamblea",
        "adultos": [
-        "T2"
+        "T2",
+        "L3"
        ]
       }
      }
@@ -4819,7 +4824,7 @@ window.HORARIOS = {
        "tipo": "fuera"
       },
       "Martes": {
-       "txt": "L · Asamblea",
+       "txt": "L · Asamblea · L3",
        "tipo": "lectivo"
       },
       "Miércoles": {
@@ -4831,7 +4836,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Viernes": {
-       "txt": "L · Asamblea",
+       "txt": "L · Asamblea · L3",
        "tipo": "lectivo"
       }
      }
@@ -6679,7 +6684,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Asamblea Sol",
+       "txt": "L · Asamblea Sol · L3",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -7043,7 +7048,7 @@ window.HORARIOS = {
      "hora": "9:00",
      "dias": {
       "Lunes": {
-       "txt": "L · Asamblea Sol",
+       "txt": "L · Asamblea Sol · L3",
        "tipo": "lectivo"
       },
       "Martes": {
@@ -7051,7 +7056,7 @@ window.HORARIOS = {
        "tipo": "no_lectivo"
       },
       "Miércoles": {
-       "txt": "L · Asamblea Sol",
+       "txt": "L · Asamblea Sol · L3",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -10564,24 +10569,29 @@ window.HORARIOS = {
       "hora": "9:00",
       "dias": {
        "Lunes": {
-        "txt": "NL",
-        "tipo": "no_lectivo"
+        "txt": "L · Sol: Asamblea · EF1",
+        "tipo": "lectivo",
+        "aula": "Sol"
        },
        "Martes": {
-        "txt": "Coord. Sur",
-        "tipo": "no_lectivo"
+        "txt": "L · Sol: Asamblea · T2",
+        "tipo": "lectivo",
+        "aula": "Sol"
        },
        "Miércoles": {
-        "txt": "Coord. Este",
-        "tipo": "no_lectivo"
+        "txt": "L · Sol: Asamblea · EF1",
+        "tipo": "lectivo",
+        "aula": "Sol"
        },
        "Jueves": {
-        "txt": "Coord. Sol",
-        "tipo": "no_lectivo"
+        "txt": "L · Sol: Asamblea · T7",
+        "tipo": "lectivo",
+        "aula": "Sol"
        },
        "Viernes": {
-        "txt": "NL",
-        "tipo": "no_lectivo"
+        "txt": "L · Sol: Asamblea · T2",
+        "tipo": "lectivo",
+        "aula": "Sol"
        }
       }
      },
@@ -10798,24 +10808,24 @@ window.HORARIOS = {
       "hora": "13:00–13:30",
       "dias": {
        "Lunes": {
-        "txt": "—",
-        "tipo": "fuera"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Martes": {
-        "txt": "—",
-        "tipo": "fuera"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Miércoles": {
         "txt": "NL",
         "tipo": "no_lectivo"
        },
        "Jueves": {
-        "txt": "—",
-        "tipo": "fuera"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Viernes": {
-        "txt": "—",
-        "tipo": "fuera"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        }
       }
      },
@@ -10832,8 +10842,8 @@ window.HORARIOS = {
         "tipo": "fuera"
        },
        "Miércoles": {
-        "txt": "—",
-        "tipo": "fuera"
+        "txt": "NL",
+        "tipo": "no_lectivo"
        },
        "Jueves": {
         "txt": "—",
