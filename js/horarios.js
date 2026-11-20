@@ -1809,12 +1809,6 @@ window.HORARIOS = {
        "adultos": [
         "T4",
         "O1"
-       ],
-       "externa": [
-        {
-         "alumno": "Catalina F.",
-         "desde": "14:15"
-        }
        ]
       },
       "Jueves": {
@@ -1881,9 +1875,6 @@ window.HORARIOS = {
        ],
        "externa": [
         {
-         "alumno": "Catalina F."
-        },
-        {
          "alumno": "Manuel",
          "desde": "15:00"
         }
@@ -1893,12 +1884,6 @@ window.HORARIOS = {
        "asig": "Cuentacuentos",
        "adultos": [
         "T4"
-       ],
-       "externa": [
-        {
-         "alumno": "Catalina F.",
-         "desde": "15:15"
-        }
        ]
       },
       "Viernes": {
@@ -1949,9 +1934,6 @@ window.HORARIOS = {
        ],
        "externa": [
         {
-         "alumno": "Catalina F."
-        },
-        {
          "alumno": "Manuel"
         }
        ]
@@ -1960,11 +1942,6 @@ window.HORARIOS = {
        "asig": "Juego",
        "adultos": [
         "T4"
-       ],
-       "externa": [
-        {
-         "alumno": "Catalina F."
-        }
        ]
       },
       "Viernes": {
@@ -5828,7 +5805,7 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Autonomía · O1\n⇱ Cata: salida externa (desde 14:15)",
+       "txt": "L · Autonomía · O1",
        "tipo": "lectivo"
       },
       "Jueves": {
@@ -5854,11 +5831,11 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Conocimiento del Entorno\n⇱ Cata: salida externa\n⇱ Manuel: salida externa (desde 15:00)\n↗ Leonor→L2",
+       "txt": "L · Conocimiento del Entorno\n⇱ Manuel: salida externa (desde 15:00)\n↗ Leonor→L2",
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Cuentacuentos\n⇱ Cata: salida externa (desde 15:15)",
+       "txt": "L · Cuentacuentos",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -5880,11 +5857,11 @@ window.HORARIOS = {
        "tipo": "lectivo"
       },
       "Miércoles": {
-       "txt": "L · Juego\n⇱ Cata: salida externa\n⇱ Manuel: salida externa",
+       "txt": "L · Juego\n⇱ Manuel: salida externa",
        "tipo": "lectivo"
       },
       "Jueves": {
-       "txt": "L · Juego\n⇱ Cata: salida externa",
+       "txt": "L · Juego",
        "tipo": "lectivo"
       },
       "Viernes": {
@@ -8898,7 +8875,7 @@ window.HORARIOS = {
         "aula": "Norte"
        },
        "Miércoles": {
-        "txt": "L · Norte: Autonomía · T4\n⇱ Cata: salida externa (desde 14:15)",
+        "txt": "L · Norte: Autonomía · T4",
         "tipo": "lectivo",
         "aula": "Norte"
        },
@@ -14224,7 +14201,7 @@ window.HORARIOS = {
         "label": "Recreo"
        },
        "Miércoles": {
-        "label": "Salida externa (desde 14:15)"
+        "label": "Recreo"
        },
        "Jueves": {
         "label": "Recreo"
@@ -14245,7 +14222,7 @@ window.HORARIOS = {
         "asig": "Autonomía"
        },
        "Miércoles": {
-        "label": "Salida externa"
+        "asig": "Autonomía"
        },
        "Jueves": {
         "asig": "Autonomía"
@@ -14267,10 +14244,10 @@ window.HORARIOS = {
         "label": "Salida externa (desde 15:15)"
        },
        "Miércoles": {
-        "label": "Salida externa"
+        "asig": "Conocimiento del Entorno"
        },
        "Jueves": {
-        "label": "Salida externa (desde 15:15)"
+        "asig": "Cuentacuentos"
        },
        "Viernes": {
         "asig": "Conocimiento del Entorno"
@@ -14288,10 +14265,10 @@ window.HORARIOS = {
         "label": "Salida externa"
        },
        "Miércoles": {
-        "label": "Salida externa"
+        "asig": "Juego"
        },
        "Jueves": {
-        "label": "Salida externa"
+        "asig": "Juego"
        },
        "Viernes": {
         "asig": "Juego"
