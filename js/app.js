@@ -627,6 +627,12 @@
       DIAS.forEach(d => { const arr = (b.filas && b.filas[0] && b.filas[0].dias && b.filas[0].dias[d]) || []; perDay[d] = parseLines(arr.join('\n')); });
       const chipsHtml = es => es.length ? es.map(e => `<span class="mom-chips">${e.chips.map(chip).join('')}</span>${e.nota ? `<span class="mom-note">${esc(e.nota)}</span>` : ''}`).join('') : '<span class="mom-e__nl">·</span>';
       const rowHtml = (label, pick) => `<tr><th class="mom-lbl"${momLblAttr(label)} scope="row">${esc(label)}</th>${DIAS.map(d => { const es = pick(d); return `<td class="mom-c${es.some(e => e.coord) ? ' is-coord' : ''}" data-day="${d}"><div class="mom-cell">${chipsHtml(es)}</div></td>`; }).join('')}</tr>`;
+      // Asamblea que hace alguien que no es tutor (p. ej. «Asamblea: EF1 + L3» en Sol el lunes):
+      // el código no dice de qué aula es. Las asambleas vienen en el orden de las filas de la
+      // hoja de turnos (Estrella, Sol, Norte, Luna, Este y, el viernes, Oeste y Sur), así que la
+      // k-ésima asamblea del día es la de la k-ésima aula. Solo se usa cuando no hay otra pista.
+      const ORDER_ASM = ['Estrella', 'Sol', 'Norte', 'Luna', 'Este', 'Oeste', 'Sur'];
+      DIAS.forEach(d => { let k = 0; perDay[d].forEach(e => { if (!e.asm) return; if (e.pref === 'Asamblea' && ORDER_ASM[k]) e.pref = ORDER_ASM[k]; k++; }); });
       // filas de aula (solo el asamblea: quién la toca)
       const aulaByPref = {}; const aulas = [];
       DIAS.forEach(d => perDay[d].filter(e => e.asm).forEach(e => { if (!(e.pref in aulaByPref)) { aulaByPref[e.pref] = {}; aulas.push(e.pref); } (aulaByPref[e.pref][d] = aulaByPref[e.pref][d] || []).push(e); }));

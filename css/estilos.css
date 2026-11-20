@@ -564,6 +564,17 @@ tr.brk th.tgut .h{color:var(--ink-3)}
 
   /* Turnos: al pulsar el botón de un grupo, imprimir SOLO ese grupo */
   .mom-block{ box-shadow:none !important; }
+  /* Turnos en papel: menos aire entre bloques para que cada grupo quepa en una hoja, y ningún
+     bloque ni la leyenda se parten entre dos hojas (antes «Patios y comedores» dejaba la
+     leyenda a caballo y salía una segunda hoja casi vacía con el logo encima). */
+  .mom-group{ gap:3.2mm !important; }
+  .momentos .mom-group + .mom-group, .momentos .mom-legend{ margin-top:3.2mm !important; }
+  .mom-head{ padding:2mm 3mm !important; }
+  .mom-head h3{ font-size:10.5pt !important; }
+  .mom-table thead th{ padding:1.2mm 1.6mm !important; font-size:7.5pt !important; }
+  .mom-cell{ min-height:0 !important; padding:1mm 1.4mm !important; }
+  .mom-legend{ padding:2mm 3mm !important; box-shadow:none !important; }
+  .mom-block, .mom-legend{ break-inside:avoid !important; }
   .mom-table thead th{ position:static !important; }
   body.printgroup .mom-group{ display:none !important; }
   body.printgroup--coord  .mom-group[data-group="coord"]{ display:flex !important; }
